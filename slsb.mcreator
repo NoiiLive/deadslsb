@@ -2340,12 +2340,6 @@
       "value": "0.0"
     },
     {
-      "name": "HealActive",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "JoinedWorld",
       "type": "logic",
       "scope": "player_persistent",

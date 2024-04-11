@@ -103,7 +103,6 @@ public class SlsbModVariables {
 			clone.ManaMax = original.ManaMax;
 			clone.Mastery = original.Mastery;
 			clone.PlayerTimer = original.PlayerTimer;
-			clone.HealActive = original.HealActive;
 			clone.JoinedWorld = original.JoinedWorld;
 			clone.SystemPlayer = original.SystemPlayer;
 			clone.BootsSave = original.BootsSave;
@@ -340,7 +339,6 @@ public class SlsbModVariables {
 		public double AbilityCooldown7 = 0;
 		public double AbilityCooldown8 = 0;
 		public double AbilityCooldown9 = 0.0;
-		public boolean HealActive = false;
 		public boolean JoinedWorld = false;
 		public boolean SystemPlayer = false;
 		public ItemStack BootsSave = ItemStack.EMPTY;
@@ -397,7 +395,6 @@ public class SlsbModVariables {
 			nbt.putDouble("AbilityCooldown7", AbilityCooldown7);
 			nbt.putDouble("AbilityCooldown8", AbilityCooldown8);
 			nbt.putDouble("AbilityCooldown9", AbilityCooldown9);
-			nbt.putBoolean("HealActive", HealActive);
 			nbt.putBoolean("JoinedWorld", JoinedWorld);
 			nbt.putBoolean("SystemPlayer", SystemPlayer);
 			nbt.put("BootsSave", BootsSave.save(new CompoundTag()));
@@ -451,7 +448,6 @@ public class SlsbModVariables {
 			AbilityCooldown7 = nbt.getDouble("AbilityCooldown7");
 			AbilityCooldown8 = nbt.getDouble("AbilityCooldown8");
 			AbilityCooldown9 = nbt.getDouble("AbilityCooldown9");
-			HealActive = nbt.getBoolean("HealActive");
 			JoinedWorld = nbt.getBoolean("JoinedWorld");
 			SystemPlayer = nbt.getBoolean("SystemPlayer");
 			BootsSave = ItemStack.of(nbt.getCompound("BootsSave"));
@@ -533,7 +529,6 @@ public class SlsbModVariables {
 					variables.AbilityCooldown7 = message.data.AbilityCooldown7;
 					variables.AbilityCooldown8 = message.data.AbilityCooldown8;
 					variables.AbilityCooldown9 = message.data.AbilityCooldown9;
-					variables.HealActive = message.data.HealActive;
 					variables.JoinedWorld = message.data.JoinedWorld;
 					variables.SystemPlayer = message.data.SystemPlayer;
 					variables.BootsSave = message.data.BootsSave;
