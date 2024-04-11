@@ -35,47 +35,67 @@ public class RandomMovesProcedure {
 			totalabilities = 5;
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Fighter")) {
-			abilitylist = "EnergyBlast,Berserker,SwordDance,Shatter,5,";
-			abilitycount = 5;
+			abilitylist = "SwordSlash,Berserker,SwordDance,Shatter,Adrenaline,Whirlwind,Precision,ManaBlade,Zone,Prediction,";
+			abilitycount = 10;
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Mage")) {
-			magemagic = Mth.nextInt(RandomSource.create(), 1, 5);
+			magemagic = Mth.nextInt(RandomSource.create(), 1, 10);
 			if (magemagic == 1) {
-				abilitylist = "FlameSpear,FlamePrison,FlameDragon,4,5,";
-				abilitycount = 5;
+				abilitylist = "FlameSpear,FlamePrison,FlameDragon,FlameBlast,Firestorm,FlameBarrage,MagmaSurge,Ignite,";
+				abilitycount = 8;
 			}
 			if (magemagic == 2) {
-				abilitylist = "Telekinesis,2,3,4,5,";
-				abilitycount = 5;
+				abilitylist = "EarthWall,Earthquake,StoneShard,BoulderCrash,Quicksand,StonePrison,StoneBarrage,Sandstorm,";
+				abilitycount = 8;
 			}
 			if (magemagic == 3) {
-				abilitylist = "Barrier,2,3,4,5,";
-				abilitycount = 5;
+				abilitylist = "WindSlice,Turbulence,WindBurst,WindPull,Suffocation,Tornado,WindBarrier,";
+				abilitycount = 7;
 			}
 			if (magemagic == 4) {
-				abilitylist = "Summon,2,3,4,5,";
-				abilitycount = 5;
+				abilitylist = "AquaSpears,Whirlpool,WaterBlast,TidalWave,AquaShield,Torrent,Drown,";
+				abilitycount = 7;
 			}
 			if (magemagic == 5) {
-				abilitylist = "ItemSummon,ItemStorage,3,4,5,";
-				abilitycount = 5;
+				abilitylist = "IceShard,IceBurst.Blizzard,Glacier,FrostBreath,Avalanche,IceWall,";
+				abilitycount = 7;
+			}
+			if (magemagic == 6) {
+				abilitylist = "Thunderbolt,ChainShock,StaticField,Thunderstorm,Overload,Thunderclap,";
+				abilitycount = 6;
+			}
+			if (magemagic == 7) {
+				abilitylist = "Weakness,Agony,Plague,Confusion,Blindness,Draining,Petrification,";
+				abilitycount = 7;
+			}
+			if (magemagic == 8) {
+				abilitylist = "SummonBeast,SummonGolem,SummonUndead,";
+				abilitycount = 3;
+			}
+			if (magemagic == 9) {
+				abilitylist = "ItemSummon,ItemStorage,Teleportation,";
+				abilitycount = 3;
+			}
+			if (magemagic == 10) {
+				abilitylist = "Barrier,ReflectiveBarrier,Encasement,";
+				abilitycount = 3;
 			}
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Assassin")) {
-			abilitylist = "Stealth,2,3,4,5,";
-			abilitycount = 5;
+			abilitylist = "Stealth,Quickstep,Backstab,Evasion,Mark,Smokescreen,Clone,Flurry,";
+			abilitycount = 8;
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Ranger")) {
-			abilitylist = "MagicArrows,2,3,4,5,";
-			abilitycount = 5;
+			abilitylist = "MagicArrows,RapidShot,ArrowRain,PiercingShot,Tracking,SnareTrap,RotatingShots,";
+			abilitycount = 7;
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Tanker")) {
-			abilitylist = "Taunt,Reinforcement,Collapse,PowerSmash,5,";
-			abilitycount = 5;
+			abilitylist = "Taunt,Reinforcement,Collapse,ChargedSmash,Bash,Rally,FinalStand,Guardian,ClearMind,Overwhelm,Taunt,Reinforcement,Collapse,ChargedSmash,Bash,Rally,FinalStand,Guardian,ClearMind,Overwhelm,";
+			abilitycount = 10;
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Healer")) {
-			abilitylist = "Healing,HasteBuff,StrengthBuff,Disguise,SacredShield,";
-			abilitycount = 5;
+			abilitylist = "Healing,HasteBuff,StrengthBuff,Disguise,SacredBarrier,Purify,Fortify,";
+			abilitycount = 7;
 		}
 		for (int index0 = 0; index0 < (int) totalabilities; index0++) {
 			if (!(abilitylist).isEmpty()) {
