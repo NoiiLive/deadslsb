@@ -9,6 +9,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.clozynoii.slsb.init.SlsbModBlockEntities;
 import net.clozynoii.slsb.block.renderer.RedGateSmallTileRenderer;
 import net.clozynoii.slsb.block.renderer.BlueGateSmallTileRenderer;
+import net.clozynoii.slsb.block.renderer.BlueGateMediumTileRenderer;
 import net.clozynoii.slsb.SlsbMod;
 
 @Mod.EventBusSubscriber(modid = SlsbMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -18,5 +19,6 @@ public class ClientListener {
 	public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerBlockEntityRenderer(SlsbModBlockEntities.BLUE_GATE_SMALL.get(), context -> new BlueGateSmallTileRenderer());
 		event.registerBlockEntityRenderer(SlsbModBlockEntities.RED_GATE_SMALL.get(), context -> new RedGateSmallTileRenderer());
+		event.registerBlockEntityRenderer(SlsbModBlockEntities.BLUE_GATE_MEDIUM.get(), context -> new BlueGateMediumTileRenderer());
 	}
 }

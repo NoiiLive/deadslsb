@@ -88,7 +88,7 @@ public class GateTimerProcedure {
 				}
 				if (GateRandomize >= 10 && GateRandomize < 15) {
 					GateRank = "\u00A7d\u00A7lC-Rank";
-					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -101,7 +101,7 @@ public class GateTimerProcedure {
 				}
 				if (GateRandomize >= 15 && GateRandomize < 18) {
 					GateRank = "\u00A7b\u00A7lB-Rank";
-					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -114,7 +114,7 @@ public class GateTimerProcedure {
 				}
 				if (GateRandomize >= 18 && GateRandomize < 20) {
 					GateRank = "\u00A7e\u00A7lA-Rank";
-					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -127,7 +127,7 @@ public class GateTimerProcedure {
 				}
 				if (GateRandomize == 20) {
 					GateRank = "\u00A7c\u00A7lS-Rank";
-					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
