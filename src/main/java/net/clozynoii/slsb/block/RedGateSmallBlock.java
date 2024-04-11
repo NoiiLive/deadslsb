@@ -85,10 +85,10 @@ public class RedGateSmallBlock extends BaseEntityBlock implements EntityBlock {
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 
 		return switch (state.getValue(FACING)) {
-			default -> box(0, 0, 0, 16, 64, 16);
-			case NORTH -> box(0, 0, 0, 16, 64, 16);
-			case EAST -> box(0, 0, 0, 16, 64, 16);
-			case WEST -> box(0, 0, 0, 16, 64, 16);
+			default -> box(-24, 0, 0, 40, 72, 16);
+			case NORTH -> box(-24, 0, 0, 40, 72, 16);
+			case EAST -> box(0, 0, -24, 16, 72, 40);
+			case WEST -> box(0, 0, -24, 16, 72, 40);
 		};
 	}
 
