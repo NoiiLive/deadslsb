@@ -1,0 +1,2717 @@
+{
+  "mod_elements": [
+    {
+      "name": "Awakening",
+      "type": "achievement",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "awakening",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/awakening.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "AwakeningTimer",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "awakening_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AwakeningTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "RandomClass",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_class",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomClassProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "RandomRank",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_rank",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomRankProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "SLSBAdmin",
+      "type": "command",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slsb_admin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/command/SLSBAdminCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "JoinWorld",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "join_world",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/JoinWorldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "WorldCreated",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_created",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/WorldCreatedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Gates"
+    },
+    {
+      "name": "GateTimer",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gate_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/GateTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Gates"
+    },
+    {
+      "name": "RandomGateCommand",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_gate_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomGateCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "KasakasVenomFang",
+      "type": "tool",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kasakas_venom_fang",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java",
+          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AwakenCommand",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "awaken_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AwakenCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "RandomClassCommand",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_class_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomClassCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "RandomRankCommand",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_rank_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomRankCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "AfterImageBlueDisplayCondition",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image_blue_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AfterImageBlueDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Misc/Procedures"
+    },
+    {
+      "name": "SkillOverlay",
+      "type": "overlay",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/client/screens/SkillOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Overlays"
+    },
+    {
+      "name": "UseSkill",
+      "type": "keybind",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/network/UseSkillMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "AfterImagePurpleDisplayCondition",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image_purple_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AfterImagePurpleDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Misc/Procedures"
+    },
+    {
+      "name": "SwitchSkill",
+      "type": "keybind",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/network/SwitchSkillMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SetMove",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_move",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetMoveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "AfterImage",
+      "type": "livingentity",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/client/renderer/AfterImageRenderer.java",
+          "src/main/java/net/clozynoii/slsb/entity/AfterImageEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Misc"
+    },
+    {
+      "name": "CooldownTimer",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CooldownTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "SkillDisplay",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "GateUpdateTick",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gate_update_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/GateUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Gates"
+    },
+    {
+      "name": "BlueGateSmall",
+      "type": "animatedblock",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_gate_small",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallDisplayModel.java",
+          "src/main/resources/assets/slsb/models/item/blue_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/entity/BlueGateSmallTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallTileRenderer.java",
+          "src/main/resources/assets/slsb/models/custom/blue_gate_small_particle.json",
+          "src/main/resources/assets/slsb/blockstates/blue_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/BlueGateSmallBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/display/BlueGateSmallDisplayItem.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "RedGateSmall",
+      "type": "animatedblock",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_gate_small",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/RedGateSmallBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/RedGateSmallTileEntity.java",
+          "src/main/resources/assets/slsb/models/custom/red_gate_small_particle.json",
+          "src/main/resources/assets/slsb/blockstates/red_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/display/RedGateSmallDisplayItem.java",
+          "src/main/resources/assets/slsb/models/item/red_gate_small.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "Test",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/TestItem.java",
+          "src/main/resources/assets/slsb/models/item/test.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "TestGateRightClick",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_gate_right_click",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TestGateRightClickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "StealthSkill",
+      "type": "achievement",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stealth_skill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/stealth_skill.json"
+        ]
+      },
+      "path": "~/Advancements/Skills/Assassin"
+    },
+    {
+      "name": "SetAssassin",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_assassin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetAssassinProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Classes"
+    },
+    {
+      "name": "CostOverlay",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cost_overlay",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CostOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "HealSkill",
+      "type": "achievement",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heal_skill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/heal_skill.json"
+        ]
+      },
+      "path": "~/Advancements/Skills/Healer"
+    },
+    {
+      "name": "StrengthSkill",
+      "type": "achievement",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strength_skill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/strength_skill.json"
+        ]
+      },
+      "path": "~/Advancements/Skills/Healer"
+    },
+    {
+      "name": "HasteSkill",
+      "type": "achievement",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste_skill",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/haste_skill.json"
+        ]
+      },
+      "path": "~/Advancements/Skills/Healer"
+    },
+    {
+      "name": "AfterImageOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "after_image_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AfterImageOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Misc/Procedures"
+    },
+    {
+      "name": "SetMana",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_mana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetManaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ManaOverlay",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_overlay",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "HealerClass",
+      "type": "achievement",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healer_class",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/healer_class.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "ManaRegen",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaRegenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "AssassinClass",
+      "type": "achievement",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "assassin_class",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/advancements/assassin_class.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "UseSkillKeybind",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_skill_keybind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/UseSkillKeybindProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills"
+    },
+    {
+      "name": "HealingAura",
+      "type": "potioneffect",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_aura",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/HealingAuraMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "HealingAuraTick",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_aura_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/HealingAuraTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "HealingSkillUse",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/HealingSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "AbilitySwitcher1",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_switcher_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AbilitySwitcher1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching/Switcher"
+    },
+    {
+      "name": "AbilitySwitcher2",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_switcher_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AbilitySwitcher2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching/Switcher"
+    },
+    {
+      "name": "AbilitySwitcher3",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_switcher_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AbilitySwitcher3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching/Switcher"
+    },
+    {
+      "name": "AbilitySwitcher4",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_switcher_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AbilitySwitcher4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching/Switcher"
+    },
+    {
+      "name": "AbilitySwitcher5",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_switcher_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AbilitySwitcher5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching/Switcher"
+    },
+    {
+      "name": "AbilitySwitcher6",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_switcher_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AbilitySwitcher6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching/Switcher"
+    },
+    {
+      "name": "AbilitySwitcher7",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_switcher_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AbilitySwitcher7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching/Switcher"
+    },
+    {
+      "name": "AbilitySwitcher8",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_switcher_8",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AbilitySwitcher8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching/Switcher"
+    },
+    {
+      "name": "AbilitySwitcher9",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_switcher_9",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AbilitySwitcher9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching/Switcher"
+    },
+    {
+      "name": "ChangeSkillKeybind",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_skill_keybind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ChangeSkillKeybindProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Move Switching"
+    },
+    {
+      "name": "SkillDisplayCondition",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "CostDisplayCondition",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cost_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CostDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "ManaDisplayCondition",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "RandomMoves",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "RandomMovesCommand",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_moves_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RandomMovesCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "HealerSkills1",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healer_skills_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/HealerSkills1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer"
+    },
+    {
+      "name": "HealerSkills2",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healer_skills_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/HealerSkills2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer"
+    },
+    {
+      "name": "HealerSkills3",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healer_skills_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/HealerSkills3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer"
+    },
+    {
+      "name": "HealerSkills4",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healer_skills_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/HealerSkills4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer"
+    },
+    {
+      "name": "HealerSkills5",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healer_skills_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/HealerSkills5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer"
+    },
+    {
+      "name": "FighterSkills1",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighter_skills_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/FighterSkills1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Fighter"
+    },
+    {
+      "name": "MageSkills1",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_skills_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MageSkills1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Mage"
+    },
+    {
+      "name": "AssassinSkills1",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "assassin_skills_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AssassinSkills1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin"
+    },
+    {
+      "name": "TankerSkills1",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tanker_skills_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TankerSkills1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker"
+    },
+    {
+      "name": "RangerSkills1",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ranger_skills_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RangerSkills1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Ranger"
+    },
+    {
+      "name": "FighterSkills2",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighter_skills_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/FighterSkills2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Fighter"
+    },
+    {
+      "name": "FighterSkills3",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighter_skills_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/FighterSkills3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Fighter"
+    },
+    {
+      "name": "FighterSkills4",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighter_skills_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/FighterSkills4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Fighter"
+    },
+    {
+      "name": "FighterSkills5",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fighter_skills_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/FighterSkills5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Fighter"
+    },
+    {
+      "name": "MageSkills2",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_skills_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MageSkills2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Mage"
+    },
+    {
+      "name": "MageSkills3",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_skills_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MageSkills3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Mage"
+    },
+    {
+      "name": "MageSkills4",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_skills_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MageSkills4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Mage"
+    },
+    {
+      "name": "MageSkills5",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mage_skills_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MageSkills5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Mage"
+    },
+    {
+      "name": "AssassinSkills2",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "assassin_skills_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AssassinSkills2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin"
+    },
+    {
+      "name": "AssassinSkills3",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "assassin_skills_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AssassinSkills3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin"
+    },
+    {
+      "name": "AssassinSkills4",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "assassin_skills_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AssassinSkills4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin"
+    },
+    {
+      "name": "AssassinSkills5",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "assassin_skills_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/AssassinSkills5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin"
+    },
+    {
+      "name": "TankerSkills2",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tanker_skills_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TankerSkills2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker"
+    },
+    {
+      "name": "TankerSkills3",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tanker_skills_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TankerSkills3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker"
+    },
+    {
+      "name": "TankerSkills4",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tanker_skills_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TankerSkills4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker"
+    },
+    {
+      "name": "TankerSkills5",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tanker_skills_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TankerSkills5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker"
+    },
+    {
+      "name": "RangerSkills2",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ranger_skills_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RangerSkills2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Ranger"
+    },
+    {
+      "name": "RangerSkills3",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ranger_skills_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RangerSkills3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Ranger"
+    },
+    {
+      "name": "RangerSkills4",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ranger_skills_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RangerSkills4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Ranger"
+    },
+    {
+      "name": "RangerSkills5",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ranger_skills_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RangerSkills5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Ranger"
+    },
+    {
+      "name": "SetHealer",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_healer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetHealerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Classes"
+    },
+    {
+      "name": "SetTanker",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_tanker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetTankerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Classes"
+    },
+    {
+      "name": "SetFighter",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_fighter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetFighterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Classes"
+    },
+    {
+      "name": "SetMage",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_mage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetMageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Classes"
+    },
+    {
+      "name": "SetRanger",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ranger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetRangerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Classes"
+    },
+    {
+      "name": "ClearAbilitiesCommand",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clear_abilities_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ClearAbilitiesCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "ClearMoves",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clear_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ClearMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
+    },
+    {
+      "name": "StealthSkillUse",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stealth_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/StealthSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
+    },
+    {
+      "name": "StealthActiveTick",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stealth_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/StealthActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
+    },
+    {
+      "name": "Stealth",
+      "type": "potioneffect",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stealth",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/StealthMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "SetRankE",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_rank_e",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetRankEProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Ranks"
+    },
+    {
+      "name": "SetRankD",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_rank_d",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetRankDProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Ranks"
+    },
+    {
+      "name": "SetRankC",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_rank_c",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetRankCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Ranks"
+    },
+    {
+      "name": "SetRankB",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_rank_b",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetRankBProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Ranks"
+    },
+    {
+      "name": "SetRankA",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_rank_a",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetRankAProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Ranks"
+    },
+    {
+      "name": "SetRankS",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_rank_s",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetRankSProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures/Ranks"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "AbilitySelected",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "None"
+    },
+    {
+      "name": "AbilitySlot1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "AbilitySlot2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "AbilitySlot3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "AbilitySlot4",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "AbilitySlot5",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "AbilitySlot6",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "AbilitySlot7",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "AbilitySlot8",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "AbilitySlot9",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
+    },
+    {
+      "name": "Aura",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "ColorCode",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "HunterClass",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Rank",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "UseAbilityType",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "Switcher"
+    },
+    {
+      "name": "Cooldown",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "GateTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "Mana",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ManaMax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Mastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PlayerTimer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "SwitcherSlot",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "1.0"
+    },
+    {
+      "name": "AbilityCooldown1",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCooldown2",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCooldown3",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCooldown4",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCooldown5",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCooldown6",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCooldown7",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCooldown8",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCooldown9",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "HealActive",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "JoinedWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "SystemPlayer",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "WorldCreated",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "BootsSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "ChestplateSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "HelmetSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "LeggingsSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "AbilityCost1",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCost2",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCost3",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCost4",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCost5",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCost6",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCost7",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCost8",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AbilityCost9",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RulerVessel",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ActiveSkills",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
+      "item.slsb.kasakas_venom_fang": "Kasaka\u0027s Venom Fang",
+      "advancements.awakening.descr": "Awaken as a Hunter.",
+      "advancements.assassin_class.descr": "Become the Assassin Class.",
+      "advancements.healer_class.title": "Healer",
+      "entity.slsb.after_image": "After Image",
+      "advancements.strength_skill.title": "Strength Skill",
+      "advancements.healer_class.descr": "Become the Healer Class.",
+      "advancements.heal_skill.descr": "Unlock Heal Skill",
+      "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
+      "advancements.assassin_class.title": "Assassin",
+      "advancements.stealth_skill.title": "Stealth Skill",
+      "advancements.haste_skill.title": "Haste Skill",
+      "key.slsb.use_skill": "Use Skill",
+      "advancements.heal_skill.title": "Heal Skill",
+      "block.slsb.blue_gate_small": "Blue Gate Small",
+      "block.slsb.red_gate_small": "Red Gate Small",
+      "effect.slsb.stealth": "Stealth",
+      "effect.slsb.healing_aura": "Healing Aura",
+      "advancements.stealth_skill.descr": "Unlock Stealth Skill",
+      "advancements.awakening.title": "Awakening",
+      "key.slsb.switch_skill": "Switch Skill",
+      "item.slsb.test": "Force Dungeon Break"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Procedures",
+        "children": [
+          {
+            "name": "Commands",
+            "children": []
+          },
+          {
+            "name": "Player",
+            "children": []
+          },
+          {
+            "name": "Skills",
+            "children": [
+              {
+                "name": "System Player",
+                "children": []
+              },
+              {
+                "name": "Fighter",
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Mage",
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Assassin",
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Tanker",
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Ranger",
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Healer",
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Gates",
+            "children": []
+          },
+          {
+            "name": "Move Switching",
+            "children": [
+              {
+                "name": "Switcher",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Advancements",
+        "children": [
+          {
+            "name": "Skills",
+            "children": [
+              {
+                "name": "Assassin",
+                "children": []
+              },
+              {
+                "name": "Healer",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "GUI",
+        "children": []
+      },
+      {
+        "name": "Damage Sources",
+        "children": []
+      },
+      {
+        "name": "Weapons",
+        "children": []
+      },
+      {
+        "name": "Dimensions",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Overlays",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Biomes",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "Armors",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Misc",
+            "children": [
+              {
+                "name": "Procedures",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Potions",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": []
+      },
+      {
+        "name": "Commands",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": [
+              {
+                "name": "Classes",
+                "children": []
+              },
+              {
+                "name": "Ranks",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gamerules",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "slsb",
+    "modName": "Solo Leveling System Break",
+    "version": "1.0.0",
+    "author": "sushiclozy, NoiiLive",
+    "websiteURL": "Clozy: https://discord.gg/2ZVbpGkGKG // Noii: https://discord.gg/VyKWxMyeZf",
+    "license": "All Rights Reserved",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "slsb_logo",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib",
+      "playeranimator"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Clozy, Noii, Chugong",
+    "modElementsPackage": "net.clozynoii.slsb",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300452316
+}

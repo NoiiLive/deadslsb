@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="slsb"
+version="1.0.0"
+displayName="Solo Leveling System Break"
+displayURL="Clozy: https://discord.gg/2ZVbpGkGKG // Noii: https://discord.gg/VyKWxMyeZf"
+logoFile="logo.png"
+credits="Clozy, Noii, Chugong"
+authors="sushiclozy, NoiiLive"
+
+[[dependencies.slsb]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+[[dependencies.slsb]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.slsb]]
+    modId="playeranimator"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
