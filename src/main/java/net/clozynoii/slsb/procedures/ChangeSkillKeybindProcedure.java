@@ -1,11 +1,13 @@
 package net.clozynoii.slsb.procedures;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
+import net.clozynoii.slsb.SlsbMod;
 
 public class ChangeSkillKeybindProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		boolean gate = false;
@@ -47,6 +49,22 @@ public class ChangeSkillKeybindProcedure {
 				AbilitySwitcher9Procedure.execute(entity);
 				gate = true;
 			}
+		}
+		if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).SkillsRenamed == false) {
+			SlsbMod.queueServerWork(5, () -> {
+				SkillRenameFighterProcedure.execute(entity);
+				SkillRenameTankerProcedure.execute(entity);
+				SkillRenameRangerProcedure.execute(entity);
+				SkillRenameHealerProcedure.execute(entity);
+				SkillRenameMageProcedure.execute(entity);
+				{
+					boolean _setval = true;
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SkillsRenamed = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			});
 		}
 	}
 }

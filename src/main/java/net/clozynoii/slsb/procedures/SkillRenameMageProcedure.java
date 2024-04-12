@@ -1194,6 +1194,15 @@ public class SkillRenameMageProcedure {
 				}
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Mage")) {
+				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("FrostBreath")) {
+					{
+						String _setval = "Frost Breath";
+						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.AbilitySelected = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1).equals("FrostBreath")) {
 					{
 						String _setval = "Frost Breath";
@@ -1241,6 +1250,15 @@ public class SkillRenameMageProcedure {
 				}
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Mage")) {
+				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("IceWall")) {
+					{
+						String _setval = "Ice Wall";
+						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.AbilitySelected = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1).equals("IceWall")) {
 					{
 						String _setval = "Ice Wall";
