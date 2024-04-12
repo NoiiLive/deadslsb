@@ -51,12 +51,12 @@ public class ChangeSkillKeybindProcedure {
 			}
 		}
 		if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).SkillsRenamed == false) {
+			SkillRenameFighterProcedure.execute(entity);
+			SkillRenameTankerProcedure.execute(entity);
+			SkillRenameRangerProcedure.execute(entity);
+			SkillRenameHealerProcedure.execute(entity);
+			SkillRenameMageProcedure.execute(entity);
 			SlsbMod.queueServerWork(5, () -> {
-				SkillRenameFighterProcedure.execute(entity);
-				SkillRenameTankerProcedure.execute(entity);
-				SkillRenameRangerProcedure.execute(entity);
-				SkillRenameHealerProcedure.execute(entity);
-				SkillRenameMageProcedure.execute(entity);
 				{
 					boolean _setval = true;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
