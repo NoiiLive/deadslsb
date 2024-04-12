@@ -12,6 +12,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
+import net.minecraft.commands.arguments.MessageArgument;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
@@ -33,7 +34,6 @@ import net.clozynoii.slsb.procedures.RandomGateCommandProcedure;
 import net.clozynoii.slsb.procedures.ClearAbilitiesCommandProcedure;
 import net.clozynoii.slsb.procedures.AwakenCommandProcedure;
 
-import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 @Mod.EventBusSubscriber
@@ -237,7 +237,7 @@ public class SLSBAdminCommand {
 			SetRankSProcedure.execute(arguments, entity);
 			return 0;
 		}))))).then(Commands.literal("ability").then(
-				Commands.literal("set").then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("name", DoubleArgumentType.doubleArg(1, 9)).then(Commands.argument("skill", StringArgumentType.word()).executes(arguments -> {
+				Commands.literal("set").then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("name", DoubleArgumentType.doubleArg(1, 9)).then(Commands.argument("skill", MessageArgument.message()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
