@@ -248,7 +248,7 @@ public class RandomMovesCommandProcedure {
 						}.getEntity()));
 					});
 				}
-				abilitylist = "IceShard,IceBurst.Blizzard,Glacier,FrostBreath,Avalanche,IceWall,";
+				abilitylist = "IceShard,IceBurst,Blizzard,Glacier,FrostBreath,Avalanche,IceWall,";
 				abilitycount = 7;
 			}
 			if (magemagic == 6) {
@@ -408,7 +408,7 @@ public class RandomMovesCommandProcedure {
 			}
 		}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Assassin")) {
 			abilitylist = "Stealth,Quickstep,Backstab,Evasion,Mark,Smokescreen,Clone,Flurry,";
-			abilitycount = 8;
+			abilitycount = 7;
 		}
 		if ((((new Object() {
 			public Entity getEntity() {
