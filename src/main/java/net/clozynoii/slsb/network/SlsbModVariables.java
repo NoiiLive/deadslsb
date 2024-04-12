@@ -97,18 +97,13 @@ public class SlsbModVariables {
 			clone.HunterClass = original.HunterClass;
 			clone.Rank = original.Rank;
 			clone.UseAbilityType = original.UseAbilityType;
+			clone.MageType = original.MageType;
 			clone.Cooldown = original.Cooldown;
 			clone.Cost = original.Cost;
 			clone.Mana = original.Mana;
 			clone.ManaMax = original.ManaMax;
 			clone.Mastery = original.Mastery;
 			clone.PlayerTimer = original.PlayerTimer;
-			clone.JoinedWorld = original.JoinedWorld;
-			clone.SystemPlayer = original.SystemPlayer;
-			clone.BootsSave = original.BootsSave;
-			clone.ChestplateSave = original.ChestplateSave;
-			clone.HelmetSave = original.HelmetSave;
-			clone.LeggingsSave = original.LeggingsSave;
 			clone.AbilityCost1 = original.AbilityCost1;
 			clone.AbilityCost2 = original.AbilityCost2;
 			clone.AbilityCost3 = original.AbilityCost3;
@@ -118,9 +113,17 @@ public class SlsbModVariables {
 			clone.AbilityCost7 = original.AbilityCost7;
 			clone.AbilityCost8 = original.AbilityCost8;
 			clone.AbilityCost9 = original.AbilityCost9;
+			clone.JoinedWorld = original.JoinedWorld;
+			clone.SystemPlayer = original.SystemPlayer;
 			clone.RulerVessel = original.RulerVessel;
+			clone.BootsSave = original.BootsSave;
+			clone.ChestplateSave = original.ChestplateSave;
+			clone.HelmetSave = original.HelmetSave;
+			clone.LeggingsSave = original.LeggingsSave;
+			clone.SkillsRenamed = original.SkillsRenamed;
 			if (!event.isWasDeath()) {
 				clone.AbilitySelected = original.AbilitySelected;
+				clone.ActiveSkills = original.ActiveSkills;
 				clone.SwitcherSlot = original.SwitcherSlot;
 				clone.AbilityCooldown1 = original.AbilityCooldown1;
 				clone.AbilityCooldown2 = original.AbilityCooldown2;
@@ -131,7 +134,6 @@ public class SlsbModVariables {
 				clone.AbilityCooldown7 = original.AbilityCooldown7;
 				clone.AbilityCooldown8 = original.AbilityCooldown8;
 				clone.AbilityCooldown9 = original.AbilityCooldown9;
-				clone.ActiveSkills = original.ActiveSkills;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -323,6 +325,8 @@ public class SlsbModVariables {
 		public String HunterClass = "";
 		public String Rank = "0";
 		public String UseAbilityType = "Switcher";
+		public String ActiveSkills = "";
+		public String MageType = "";
 		public double Cooldown = 0;
 		public double Cost = 0;
 		public double Mana = 0;
@@ -339,12 +343,6 @@ public class SlsbModVariables {
 		public double AbilityCooldown7 = 0;
 		public double AbilityCooldown8 = 0;
 		public double AbilityCooldown9 = 0.0;
-		public boolean JoinedWorld = false;
-		public boolean SystemPlayer = false;
-		public ItemStack BootsSave = ItemStack.EMPTY;
-		public ItemStack ChestplateSave = ItemStack.EMPTY;
-		public ItemStack HelmetSave = ItemStack.EMPTY;
-		public ItemStack LeggingsSave = ItemStack.EMPTY;
 		public double AbilityCost1 = 0;
 		public double AbilityCost2 = 0;
 		public double AbilityCost3 = 0;
@@ -354,8 +352,14 @@ public class SlsbModVariables {
 		public double AbilityCost7 = 0;
 		public double AbilityCost8 = 0;
 		public double AbilityCost9 = 0;
+		public boolean JoinedWorld = false;
+		public boolean SystemPlayer = false;
 		public boolean RulerVessel = false;
-		public String ActiveSkills = "\"\"";
+		public ItemStack BootsSave = ItemStack.EMPTY;
+		public ItemStack ChestplateSave = ItemStack.EMPTY;
+		public ItemStack HelmetSave = ItemStack.EMPTY;
+		public ItemStack LeggingsSave = ItemStack.EMPTY;
+		public boolean SkillsRenamed = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -379,6 +383,8 @@ public class SlsbModVariables {
 			nbt.putString("HunterClass", HunterClass);
 			nbt.putString("Rank", Rank);
 			nbt.putString("UseAbilityType", UseAbilityType);
+			nbt.putString("ActiveSkills", ActiveSkills);
+			nbt.putString("MageType", MageType);
 			nbt.putDouble("Cooldown", Cooldown);
 			nbt.putDouble("Cost", Cost);
 			nbt.putDouble("Mana", Mana);
@@ -395,12 +401,6 @@ public class SlsbModVariables {
 			nbt.putDouble("AbilityCooldown7", AbilityCooldown7);
 			nbt.putDouble("AbilityCooldown8", AbilityCooldown8);
 			nbt.putDouble("AbilityCooldown9", AbilityCooldown9);
-			nbt.putBoolean("JoinedWorld", JoinedWorld);
-			nbt.putBoolean("SystemPlayer", SystemPlayer);
-			nbt.put("BootsSave", BootsSave.save(new CompoundTag()));
-			nbt.put("ChestplateSave", ChestplateSave.save(new CompoundTag()));
-			nbt.put("HelmetSave", HelmetSave.save(new CompoundTag()));
-			nbt.put("LeggingsSave", LeggingsSave.save(new CompoundTag()));
 			nbt.putDouble("AbilityCost1", AbilityCost1);
 			nbt.putDouble("AbilityCost2", AbilityCost2);
 			nbt.putDouble("AbilityCost3", AbilityCost3);
@@ -410,8 +410,14 @@ public class SlsbModVariables {
 			nbt.putDouble("AbilityCost7", AbilityCost7);
 			nbt.putDouble("AbilityCost8", AbilityCost8);
 			nbt.putDouble("AbilityCost9", AbilityCost9);
+			nbt.putBoolean("JoinedWorld", JoinedWorld);
+			nbt.putBoolean("SystemPlayer", SystemPlayer);
 			nbt.putBoolean("RulerVessel", RulerVessel);
-			nbt.putString("ActiveSkills", ActiveSkills);
+			nbt.put("BootsSave", BootsSave.save(new CompoundTag()));
+			nbt.put("ChestplateSave", ChestplateSave.save(new CompoundTag()));
+			nbt.put("HelmetSave", HelmetSave.save(new CompoundTag()));
+			nbt.put("LeggingsSave", LeggingsSave.save(new CompoundTag()));
+			nbt.putBoolean("SkillsRenamed", SkillsRenamed);
 			return nbt;
 		}
 
@@ -432,6 +438,8 @@ public class SlsbModVariables {
 			HunterClass = nbt.getString("HunterClass");
 			Rank = nbt.getString("Rank");
 			UseAbilityType = nbt.getString("UseAbilityType");
+			ActiveSkills = nbt.getString("ActiveSkills");
+			MageType = nbt.getString("MageType");
 			Cooldown = nbt.getDouble("Cooldown");
 			Cost = nbt.getDouble("Cost");
 			Mana = nbt.getDouble("Mana");
@@ -448,12 +456,6 @@ public class SlsbModVariables {
 			AbilityCooldown7 = nbt.getDouble("AbilityCooldown7");
 			AbilityCooldown8 = nbt.getDouble("AbilityCooldown8");
 			AbilityCooldown9 = nbt.getDouble("AbilityCooldown9");
-			JoinedWorld = nbt.getBoolean("JoinedWorld");
-			SystemPlayer = nbt.getBoolean("SystemPlayer");
-			BootsSave = ItemStack.of(nbt.getCompound("BootsSave"));
-			ChestplateSave = ItemStack.of(nbt.getCompound("ChestplateSave"));
-			HelmetSave = ItemStack.of(nbt.getCompound("HelmetSave"));
-			LeggingsSave = ItemStack.of(nbt.getCompound("LeggingsSave"));
 			AbilityCost1 = nbt.getDouble("AbilityCost1");
 			AbilityCost2 = nbt.getDouble("AbilityCost2");
 			AbilityCost3 = nbt.getDouble("AbilityCost3");
@@ -463,8 +465,14 @@ public class SlsbModVariables {
 			AbilityCost7 = nbt.getDouble("AbilityCost7");
 			AbilityCost8 = nbt.getDouble("AbilityCost8");
 			AbilityCost9 = nbt.getDouble("AbilityCost9");
+			JoinedWorld = nbt.getBoolean("JoinedWorld");
+			SystemPlayer = nbt.getBoolean("SystemPlayer");
 			RulerVessel = nbt.getBoolean("RulerVessel");
-			ActiveSkills = nbt.getString("ActiveSkills");
+			BootsSave = ItemStack.of(nbt.getCompound("BootsSave"));
+			ChestplateSave = ItemStack.of(nbt.getCompound("ChestplateSave"));
+			HelmetSave = ItemStack.of(nbt.getCompound("HelmetSave"));
+			LeggingsSave = ItemStack.of(nbt.getCompound("LeggingsSave"));
+			SkillsRenamed = nbt.getBoolean("SkillsRenamed");
 		}
 	}
 
@@ -513,6 +521,8 @@ public class SlsbModVariables {
 					variables.HunterClass = message.data.HunterClass;
 					variables.Rank = message.data.Rank;
 					variables.UseAbilityType = message.data.UseAbilityType;
+					variables.ActiveSkills = message.data.ActiveSkills;
+					variables.MageType = message.data.MageType;
 					variables.Cooldown = message.data.Cooldown;
 					variables.Cost = message.data.Cost;
 					variables.Mana = message.data.Mana;
@@ -529,12 +539,6 @@ public class SlsbModVariables {
 					variables.AbilityCooldown7 = message.data.AbilityCooldown7;
 					variables.AbilityCooldown8 = message.data.AbilityCooldown8;
 					variables.AbilityCooldown9 = message.data.AbilityCooldown9;
-					variables.JoinedWorld = message.data.JoinedWorld;
-					variables.SystemPlayer = message.data.SystemPlayer;
-					variables.BootsSave = message.data.BootsSave;
-					variables.ChestplateSave = message.data.ChestplateSave;
-					variables.HelmetSave = message.data.HelmetSave;
-					variables.LeggingsSave = message.data.LeggingsSave;
 					variables.AbilityCost1 = message.data.AbilityCost1;
 					variables.AbilityCost2 = message.data.AbilityCost2;
 					variables.AbilityCost3 = message.data.AbilityCost3;
@@ -544,8 +548,14 @@ public class SlsbModVariables {
 					variables.AbilityCost7 = message.data.AbilityCost7;
 					variables.AbilityCost8 = message.data.AbilityCost8;
 					variables.AbilityCost9 = message.data.AbilityCost9;
+					variables.JoinedWorld = message.data.JoinedWorld;
+					variables.SystemPlayer = message.data.SystemPlayer;
 					variables.RulerVessel = message.data.RulerVessel;
-					variables.ActiveSkills = message.data.ActiveSkills;
+					variables.BootsSave = message.data.BootsSave;
+					variables.ChestplateSave = message.data.ChestplateSave;
+					variables.HelmetSave = message.data.HelmetSave;
+					variables.LeggingsSave = message.data.LeggingsSave;
+					variables.SkillsRenamed = message.data.SkillsRenamed;
 				}
 			});
 			context.setPacketHandled(true);

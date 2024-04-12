@@ -8,6 +8,20 @@ public class UseSkillKeybindProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
+		if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).SkillsRenamed == false) {
+			SkillRenameFighterProcedure.execute(entity);
+			SkillRenameTankerProcedure.execute(entity);
+			SkillRenameRangerProcedure.execute(entity);
+			SkillRenameHealerProcedure.execute(entity);
+			SkillRenameMageProcedure.execute(entity);
+			{
+				boolean _setval = true;
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SkillsRenamed = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
 		if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).SystemPlayer == true) {
 		} else {
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Fighter")) {

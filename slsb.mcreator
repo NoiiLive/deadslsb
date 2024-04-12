@@ -2167,6 +2167,106 @@
         ]
       },
       "path": "~/Blocks/Gates"
+    },
+    {
+      "name": "SkillRenameFighter",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_rename_fighter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillRenameFighterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Fighter"
+    },
+    {
+      "name": "SkillRenameTanker",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_rename_tanker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillRenameTankerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker"
+    },
+    {
+      "name": "SkillRenameRanger",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_rename_ranger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillRenameRangerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Ranger"
+    },
+    {
+      "name": "SkillRenameHealer",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_rename_healer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillRenameHealerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer"
+    },
+    {
+      "name": "SkillRenameMage",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_rename_mage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SkillRenameMageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Mage"
     }
   ],
   "variable_elements": [
@@ -2259,6 +2359,18 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "Switcher"
+    },
+    {
+      "name": "ActiveSkills",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "MageType",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     },
     {
       "name": "Cooldown",
@@ -2363,48 +2475,6 @@
       "value": "0.0"
     },
     {
-      "name": "JoinedWorld",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "SystemPlayer",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "WorldCreated",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "BootsSave",
-      "type": "itemstack",
-      "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "ChestplateSave",
-      "type": "itemstack",
-      "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "HelmetSave",
-      "type": "itemstack",
-      "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "LeggingsSave",
-      "type": "itemstack",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
       "name": "AbilityCost1",
       "type": "number",
       "scope": "player_persistent",
@@ -2459,16 +2529,58 @@
       "value": "0"
     },
     {
+      "name": "JoinedWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "SystemPlayer",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "WorldCreated",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
       "name": "RulerVessel",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
     },
     {
-      "name": "ActiveSkills",
-      "type": "string",
-      "scope": "player_lifetime",
-      "value": "\"\""
+      "name": "BootsSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "ChestplateSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "HelmetSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "LeggingsSave",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "SkillsRenamed",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],

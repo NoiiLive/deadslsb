@@ -9,6 +9,13 @@ public class ClearMovesProcedure {
 		if (entity == null)
 			return;
 		{
+			String _setval = "";
+			entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MageType = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
 			String _setval = "None";
 			entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.AbilitySelected = _setval;
@@ -208,6 +215,13 @@ public class ClearMovesProcedure {
 			double _setval = 1;
 			entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.SwitcherSlot = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			boolean _setval = false;
+			entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.SkillsRenamed = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

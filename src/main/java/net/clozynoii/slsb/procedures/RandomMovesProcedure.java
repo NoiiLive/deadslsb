@@ -41,42 +41,112 @@ public class RandomMovesProcedure {
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Mage")) {
 			magemagic = Mth.nextInt(RandomSource.create(), 1, 10);
 			if (magemagic == 1) {
+				{
+					String _setval = "Flame";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "FlameSpear,FlamePrison,FlameDragon,FlameBlast,Firestorm,FlameBarrage,MagmaSurge,Ignite,";
 				abilitycount = 8;
 			}
 			if (magemagic == 2) {
+				{
+					String _setval = "Earth";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "EarthWall,Earthquake,StoneShard,BoulderCrash,Quicksand,StonePrison,StoneBarrage,Sandstorm,";
 				abilitycount = 8;
 			}
 			if (magemagic == 3) {
+				{
+					String _setval = "Wind";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "WindSlice,Turbulence,WindBurst,WindPull,Suffocation,Tornado,WindBarrier,";
 				abilitycount = 7;
 			}
 			if (magemagic == 4) {
+				{
+					String _setval = "Water";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "AquaSpears,Whirlpool,WaterBlast,TidalWave,AquaShield,Torrent,Drown,";
 				abilitycount = 7;
 			}
 			if (magemagic == 5) {
+				{
+					String _setval = "Ice";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "IceShard,IceBurst.Blizzard,Glacier,FrostBreath,Avalanche,IceWall,";
 				abilitycount = 7;
 			}
 			if (magemagic == 6) {
+				{
+					String _setval = "Lightning";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "Thunderbolt,ChainShock,StaticField,Thunderstorm,Overload,Thunderclap,";
 				abilitycount = 6;
 			}
 			if (magemagic == 7) {
+				{
+					String _setval = "Curse";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "Weakness,Agony,Plague,Confusion,Blindness,Draining,Petrification,";
 				abilitycount = 7;
 			}
 			if (magemagic == 8) {
+				{
+					String _setval = "Summoning";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "SummonBeast,SummonGolem,SummonUndead,";
 				abilitycount = 3;
 			}
 			if (magemagic == 9) {
+				{
+					String _setval = "Spatial";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "ItemSummon,ItemStorage,Teleportation,";
 				abilitycount = 3;
 			}
 			if (magemagic == 10) {
+				{
+					String _setval = "Barrier";
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.MageType = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				abilitylist = "Barrier,ReflectiveBarrier,Encasement,";
 				abilitycount = 3;
 			}
@@ -90,7 +160,7 @@ public class RandomMovesProcedure {
 			abilitycount = 7;
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Tanker")) {
-			abilitylist = "Taunt,Reinforcement,Collapse,ChargedSmash,Bash,Rally,FinalStand,Guardian,ClearMind,Overwhelm,Taunt,Reinforcement,Collapse,ChargedSmash,Bash,Rally,FinalStand,Guardian,ClearMind,Overwhelm,";
+			abilitylist = "Taunt,Reinforcement,Collapse,ChargedSmash,Bash,Rally,FinalStand,Guardian,ClearMind,Overwhelm,";
 			abilitycount = 10;
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Healer")) {
