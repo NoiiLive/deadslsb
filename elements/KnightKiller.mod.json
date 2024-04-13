@@ -1,0 +1,36 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "knightkiller",
+    "customModelName": "knightkiller:default",
+    "blockingModelName": "Normal blocking",
+    "name": "§cKnight Killer",
+    "specialInformation": {
+      "fixedValue": [
+        "§f-Effect \"§eKnight Killer§f\":",
+        "§fAttacks used against armored units will inflict 25% additional damage."
+      ]
+    },
+    "creativeTab": {
+      "value": "CUSTOM:SoloLevelingWeapons"
+    },
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 2.5,
+    "enchantability": 0,
+    "damageVsEntity": 73.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

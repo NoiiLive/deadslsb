@@ -8,19 +8,21 @@
     "texture": "kasaka",
     "customModelName": "kasakavenomfang:default",
     "blockingModelName": "Normal blocking",
-    "name": "Kasaka's Venom Fang",
+    "name": "§eKasaka's Venom Fang",
     "specialInformation": {
       "fixedValue": [
-        "§f-Effect \"§eParalyze§f\": The Opponent Will Be Paralyzed At A Certain Rate.",
-        "§f-Effect \"§eBleed§f\": The Opponent Will Lose 1% Health Every Second."
+        "§f-Effect \"§eParalyze§f\":",
+        "§fThe Opponent Will Be Paralyzed At A Certain Rate.",
+        "§f-Effect \"§eBleed§f\":",
+        "§fThe Opponent Will Lose 1% Health Every Second."
       ]
     },
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "CUSTOM:SoloLevelingWeapons"
     },
     "harvestLevel": 1,
     "efficiency": 4.0,
-    "attackSpeed": 1.0,
+    "attackSpeed": 2.5,
     "enchantability": 0,
     "damageVsEntity": 23.0,
     "usageCount": 0,

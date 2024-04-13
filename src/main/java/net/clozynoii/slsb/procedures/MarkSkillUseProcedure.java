@@ -1,13 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
-import net.clozynoii.slsb.init.SlsbModEntities;
-import net.clozynoii.slsb.entity.MarkProjectileEntity;
+import javax.annotation.Nullable;
 
 public class MarkSkillUseProcedure {
 	public static void execute(Entity entity) {
@@ -20,7 +15,7 @@ public class MarkSkillUseProcedure {
 			if (!projectileLevel.isClientSide()) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-						AbstractArrow entityToSpawn = new MarkProjectileEntity(SlsbModEntities.MARK_PROJECTILE.get(), level);
+						AbstractArrow entityToSpawn = new MarkProjectileEntity(SlsbModEntities.DELETED_MOD_ELEMENT.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);

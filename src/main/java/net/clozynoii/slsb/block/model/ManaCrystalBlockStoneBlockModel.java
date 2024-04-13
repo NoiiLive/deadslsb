@@ -1,0 +1,18 @@
+package net.clozynoii.slsb.block.model;
+
+public class ManaCrystalBlockStoneBlockModel extends GeoModel<ManaCrystalBlockStoneTileEntity> {
+	@Override
+	public ResourceLocation getAnimationResource(ManaCrystalBlockStoneTileEntity animatable) {
+		return new ResourceLocation("slsb", "animations/manacrystal.animation.json");
+	}
+
+	@Override
+	public ResourceLocation getModelResource(ManaCrystalBlockStoneTileEntity animatable) {
+		return new ResourceLocation("slsb", "geo/manacrystal.geo.json");
+	}
+
+	@Override
+	public ResourceLocation getTextureResource(ManaCrystalBlockStoneTileEntity entity) {
+		return new ResourceLocation("slsb", "textures/block/manacrystal_stone.png");
+	}
+}

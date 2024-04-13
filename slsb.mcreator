@@ -522,57 +522,6 @@
       "path": "~/Blocks/Gates"
     },
     {
-      "name": "Test",
-      "type": "item",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/item/TestItem.java",
-          "src/main/resources/assets/slsb/models/item/test.json"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "TestGateRightClick",
-      "type": "procedure",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test_gate_right_click",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/TestGateRightClickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
       "name": "StealthSkill",
       "type": "achievement",
       "sortid": 33,
@@ -801,18 +750,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -1362,22 +1299,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2305,15 +2226,103 @@
       "path": "~/Procedures/Skills/Mage"
     },
     {
-      "name": "QuickStepSkillUse",
+      "name": "MarkProjectileProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 123,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "quick_step_skill_use",
+      "registry_name": "mark_projectile_projectile_hits_living_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/QuickStepSkillUseProcedure.java"
+          "src/main/java/net/clozynoii/slsb/procedures/MarkProjectileProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "MarkSkillUse",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mark_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MarkSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
+    },
+    {
+      "name": "Evade",
+      "type": "potioneffect",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "evade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/EvadeMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "MarkProjectile",
+      "type": "projectile",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mark_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/entity/MarkProjectileEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "BackstabSkillUse",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backstab_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/BackstabSkillUseProcedure.java"
         ],
         "dependencies": [
           {
@@ -2341,18 +2350,36 @@
       "path": "~/Procedures/Skills/Assassin/Moves"
     },
     {
-      "name": "Evade",
-      "type": "potioneffect",
-      "sortid": 124,
+      "name": "MarkHit",
+      "type": "procedure",
+      "sortid": 130,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "evade",
+      "registry_name": "mark_hit",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/potion/EvadeMobEffect.java"
+          "src/main/java/net/clozynoii/slsb/procedures/MarkHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
-      "path": "~/Potions"
+      "path": "~/Procedures/Skills/Assassin/Moves"
     },
     {
       "name": "EvadeTick",
@@ -2364,6 +2391,42 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/slsb/procedures/EvadeTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
+    },
+    {
+      "name": "QuickStepSkillUse",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_step_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/QuickStepSkillUseProcedure.java"
         ],
         "dependencies": [
           {
@@ -2411,146 +2474,208 @@
       "path": "~/Procedures/Skills/Assassin/Moves"
     },
     {
-      "name": "MarkProjectileProjectileHitsLivingEntity",
-      "type": "procedure",
-      "sortid": 127,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mark_projectile_projectile_hits_living_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/MarkProjectileProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "MarkProjectile",
-      "type": "projectile",
-      "sortid": 128,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mark_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/entity/MarkProjectileEntity.java"
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "MarkSkillUse",
-      "type": "procedure",
-      "sortid": 129,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mark_skill_use",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/MarkSkillUseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Skills/Assassin/Moves"
-    },
-    {
-      "name": "MarkHit",
-      "type": "procedure",
+      "name": "SoloLevelingItems",
+      "type": "tab",
       "sortid": 130,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "mark_hit",
+      "registry_name": "solo_leveling_items",
       "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/MarkHitProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "files": []
       },
-      "path": "~/Procedures/Skills/Assassin/Moves"
+      "path": "~/Tabs"
     },
     {
-      "name": "BackstabSkillUse",
-      "type": "procedure",
+      "name": "KnightKiller",
+      "type": "tool",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knight_killer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/knight_killer.json",
+          "src/main/java/net/clozynoii/slsb/item/KnightKillerItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "ManaCrystalBlockStone",
+      "type": "animatedblock",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockStoneBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockStoneTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockStoneDisplayItem.java",
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_stone.json",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockStoneBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockStoneDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockStoneTileEntity.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_stone.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockStoneDisplayItemRenderer.java",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_stone_particle.json"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystalBlockPure",
+      "type": "animatedblock",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_pure",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_pure_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockPureTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockPureBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockPureDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockPureDisplayModel.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_pure.json",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockPureBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockPureDisplayItem.java",
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_pure.json",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockPureTileEntity.java"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystalBlockGranite",
+      "type": "animatedblock",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_granite",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_granite.json",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_granite_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockGraniteDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockGraniteBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockGraniteTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockGraniteBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockGraniteDisplayItem.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_granite.json",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockGraniteTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockGraniteDisplayItemRenderer.java"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystalBlockDiorite",
+      "type": "animatedblock",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_diorite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDioriteDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockDioriteDisplayItem.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDioriteBlockModel.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_diorite.json",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockDioriteBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDioriteTileRenderer.java",
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_diorite.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDioriteDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockDioriteTileEntity.java",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_diorite_particle.json"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystalBlockDeepslate",
+      "type": "animatedblock",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_deepslate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDeepslateBlockModel.java",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_deepslate_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockDeepslateBlock.java",
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_deepslate.json",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockDeepslateTileEntity.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_deepslate.json",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockDeepslateDisplayItem.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDeepslateTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDeepslateDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDeepslateDisplayItemRenderer.java"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystal",
+      "type": "item",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/ManaCrystalItem.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "ManaCrystalBlockDripstone",
+      "type": "animatedblock",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_dripstone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockDripstoneDisplayItem.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockDripstoneTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDripstoneDisplayModel.java",
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_dripstone.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDripstoneDisplayItemRenderer.java",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_dripstone_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDripstoneTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDripstoneBlockModel.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_dripstone.json",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockDripstoneBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "SoloLevelingBlocks",
+      "type": "tab",
       "sortid": 131,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "backstab_skill_use",
+      "registry_name": "solo_leveling_blocks",
       "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/BackstabSkillUseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "files": []
       },
-      "path": "~/Procedures/Skills/Assassin/Moves"
+      "path": "~/Tabs"
+    },
+    {
+      "name": "SoloLevelingWeapons",
+      "type": "tab",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solo_leveling_weapons",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Tabs"
     }
   ],
   "variable_elements": [
@@ -2867,16 +2992,16 @@
       "value": "false"
     },
     {
-      "name": "Marked",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
       "name": "MarkedOwner",
       "type": "string",
       "scope": "player_lifetime",
       "value": ""
+    },
+    {
+      "name": "Marked",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -2904,7 +3029,6 @@
       "effect.slsb.healing_aura": "Healing Aura",
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
       "key.slsb.switch_skill": "Switch Skill",
-      "item.slsb.test": "Force Dungeon Break",
       "subtitles.stab": "",
       "advancements.awakening.descr": "Awaken as a Hunter.",
       "advancements.assassin_class.descr": "Become the Assassin Class.",
@@ -2913,7 +3037,6 @@
       "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "advancements.assassin_class.title": "Assassin",
       "key.slsb.use_skill": "Use Skill",
-      "effect.slsb.evade": "Evade",
       "advancements.heal_skill.title": "Heal Skill",
       "effect.slsb.stealth": "Stealth",
       "advancements.awakening.title": "Awakening"
@@ -2923,8 +3046,21 @@
     "name": "~",
     "children": [
       {
+        "name": "Gamerules",
+        "children": []
+      },
+      {
         "name": "Procedures",
         "children": [
+          {
+            "name": "Move Switching",
+            "children": [
+              {
+                "name": "Switcher",
+                "children": []
+              }
+            ]
+          },
           {
             "name": "Commands",
             "children": []
@@ -2941,7 +3077,25 @@
                 "children": []
               },
               {
+                "name": "Ranger",
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
+              },
+              {
                 "name": "Fighter",
+                "children": [
+                  {
+                    "name": "Moves",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Healer",
                 "children": [
                   {
                     "name": "Moves",
@@ -2975,39 +3129,12 @@
                     "children": []
                   }
                 ]
-              },
-              {
-                "name": "Ranger",
-                "children": [
-                  {
-                    "name": "Moves",
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "name": "Healer",
-                "children": [
-                  {
-                    "name": "Moves",
-                    "children": []
-                  }
-                ]
               }
             ]
           },
           {
             "name": "Gates",
             "children": []
-          },
-          {
-            "name": "Move Switching",
-            "children": [
-              {
-                "name": "Switcher",
-                "children": []
-              }
-            ]
           }
         ]
       },
@@ -3035,6 +3162,10 @@
           {
             "name": "Gates",
             "children": []
+          },
+          {
+            "name": "Mana Crystals",
+            "children": []
           }
         ]
       },
@@ -3059,6 +3190,10 @@
         "children": []
       },
       {
+        "name": "Tabs",
+        "children": []
+      },
+      {
         "name": "Items",
         "children": []
       },
@@ -3073,6 +3208,10 @@
       },
       {
         "name": "Biomes",
+        "children": []
+      },
+      {
+        "name": "Projectiles",
         "children": []
       },
       {
@@ -3126,14 +3265,6 @@
             ]
           }
         ]
-      },
-      {
-        "name": "Gamerules",
-        "children": []
-      },
-      {
-        "name": "Projectiles",
-        "children": []
       }
     ]
   },

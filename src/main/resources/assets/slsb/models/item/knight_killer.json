@@ -1,0 +1,7 @@
+{
+  "parent": "slsb:custom/knightkiller",
+  "textures": {
+    "0": "slsb:block/knightkillertexture",
+    "particle": "slsb:item/knightkiller"
+  }
+}

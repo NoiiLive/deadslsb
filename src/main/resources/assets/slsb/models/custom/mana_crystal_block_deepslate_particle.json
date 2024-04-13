@@ -1,0 +1,6 @@
+{
+  "parent": "slsb:displaysettings/manacrystal.item",
+  "textures": {
+    "particle": "slsb:block/manacrystal_deepslate"
+  }
+}
