@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
-      "model": "slsb:custom/mana_crystal_block_deepslate_particle"
+    "axis=x": {
+      "model": "slsb:custom/mana_crystal_block_deepslate_particle",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "slsb:custom/mana_crystal_block_deepslate_particle",
+    },
+    "axis=z": {
+      "model": "slsb:custom/mana_crystal_block_deepslate_particle",
+      "x": 90
     }
   }
 }

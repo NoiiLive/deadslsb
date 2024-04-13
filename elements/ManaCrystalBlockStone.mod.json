@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 0,
-    "rotationMode": 0,
+    "rotationMode": 5,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
@@ -101,13 +101,13 @@
     "luminance": 10,
     "unbreakable": false,
     "breakHarvestLevel": 2,
-    "spawnParticles": false,
+    "spawnParticles": true,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "GLOW"
     },
     "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "particleSpawningRadious": 3.0,
+    "particleAmount": 1,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
