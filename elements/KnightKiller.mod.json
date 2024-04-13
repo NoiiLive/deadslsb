@@ -8,7 +8,7 @@
     "texture": "knightkiller",
     "customModelName": "knightkiller:default",
     "blockingModelName": "Normal blocking",
-    "name": "Knight Killer",
+    "name": "§cKnight Killer",
     "specialInformation": {
       "fixedValue": [
         "§f-Effect \"§eKnight Killer§f\":",
@@ -20,7 +20,7 @@
     },
     "harvestLevel": 1,
     "efficiency": 4.0,
-    "attackSpeed": 1.0,
+    "attackSpeed": 3.0,
     "enchantability": 0,
     "damageVsEntity": 73.0,
     "usageCount": 0,

@@ -8,7 +8,7 @@
     "texture": "kasaka",
     "customModelName": "kasakavenomfang:default",
     "blockingModelName": "Normal blocking",
-    "name": "Kasaka's Venom Fang",
+    "name": "§eKasaka's Venom Fang",
     "specialInformation": {
       "fixedValue": [
         "§f-Effect \"§eParalyze§f\":",
@@ -22,7 +22,7 @@
     },
     "harvestLevel": 1,
     "efficiency": 4.0,
-    "attackSpeed": 1.0,
+    "attackSpeed": 3.0,
     "enchantability": 0,
     "damageVsEntity": 23.0,
     "usageCount": 0,

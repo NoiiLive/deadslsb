@@ -2748,10 +2748,10 @@
   "language_map": {
     "en_us": {
       "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
-      "item.slsb.kasakas_venom_fang": "Kasaka\u0027s Venom Fang",
+      "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
       "item.slsb.mana_crystal": "§bMana Crystal",
-      "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
+      "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
       "entity.slsb.after_image": "After Image",
       "advancements.strength_skill.title": "Strength Skill",
@@ -2763,7 +2763,7 @@
       "block.slsb.red_gate_small": "Red Gate Small",
       "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
       "effect.slsb.healing_aura": "Healing Aura",
-      "item.slsb.knight_killer": "Knight Killer",
+      "item.slsb.knight_killer": "§cKnight Killer",
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
       "key.slsb.switch_skill": "Switch Skill",
       "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
