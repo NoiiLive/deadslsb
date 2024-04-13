@@ -38,7 +38,7 @@ public class KasakasVenomFangItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 3, -1f, new Item.Properties().fireResistant());
+		}, 3, -1.5f, new Item.Properties().fireResistant());
 	}
 
 	@Override
