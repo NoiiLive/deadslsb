@@ -52,7 +52,7 @@ public class SwitchSkillMessage {
 			return;
 		if (type == 0) {
 
-			ChangeSkillKeybindProcedure.execute(world, entity);
+			ChangeSkillKeybindProcedure.execute(entity);
 		}
 	}
 

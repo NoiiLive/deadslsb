@@ -8,6 +8,6 @@ public class ManaOverlayProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "Mana \u00A7l" + "[\u00A7b" + new java.text.DecimalFormat("#").format((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana) + "\u00A7r\u00A7l]";
+		return "\u00A7f\u00A7l[\u00A7b" + new java.text.DecimalFormat("#").format((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana) + "\u00A7f\u00A7l]";
 	}
 }

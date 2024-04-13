@@ -21,6 +21,7 @@ public class RandomMovesCommandProcedure {
 		double totalabilities = 0;
 		double magemagic = 0;
 		double abilitycount = 0;
+		ClearAbilitiesCommandProcedure.execute(arguments);
 		abilitiesselected = 1;
 		if ((((new Object() {
 			public Entity getEntity() {

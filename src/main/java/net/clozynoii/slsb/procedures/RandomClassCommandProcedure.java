@@ -1,6 +1,5 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
@@ -15,7 +14,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 
 public class RandomClassCommandProcedure {
-	public static void execute(LevelAccessor world, CommandContext<CommandSourceStack> arguments) {
+	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		double randomclass = 0;
 		double randomrank = 0;
 		if (!(((new Object() {
@@ -407,7 +406,6 @@ public class RandomClassCommandProcedure {
 				}.getEntity()) instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal(("You Are A " + "\u00A7c\u00A7lTanker")), true);
 			}
-			RandomMovesCommandProcedure.execute(world, arguments);
 		}
 	}
 }

@@ -48,7 +48,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Player"
+      "path": "~/Procedures/Awakening"
     },
     {
       "name": "RandomClass",
@@ -72,7 +72,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Player"
+      "path": "~/Procedures/Awakening"
     },
     {
       "name": "RandomRank",
@@ -92,7 +92,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Player"
+      "path": "~/Procedures/Awakening"
     },
     {
       "name": "SLSBAdmin",
@@ -250,10 +250,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1036,10 +1032,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1130,7 +1122,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Player"
+      "path": "~/Procedures/Awakening"
     },
     {
       "name": "RandomMovesCommand",
@@ -1994,7 +1986,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Player"
+      "path": "~/Procedures/Awakening"
     },
     {
       "name": "StealthSkillUse",
@@ -2800,6 +2792,736 @@
         "files": []
       },
       "path": "~/Tabs"
+    },
+    {
+      "name": "AwakeningOrb",
+      "type": "animatedblock",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "awakening_orb",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/renderer/AwakeningOrbDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/display/AwakeningOrbDisplayItem.java",
+          "src/main/java/net/clozynoii/slsb/block/model/AwakeningOrbDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/AwakeningOrbBlock.java",
+          "src/main/resources/assets/slsb/models/custom/awakening_orb_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/model/AwakeningOrbBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/AwakeningOrbTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/AwakeningOrbTileRenderer.java",
+          "src/main/resources/assets/slsb/models/item/awakening_orb.json",
+          "src/main/resources/assets/slsb/blockstates/awakening_orb.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "OrbAwakening",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orb_awakening",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/OrbAwakeningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Awakening"
+    },
+    {
+      "name": "UnawakenCommand",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unawaken_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/UnawakenCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands"
+    },
+    {
+      "name": "ManaBar1",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar2",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar3",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar4",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar5",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar6",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar7",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar8",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_8",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar9",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_9",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar10",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_10",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar11",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_11",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar11Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar12",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_12",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar12Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar13",
+      "type": "procedure",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_13",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar13Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar14",
+      "type": "procedure",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_14",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar14Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ManaBar15",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_bar_15",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ManaBar15Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Mana Bar"
+    },
+    {
+      "name": "ReturnOverlayActivate",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_overlay_activate",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnOverlayActivateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI"
+    },
+    {
+      "name": "ReturnAbilitySlots1",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_slots_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySlots1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Exist"
+    },
+    {
+      "name": "ReturnAbilitySlots2",
+      "type": "procedure",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_slots_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySlots2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Exist"
+    },
+    {
+      "name": "ReturnAbilitySlots3",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_slots_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySlots3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Exist"
+    },
+    {
+      "name": "ReturnAbilitySlots4",
+      "type": "procedure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_slots_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySlots4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Exist"
+    },
+    {
+      "name": "ReturnAbilitySlots5",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_slots_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySlots5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Exist"
+    },
+    {
+      "name": "ReturnAbilitySelected1",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_selected_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySelected1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Selected"
+    },
+    {
+      "name": "ReturnAbilitySelected2",
+      "type": "procedure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_selected_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySelected2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Selected"
+    },
+    {
+      "name": "ReturnAbilitySelected3",
+      "type": "procedure",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_selected_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySelected3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Selected"
+    },
+    {
+      "name": "ReturnAbilitySelected4",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_selected_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySelected4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Selected"
+    },
+    {
+      "name": "ReturnAbilitySelected5",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_selected_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilitySelected5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Selected"
+    },
+    {
+      "name": "ReturnAbilityCooldown1",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_cooldown_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilityCooldown1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Cooldown"
+    },
+    {
+      "name": "ReturnAbilityCooldown2",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_cooldown_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilityCooldown2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Cooldown"
+    },
+    {
+      "name": "ReturnAbilityCooldown3",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_cooldown_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilityCooldown3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Cooldown"
+    },
+    {
+      "name": "ReturnAbilityCooldown4",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_cooldown_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilityCooldown4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Cooldown"
+    },
+    {
+      "name": "ReturnAbilityCooldown5",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_ability_cooldown_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReturnAbilityCooldown5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI/Slots/Cooldown"
     }
   ],
   "variable_elements": [
@@ -2904,18 +3626,6 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
-    },
-    {
-      "name": "Cooldown",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "GateTimer",
@@ -3116,16 +3826,10 @@
       "value": "false"
     },
     {
-      "name": "MarkedOwner",
-      "type": "string",
-      "scope": "player_lifetime",
-      "value": ""
-    },
-    {
-      "name": "Marked",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
+      "name": "Awakened",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -3146,6 +3850,7 @@
       "advancements.haste_skill.title": "Haste Skill",
       "block.slsb.blue_gate_small": "Blue Gate Small",
       "block.slsb.red_gate_small": "Red Gate Small",
+      "block.slsb.awakening_orb": "Awakening Orb",
       "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
       "effect.slsb.healing_aura": "Healing Aura",
       "item.slsb.knight_killer": "§cKnight Killer",
@@ -3263,6 +3968,36 @@
           {
             "name": "Gates",
             "children": []
+          },
+          {
+            "name": "Awakening",
+            "children": []
+          },
+          {
+            "name": "GUI",
+            "children": [
+              {
+                "name": "Mana Bar",
+                "children": []
+              },
+              {
+                "name": "Slots",
+                "children": [
+                  {
+                    "name": "Exist",
+                    "children": []
+                  },
+                  {
+                    "name": "Selected",
+                    "children": []
+                  },
+                  {
+                    "name": "Cooldown",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       },

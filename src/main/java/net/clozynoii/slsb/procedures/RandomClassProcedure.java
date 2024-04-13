@@ -1,11 +1,9 @@
 package net.clozynoii.slsb.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
-import net.minecraft.network.chat.Component;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
 
@@ -31,8 +29,6 @@ public class RandomClassProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("You Are A " + "\u00A7b\u00A7lMage")), true);
 			}
 			if (randomclass == 2) {
 				{
@@ -49,8 +45,6 @@ public class RandomClassProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("You Are An " + "\u00A79\u00A7lAssassin")), true);
 			}
 			if (randomclass == 3) {
 				{
@@ -67,8 +61,6 @@ public class RandomClassProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("You Are A " + "\u00A72\u00A7lRanger")), true);
 			}
 			if (randomclass == 4) {
 				{
@@ -85,8 +77,6 @@ public class RandomClassProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("You Are A " + "\u00A7a\u00A7lHealer")), true);
 			}
 			if (randomclass == 5) {
 				{
@@ -103,8 +93,6 @@ public class RandomClassProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("You Are A " + "\u00A76\u00A7lFighter")), true);
 			}
 			if (randomclass == 6) {
 				{
@@ -121,8 +109,6 @@ public class RandomClassProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("You Are A " + "\u00A7c\u00A7lTanker")), true);
 			}
 			{
 				String _setval = "None";

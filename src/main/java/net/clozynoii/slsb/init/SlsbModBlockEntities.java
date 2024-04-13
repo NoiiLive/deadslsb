@@ -20,6 +20,7 @@ import net.clozynoii.slsb.block.entity.ManaCrystalBlockDioriteTileEntity;
 import net.clozynoii.slsb.block.entity.ManaCrystalBlockDeepslateTileEntity;
 import net.clozynoii.slsb.block.entity.BlueGateSmallTileEntity;
 import net.clozynoii.slsb.block.entity.BlueGateMediumTileEntity;
+import net.clozynoii.slsb.block.entity.AwakeningOrbTileEntity;
 import net.clozynoii.slsb.SlsbMod;
 
 public class SlsbModBlockEntities {
@@ -40,6 +41,7 @@ public class SlsbModBlockEntities {
 			() -> BlockEntityType.Builder.of(ManaCrystalBlockGraniteTileEntity::new, SlsbModBlocks.MANA_CRYSTAL_BLOCK_GRANITE.get()).build(null));
 	public static final RegistryObject<BlockEntityType<ManaCrystalBlockDripstoneTileEntity>> MANA_CRYSTAL_BLOCK_DRIPSTONE = REGISTRY.register("mana_crystal_block_dripstone",
 			() -> BlockEntityType.Builder.of(ManaCrystalBlockDripstoneTileEntity::new, SlsbModBlocks.MANA_CRYSTAL_BLOCK_DRIPSTONE.get()).build(null));
+	public static final RegistryObject<BlockEntityType<AwakeningOrbTileEntity>> AWAKENING_ORB = REGISTRY.register("awakening_orb", () -> BlockEntityType.Builder.of(AwakeningOrbTileEntity::new, SlsbModBlocks.AWAKENING_ORB.get()).build(null));
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));

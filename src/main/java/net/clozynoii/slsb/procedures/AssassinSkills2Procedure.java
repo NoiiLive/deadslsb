@@ -34,9 +34,9 @@ public class AssassinSkills2Procedure {
 					StealthSkillUseProcedure.execute(world, x, y, z, entity);
 				}
 			}
-			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("")) {
+			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Quickstep")) {
 				{
-					double _setval = 0;
+					double _setval = 50;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost2 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -44,6 +44,64 @@ public class AssassinSkills2Procedure {
 				}
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost2) {
+					QuickStepSkillUseProcedure.execute(world, x, y, z, entity);
+				} else {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(
+								Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
+										+ new java.text.DecimalFormat("##").format((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCost2) + " \u00A7fMana to Use This")),
+								true);
+				}
+			}
+			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Evasion")) {
+				{
+					double _setval = 150;
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AbilityCost2 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost2) {
+					EvadeSkillUseProcedure.execute(entity);
+				} else {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(
+								Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
+										+ new java.text.DecimalFormat("##").format((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCost2) + " \u00A7fMana to Use This")),
+								true);
+				}
+			}
+			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Backstab")) {
+				{
+					double _setval = 350;
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AbilityCost2 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost2) {
+					BackstabSkillUseProcedure.execute(world, x, y, z, entity);
+				} else {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(
+								Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
+										+ new java.text.DecimalFormat("##").format((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCost2) + " \u00A7fMana to Use This")),
+								true);
+				}
+			}
+			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Mark")) {
+				{
+					double _setval = 200;
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AbilityCost2 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost2) {
+					MarkSkillUseProcedure.execute(entity);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(
@@ -55,7 +113,7 @@ public class AssassinSkills2Procedure {
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("\u00A7fAbility on Cooldown For \u00A7c\u00A7l"
-						+ new java.text.DecimalFormat("##").format((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCooldown2) + " \u00A7fSeconds")), true);
+						+ new java.text.DecimalFormat("##").format((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCooldown2 / 20) + " \u00A7fSeconds")), true);
 		}
 	}
 }
