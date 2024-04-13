@@ -1,8 +1,13 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.clozynoii.slsb.network.SlsbModVariables;
+import net.clozynoii.slsb.init.SlsbModEntities;
+import net.clozynoii.slsb.entity.MarkProjectileEntity;
 
 public class MarkSkillUseProcedure {
 	public static void execute(Entity entity) {
@@ -15,7 +20,7 @@ public class MarkSkillUseProcedure {
 			if (!projectileLevel.isClientSide()) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-						AbstractArrow entityToSpawn = new MarkProjectileEntity(SlsbModEntities.DELETED_MOD_ELEMENT.get(), level);
+						AbstractArrow entityToSpawn = new MarkProjectileEntity(SlsbModEntities.MARK_PROJECTILE.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);
@@ -28,7 +33,7 @@ public class MarkSkillUseProcedure {
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 		}
-		cooldown = 500;
+		cooldown = 200;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected)
 				.equals((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1)) {
 			{

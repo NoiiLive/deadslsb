@@ -1,25 +1,43 @@
 package net.clozynoii.slsb.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
 import net.clozynoii.slsb.init.SlsbModMobEffects;
 import net.clozynoii.slsb.SlsbMod;
 
 public class StealthSkillUseProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double cooldown = 0;
 		boolean gate = false;
 		gate = false;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Stealth") == false && gate == false) {
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.nearby_closest")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.nearby_closest")), SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, 0.1, 0.1, 0.1, 0.1);
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.STEALTH.get(), 2, 0, false, true));
 			gate = true;
@@ -98,6 +116,15 @@ public class StealthSkillUseProcedure {
 			SlsbMod.LOGGER.debug(((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills));
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Stealth") == true && gate == false) {
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.nearby_closer")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.nearby_closer")), SoundSource.PLAYERS, 1, 1, false);
+				}
+			}
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, 0.1, 0.1, 0.1, 0.1);
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(SlsbModMobEffects.STEALTH.get());
 			gate = true;

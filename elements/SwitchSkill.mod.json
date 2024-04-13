@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "R",
+    "triggerKey": "X",
     "keyBindingName": "Switch Skill",
     "keyBindingCategoryKey": "slsb",
     "onKeyPressed": {

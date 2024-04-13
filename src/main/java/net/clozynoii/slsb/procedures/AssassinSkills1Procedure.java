@@ -23,7 +23,7 @@ public class AssassinSkills1Procedure {
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Stealth") == false) {
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
-						StealthSkillUseProcedure.execute(entity);
+						StealthSkillUseProcedure.execute(world, x, y, z, entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -31,7 +31,7 @@ public class AssassinSkills1Procedure {
 									true);
 					}
 				} else {
-					StealthSkillUseProcedure.execute(entity);
+					StealthSkillUseProcedure.execute(world, x, y, z, entity);
 				}
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Quickstep")) {
