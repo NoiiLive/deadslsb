@@ -36,6 +36,7 @@ public class SlsbModTabs {
 	public static final RegistryObject<CreativeModeTab> SOLO_LEVELING_WEAPONS = REGISTRY.register("solo_leveling_weapons",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.slsb.solo_leveling_weapons")).icon(() -> new ItemStack(SlsbModItems.KASAKAS_VENOM_FANG.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(SlsbModItems.KASAKAS_VENOM_FANG.get());
+				tabData.accept(SlsbModItems.KNIGHT_KILLER.get());
 			})
 
 					.build());

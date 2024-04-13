@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.item.Item;
 
 import net.clozynoii.slsb.item.ManaCrystalItem;
+import net.clozynoii.slsb.item.KnightKillerItem;
 import net.clozynoii.slsb.item.KasakasVenomFangItem;
 import net.clozynoii.slsb.block.display.RedGateSmallDisplayItem;
 import net.clozynoii.slsb.block.display.ManaCrystalBlockStoneDisplayItem;
@@ -42,4 +43,5 @@ public class SlsbModItems {
 			() -> new ManaCrystalBlockGraniteDisplayItem(SlsbModBlocks.MANA_CRYSTAL_BLOCK_GRANITE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> MANA_CRYSTAL_BLOCK_DRIPSTONE = REGISTRY.register(SlsbModBlocks.MANA_CRYSTAL_BLOCK_DRIPSTONE.getId().getPath(),
 			() -> new ManaCrystalBlockDripstoneDisplayItem(SlsbModBlocks.MANA_CRYSTAL_BLOCK_DRIPSTONE.get(), new Item.Properties()));
+	public static final RegistryObject<Item> KNIGHT_KILLER = REGISTRY.register("knight_killer", () -> new KnightKillerItem());
 }

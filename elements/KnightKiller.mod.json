@@ -5,16 +5,14 @@
     "toolType": "Sword",
     "renderType": 1,
     "blockingRenderType": 0,
-    "texture": "kasaka",
-    "customModelName": "kasakavenomfang:default",
+    "texture": "knightkiller",
+    "customModelName": "knightkiller:default",
     "blockingModelName": "Normal blocking",
-    "name": "Kasaka's Venom Fang",
+    "name": "Knight Killer",
     "specialInformation": {
       "fixedValue": [
-        "§f-Effect \"§eParalyze§f\":",
-        "§fThe Opponent Will Be Paralyzed At A Certain Rate.",
-        "§f-Effect \"§eBleed§f\":",
-        "§fThe Opponent Will Lose 1% Health Every Second."
+        "§f-Effect \"§eKnight Killer§f\":",
+        "§fAttacks used against armored units will inflict 25% additional damage."
       ]
     },
     "creativeTab": {
@@ -24,7 +22,7 @@
     "efficiency": 4.0,
     "attackSpeed": 1.0,
     "enchantability": 0,
-    "damageVsEntity": 23.0,
+    "damageVsEntity": 73.0,
     "usageCount": 0,
     "blocksAffected": [],
     "glowCondition": {

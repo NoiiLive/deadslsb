@@ -12,8 +12,8 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-public class KasakasVenomFangItem extends SwordItem {
-	public KasakasVenomFangItem() {
+public class KnightKillerItem extends SwordItem {
+	public KnightKillerItem() {
 		super(new Tier() {
 			public int getUses() {
 				return 0;
@@ -24,7 +24,7 @@ public class KasakasVenomFangItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 21f;
+				return 71f;
 			}
 
 			public int getLevel() {
@@ -44,9 +44,7 @@ public class KasakasVenomFangItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A7f-Effect \"\u00A7eParalyze\u00A7f\":"));
-		list.add(Component.literal("\u00A7fThe Opponent Will Be Paralyzed At A Certain Rate."));
-		list.add(Component.literal("\u00A7f-Effect \"\u00A7eBleed\u00A7f\":"));
-		list.add(Component.literal("\u00A7fThe Opponent Will Lose 1% Health Every Second."));
+		list.add(Component.literal("\u00A7f-Effect \"\u00A7eKnight Killer\u00A7f\":"));
+		list.add(Component.literal("\u00A7fAttacks used against armored units will inflict 25% additional damage."));
 	}
 }

@@ -2413,6 +2413,21 @@
         "files": []
       },
       "path": "~/Tabs"
+    },
+    {
+      "name": "KnightKiller",
+      "type": "tool",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knight_killer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/KnightKillerItem.java",
+          "src/main/resources/assets/slsb/models/item/knight_killer.json"
+        ]
+      },
+      "path": "~/Weapons"
     }
   ],
   "variable_elements": [
@@ -2748,6 +2763,7 @@
       "block.slsb.red_gate_small": "Red Gate Small",
       "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
       "effect.slsb.healing_aura": "Healing Aura",
+      "item.slsb.knight_killer": "Knight Killer",
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
       "key.slsb.switch_skill": "Switch Skill",
       "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
