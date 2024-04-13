@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "gate_item",
+    "texture": "mana_crystal",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Force Dungeon Break",
+    "name": "§bMana Crystal",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:SoloLevelingItems"
     },
     "stackSize": 64,
     "enchantability": 0,
@@ -27,7 +27,10 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§7Contains small amounts of §bMana",
+        "§7§oCan be sold for a decent price."
+      ]
     },
     "glowCondition": {
       "fixedValue": false

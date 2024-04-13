@@ -522,57 +522,6 @@
       "path": "~/Blocks/Gates"
     },
     {
-      "name": "Test",
-      "type": "item",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/item/TestItem.java",
-          "src/main/resources/assets/slsb/models/item/test.json"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "TestGateRightClick",
-      "type": "procedure",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test_gate_right_click",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/TestGateRightClickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
       "name": "StealthSkill",
       "type": "achievement",
       "sortid": 33,
@@ -2275,6 +2224,195 @@
         ]
       },
       "path": "~/Procedures/Skills/Mage"
+    },
+    {
+      "name": "ManaCrystal",
+      "type": "item",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/ManaCrystalItem.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "ManaCrystalBlockStone",
+      "type": "animatedblock",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_stone.json",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockStoneBlock.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_stone.json",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockStoneTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockStoneDisplayItemRenderer.java",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_stone_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockStoneDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockStoneBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockStoneTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockStoneDisplayItem.java"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystalBlockPure",
+      "type": "animatedblock",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_pure",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_pure_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockPureTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockPureDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockPureDisplayItem.java",
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_pure.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockPureDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockPureTileRenderer.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_pure.json",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockPureBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockPureBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystalBlockDeepslate",
+      "type": "animatedblock",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_deepslate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDeepslateDisplayModel.java",
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_deepslate.json",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_deepslate.json",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_deepslate_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDeepslateTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDeepslateBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockDeepslateTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockDeepslateBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDeepslateDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockDeepslateDisplayItem.java"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystalBlockDiorite",
+      "type": "animatedblock",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_diorite",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_diorite.json",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockDioriteBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockDioriteTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDioriteDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockDioriteDisplayItem.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDioriteTileRenderer.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_diorite.json",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_diorite_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDioriteDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDioriteBlockModel.java"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystalBlockGranite",
+      "type": "animatedblock",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_granite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockGraniteDisplayItem.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_granite.json",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockGraniteDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockGraniteTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockGraniteTileRenderer.java",
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_granite.json",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockGraniteBlock.java",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_granite_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockGraniteBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockGraniteDisplayItemRenderer.java"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "ManaCrystalBlockDripstone",
+      "type": "animatedblock",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_crystal_block_dripstone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDripstoneDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/ManaCrystalBlockDripstoneTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDripstoneDisplayItemRenderer.java",
+          "src/main/resources/assets/slsb/models/item/mana_crystal_block_dripstone.json",
+          "src/main/resources/assets/slsb/models/custom/mana_crystal_block_dripstone_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/ManaCrystalBlockDripstoneTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/ManaCrystalBlockDripstoneBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/ManaCrystalBlockDripstoneBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/display/ManaCrystalBlockDripstoneDisplayItem.java",
+          "src/main/resources/assets/slsb/blockstates/mana_crystal_block_dripstone.json"
+        ]
+      },
+      "path": "~/Blocks/Mana Crystals"
+    },
+    {
+      "name": "SoloLevelingItems",
+      "type": "tab",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solo_leveling_items",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Tabs"
+    },
+    {
+      "name": "SoloLevelingBlocks",
+      "type": "tab",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solo_leveling_blocks",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Tabs"
+    },
+    {
+      "name": "SoloLevelingWeapons",
+      "type": "tab",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solo_leveling_weapons",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Tabs"
     }
   ],
   "variable_elements": [
@@ -2596,24 +2734,33 @@
     "en_us": {
       "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
       "item.slsb.kasakas_venom_fang": "Kasaka\u0027s Venom Fang",
+      "item.slsb.mana_crystal": "§bMana Crystal",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
+      "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
+      "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
       "entity.slsb.after_image": "After Image",
       "advancements.strength_skill.title": "Strength Skill",
+      "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
       "advancements.heal_skill.descr": "Unlock Heal Skill",
       "advancements.stealth_skill.title": "Stealth Skill",
       "advancements.haste_skill.title": "Haste Skill",
       "block.slsb.blue_gate_small": "Blue Gate Small",
       "block.slsb.red_gate_small": "Red Gate Small",
+      "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
       "effect.slsb.healing_aura": "Healing Aura",
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
       "key.slsb.switch_skill": "Switch Skill",
-      "item.slsb.test": "Force Dungeon Break",
+      "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
+      "item_group.slsb.solo_leveling_weapons": "Solo Leveling: Weapons",
       "advancements.awakening.descr": "Awaken as a Hunter.",
+      "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
       "advancements.assassin_class.descr": "Become the Assassin Class.",
       "advancements.healer_class.title": "Healer",
+      "block.slsb.mana_crystal_block_stone": "Mana Crystal (Stone)",
       "advancements.healer_class.descr": "Become the Healer Class.",
       "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "advancements.assassin_class.title": "Assassin",
+      "block.slsb.mana_crystal_block_granite": "Mana Crystal (Granite)",
       "key.slsb.use_skill": "Use Skill",
       "advancements.heal_skill.title": "Heal Skill",
       "effect.slsb.stealth": "Stealth",
@@ -2736,6 +2883,10 @@
           {
             "name": "Gates",
             "children": []
+          },
+          {
+            "name": "Mana Crystals",
+            "children": []
           }
         ]
       },
@@ -2830,6 +2981,10 @@
       },
       {
         "name": "Gamerules",
+        "children": []
+      },
+      {
+        "name": "Tabs",
         "children": []
       }
     ]
