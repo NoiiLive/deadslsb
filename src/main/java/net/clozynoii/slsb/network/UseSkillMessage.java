@@ -52,7 +52,7 @@ public class UseSkillMessage {
 			return;
 		if (type == 0) {
 
-			UseSkillKeybindProcedure.execute(world, entity);
+			UseSkillKeybindProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

@@ -124,6 +124,8 @@ public class SlsbModVariables {
 				clone.AbilityCooldown7 = original.AbilityCooldown7;
 				clone.AbilityCooldown8 = original.AbilityCooldown8;
 				clone.AbilityCooldown9 = original.AbilityCooldown9;
+				clone.Marked = original.Marked;
+				clone.MarkedOwner = original.MarkedOwner;
 			}
 		}
 
@@ -345,6 +347,8 @@ public class SlsbModVariables {
 		public ItemStack HelmetSave = ItemStack.EMPTY;
 		public ItemStack LeggingsSave = ItemStack.EMPTY;
 		public boolean SkillsRenamed = false;
+		public double Marked = 0;
+		public String MarkedOwner = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -403,6 +407,8 @@ public class SlsbModVariables {
 			nbt.put("HelmetSave", HelmetSave.save(new CompoundTag()));
 			nbt.put("LeggingsSave", LeggingsSave.save(new CompoundTag()));
 			nbt.putBoolean("SkillsRenamed", SkillsRenamed);
+			nbt.putDouble("Marked", Marked);
+			nbt.putString("MarkedOwner", MarkedOwner);
 			return nbt;
 		}
 
@@ -458,6 +464,8 @@ public class SlsbModVariables {
 			HelmetSave = ItemStack.of(nbt.getCompound("HelmetSave"));
 			LeggingsSave = ItemStack.of(nbt.getCompound("LeggingsSave"));
 			SkillsRenamed = nbt.getBoolean("SkillsRenamed");
+			Marked = nbt.getDouble("Marked");
+			MarkedOwner = nbt.getString("MarkedOwner");
 		}
 	}
 
@@ -532,6 +540,8 @@ public class SlsbModVariables {
 					variables.HelmetSave = message.data.HelmetSave;
 					variables.LeggingsSave = message.data.LeggingsSave;
 					variables.SkillsRenamed = message.data.SkillsRenamed;
+					variables.Marked = message.data.Marked;
+					variables.MarkedOwner = message.data.MarkedOwner;
 				}
 			});
 			context.setPacketHandled(true);

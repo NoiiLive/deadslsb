@@ -236,8 +236,8 @@ public class SLSBAdminCommand {
 
 			SetRankSProcedure.execute(arguments, entity);
 			return 0;
-		}))))).then(Commands.literal("ability").then(
-				Commands.literal("set").then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("name", DoubleArgumentType.doubleArg(1, 9)).then(Commands.argument("skill", MessageArgument.message()).executes(arguments -> {
+		}))))).then(Commands.literal("ability").then(Commands.literal("set")
+				.then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("movenumber", DoubleArgumentType.doubleArg(1, 9)).then(Commands.argument("skill", MessageArgument.message()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

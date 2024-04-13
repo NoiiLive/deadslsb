@@ -13,6 +13,7 @@
   "advancements.stealth_skill.descr": "Unlock Stealth Skill",
   "key.slsb.switch_skill": "Switch Skill",
   "item.slsb.test": "Force Dungeon Break",
+  "subtitles.stab": "",
   "advancements.awakening.descr": "Awaken as a Hunter.",
   "advancements.assassin_class.descr": "Become the Assassin Class.",
   "advancements.healer_class.title": "Healer",
@@ -20,6 +21,7 @@
   "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
   "advancements.assassin_class.title": "Assassin",
   "key.slsb.use_skill": "Use Skill",
+  "effect.slsb.evade": "Evade",
   "advancements.heal_skill.title": "Heal Skill",
   "effect.slsb.stealth": "Stealth",
   "advancements.awakening.title": "Awakening"

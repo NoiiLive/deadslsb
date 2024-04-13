@@ -21,7 +21,7 @@ public class StealthSkillUseProcedure {
 		gate = false;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Stealth") == false && gate == false) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.STEALTH.get(), 20, 0, false, true));
+				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.STEALTH.get(), 2, 0, false, true));
 			gate = true;
 			cooldown = 60;
 			{

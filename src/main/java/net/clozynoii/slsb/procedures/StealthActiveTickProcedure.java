@@ -67,7 +67,7 @@ public class StealthActiveTickProcedure {
 			SlsbMod.LOGGER.debug(((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills));
 		} else {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.STEALTH.get(), 20, 0, false, false));
+				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.STEALTH.get(), 2, 0, false, false));
 		}
 		if (entity.getPersistentData().getDouble("RegenCD") > 0) {
 			entity.getPersistentData().putDouble("RegenCD", (entity.getPersistentData().getDouble("RegenCD") - 1));
@@ -118,6 +118,6 @@ public class StealthActiveTickProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 20, 0, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 2, 0, false, false));
 	}
 }

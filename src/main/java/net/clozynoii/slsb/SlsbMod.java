@@ -30,6 +30,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.clozynoii.slsb.init.SlsbModTabs;
+import net.clozynoii.slsb.init.SlsbModSounds;
 import net.clozynoii.slsb.init.SlsbModMobEffects;
 import net.clozynoii.slsb.init.SlsbModItems;
 import net.clozynoii.slsb.init.SlsbModEntities;
@@ -53,7 +54,7 @@ public class SlsbMod {
 	public SlsbMod() {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
+		SlsbModSounds.REGISTRY.register(bus);
 		SlsbModBlocks.REGISTRY.register(bus);
 		SlsbModBlockEntities.REGISTRY.register(bus);
 		SlsbModItems.REGISTRY.register(bus);

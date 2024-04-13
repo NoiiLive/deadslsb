@@ -803,6 +803,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1350,6 +1362,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2275,6 +2303,254 @@
         ]
       },
       "path": "~/Procedures/Skills/Mage"
+    },
+    {
+      "name": "QuickStepSkillUse",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_step_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/QuickStepSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
+    },
+    {
+      "name": "Evade",
+      "type": "potioneffect",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "evade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/EvadeMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "EvadeTick",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "evade_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/EvadeTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
+    },
+    {
+      "name": "EvadeSkillUse",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "evade_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/EvadeSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
+    },
+    {
+      "name": "MarkProjectileProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mark_projectile_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MarkProjectileProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "MarkProjectile",
+      "type": "projectile",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mark_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/entity/MarkProjectileEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "MarkSkillUse",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mark_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MarkSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
+    },
+    {
+      "name": "MarkHit",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mark_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MarkHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
+    },
+    {
+      "name": "BackstabSkillUse",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backstab_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/BackstabSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Assassin/Moves"
     }
   ],
   "variable_elements": [
@@ -2589,9 +2865,30 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "Marked",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "MarkedOwner",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "stab",
+      "files": [
+        "audio_-_attack_sfx_-_creator_store"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
   "language_map": {
     "en_us": {
       "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
@@ -2608,6 +2905,7 @@
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
       "key.slsb.switch_skill": "Switch Skill",
       "item.slsb.test": "Force Dungeon Break",
+      "subtitles.stab": "",
       "advancements.awakening.descr": "Awaken as a Hunter.",
       "advancements.assassin_class.descr": "Become the Assassin Class.",
       "advancements.healer_class.title": "Healer",
@@ -2615,6 +2913,7 @@
       "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "advancements.assassin_class.title": "Assassin",
       "key.slsb.use_skill": "Use Skill",
+      "effect.slsb.evade": "Evade",
       "advancements.heal_skill.title": "Heal Skill",
       "effect.slsb.stealth": "Stealth",
       "advancements.awakening.title": "Awakening"
@@ -2830,6 +3129,10 @@
       },
       {
         "name": "Gamerules",
+        "children": []
+      },
+      {
+        "name": "Projectiles",
         "children": []
       }
     ]
