@@ -17,8 +17,13 @@ import net.clozynoii.slsb.block.ManaCrystalBlockGraniteBlock;
 import net.clozynoii.slsb.block.ManaCrystalBlockDripstoneBlock;
 import net.clozynoii.slsb.block.ManaCrystalBlockDioriteBlock;
 import net.clozynoii.slsb.block.ManaCrystalBlockDeepslateBlock;
+import net.clozynoii.slsb.block.DripstoneDungeonWestBlock;
+import net.clozynoii.slsb.block.DripstoneDungeonSouthBlock;
+import net.clozynoii.slsb.block.DripstoneDungeonNorthBlock;
+import net.clozynoii.slsb.block.DripstoneDungeonEastBlock;
 import net.clozynoii.slsb.block.BlueGateSmallBlock;
 import net.clozynoii.slsb.block.BlueGateMediumBlock;
+import net.clozynoii.slsb.block.AwakeningOrbBlock;
 import net.clozynoii.slsb.SlsbMod;
 
 public class SlsbModBlocks {
@@ -32,4 +37,9 @@ public class SlsbModBlocks {
 	public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK_DIORITE = REGISTRY.register("mana_crystal_block_diorite", () -> new ManaCrystalBlockDioriteBlock());
 	public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK_GRANITE = REGISTRY.register("mana_crystal_block_granite", () -> new ManaCrystalBlockGraniteBlock());
 	public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK_DRIPSTONE = REGISTRY.register("mana_crystal_block_dripstone", () -> new ManaCrystalBlockDripstoneBlock());
+	public static final RegistryObject<Block> AWAKENING_ORB = REGISTRY.register("awakening_orb", () -> new AwakeningOrbBlock());
+	public static final RegistryObject<Block> DRIPSTONE_DUNGEON_NORTH = REGISTRY.register("dripstone_dungeon_north", () -> new DripstoneDungeonNorthBlock());
+	public static final RegistryObject<Block> DRIPSTONE_DUNGEON_SOUTH = REGISTRY.register("dripstone_dungeon_south", () -> new DripstoneDungeonSouthBlock());
+	public static final RegistryObject<Block> DRIPSTONE_DUNGEON_EAST = REGISTRY.register("dripstone_dungeon_east", () -> new DripstoneDungeonEastBlock());
+	public static final RegistryObject<Block> DRIPSTONE_DUNGEON_WEST = REGISTRY.register("dripstone_dungeon_west", () -> new DripstoneDungeonWestBlock());
 }

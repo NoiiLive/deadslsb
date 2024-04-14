@@ -22,7 +22,6 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
-import net.clozynoii.slsb.SlsbMod;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
@@ -120,12 +119,6 @@ public class AwakenCommandProcedure {
 		}.getEntity()) instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 20, 0, false, false));
 		ClearAbilitiesCommandProcedure.execute(arguments);
-		SlsbMod.queueServerWork(20, () -> {
-			RandomRankCommandProcedure.execute(arguments);
-			SlsbMod.queueServerWork(20, () -> {
-				RandomClassCommandProcedure.execute(world, arguments);
-			});
-		});
 		if (!((new Object() {
 			public Entity getEntity() {
 				try {
@@ -135,7 +128,7 @@ public class AwakenCommandProcedure {
 					return null;
 				}
 			}
-		}.getEntity()) instanceof ServerPlayer _plr14 && _plr14.level() instanceof ServerLevel && _plr14.getAdvancements().getOrStartProgress(_plr14.server.getAdvancements().getAdvancement(new ResourceLocation("slsb:awakening"))).isDone())) {
+		}.getEntity()) instanceof ServerPlayer _plr12 && _plr12.level() instanceof ServerLevel && _plr12.getAdvancements().getOrStartProgress(_plr12.server.getAdvancements().getAdvancement(new ResourceLocation("slsb:awakening"))).isDone())) {
 			if ((new Object() {
 				public Entity getEntity() {
 					try {
@@ -201,5 +194,41 @@ public class AwakenCommandProcedure {
 					}
 				}.getEntity()).getDisplayName().getString() + " Has Been Awakened")), false);
 		}
+		{
+			boolean _setval = true;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Awakened = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		if ((new Object() {
+			public Entity getEntity() {
+				try {
+					return EntityArgument.getEntity(arguments, "name");
+				} catch (CommandSyntaxException e) {
+					e.printStackTrace();
+					return null;
+				}
+			}
+		}.getEntity()) instanceof Player _player && !_player.level().isClientSide())
+			_player.displayClientMessage(Component.literal("\u00A7f\u00A7oYou should get evaluated to learn more about this power..."), true);
 	}
 }

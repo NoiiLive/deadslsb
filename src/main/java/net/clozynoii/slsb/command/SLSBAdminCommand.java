@@ -16,6 +16,7 @@ import net.minecraft.commands.arguments.MessageArgument;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
+import net.clozynoii.slsb.procedures.UnawakenCommandProcedure;
 import net.clozynoii.slsb.procedures.SetTankerProcedure;
 import net.clozynoii.slsb.procedures.SetRankSProcedure;
 import net.clozynoii.slsb.procedures.SetRankEProcedure;
@@ -30,7 +31,10 @@ import net.clozynoii.slsb.procedures.SetMageProcedure;
 import net.clozynoii.slsb.procedures.SetHealerProcedure;
 import net.clozynoii.slsb.procedures.SetFighterProcedure;
 import net.clozynoii.slsb.procedures.SetAssassinProcedure;
+import net.clozynoii.slsb.procedures.RandomRankCommandProcedure;
+import net.clozynoii.slsb.procedures.RandomMovesCommandProcedure;
 import net.clozynoii.slsb.procedures.RandomGateCommandProcedure;
+import net.clozynoii.slsb.procedures.RandomClassCommandProcedure;
 import net.clozynoii.slsb.procedures.ClearAbilitiesCommandProcedure;
 import net.clozynoii.slsb.procedures.AwakenCommandProcedure;
 
@@ -67,6 +71,20 @@ public class SLSBAdminCommand {
 				direction = entity.getDirection();
 
 			AwakenCommandProcedure.execute(world, arguments, entity);
+			return 0;
+		}))).then(Commands.literal("unawaken").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			UnawakenCommandProcedure.execute(arguments);
 			return 0;
 		}))).then(Commands.literal("class").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("fighter").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
@@ -152,6 +170,20 @@ public class SLSBAdminCommand {
 
 			SetHealerProcedure.execute(arguments, entity);
 			return 0;
+		}))).then(Commands.literal("random").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			RandomClassCommandProcedure.execute(arguments);
+			return 0;
 		})))).then(Commands.literal("rank").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("e").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
@@ -236,6 +268,20 @@ public class SLSBAdminCommand {
 
 			SetRankSProcedure.execute(arguments, entity);
 			return 0;
+		}))).then(Commands.literal("random").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			RandomRankCommandProcedure.execute(arguments);
+			return 0;
 		}))))).then(Commands.literal("ability").then(Commands.literal("set")
 				.then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("movenumber", DoubleArgumentType.doubleArg(1, 9)).then(Commands.argument("skill", MessageArgument.message()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -264,6 +310,20 @@ public class SLSBAdminCommand {
 						direction = entity.getDirection();
 
 					ClearAbilitiesCommandProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("random").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					RandomMovesCommandProcedure.execute(world, arguments);
 					return 0;
 				})))).then(Commands.literal("mana").then(Commands.argument("manaset", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

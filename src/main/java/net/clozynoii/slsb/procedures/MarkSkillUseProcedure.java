@@ -1,13 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
-import net.clozynoii.slsb.init.SlsbModEntities;
-import net.clozynoii.slsb.entity.MarkProjectileEntity;
+import javax.annotation.Nullable;
 
 public class MarkSkillUseProcedure {
 	public static void execute(Entity entity) {
@@ -33,7 +28,7 @@ public class MarkSkillUseProcedure {
 				projectileLevel.addFreshEntity(_entityToSpawn);
 			}
 		}
-		cooldown = 500;
+		cooldown = 200;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected)
 				.equals((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1)) {
 			{

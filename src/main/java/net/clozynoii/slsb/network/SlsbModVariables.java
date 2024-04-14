@@ -88,8 +88,6 @@ public class SlsbModVariables {
 			clone.Rank = original.Rank;
 			clone.UseAbilityType = original.UseAbilityType;
 			clone.MageType = original.MageType;
-			clone.Cooldown = original.Cooldown;
-			clone.Cost = original.Cost;
 			clone.Mana = original.Mana;
 			clone.ManaMax = original.ManaMax;
 			clone.Mastery = original.Mastery;
@@ -111,6 +109,7 @@ public class SlsbModVariables {
 			clone.HelmetSave = original.HelmetSave;
 			clone.LeggingsSave = original.LeggingsSave;
 			clone.SkillsRenamed = original.SkillsRenamed;
+			clone.Awakened = original.Awakened;
 			if (!event.isWasDeath()) {
 				clone.AbilitySelected = original.AbilitySelected;
 				clone.ActiveSkills = original.ActiveSkills;
@@ -124,8 +123,6 @@ public class SlsbModVariables {
 				clone.AbilityCooldown7 = original.AbilityCooldown7;
 				clone.AbilityCooldown8 = original.AbilityCooldown8;
 				clone.AbilityCooldown9 = original.AbilityCooldown9;
-				clone.MarkedOwner = original.MarkedOwner;
-				clone.Marked = original.Marked;
 			}
 		}
 
@@ -314,8 +311,6 @@ public class SlsbModVariables {
 		public String UseAbilityType = "Switcher";
 		public String ActiveSkills = "";
 		public String MageType = "";
-		public double Cooldown = 0;
-		public double Cost = 0;
 		public double Mana = 0;
 		public double ManaMax = 0;
 		public double Mastery = 0;
@@ -347,8 +342,7 @@ public class SlsbModVariables {
 		public ItemStack HelmetSave = ItemStack.EMPTY;
 		public ItemStack LeggingsSave = ItemStack.EMPTY;
 		public boolean SkillsRenamed = false;
-		public String MarkedOwner = "";
-		public double Marked = 0;
+		public boolean Awakened = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -374,8 +368,6 @@ public class SlsbModVariables {
 			nbt.putString("UseAbilityType", UseAbilityType);
 			nbt.putString("ActiveSkills", ActiveSkills);
 			nbt.putString("MageType", MageType);
-			nbt.putDouble("Cooldown", Cooldown);
-			nbt.putDouble("Cost", Cost);
 			nbt.putDouble("Mana", Mana);
 			nbt.putDouble("ManaMax", ManaMax);
 			nbt.putDouble("Mastery", Mastery);
@@ -407,8 +399,7 @@ public class SlsbModVariables {
 			nbt.put("HelmetSave", HelmetSave.save(new CompoundTag()));
 			nbt.put("LeggingsSave", LeggingsSave.save(new CompoundTag()));
 			nbt.putBoolean("SkillsRenamed", SkillsRenamed);
-			nbt.putString("MarkedOwner", MarkedOwner);
-			nbt.putDouble("Marked", Marked);
+			nbt.putBoolean("Awakened", Awakened);
 			return nbt;
 		}
 
@@ -431,8 +422,6 @@ public class SlsbModVariables {
 			UseAbilityType = nbt.getString("UseAbilityType");
 			ActiveSkills = nbt.getString("ActiveSkills");
 			MageType = nbt.getString("MageType");
-			Cooldown = nbt.getDouble("Cooldown");
-			Cost = nbt.getDouble("Cost");
 			Mana = nbt.getDouble("Mana");
 			ManaMax = nbt.getDouble("ManaMax");
 			Mastery = nbt.getDouble("Mastery");
@@ -464,8 +453,7 @@ public class SlsbModVariables {
 			HelmetSave = ItemStack.of(nbt.getCompound("HelmetSave"));
 			LeggingsSave = ItemStack.of(nbt.getCompound("LeggingsSave"));
 			SkillsRenamed = nbt.getBoolean("SkillsRenamed");
-			MarkedOwner = nbt.getString("MarkedOwner");
-			Marked = nbt.getDouble("Marked");
+			Awakened = nbt.getBoolean("Awakened");
 		}
 	}
 
@@ -507,8 +495,6 @@ public class SlsbModVariables {
 					variables.UseAbilityType = message.data.UseAbilityType;
 					variables.ActiveSkills = message.data.ActiveSkills;
 					variables.MageType = message.data.MageType;
-					variables.Cooldown = message.data.Cooldown;
-					variables.Cost = message.data.Cost;
 					variables.Mana = message.data.Mana;
 					variables.ManaMax = message.data.ManaMax;
 					variables.Mastery = message.data.Mastery;
@@ -540,8 +526,7 @@ public class SlsbModVariables {
 					variables.HelmetSave = message.data.HelmetSave;
 					variables.LeggingsSave = message.data.LeggingsSave;
 					variables.SkillsRenamed = message.data.SkillsRenamed;
-					variables.MarkedOwner = message.data.MarkedOwner;
-					variables.Marked = message.data.Marked;
+					variables.Awakened = message.data.Awakened;
 				}
 			});
 			context.setPacketHandled(true);

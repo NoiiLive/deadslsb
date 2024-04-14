@@ -19,9 +19,9 @@
           "displayCondition": {
             "name": "SkillDisplayCondition"
           },
-          "anchorPoint": "BOTTOM_LEFT",
-          "x": 23,
-          "y": 211
+          "anchorPoint": "TOP_LEFT",
+          "x": 8,
+          "y": 40
         }
       },
       {
@@ -39,9 +39,9 @@
           "displayCondition": {
             "name": "ManaDisplayCondition"
           },
-          "anchorPoint": "BOTTOM_LEFT",
-          "x": 23,
-          "y": 197
+          "anchorPoint": "TOP_LEFT",
+          "x": 143,
+          "y": 9
         }
       },
       {
@@ -59,9 +59,412 @@
           "displayCondition": {
             "name": "CostDisplayCondition"
           },
-          "anchorPoint": "BOTTOM_LEFT",
-          "x": 23,
-          "y": 225
+          "anchorPoint": "TOP_LEFT",
+          "x": 8,
+          "y": 52
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnOverlayActivate"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_slots_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySlots1"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_slots_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySlots2"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_slots_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySlots3"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_slots_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySlots4"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_slots_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySlots5"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar1"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar2"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar3"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar4"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar5"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar6"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar7"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar8"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_9.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar9"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_10.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar10"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_11.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar11"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_12.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar12"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_13.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar13"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_14.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar14"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoveerlay_mana_15.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ManaBar15"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_select_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySelected1"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 32,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_select_other.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySelected2"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 51,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_select_other.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySelected3"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 70,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_select_other.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySelected4"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 89,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_select_other.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnAbilitySelected5"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 108,
+          "y": 12
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_lock.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnAbilityCooldown1"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 37,
+          "y": 16
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_lock.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnAbilityCooldown2"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 56,
+          "y": 16
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_lock.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnAbilityCooldown3"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 75,
+          "y": 16
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_lock.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnAbilityCooldown4"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 94,
+          "y": 16
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "abilityoverlay_lock.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ReturnAbilityCooldown5"
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 113,
+          "y": 16
         }
       }
     ],

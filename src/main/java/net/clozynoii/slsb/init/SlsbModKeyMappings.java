@@ -21,7 +21,7 @@ import net.clozynoii.slsb.SlsbMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class SlsbModKeyMappings {
-	public static final KeyMapping SWITCH_SKILL = new KeyMapping("key.slsb.switch_skill", GLFW.GLFW_KEY_R, "key.categories.slsb") {
+	public static final KeyMapping SWITCH_SKILL = new KeyMapping("key.slsb.switch_skill", GLFW.GLFW_KEY_X, "key.categories.slsb") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -34,7 +34,7 @@ public class SlsbModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping USE_SKILL = new KeyMapping("key.slsb.use_skill", GLFW.GLFW_KEY_Z, "key.categories.slsb") {
+	public static final KeyMapping USE_SKILL = new KeyMapping("key.slsb.use_skill", GLFW.GLFW_KEY_C, "key.categories.slsb") {
 		private boolean isDownOld = false;
 
 		@Override

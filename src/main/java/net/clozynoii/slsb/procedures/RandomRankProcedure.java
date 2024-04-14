@@ -1,10 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
-import net.minecraft.network.chat.Component;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
 
@@ -22,8 +20,13 @@ public class RandomRankProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You Are " + "\u00A7f\u00A7lE-Rank")), true);
+			{
+				String _setval = "\u00A7f\u00A7l";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			{
 				double _setval = Mth.nextInt(RandomSource.create(), 50, 100);
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -40,8 +43,13 @@ public class RandomRankProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You Are " + "\u00A7a\u00A7lD-Rank")), true);
+			{
+				String _setval = "\u00A7a\u00A7l";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			{
 				double _setval = Mth.nextInt(RandomSource.create(), 200, 350);
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -58,8 +66,13 @@ public class RandomRankProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You Are " + "\u00A7d\u00A7lC-Rank")), true);
+			{
+				String _setval = "\u00A7d\u00A7l";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			{
 				double _setval = Mth.nextInt(RandomSource.create(), 500, 700);
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -76,8 +89,13 @@ public class RandomRankProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You Are " + "\u00A7b\u00A7lB-Rank")), true);
+			{
+				String _setval = "\u00A7b\u00A7l";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			{
 				double _setval = Mth.nextInt(RandomSource.create(), 1000, 1500);
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -94,8 +112,13 @@ public class RandomRankProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You Are " + "\u00A7e\u00A7lA-Rank")), true);
+			{
+				String _setval = "\u00A7e\u00A7l";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			{
 				double _setval = Mth.nextInt(RandomSource.create(), 2000, 5000);
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -112,8 +135,13 @@ public class RandomRankProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You Are " + "\u00A7c\u00A7lS-Rank")), true);
+			{
+				String _setval = "\u00A7c\u00A7l";
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ColorCode = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			{
 				double _setval = Mth.nextInt(RandomSource.create(), 10000, 25000);
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
