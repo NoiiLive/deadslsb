@@ -201,8 +201,8 @@
       "registry_name": "kasakas_venom_fang",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java",
-          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json"
+          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json",
+          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java"
         ]
       },
       "path": "~/Weapons"
@@ -484,16 +484,16 @@
       "registry_name": "blue_gate_small",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallBlockModel.java",
-          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallDisplayModel.java",
-          "src/main/resources/assets/slsb/models/item/blue_gate_small.json",
           "src/main/java/net/clozynoii/slsb/block/entity/BlueGateSmallTileEntity.java",
-          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallDisplayItemRenderer.java",
-          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallTileRenderer.java",
           "src/main/resources/assets/slsb/models/custom/blue_gate_small_particle.json",
           "src/main/resources/assets/slsb/blockstates/blue_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallTileRenderer.java",
           "src/main/java/net/clozynoii/slsb/block/BlueGateSmallBlock.java",
-          "src/main/java/net/clozynoii/slsb/block/display/BlueGateSmallDisplayItem.java"
+          "src/main/resources/assets/slsb/models/item/blue_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/display/BlueGateSmallDisplayItem.java",
+          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallBlockModel.java"
         ]
       },
       "path": "~/Blocks/Gates"
@@ -507,16 +507,16 @@
       "registry_name": "red_gate_small",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallTileRenderer.java",
-          "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallBlockModel.java",
           "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallDisplayItemRenderer.java",
-          "src/main/java/net/clozynoii/slsb/block/RedGateSmallBlock.java",
-          "src/main/java/net/clozynoii/slsb/block/entity/RedGateSmallTileEntity.java",
-          "src/main/resources/assets/slsb/models/custom/red_gate_small_particle.json",
           "src/main/resources/assets/slsb/blockstates/red_gate_small.json",
+          "src/main/resources/assets/slsb/models/item/red_gate_small.json",
+          "src/main/resources/assets/slsb/models/custom/red_gate_small_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/RedGateSmallBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallBlockModel.java",
           "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallDisplayModel.java",
           "src/main/java/net/clozynoii/slsb/block/display/RedGateSmallDisplayItem.java",
-          "src/main/resources/assets/slsb/models/item/red_gate_small.json"
+          "src/main/java/net/clozynoii/slsb/block/entity/RedGateSmallTileEntity.java"
         ]
       },
       "path": "~/Blocks/Gates"
@@ -750,6 +750,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -1299,6 +1311,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2111,16 +2139,16 @@
       "registry_name": "blue_gate_medium",
       "metadata": {
         "files": [
+          "src/main/java/net/clozynoii/slsb/block/BlueGateMediumBlock.java",
           "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateMediumDisplayItemRenderer.java",
-          "src/main/java/net/clozynoii/slsb/block/display/BlueGateMediumDisplayItem.java",
+          "src/main/resources/assets/slsb/models/custom/blue_gate_medium_particle.json",
           "src/main/java/net/clozynoii/slsb/block/entity/BlueGateMediumTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateMediumTileRenderer.java",
+          "src/main/resources/assets/slsb/models/item/blue_gate_medium.json",
           "src/main/resources/assets/slsb/blockstates/blue_gate_medium.json",
           "src/main/java/net/clozynoii/slsb/block/model/BlueGateMediumBlockModel.java",
           "src/main/java/net/clozynoii/slsb/block/model/BlueGateMediumDisplayModel.java",
-          "src/main/java/net/clozynoii/slsb/block/BlueGateMediumBlock.java",
-          "src/main/resources/assets/slsb/models/item/blue_gate_medium.json",
-          "src/main/resources/assets/slsb/models/custom/blue_gate_medium_particle.json",
-          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateMediumTileRenderer.java"
+          "src/main/java/net/clozynoii/slsb/block/display/BlueGateMediumDisplayItem.java"
         ]
       },
       "path": "~/Blocks/Gates"
@@ -3017,26 +3045,38 @@
   "language_map": {
     "en_us": {
       "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
-      "item.slsb.kasakas_venom_fang": "Kasaka\u0027s Venom Fang",
+      "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
+      "item.slsb.mana_crystal": "§bMana Crystal",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
+      "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
+      "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
       "entity.slsb.after_image": "After Image",
       "advancements.strength_skill.title": "Strength Skill",
+      "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
       "advancements.heal_skill.descr": "Unlock Heal Skill",
       "advancements.stealth_skill.title": "Stealth Skill",
       "advancements.haste_skill.title": "Haste Skill",
       "block.slsb.blue_gate_small": "Blue Gate Small",
       "block.slsb.red_gate_small": "Red Gate Small",
+      "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
       "effect.slsb.healing_aura": "Healing Aura",
+      "item.slsb.knight_killer": "§cKnight Killer",
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
       "key.slsb.switch_skill": "Switch Skill",
+      "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
+      "item_group.slsb.solo_leveling_weapons": "Solo Leveling: Weapons",
       "subtitles.stab": "",
       "advancements.awakening.descr": "Awaken as a Hunter.",
+      "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
       "advancements.assassin_class.descr": "Become the Assassin Class.",
       "advancements.healer_class.title": "Healer",
+      "block.slsb.mana_crystal_block_stone": "Mana Crystal (Stone)",
       "advancements.healer_class.descr": "Become the Healer Class.",
       "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "advancements.assassin_class.title": "Assassin",
+      "block.slsb.mana_crystal_block_granite": "Mana Crystal (Granite)",
       "key.slsb.use_skill": "Use Skill",
+      "effect.slsb.evade": "Evade",
       "advancements.heal_skill.title": "Heal Skill",
       "effect.slsb.stealth": "Stealth",
       "advancements.awakening.title": "Awakening"

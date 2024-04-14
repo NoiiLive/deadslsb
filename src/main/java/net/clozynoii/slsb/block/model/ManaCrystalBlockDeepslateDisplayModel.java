@@ -1,5 +1,11 @@
 package net.clozynoii.slsb.block.model;
 
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.clozynoii.slsb.block.display.ManaCrystalBlockDeepslateDisplayItem;
+
 public class ManaCrystalBlockDeepslateDisplayModel extends GeoModel<ManaCrystalBlockDeepslateDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(ManaCrystalBlockDeepslateDisplayItem animatable) {

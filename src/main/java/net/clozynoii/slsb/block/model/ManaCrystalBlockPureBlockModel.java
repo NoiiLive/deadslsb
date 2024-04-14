@@ -1,5 +1,11 @@
 package net.clozynoii.slsb.block.model;
 
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.clozynoii.slsb.block.entity.ManaCrystalBlockPureTileEntity;
+
 public class ManaCrystalBlockPureBlockModel extends GeoModel<ManaCrystalBlockPureTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(ManaCrystalBlockPureTileEntity animatable) {
