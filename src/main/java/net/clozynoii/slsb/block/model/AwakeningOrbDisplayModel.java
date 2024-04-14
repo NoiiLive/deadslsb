@@ -1,5 +1,11 @@
 package net.clozynoii.slsb.block.model;
 
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.clozynoii.slsb.block.display.AwakeningOrbDisplayItem;
+
 public class AwakeningOrbDisplayModel extends GeoModel<AwakeningOrbDisplayItem> {
 	@Override
 	public ResourceLocation getAnimationResource(AwakeningOrbDisplayItem animatable) {

@@ -201,8 +201,8 @@
       "registry_name": "kasakas_venom_fang",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java",
-          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json"
+          "src/main/resources/assets/slsb/models/item/kasakas_venom_fang.json",
+          "src/main/java/net/clozynoii/slsb/item/KasakasVenomFangItem.java"
         ]
       },
       "path": "~/Weapons"
@@ -250,10 +250,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -484,16 +480,16 @@
       "registry_name": "blue_gate_small",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallBlockModel.java",
-          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallDisplayModel.java",
-          "src/main/resources/assets/slsb/models/item/blue_gate_small.json",
           "src/main/java/net/clozynoii/slsb/block/entity/BlueGateSmallTileEntity.java",
-          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallDisplayItemRenderer.java",
-          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallTileRenderer.java",
           "src/main/resources/assets/slsb/models/custom/blue_gate_small_particle.json",
           "src/main/resources/assets/slsb/blockstates/blue_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallDisplayModel.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallTileRenderer.java",
           "src/main/java/net/clozynoii/slsb/block/BlueGateSmallBlock.java",
-          "src/main/java/net/clozynoii/slsb/block/display/BlueGateSmallDisplayItem.java"
+          "src/main/resources/assets/slsb/models/item/blue_gate_small.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateSmallDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/display/BlueGateSmallDisplayItem.java",
+          "src/main/java/net/clozynoii/slsb/block/model/BlueGateSmallBlockModel.java"
         ]
       },
       "path": "~/Blocks/Gates"
@@ -507,16 +503,16 @@
       "registry_name": "red_gate_small",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallTileRenderer.java",
-          "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallBlockModel.java",
           "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallDisplayItemRenderer.java",
-          "src/main/java/net/clozynoii/slsb/block/RedGateSmallBlock.java",
-          "src/main/java/net/clozynoii/slsb/block/entity/RedGateSmallTileEntity.java",
-          "src/main/resources/assets/slsb/models/custom/red_gate_small_particle.json",
           "src/main/resources/assets/slsb/blockstates/red_gate_small.json",
+          "src/main/resources/assets/slsb/models/item/red_gate_small.json",
+          "src/main/resources/assets/slsb/models/custom/red_gate_small_particle.json",
+          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateSmallTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/RedGateSmallBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallBlockModel.java",
           "src/main/java/net/clozynoii/slsb/block/model/RedGateSmallDisplayModel.java",
           "src/main/java/net/clozynoii/slsb/block/display/RedGateSmallDisplayItem.java",
-          "src/main/resources/assets/slsb/models/item/red_gate_small.json"
+          "src/main/java/net/clozynoii/slsb/block/entity/RedGateSmallTileEntity.java"
         ]
       },
       "path": "~/Blocks/Gates"
@@ -1036,10 +1032,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1171,6 +1163,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1347,6 +1355,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1547,6 +1571,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1567,6 +1607,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1587,6 +1643,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1607,6 +1679,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1947,6 +2035,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1967,6 +2071,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2139,16 +2259,16 @@
       "registry_name": "blue_gate_medium",
       "metadata": {
         "files": [
+          "src/main/java/net/clozynoii/slsb/block/BlueGateMediumBlock.java",
           "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateMediumDisplayItemRenderer.java",
-          "src/main/java/net/clozynoii/slsb/block/display/BlueGateMediumDisplayItem.java",
+          "src/main/resources/assets/slsb/models/custom/blue_gate_medium_particle.json",
           "src/main/java/net/clozynoii/slsb/block/entity/BlueGateMediumTileEntity.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateMediumTileRenderer.java",
+          "src/main/resources/assets/slsb/models/item/blue_gate_medium.json",
           "src/main/resources/assets/slsb/blockstates/blue_gate_medium.json",
           "src/main/java/net/clozynoii/slsb/block/model/BlueGateMediumBlockModel.java",
           "src/main/java/net/clozynoii/slsb/block/model/BlueGateMediumDisplayModel.java",
-          "src/main/java/net/clozynoii/slsb/block/BlueGateMediumBlock.java",
-          "src/main/resources/assets/slsb/models/item/blue_gate_medium.json",
-          "src/main/resources/assets/slsb/models/custom/blue_gate_medium_particle.json",
-          "src/main/java/net/clozynoii/slsb/block/renderer/BlueGateMediumTileRenderer.java"
+          "src/main/java/net/clozynoii/slsb/block/display/BlueGateMediumDisplayItem.java"
         ]
       },
       "path": "~/Blocks/Gates"
@@ -2274,18 +2394,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -2399,6 +2507,18 @@
           },
           {
             "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
             "type": "number"
           },
           {
@@ -3502,6 +3622,708 @@
         ]
       },
       "path": "~/Procedures/GUI/Slots/Cooldown"
+    },
+    {
+      "name": "StrengthBuffSkillUse",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strength_buff_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/StrengthBuffSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "HasteBuffSkillUse",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste_buff_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/HasteBuffSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "Disguise",
+      "type": "potioneffect",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disguise",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/DisguiseMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "DisguiseSkillUse",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disguise_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DisguiseSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "DisguiseTick",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disguise_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DisguiseTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "PurifySkillUse",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purify_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/PurifySkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "FortifySkillUse",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fortify_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/FortifySkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "ERank",
+      "type": "tag",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/e_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "DRank",
+      "type": "tag",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "d_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/d_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "CRank",
+      "type": "tag",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/c_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "BRank",
+      "type": "tag",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/b_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "ARank",
+      "type": "tag",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "a_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/a_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "SRank",
+      "type": "tag",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/s_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "TauntSkillUse",
+      "type": "procedure",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "taunt_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TauntSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "ProvocationSkillUse",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "provocation_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ProvocationSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "ReinforcementSkillUse",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reinforcement_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReinforcementSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "Reinforcement",
+      "type": "potioneffect",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reinforcement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/ReinforcementMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ReinforcementTick",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reinforcement_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReinforcementTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "Collapse",
+      "type": "potioneffect",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collapse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/CollapseMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "CollapseActiveTick",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collapse_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CollapseActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "CollapseEffectExpires",
+      "type": "procedure",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collapse_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CollapseEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "CollapseSkillUse",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collapse_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CollapseSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "ChargedSmashSkillUse",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charged_smash_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ChargedSmashSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "Charged",
+      "type": "potioneffect",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/ChargedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ChargedHit",
+      "type": "procedure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charged_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ChargedHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "BashOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bash_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/BashOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "Bash",
+      "type": "potioneffect",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/BashMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "BashSkillUse",
+      "type": "procedure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bash_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/BashSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
     }
   ],
   "variable_elements": [
@@ -3816,8 +4638,10 @@
   "language_map": {
     "en_us": {
       "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
+      "effect.slsb.collapse": "Collapse",
       "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
       "item.slsb.mana_crystal": "§bMana Crystal",
+      "block.slsb.dripstone_dungeon_south": "Dripstone Dungeon South",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
@@ -3826,16 +4650,22 @@
       "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
       "advancements.heal_skill.descr": "Unlock Heal Skill",
       "advancements.stealth_skill.title": "Stealth Skill",
+      "effect.slsb.charged": "Charged",
       "advancements.haste_skill.title": "Haste Skill",
+      "effect.slsb.bash": "Bash",
       "block.slsb.blue_gate_small": "Blue Gate Small",
       "block.slsb.red_gate_small": "Red Gate Small",
+      "block.slsb.awakening_orb": "Awakening Orb",
       "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
       "effect.slsb.healing_aura": "Healing Aura",
       "item.slsb.knight_killer": "§cKnight Killer",
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
       "key.slsb.switch_skill": "Switch Skill",
+      "block.slsb.dripstone_dungeon_north": "Dripstone Dungeon North",
+      "effect.slsb.reinforcement": "Reinforcement",
       "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
       "item_group.slsb.solo_leveling_weapons": "Solo Leveling: Weapons",
+      "block.slsb.dripstone_dungeon_west": "Dripstone Dungeon West",
       "subtitles.stab": "",
       "advancements.awakening.descr": "Awaken as a Hunter.",
       "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
@@ -3845,10 +4675,12 @@
       "advancements.healer_class.descr": "Become the Healer Class.",
       "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "advancements.assassin_class.title": "Assassin",
+      "effect.slsb.disguise": "Disguise",
       "block.slsb.mana_crystal_block_granite": "Mana Crystal (Granite)",
       "key.slsb.use_skill": "Use Skill",
       "effect.slsb.evade": "Evade",
       "advancements.heal_skill.title": "Heal Skill",
+      "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East",
       "effect.slsb.stealth": "Stealth",
       "advancements.awakening.title": "Awakening"
     }
@@ -4087,7 +4919,12 @@
       },
       {
         "name": "Potions",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Keybinds",
