@@ -33,6 +33,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
@@ -43,6 +44,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
 import net.clozynoii.slsb.procedures.GateUpdateTickProcedure;
+import net.clozynoii.slsb.procedures.EnterGateProcedure;
 import net.clozynoii.slsb.init.SlsbModBlockEntities;
 
 import javax.annotation.Nullable;
@@ -157,6 +159,12 @@ public class BlueGateSmallBlock extends BaseEntityBlock implements EntityBlock {
 			double dz = (random.nextFloat() - 0.5D) * 3D;
 			world.addParticle(ParticleTypes.ENCHANT, x0, y0, z0, dx, dy, dz);
 		}
+	}
+
+	@Override
+	public void entityInside(BlockState blockstate, Level world, BlockPos pos, Entity entity) {
+		super.entityInside(blockstate, world, pos, entity);
+		EnterGateProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 	}
 
 	@Override

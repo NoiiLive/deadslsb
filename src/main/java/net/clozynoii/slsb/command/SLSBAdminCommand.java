@@ -35,9 +35,11 @@ import net.clozynoii.slsb.procedures.RandomRankCommandProcedure;
 import net.clozynoii.slsb.procedures.RandomMovesCommandProcedure;
 import net.clozynoii.slsb.procedures.RandomGateCommandProcedure;
 import net.clozynoii.slsb.procedures.RandomClassCommandProcedure;
+import net.clozynoii.slsb.procedures.PlaceGateProcedure;
 import net.clozynoii.slsb.procedures.ClearAbilitiesCommandProcedure;
 import net.clozynoii.slsb.procedures.AwakenCommandProcedure;
 
+import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 @Mod.EventBusSubscriber
@@ -58,7 +60,21 @@ public class SLSBAdminCommand {
 
 			RandomGateCommandProcedure.execute(world, entity);
 			return 0;
-		}))).then(Commands.literal("hunter").then(Commands.literal("awaken").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+		})).then(Commands.literal("place").then(Commands.argument("rank", StringArgumentType.word()).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			PlaceGateProcedure.execute(world, arguments, entity);
+			return 0;
+		})))).then(Commands.literal("hunter").then(Commands.literal("awaken").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

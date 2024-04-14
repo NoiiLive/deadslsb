@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bedrock",
+    "slsb:dripstone_dungeon_north",
+    "slsb:dripstone_dungeon_south",
+    "slsb:dripstone_dungeon_east",
+    "slsb:dripstone_dungeon_west"
+  ]
+}

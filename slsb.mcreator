@@ -3590,6 +3590,308 @@
         ]
       },
       "path": "~/Blocks/Drisptone Dungeon"
+    },
+    {
+      "name": "DripstoneDungeonSpawnNorth",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_spawn_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnNorthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
+    },
+    {
+      "name": "DripstoneDungeonSpawnSouth",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_spawn_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnSouthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
+    },
+    {
+      "name": "DripstoneDungeonSpawnEast",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_spawn_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnEastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
+    },
+    {
+      "name": "DripstoneDungeonSpawnWest",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_spawn_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnWestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
+    },
+    {
+      "name": "DungeonUnplaceable",
+      "type": "tag",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon_unplaceable",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/blocks/dungeon_unplaceable.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "Dungeon",
+      "type": "biome",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/worldgen/configured_feature/dungeon_tree.json",
+          "src/main/resources/data/slsb/worldgen/placed_feature/dungeon_tree.json",
+          "src/main/resources/data/slsb/worldgen/biome/dungeon.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "DungeonWorld",
+      "type": "dimension",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon_world",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/dungeon_world.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/DungeonWorldDimension.java",
+          "src/main/resources/data/slsb/dimension/dungeon_world.json"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "EnterGate",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enter_gate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/EnterGateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Gates"
+    },
+    {
+      "name": "DungeonWorldGenerate",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon_world_generate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DungeonWorldGenerateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "dimension",
+            "type": "dimensiontype"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons"
+    },
+    {
+      "name": "PlaceGate",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "place_gate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/PlaceGateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Gates"
+    },
+    {
+      "name": "DungeonGeneration",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon_generation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DungeonGenerationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons"
     }
   ],
   "variable_elements": [
@@ -3898,6 +4200,30 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "DungeonRoomTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DungeonRoomCount",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "DungeonBossRoom",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "DungeonGenerate",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -3944,7 +4270,8 @@
       "advancements.heal_skill.title": "Heal Skill",
       "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East",
       "effect.slsb.stealth": "Stealth",
-      "advancements.awakening.title": "Awakening"
+      "advancements.awakening.title": "Awakening",
+      "biome.slsb.dungeon": "Dungeon"
     }
   },
   "foldersRoot": {
@@ -4068,6 +4395,15 @@
                     "children": []
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "name": "Dungeons",
+            "children": [
+              {
+                "name": "Dripstone Dungeon",
+                "children": []
               }
             ]
           }

@@ -43,6 +43,10 @@ public class GateTimerProcedure {
 		double RandomY = 0;
 		double RandomZ = 0;
 		double GateRandomize = 0;
+		if (SlsbModVariables.MapVariables.get(world).DungeonRoomTimer > 0) {
+			SlsbModVariables.MapVariables.get(world).DungeonRoomTimer = SlsbModVariables.MapVariables.get(world).DungeonRoomTimer - 1;
+			SlsbModVariables.MapVariables.get(world).syncData(world);
+		}
 		if (SlsbModVariables.MapVariables.get(world).GateTimer > 0) {
 			SlsbModVariables.MapVariables.get(world).GateTimer = SlsbModVariables.MapVariables.get(world).GateTimer - 1;
 			SlsbModVariables.MapVariables.get(world).syncData(world);

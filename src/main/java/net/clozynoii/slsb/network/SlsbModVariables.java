@@ -120,6 +120,7 @@ public class SlsbModVariables {
 			clone.LeggingsSave = original.LeggingsSave;
 			clone.SkillsRenamed = original.SkillsRenamed;
 			clone.Awakened = original.Awakened;
+			clone.DungeonGenerate = original.DungeonGenerate;
 			if (!event.isWasDeath()) {
 				clone.AbilitySelected = original.AbilitySelected;
 				clone.ActiveSkills = original.ActiveSkills;
@@ -201,6 +202,9 @@ public class SlsbModVariables {
 		public static final String DATA_NAME = "slsb_mapvars";
 		public double GateTimer = 0;
 		public boolean WorldCreated = false;
+		public double DungeonRoomTimer = 0;
+		public double DungeonRoomCount = 0;
+		public boolean DungeonBossRoom = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -211,12 +215,18 @@ public class SlsbModVariables {
 		public void read(CompoundTag nbt) {
 			GateTimer = nbt.getDouble("GateTimer");
 			WorldCreated = nbt.getBoolean("WorldCreated");
+			DungeonRoomTimer = nbt.getDouble("DungeonRoomTimer");
+			DungeonRoomCount = nbt.getDouble("DungeonRoomCount");
+			DungeonBossRoom = nbt.getBoolean("DungeonBossRoom");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putDouble("GateTimer", GateTimer);
 			nbt.putBoolean("WorldCreated", WorldCreated);
+			nbt.putDouble("DungeonRoomTimer", DungeonRoomTimer);
+			nbt.putDouble("DungeonRoomCount", DungeonRoomCount);
+			nbt.putBoolean("DungeonBossRoom", DungeonBossRoom);
 			return nbt;
 		}
 
@@ -358,6 +368,7 @@ public class SlsbModVariables {
 		public ItemStack LeggingsSave = ItemStack.EMPTY;
 		public boolean SkillsRenamed = false;
 		public boolean Awakened = false;
+		public boolean DungeonGenerate = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -415,6 +426,7 @@ public class SlsbModVariables {
 			nbt.put("LeggingsSave", LeggingsSave.save(new CompoundTag()));
 			nbt.putBoolean("SkillsRenamed", SkillsRenamed);
 			nbt.putBoolean("Awakened", Awakened);
+			nbt.putBoolean("DungeonGenerate", DungeonGenerate);
 			return nbt;
 		}
 
@@ -469,6 +481,7 @@ public class SlsbModVariables {
 			LeggingsSave = ItemStack.of(nbt.getCompound("LeggingsSave"));
 			SkillsRenamed = nbt.getBoolean("SkillsRenamed");
 			Awakened = nbt.getBoolean("Awakened");
+			DungeonGenerate = nbt.getBoolean("DungeonGenerate");
 		}
 	}
 
@@ -551,6 +564,7 @@ public class SlsbModVariables {
 					variables.LeggingsSave = message.data.LeggingsSave;
 					variables.SkillsRenamed = message.data.SkillsRenamed;
 					variables.Awakened = message.data.Awakened;
+					variables.DungeonGenerate = message.data.DungeonGenerate;
 				}
 			});
 			context.setPacketHandled(true);

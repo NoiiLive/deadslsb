@@ -129,6 +129,9 @@
     "onTickUpdate": {
       "name": "GateUpdateTick"
     },
+    "onEntityCollides": {
+      "name": "EnterGate"
+    },
     "restrictionBiomes": [],
     "blocksToReplace": [],
     "generationShape": "UNIFORM",

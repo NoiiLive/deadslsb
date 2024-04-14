@@ -108,5 +108,8 @@ public class CooldownTimerProcedure {
 				});
 			}
 		}
+		if (entity.getPersistentData().getDouble("PortalCooldown") > 0) {
+			entity.getPersistentData().putDouble("PortalCooldown", (entity.getPersistentData().getDouble("PortalCooldown") - 1));
+		}
 	}
 }
