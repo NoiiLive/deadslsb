@@ -8,7 +8,9 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
 
 import net.clozynoii.slsb.item.ManaCrystalItem;
 import net.clozynoii.slsb.item.KnightKillerItem;
@@ -46,4 +48,12 @@ public class SlsbModItems {
 			() -> new ManaCrystalBlockDripstoneDisplayItem(SlsbModBlocks.MANA_CRYSTAL_BLOCK_DRIPSTONE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> KNIGHT_KILLER = REGISTRY.register("knight_killer", () -> new KnightKillerItem());
 	public static final RegistryObject<Item> AWAKENING_ORB = REGISTRY.register(SlsbModBlocks.AWAKENING_ORB.getId().getPath(), () -> new AwakeningOrbDisplayItem(SlsbModBlocks.AWAKENING_ORB.get(), new Item.Properties()));
+	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_NORTH = block(SlsbModBlocks.DRIPSTONE_DUNGEON_NORTH);
+	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_SOUTH = block(SlsbModBlocks.DRIPSTONE_DUNGEON_SOUTH);
+	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_EAST = block(SlsbModBlocks.DRIPSTONE_DUNGEON_EAST);
+	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_WEST = block(SlsbModBlocks.DRIPSTONE_DUNGEON_WEST);
+
+	private static RegistryObject<Item> block(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
 }

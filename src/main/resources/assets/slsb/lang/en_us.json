@@ -2,6 +2,7 @@
   "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
   "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
   "item.slsb.mana_crystal": "§bMana Crystal",
+  "block.slsb.dripstone_dungeon_south": "Dripstone Dungeon South",
   "block.slsb.blue_gate_medium": "Blue Gate Medium",
   "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
   "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
@@ -20,8 +21,10 @@
   "item.slsb.knight_killer": "§cKnight Killer",
   "advancements.stealth_skill.descr": "Unlock Stealth Skill",
   "key.slsb.switch_skill": "Switch Skill",
+  "block.slsb.dripstone_dungeon_north": "Dripstone Dungeon North",
   "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
   "item_group.slsb.solo_leveling_weapons": "Solo Leveling: Weapons",
+  "block.slsb.dripstone_dungeon_west": "Dripstone Dungeon West",
   "subtitles.stab": "",
   "advancements.awakening.descr": "Awaken as a Hunter.",
   "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
@@ -35,6 +38,7 @@
   "key.slsb.use_skill": "Use Skill",
   "effect.slsb.evade": "Evade",
   "advancements.heal_skill.title": "Heal Skill",
+  "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East",
   "effect.slsb.stealth": "Stealth",
   "advancements.awakening.title": "Awakening"
 }

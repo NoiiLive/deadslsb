@@ -3522,6 +3522,74 @@
         ]
       },
       "path": "~/Procedures/GUI/Slots/Cooldown"
+    },
+    {
+      "name": "DripstoneDungeonNorth",
+      "type": "block",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/dripstone_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/dripstone_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/DripstoneDungeonNorthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Drisptone Dungeon"
+    },
+    {
+      "name": "DripstoneDungeonSouth",
+      "type": "block",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/DripstoneDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/block/dripstone_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/dripstone_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Drisptone Dungeon"
+    },
+    {
+      "name": "DripstoneDungeonEast",
+      "type": "block",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/dripstone_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/DripstoneDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/block/dripstone_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Drisptone Dungeon"
+    },
+    {
+      "name": "DripstoneDungeonWest",
+      "type": "block",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/item/dripstone_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/DripstoneDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/block/dripstone_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Drisptone Dungeon"
     }
   ],
   "variable_elements": [
@@ -3838,6 +3906,7 @@
       "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
       "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
       "item.slsb.mana_crystal": "§bMana Crystal",
+      "block.slsb.dripstone_dungeon_south": "Dripstone Dungeon South",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
@@ -3856,8 +3925,10 @@
       "item.slsb.knight_killer": "§cKnight Killer",
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
       "key.slsb.switch_skill": "Switch Skill",
+      "block.slsb.dripstone_dungeon_north": "Dripstone Dungeon North",
       "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
       "item_group.slsb.solo_leveling_weapons": "Solo Leveling: Weapons",
+      "block.slsb.dripstone_dungeon_west": "Dripstone Dungeon West",
       "subtitles.stab": "",
       "advancements.awakening.descr": "Awaken as a Hunter.",
       "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
@@ -3871,6 +3942,7 @@
       "key.slsb.use_skill": "Use Skill",
       "effect.slsb.evade": "Evade",
       "advancements.heal_skill.title": "Heal Skill",
+      "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East",
       "effect.slsb.stealth": "Stealth",
       "advancements.awakening.title": "Awakening"
     }
@@ -4028,6 +4100,10 @@
           },
           {
             "name": "Mana Crystals",
+            "children": []
+          },
+          {
+            "name": "Drisptone Dungeon",
             "children": []
           }
         ]
