@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "slsb:block/maze_dungeon_south"
+    }
+  }
+}

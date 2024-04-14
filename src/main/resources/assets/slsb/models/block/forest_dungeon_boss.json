@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "slsb:block/boss",
+    "up": "slsb:block/boss",
+    "north": "slsb:block/boss",
+    "east": "slsb:block/boss",
+    "south": "slsb:block/boss",
+    "west": "slsb:block/boss",
+    "particle": "slsb:block/boss"
+  },
+  "render_type": "solid"
+}

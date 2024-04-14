@@ -37,7 +37,7 @@ public class DungeonWorldGenerateProcedure {
 					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:a_rank_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:s_rank_dungeon")))) {
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).DungeonGenerate == true) {
 					entity.getPersistentData().putBoolean("GenerateDungeon", true);
-					SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = 200;
+					SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = 300;
 					SlsbModVariables.MapVariables.get(world).syncData(world);
 				}
 				SlsbMod.LOGGER.debug("Dungeon Entered");

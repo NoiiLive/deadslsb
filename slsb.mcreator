@@ -3574,7 +3574,7 @@
           "src/main/java/net/clozynoii/slsb/block/DripstoneDungeonNorthBlock.java"
         ]
       },
-      "path": "~/Blocks/Drisptone Dungeon"
+      "path": "~/Blocks/Dungeon Blocks"
     },
     {
       "name": "DripstoneDungeonSouth",
@@ -3591,7 +3591,7 @@
           "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_south.json"
         ]
       },
-      "path": "~/Blocks/Drisptone Dungeon"
+      "path": "~/Blocks/Dungeon Blocks"
     },
     {
       "name": "DripstoneDungeonEast",
@@ -3608,7 +3608,7 @@
           "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_east.json"
         ]
       },
-      "path": "~/Blocks/Drisptone Dungeon"
+      "path": "~/Blocks/Dungeon Blocks"
     },
     {
       "name": "DripstoneDungeonWest",
@@ -3625,7 +3625,7 @@
           "src/main/resources/assets/slsb/models/block/dripstone_dungeon_west.json"
         ]
       },
-      "path": "~/Blocks/Drisptone Dungeon"
+      "path": "~/Blocks/Dungeon Blocks"
     },
     {
       "name": "DripstoneDungeonSpawnWest",
@@ -4726,6 +4726,2040 @@
         ]
       },
       "path": "~/Dimensions"
+    },
+    {
+      "name": "RatDungeonNorth",
+      "type": "block",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/rat_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/rat_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/rat_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/RatDungeonNorthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "RatDungeonEast",
+      "type": "block",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/rat_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/rat_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/rat_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/RatDungeonEastBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "RatDungeonSouth",
+      "type": "block",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/rat_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/rat_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/rat_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/RatDungeonSouthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "RatDungeonWest",
+      "type": "block",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/rat_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/RatDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/item/rat_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/rat_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "MineDungeonNorth",
+      "type": "block",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/mine_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/mine_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/mine_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/MineDungeonNorthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "MineDungeonEast",
+      "type": "block",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/mine_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/mine_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/MineDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/mine_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "MineDungeonSouth",
+      "type": "block",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/mine_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/MineDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/item/mine_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/mine_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "MineDungeonWest",
+      "type": "block",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/MineDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/blockstates/mine_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/item/mine_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/mine_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "ForestDungeonNorth",
+      "type": "block",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/forest_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/forest_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/ForestDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/models/block/forest_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Forest Dungeon"
+    },
+    {
+      "name": "ForestDungeonEast",
+      "type": "block",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/forest_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/forest_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/forest_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/ForestDungeonEastBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Forest Dungeon"
+    },
+    {
+      "name": "ForestDungeonSouth",
+      "type": "block",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/ForestDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/block/forest_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/forest_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/forest_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Forest Dungeon"
+    },
+    {
+      "name": "ForestDungeonWest",
+      "type": "block",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/forest_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/item/forest_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/ForestDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/blockstates/forest_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Forest Dungeon"
+    },
+    {
+      "name": "SubwayDungeonNorth",
+      "type": "block",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "subway_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/SubwayDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/subway_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/subway_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/subway_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Subway Dungeon"
+    },
+    {
+      "name": "SubwayDungeonEast",
+      "type": "block",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "subway_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/subway_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/SubwayDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/block/subway_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/item/subway_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Subway Dungeon"
+    },
+    {
+      "name": "SubwayDungeonSouth",
+      "type": "block",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "subway_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/subway_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/SubwayDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/block/subway_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/subway_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Subway Dungeon"
+    },
+    {
+      "name": "SubwayDungeonWest",
+      "type": "block",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "subway_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/subway_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/subway_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/SubwayDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/item/subway_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Subway Dungeon"
+    },
+    {
+      "name": "RatDungeonEnemies",
+      "type": "block",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/RatDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/item/rat_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/block/rat_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/rat_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "RatDungeonBoss",
+      "type": "block",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/rat_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/RatDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/item/rat_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/rat_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "MineDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/mine_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/mine_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/block/mine_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/MineDungeonEnemiesBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "MineDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/mine_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/mine_dungeon_boss.json",
+          "src/main/resources/assets/slsb/blockstates/mine_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/MineDungeonBossBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "ForestDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/forest_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/ForestDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/item/forest_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/forest_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Forest Dungeon"
+    },
+    {
+      "name": "ForestDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/ForestDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/item/forest_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/forest_dungeon_boss.json",
+          "src/main/resources/assets/slsb/blockstates/forest_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Forest Dungeon"
+    },
+    {
+      "name": "SubwayDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "subway_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/SubwayDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/blockstates/subway_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/item/subway_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/block/subway_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Subway Dungeon"
+    },
+    {
+      "name": "SubwayDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "subway_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/SubwayDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/block/subway_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/item/subway_dungeon_boss.json",
+          "src/main/resources/assets/slsb/blockstates/subway_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/E Rank/Subway Dungeon"
+    },
+    {
+      "name": "CatacombDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/catacomb_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/catacomb_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/CatacombDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/models/item/catacomb_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/catacomb_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/catacomb_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/CatacombDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/block/catacomb_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/catacomb_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/CatacombDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/catacomb_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/catacomb_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/catacomb_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/catacomb_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/CatacombDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/block/catacomb_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/catacomb_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/CatacombDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/blockstates/catacomb_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/item/catacomb_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/CatacombDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/blockstates/catacomb_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/item/catacomb_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/catacomb_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "SpiderDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/spider_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/spider_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/spider_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/SpiderDungeonNorthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Spider Dungeon"
+    },
+    {
+      "name": "SpiderDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/SpiderDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/spider_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/spider_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/spider_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Spider Dungeon"
+    },
+    {
+      "name": "SpiderDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/spider_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/spider_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/SpiderDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/block/spider_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Spider Dungeon"
+    },
+    {
+      "name": "SpiderDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/SpiderDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/blockstates/spider_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/item/spider_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/spider_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Spider Dungeon"
+    },
+    {
+      "name": "SpiderDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/spider_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/SpiderDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/item/spider_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/block/spider_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Spider Dungeon"
+    },
+    {
+      "name": "SpiderDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spider_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/SpiderDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/blockstates/spider_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/item/spider_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/spider_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Spider Dungeon"
+    },
+    {
+      "name": "SunkenDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunken_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/sunken_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/sunken_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/SunkenDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/sunken_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Sunken Dungeon"
+    },
+    {
+      "name": "SunkenDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunken_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/sunken_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/sunken_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/SunkenDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/blockstates/sunken_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Sunken Dungeon"
+    },
+    {
+      "name": "SunkenDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunken_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/sunken_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/sunken_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/SunkenDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/block/sunken_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Sunken Dungeon"
+    },
+    {
+      "name": "SunkenDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunken_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/sunken_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/sunken_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/sunken_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/SunkenDungeonWestBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Sunken Dungeon"
+    },
+    {
+      "name": "SunkenDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunken_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/sunken_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/sunken_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/item/sunken_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/SunkenDungeonEnemiesBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Sunken Dungeon"
+    },
+    {
+      "name": "SunkenDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunken_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/sunken_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/SunkenDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/blockstates/sunken_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/sunken_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Sunken Dungeon"
+    },
+    {
+      "name": "IceDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/ice_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/ice_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/ice_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/IceDungeonNorthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Ice Dungeon"
+    },
+    {
+      "name": "IceDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/ice_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/IceDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/ice_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/ice_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Ice Dungeon"
+    },
+    {
+      "name": "IceDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/ice_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/ice_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/ice_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/IceDungeonSouthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Ice Dungeon"
+    },
+    {
+      "name": "IceDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/ice_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/item/ice_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/ice_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/IceDungeonWestBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Ice Dungeon"
+    },
+    {
+      "name": "IceDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/ice_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/block/ice_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/ice_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/IceDungeonEnemiesBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Ice Dungeon"
+    },
+    {
+      "name": "IceDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/ice_dungeon_boss.json",
+          "src/main/resources/assets/slsb/blockstates/ice_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/IceDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/block/ice_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Ice Dungeon"
+    },
+    {
+      "name": "DoubleDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/double_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/double_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/DoubleDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/double_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Double Dungeon"
+    },
+    {
+      "name": "DoubleDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/DoubleDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/double_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/double_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/double_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Double Dungeon"
+    },
+    {
+      "name": "DoubleDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/DoubleDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/double_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/double_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/double_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Double Dungeon"
+    },
+    {
+      "name": "DoubleDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/DoubleDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/item/double_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/double_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/double_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Double Dungeon"
+    },
+    {
+      "name": "DoubleDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/double_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/block/double_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/DoubleDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/item/double_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Double Dungeon"
+    },
+    {
+      "name": "DoubleDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/DoubleDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/blockstates/double_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/double_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/item/double_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Double Dungeon"
+    },
+    {
+      "name": "LibraryDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "library_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/LibraryDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/models/block/library_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/library_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/library_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Library Dungeon"
+    },
+    {
+      "name": "LibraryDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "library_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/library_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/LibraryDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/library_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/library_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Library Dungeon"
+    },
+    {
+      "name": "LibraryDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "library_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/library_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/library_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/library_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/LibraryDungeonSouthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Library Dungeon"
+    },
+    {
+      "name": "LibraryDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "library_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/LibraryDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/block/library_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/item/library_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/library_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Library Dungeon"
+    },
+    {
+      "name": "LibraryDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "library_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/library_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/LibraryDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/blockstates/library_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/item/library_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Library Dungeon"
+    },
+    {
+      "name": "LibraryDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "library_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/library_dungeon_boss.json",
+          "src/main/resources/assets/slsb/blockstates/library_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/LibraryDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/block/library_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Library Dungeon"
+    },
+    {
+      "name": "MazeDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maze_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/MazeDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/maze_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/maze_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/maze_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Maze Dungeon"
+    },
+    {
+      "name": "MazeDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maze_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/maze_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/maze_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/maze_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/MazeDungeonEastBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Maze Dungeon"
+    },
+    {
+      "name": "MazeDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maze_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/maze_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/maze_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/MazeDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/maze_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Maze Dungeon"
+    },
+    {
+      "name": "MazeDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maze_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/maze_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/MazeDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/block/maze_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/item/maze_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Maze Dungeon"
+    },
+    {
+      "name": "MazeDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maze_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/maze_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/item/maze_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/MazeDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/block/maze_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Maze Dungeon"
+    },
+    {
+      "name": "MazeDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maze_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/maze_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/maze_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/MazeDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/blockstates/maze_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/D Rank/Maze Dungeon"
+    },
+    {
+      "name": "GoblinDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/goblin_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/GoblinDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/goblin_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/goblin_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Goblin Dungeon"
+    },
+    {
+      "name": "GoblinDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/goblin_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/goblin_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/goblin_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/GoblinDungeonEastBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Goblin Dungeon"
+    },
+    {
+      "name": "GoblinDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/goblin_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/GoblinDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/item/goblin_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/goblin_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Goblin Dungeon"
+    },
+    {
+      "name": "GoblinDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/goblin_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/goblin_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/GoblinDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/blockstates/goblin_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Goblin Dungeon"
+    },
+    {
+      "name": "GoblinDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/goblin_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/GoblinDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/item/goblin_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/block/goblin_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Goblin Dungeon"
+    },
+    {
+      "name": "GoblinDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/goblin_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/GoblinDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/item/goblin_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/goblin_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Goblin Dungeon"
+    },
+    {
+      "name": "SandDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/SandDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/sand_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/sand_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/sand_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Sand Dungeon"
+    },
+    {
+      "name": "SandDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/SandDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/sand_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/sand_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/sand_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Sand Dungeon"
+    },
+    {
+      "name": "SandDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/sand_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/sand_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/sand_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/SandDungeonSouthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Sand Dungeon"
+    },
+    {
+      "name": "SandDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/SandDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/item/sand_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/sand_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/sand_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Sand Dungeon"
+    },
+    {
+      "name": "SandDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/sand_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/item/sand_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/block/sand_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/SandDungeonEnemiesBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Sand Dungeon"
+    },
+    {
+      "name": "SandDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/sand_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/item/sand_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/SandDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/blockstates/sand_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/C Rank/Sand Dungeon"
+    },
+    {
+      "name": "CrystalDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/crystal_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/crystal_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/CrystalDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/models/block/crystal_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Crystal Dungeon"
+    },
+    {
+      "name": "CrystalDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/crystal_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/crystal_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/CrystalDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/blockstates/crystal_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Crystal Dungeon"
+    },
+    {
+      "name": "CrystalDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/crystal_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/crystal_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/crystal_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/CrystalDungeonSouthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Crystal Dungeon"
+    },
+    {
+      "name": "CrystalDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/crystal_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/CrystalDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/item/crystal_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/crystal_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Crystal Dungeon"
+    },
+    {
+      "name": "CrystalDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/crystal_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/crystal_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/CrystalDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/block/crystal_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Crystal Dungeon"
+    },
+    {
+      "name": "CrystalDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/crystal_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/item/crystal_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/CrystalDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/blockstates/crystal_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Crystal Dungeon"
+    },
+    {
+      "name": "ColiseumDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coliseum_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/ColiseumDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/coliseum_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/coliseum_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/coliseum_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Coliseum Dungeon"
+    },
+    {
+      "name": "ColiseumDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coliseum_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/coliseum_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/ColiseumDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/coliseum_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/coliseum_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Coliseum Dungeon"
+    },
+    {
+      "name": "ColiseumDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coliseum_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/coliseum_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/coliseum_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/ColiseumDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/block/coliseum_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Coliseum Dungeon"
+    },
+    {
+      "name": "ColiseumDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coliseum_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/coliseum_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/coliseum_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/coliseum_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/ColiseumDungeonWestBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Coliseum Dungeon"
+    },
+    {
+      "name": "ColiseumDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coliseum_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/coliseum_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/ColiseumDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/block/coliseum_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/coliseum_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Coliseum Dungeon"
+    },
+    {
+      "name": "ColiseumDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coliseum_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/coliseum_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/coliseum_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/ColiseumDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/blockstates/coliseum_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/B Rank/Coliseum Dungeon"
+    },
+    {
+      "name": "OrcDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orc_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/OrcDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/models/block/orc_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/orc_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/orc_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Orc Dungeon"
+    },
+    {
+      "name": "OrcDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orc_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/orc_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/OrcDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/orc_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/orc_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Orc Dungeon"
+    },
+    {
+      "name": "OrcDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orc_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/orc_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/orc_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/orc_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/OrcDungeonSouthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Orc Dungeon"
+    },
+    {
+      "name": "OrcDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orc_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/orc_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/orc_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/orc_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/OrcDungeonWestBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Orc Dungeon"
+    },
+    {
+      "name": "OrcDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orc_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/orc_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/OrcDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/item/orc_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/orc_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Orc Dungeon"
+    },
+    {
+      "name": "OrcDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orc_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/OrcDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/item/orc_dungeon_boss.json",
+          "src/main/resources/assets/slsb/blockstates/orc_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/orc_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Orc Dungeon"
+    },
+    {
+      "name": "LichDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lich_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/lich_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/lich_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/lich_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/LichDungeonNorthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Lich Dungeon"
+    },
+    {
+      "name": "LichDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lich_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/LichDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/lich_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/lich_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/lich_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Lich Dungeon"
+    },
+    {
+      "name": "LichDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lich_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/LichDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/lich_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/lich_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/lich_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Lich Dungeon"
+    },
+    {
+      "name": "LichDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lich_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/lich_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/lich_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/item/lich_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/LichDungeonWestBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Lich Dungeon"
+    },
+    {
+      "name": "LichDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lich_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/lich_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/item/lich_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/LichDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/block/lich_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Lich Dungeon"
+    },
+    {
+      "name": "LichDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lich_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/LichDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/block/lich_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/item/lich_dungeon_boss.json",
+          "src/main/resources/assets/slsb/blockstates/lich_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Lich Dungeon"
+    },
+    {
+      "name": "NagaDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naga_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/naga_dungeon_north.json",
+          "src/main/resources/assets/slsb/blockstates/naga_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/naga_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/NagaDungeonNorthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Naga Dungeon"
+    },
+    {
+      "name": "NagaDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naga_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/naga_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/naga_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/NagaDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/blockstates/naga_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Naga Dungeon"
+    },
+    {
+      "name": "NagaDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naga_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/naga_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/NagaDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/block/naga_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/naga_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Naga Dungeon"
+    },
+    {
+      "name": "NagaDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naga_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/NagaDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/models/item/naga_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/naga_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/naga_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Naga Dungeon"
+    },
+    {
+      "name": "NagaDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naga_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/naga_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/NagaDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/block/naga_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/item/naga_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Naga Dungeon"
+    },
+    {
+      "name": "NagaDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naga_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/naga_dungeon_boss.json",
+          "src/main/resources/assets/slsb/blockstates/naga_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/item/naga_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/NagaDungeonBossBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/A Rank/Naga Dungeon"
+    },
+    {
+      "name": "DragonDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/DragonDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/dragon_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/dragon_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/dragon_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Dragon Dungeon"
+    },
+    {
+      "name": "DragonDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/dragon_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/DragonDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/dragon_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/dragon_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Dragon Dungeon"
+    },
+    {
+      "name": "DragonDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/dragon_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/DragonDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/dragon_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/item/dragon_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Dragon Dungeon"
+    },
+    {
+      "name": "DragonDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/dragon_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/item/dragon_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/dragon_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/DragonDungeonWestBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Dragon Dungeon"
+    },
+    {
+      "name": "DragonDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/dragon_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/dragon_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/DragonDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/block/dragon_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Dragon Dungeon"
+    },
+    {
+      "name": "DragonDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/dragon_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/DragonDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/blockstates/dragon_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/dragon_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Dragon Dungeon"
+    },
+    {
+      "name": "GiantDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/giant_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/giant_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/block/giant_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/GiantDungeonNorthBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Giant Dungeon"
+    },
+    {
+      "name": "GiantDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/GiantDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/giant_dungeon_east.json",
+          "src/main/resources/assets/slsb/blockstates/giant_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/giant_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Giant Dungeon"
+    },
+    {
+      "name": "GiantDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/giant_dungeon_south.json",
+          "src/main/java/net/clozynoii/slsb/block/GiantDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/giant_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/giant_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Giant Dungeon"
+    },
+    {
+      "name": "GiantDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/giant_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/giant_dungeon_west.json",
+          "src/main/resources/assets/slsb/blockstates/giant_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/GiantDungeonWestBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Giant Dungeon"
+    },
+    {
+      "name": "GiantDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/giant_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/giant_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/GiantDungeonEnemiesBlock.java",
+          "src/main/resources/assets/slsb/models/block/giant_dungeon_enemies.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Giant Dungeon"
+    },
+    {
+      "name": "GiantDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/giant_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/GiantDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/item/giant_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/giant_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Giant Dungeon"
+    },
+    {
+      "name": "CathedralDungeonNorth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cathedral_dungeon_north",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/block/cathedral_dungeon_north.json",
+          "src/main/java/net/clozynoii/slsb/block/CathedralDungeonNorthBlock.java",
+          "src/main/resources/assets/slsb/blockstates/cathedral_dungeon_north.json",
+          "src/main/resources/assets/slsb/models/item/cathedral_dungeon_north.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Cathedral Dungeon"
+    },
+    {
+      "name": "CathedralDungeonEast",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cathedral_dungeon_east",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/cathedral_dungeon_east.json",
+          "src/main/resources/assets/slsb/models/block/cathedral_dungeon_east.json",
+          "src/main/java/net/clozynoii/slsb/block/CathedralDungeonEastBlock.java",
+          "src/main/resources/assets/slsb/models/item/cathedral_dungeon_east.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Cathedral Dungeon"
+    },
+    {
+      "name": "CathedralDungeonSouth",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cathedral_dungeon_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/CathedralDungeonSouthBlock.java",
+          "src/main/resources/assets/slsb/models/item/cathedral_dungeon_south.json",
+          "src/main/resources/assets/slsb/models/block/cathedral_dungeon_south.json",
+          "src/main/resources/assets/slsb/blockstates/cathedral_dungeon_south.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Cathedral Dungeon"
+    },
+    {
+      "name": "CathedralDungeonWest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cathedral_dungeon_west",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/cathedral_dungeon_west.json",
+          "src/main/resources/assets/slsb/models/block/cathedral_dungeon_west.json",
+          "src/main/java/net/clozynoii/slsb/block/CathedralDungeonWestBlock.java",
+          "src/main/resources/assets/slsb/blockstates/cathedral_dungeon_west.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Cathedral Dungeon"
+    },
+    {
+      "name": "CathedralDungeonEnemies",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cathedral_dungeon_enemies",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/cathedral_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/models/block/cathedral_dungeon_enemies.json",
+          "src/main/resources/assets/slsb/blockstates/cathedral_dungeon_enemies.json",
+          "src/main/java/net/clozynoii/slsb/block/CathedralDungeonEnemiesBlock.java"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Cathedral Dungeon"
+    },
+    {
+      "name": "CathedralDungeonBoss",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cathedral_dungeon_boss",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/blockstates/cathedral_dungeon_boss.json",
+          "src/main/resources/assets/slsb/models/block/cathedral_dungeon_boss.json",
+          "src/main/java/net/clozynoii/slsb/block/CathedralDungeonBossBlock.java",
+          "src/main/resources/assets/slsb/models/item/cathedral_dungeon_boss.json"
+        ]
+      },
+      "path": "~/Blocks/Dungeon Blocks/S Rank/Cathedral Dungeon"
     }
   ],
   "variable_elements": [
@@ -5069,53 +7103,179 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
       "effect.slsb.collapse": "Collapse",
-      "item.slsb.mana_crystal": "§bMana Crystal",
-      "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
-      "block.slsb.dripstone_dungeon_south": "Dripstone Dungeon South",
+      "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
+      "block.slsb.naga_dungeon_south": "Rat Dungeon South",
+      "block.slsb.cathedral_dungeon_east": "Rat Dungeon East",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
-      "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
-      "entity.slsb.after_image": "After Image",
+      "block.slsb.ice_dungeon_south": "Rat Dungeon South",
       "advancements.strength_skill.title": "Strength Skill",
-      "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
-      "advancements.heal_skill.descr": "Unlock Heal Skill",
-      "advancements.stealth_skill.title": "Stealth Skill",
-      "effect.slsb.charged": "Charged",
-      "advancements.haste_skill.title": "Haste Skill",
-      "effect.slsb.bash": "Bash",
-      "block.slsb.awakening_orb": "Awakening Orb",
-      "block.slsb.red_gate_small": "Red Gate Small",
-      "block.slsb.blue_gate_small": "Blue Gate Small",
+      "block.slsb.rat_dungeon_north": "Rat Dungeon North",
+      "block.slsb.lich_dungeon_east": "Rat Dungeon East",
+      "block.slsb.double_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.double_dungeon_west": "Rat Dungeon West",
+      "block.slsb.subway_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.library_dungeon_north": "Rat Dungeon North",
+      "block.slsb.coliseum_dungeon_north": "Rat Dungeon North",
+      "block.slsb.naga_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.sand_dungeon_south": "Rat Dungeon South",
       "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
-      "item.slsb.knight_killer": "§cKnight Killer",
-      "effect.slsb.healing_aura": "Healing Aura",
-      "advancements.stealth_skill.descr": "Unlock Stealth Skill",
-      "key.slsb.switch_skill": "Switch Skill",
-      "block.slsb.dripstone_dungeon_north": "Dripstone Dungeon North",
-      "effect.slsb.reinforcement": "Reinforcement",
+      "block.slsb.forest_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.dragon_dungeon_south": "Rat Dungeon South",
+      "block.slsb.subway_dungeon_north": "Subway Dungeon North",
       "block.slsb.dripstone_dungeon_west": "Dripstone Dungeon West",
       "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
-      "item_group.slsb.solo_leveling_weapons": "Solo Leveling: Weapons",
-      "subtitles.stab": "",
-      "advancements.awakening.descr": "Awaken as a Hunter.",
-      "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
+      "block.slsb.mine_dungeon_south": "Mine Dungeon South",
       "advancements.assassin_class.descr": "Become the Assassin Class.",
       "advancements.healer_class.title": "Healer",
-      "block.slsb.mana_crystal_block_stone": "Mana Crystal (Stone)",
-      "advancements.healer_class.descr": "Become the Healer Class.",
-      "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
-      "advancements.assassin_class.title": "Assassin",
+      "block.slsb.forest_dungeon_north": "Forest Dungeon North",
+      "block.slsb.mine_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.library_dungeon_west": "Rat Dungeon West",
+      "block.slsb.mine_dungeon_west": "Mine Dungeon West",
       "effect.slsb.disguise": "Disguise",
-      "block.slsb.mana_crystal_block_granite": "Mana Crystal (Granite)",
-      "key.slsb.use_skill": "Use Skill",
-      "effect.slsb.evade": "Evade",
-      "advancements.heal_skill.title": "Heal Skill",
-      "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East",
+      "block.slsb.orc_dungeon_west": "Rat Dungeon West",
+      "block.slsb.goblin_dungeon_east": "Rat Dungeon East",
+      "block.slsb.cathedral_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.dragon_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.sand_dungeon_west": "Rat Dungeon West",
+      "block.slsb.sunken_dungeon_west": "Rat Dungeon West",
+      "block.slsb.ice_dungeon_east": "Rat Dungeon East",
       "effect.slsb.stealth": "Stealth",
+      "block.slsb.rat_dungeon_boss": "Rat Dungeon North",
+      "biome.slsb.dungeon": "Dungeon",
+      "block.slsb.lich_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.cathedral_dungeon_south": "Rat Dungeon South",
+      "block.slsb.sunken_dungeon_south": "Rat Dungeon South",
+      "block.slsb.sunken_dungeon_north": "Rat Dungeon North",
+      "block.slsb.dripstone_dungeon_south": "Dripstone Dungeon South",
+      "block.slsb.goblin_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.subway_dungeon_west": "Subway Dungeon West",
+      "block.slsb.catacomb_dungeon_east": "Rat Dungeon East",
+      "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
+      "block.slsb.maze_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.rat_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.spider_dungeon_east": "Rat Dungeon East",
+      "block.slsb.coliseum_dungeon_east": "Rat Dungeon East",
+      "block.slsb.blue_gate_small": "Blue Gate Small",
+      "block.slsb.crystal_dungeon_south": "Rat Dungeon South",
+      "effect.slsb.healing_aura": "Healing Aura",
+      "block.slsb.dripstone_dungeon_north": "Dripstone Dungeon North",
+      "block.slsb.double_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.lich_dungeon_west": "Rat Dungeon West",
+      "effect.slsb.reinforcement": "Reinforcement",
+      "block.slsb.catacomb_dungeon_west": "Rat Dungeon West",
+      "item_group.slsb.solo_leveling_weapons": "Solo Leveling: Weapons",
+      "block.slsb.sunken_dungeon_east": "Rat Dungeon East",
+      "advancements.awakening.descr": "Awaken as a Hunter.",
+      "block.slsb.catacomb_dungeon_north": "Rat Dungeon North",
+      "block.slsb.naga_dungeon_east": "Rat Dungeon East",
+      "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
+      "block.slsb.mana_crystal_block_stone": "Mana Crystal (Stone)",
+      "block.slsb.dragon_dungeon_enemies": "Rat Dungeon North",
+      "advancements.healer_class.descr": "Become the Healer Class.",
+      "block.slsb.dragon_dungeon_west": "Rat Dungeon West",
+      "block.slsb.catacomb_dungeon_south": "Rat Dungeon South",
+      "block.slsb.crystal_dungeon_north": "Rat Dungeon North",
+      "block.slsb.coliseum_dungeon_south": "Rat Dungeon South",
+      "block.slsb.catacomb_dungeon_enemies": "Rat Dungeon North",
+      "effect.slsb.evade": "Evade",
+      "block.slsb.giant_dungeon_west": "Rat Dungeon West",
+      "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East",
+      "block.slsb.forest_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.crystal_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.mine_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.sand_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.mine_dungeon_east": "Mine Dungeon East",
+      "block.slsb.crystal_dungeon_enemies": "Rat Dungeon North",
+      "item.slsb.mana_crystal": "§bMana Crystal",
+      "block.slsb.lich_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.spider_dungeon_west": "Rat Dungeon West",
+      "block.slsb.maze_dungeon_west": "Rat Dungeon West",
+      "block.slsb.ice_dungeon_north": "Rat Dungeon North",
+      "block.slsb.library_dungeon_east": "Rat Dungeon East",
+      "block.slsb.orc_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.crystal_dungeon_west": "Rat Dungeon West",
+      "block.slsb.naga_dungeon_north": "Rat Dungeon North",
+      "block.slsb.goblin_dungeon_west": "Rat Dungeon West",
+      "block.slsb.orc_dungeon_east": "Rat Dungeon East",
+      "block.slsb.rat_dungeon_east": "Rat Dungeon East",
+      "block.slsb.forest_dungeon_east": "Forest Dungeon East",
+      "effect.slsb.charged": "Charged",
+      "advancements.haste_skill.title": "Haste Skill",
+      "block.slsb.library_dungeon_south": "Rat Dungeon South",
+      "block.slsb.cathedral_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.awakening_orb": "Awakening Orb",
+      "block.slsb.coliseum_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.subway_dungeon_enemies": "Rat Dungeon North",
+      "item.slsb.knight_killer": "§cKnight Killer",
+      "block.slsb.goblin_dungeon_enemies": "Rat Dungeon North",
+      "key.slsb.switch_skill": "Switch Skill",
+      "block.slsb.rat_dungeon_south": "Rat Dungeon South",
+      "block.slsb.forest_dungeon_south": "Forest Dungeon South",
+      "block.slsb.subway_dungeon_south": "Subway Dungeon South",
+      "block.slsb.coliseum_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.ice_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.giant_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.double_dungeon_east": "Rat Dungeon East",
+      "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
+      "block.slsb.cathedral_dungeon_north": "Rat Dungeon North",
+      "block.slsb.naga_dungeon_west": "Rat Dungeon West",
+      "key.slsb.use_skill": "Use Skill",
+      "block.slsb.sand_dungeon_north": "Rat Dungeon North",
+      "block.slsb.goblin_dungeon_south": "Rat Dungeon South",
+      "block.slsb.giant_dungeon_east": "Rat Dungeon East",
       "advancements.awakening.title": "Awakening",
-      "biome.slsb.dungeon": "Dungeon"
+      "block.slsb.subway_dungeon_east": "Subway Dungeon East",
+      "block.slsb.spider_dungeon_north": "Rat Dungeon North",
+      "block.slsb.sand_dungeon_enemies": "Rat Dungeon North",
+      "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
+      "block.slsb.maze_dungeon_north": "Rat Dungeon North",
+      "block.slsb.spider_dungeon_south": "Rat Dungeon South",
+      "block.slsb.spider_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
+      "block.slsb.maze_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.dragon_dungeon_east": "Rat Dungeon East",
+      "block.slsb.maze_dungeon_south": "Rat Dungeon South",
+      "entity.slsb.after_image": "After Image",
+      "block.slsb.giant_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.forest_dungeon_west": "Forest Dungeon West",
+      "block.slsb.goblin_dungeon_north": "Rat Dungeon North",
+      "advancements.heal_skill.descr": "Unlock Heal Skill",
+      "block.slsb.orc_dungeon_north": "Rat Dungeon North",
+      "block.slsb.sunken_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.lich_dungeon_south": "Rat Dungeon South",
+      "block.slsb.lich_dungeon_north": "Rat Dungeon North",
+      "advancements.stealth_skill.title": "Stealth Skill",
+      "effect.slsb.bash": "Bash",
+      "block.slsb.red_gate_small": "Red Gate Small",
+      "block.slsb.catacomb_dungeon_boss": "Rat Dungeon North",
+      "advancements.stealth_skill.descr": "Unlock Stealth Skill",
+      "block.slsb.coliseum_dungeon_west": "Rat Dungeon West",
+      "block.slsb.maze_dungeon_east": "Rat Dungeon East",
+      "block.slsb.ice_dungeon_west": "Rat Dungeon West",
+      "subtitles.stab": "",
+      "block.slsb.mine_dungeon_north": "Mine Dungeon North",
+      "block.slsb.rat_dungeon_west": "Rat Dungeon West",
+      "block.slsb.giant_dungeon_south": "Rat Dungeon South",
+      "block.slsb.giant_dungeon_north": "Rat Dungeon North",
+      "block.slsb.cathedral_dungeon_west": "Rat Dungeon West",
+      "block.slsb.ice_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.crystal_dungeon_east": "Rat Dungeon East",
+      "block.slsb.dragon_dungeon_north": "Rat Dungeon North",
+      "advancements.assassin_class.title": "Assassin",
+      "block.slsb.sand_dungeon_east": "Rat Dungeon East",
+      "block.slsb.mana_crystal_block_granite": "Mana Crystal (Granite)",
+      "block.slsb.sunken_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.library_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.naga_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.spider_dungeon_enemies": "Rat Dungeon North",
+      "advancements.heal_skill.title": "Heal Skill",
+      "block.slsb.double_dungeon_north": "Rat Dungeon North",
+      "block.slsb.library_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.double_dungeon_south": "Rat Dungeon South",
+      "block.slsb.orc_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.orc_dungeon_south": "Rat Dungeon South"
     }
   },
   "foldersRoot": {
@@ -5283,8 +7443,127 @@
             "children": []
           },
           {
-            "name": "Drisptone Dungeon",
-            "children": []
+            "name": "Dungeon Blocks",
+            "children": [
+              {
+                "name": "E Rank",
+                "children": [
+                  {
+                    "name": "Rat Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Mine Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Forest Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Subway Dungeon",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "D Rank",
+                "children": [
+                  {
+                    "name": "Catacomb Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Library Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Maze Dungeon",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "C Rank",
+                "children": [
+                  {
+                    "name": "Spider Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Goblin Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Sand Dungeon",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "B Rank",
+                "children": [
+                  {
+                    "name": "Sunken Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Crystal Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Coliseum Dungeon",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "A Rank",
+                "children": [
+                  {
+                    "name": "Ice Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Orc Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Lich Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Naga Dungeon",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "S Rank",
+                "children": [
+                  {
+                    "name": "Double Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Dragon Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Giant Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Cathedral Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Demon Castle",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       },

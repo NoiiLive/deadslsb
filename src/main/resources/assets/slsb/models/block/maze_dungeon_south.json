@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "slsb:block/blue",
+    "up": "slsb:block/blue",
+    "north": "slsb:block/blue",
+    "east": "slsb:block/blue",
+    "south": "slsb:block/blue",
+    "west": "slsb:block/blue",
+    "particle": "slsb:block/blue"
+  },
+  "render_type": "solid"
+}
