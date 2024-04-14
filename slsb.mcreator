@@ -3592,102 +3592,6 @@
       "path": "~/Blocks/Drisptone Dungeon"
     },
     {
-      "name": "DripstoneDungeonSpawnNorth",
-      "type": "procedure",
-      "sortid": 172,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_spawn_north",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnNorthProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
-    },
-    {
-      "name": "DripstoneDungeonSpawnSouth",
-      "type": "procedure",
-      "sortid": 173,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_spawn_south",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnSouthProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
-    },
-    {
-      "name": "DripstoneDungeonSpawnEast",
-      "type": "procedure",
-      "sortid": 174,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_spawn_east",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnEastProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
-    },
-    {
       "name": "DripstoneDungeonSpawnWest",
       "type": "procedure",
       "sortid": 175,
@@ -3720,36 +3624,6 @@
       "path": "~/Procedures/Dungeons/Dripstone Dungeon"
     },
     {
-      "name": "DungeonUnplaceable",
-      "type": "tag",
-      "sortid": 176,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dungeon_unplaceable",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/tags/blocks/dungeon_unplaceable.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "Dungeon",
-      "type": "biome",
-      "sortid": 177,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dungeon",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/worldgen/configured_feature/dungeon_tree.json",
-          "src/main/resources/data/slsb/worldgen/placed_feature/dungeon_tree.json",
-          "src/main/resources/data/slsb/worldgen/biome/dungeon.json"
-        ]
-      },
-      "path": "~/Biomes"
-    },
-    {
       "name": "DungeonWorld",
       "type": "dimension",
       "sortid": 178,
@@ -3764,42 +3638,6 @@
         ]
       },
       "path": "~/Dimensions"
-    },
-    {
-      "name": "EnterGate",
-      "type": "procedure",
-      "sortid": 179,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enter_gate",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/EnterGateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Gates"
     },
     {
       "name": "DungeonWorldGenerate",
@@ -3830,24 +3668,32 @@
       "path": "~/Procedures/Dungeons"
     },
     {
-      "name": "PlaceGate",
+      "name": "EnterGate",
       "type": "procedure",
-      "sortid": 181,
+      "sortid": 179,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "place_gate",
+      "registry_name": "enter_gate",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/PlaceGateProcedure.java"
+          "src/main/java/net/clozynoii/slsb/procedures/EnterGateProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -3892,6 +3738,862 @@
         ]
       },
       "path": "~/Procedures/Dungeons"
+    },
+    {
+      "name": "Dungeon",
+      "type": "biome",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/worldgen/configured_feature/dungeon_tree.json",
+          "src/main/resources/data/slsb/worldgen/placed_feature/dungeon_tree.json",
+          "src/main/resources/data/slsb/worldgen/biome/dungeon.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "DripstoneDungeonSpawnEast",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_spawn_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnEastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
+    },
+    {
+      "name": "PlaceGate",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "place_gate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/PlaceGateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Gates"
+    },
+    {
+      "name": "DungeonUnplaceable",
+      "type": "tag",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon_unplaceable",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/blocks/dungeon_unplaceable.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "DripstoneDungeonSpawnSouth",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_spawn_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnSouthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
+    },
+    {
+      "name": "DripstoneDungeonSpawnNorth",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dripstone_dungeon_spawn_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnNorthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
+    },
+    {
+      "name": "HasteBuffSkillUse",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "haste_buff_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/HasteBuffSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "Disguise",
+      "type": "potioneffect",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disguise",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/DisguiseMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ChargedSmashSkillUse",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charged_smash_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ChargedSmashSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "BRank",
+      "type": "tag",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/b_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "BashSkillUse",
+      "type": "procedure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bash_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/BashSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "PurifySkillUse",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purify_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/PurifySkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "CollapseActiveTick",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collapse_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CollapseActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "DisguiseTick",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disguise_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DisguiseTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "StrengthBuffSkillUse",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strength_buff_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/StrengthBuffSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "TauntSkillUse",
+      "type": "procedure",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "taunt_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TauntSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "Charged",
+      "type": "potioneffect",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/ChargedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "CollapseEffectExpires",
+      "type": "procedure",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collapse_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CollapseEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "ReinforcementSkillUse",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reinforcement_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReinforcementSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "Reinforcement",
+      "type": "potioneffect",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reinforcement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/ReinforcementMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "CRank",
+      "type": "tag",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/c_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "Collapse",
+      "type": "potioneffect",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collapse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/CollapseMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ReinforcementTick",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reinforcement_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ReinforcementTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "ERank",
+      "type": "tag",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/e_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "BashOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bash_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/BashOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "SRank",
+      "type": "tag",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/s_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "DisguiseSkillUse",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disguise_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DisguiseSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "Bash",
+      "type": "potioneffect",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/BashMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FortifySkillUse",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fortify_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/FortifySkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Healer/Moves"
+    },
+    {
+      "name": "ProvocationSkillUse",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "provocation_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ProvocationSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "CollapseSkillUse",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collapse_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CollapseSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "DRank",
+      "type": "tag",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "d_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/d_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "ARank",
+      "type": "tag",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "a_rank",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/tags/entity_types/a_rank.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "ChargedHit",
+      "type": "procedure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charged_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ChargedHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
     }
   ],
   "variable_elements": [
@@ -4202,10 +4904,10 @@
       "value": "false"
     },
     {
-      "name": "DungeonRoomTimer",
-      "type": "number",
+      "name": "DungeonBossRoom",
+      "type": "logic",
       "scope": "map",
-      "value": "0"
+      "value": "false"
     },
     {
       "name": "DungeonRoomCount",
@@ -4214,64 +4916,62 @@
       "value": "0"
     },
     {
-      "name": "DungeonBossRoom",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
       "name": "DungeonGenerate",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "DungeonRoomTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
       "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
-      "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
       "item.slsb.mana_crystal": "§bMana Crystal",
-      "block.slsb.dripstone_dungeon_south": "Dripstone Dungeon South",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
-      "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
-      "entity.slsb.after_image": "After Image",
       "advancements.strength_skill.title": "Strength Skill",
+      "advancements.haste_skill.title": "Haste Skill",
+      "block.slsb.awakening_orb": "Awakening Orb",
+      "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
+      "item.slsb.knight_killer": "§cKnight Killer",
+      "key.slsb.switch_skill": "Switch Skill",
+      "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
+      "block.slsb.dripstone_dungeon_west": "Dripstone Dungeon West",
+      "advancements.assassin_class.descr": "Become the Assassin Class.",
+      "advancements.healer_class.title": "Healer",
+      "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
+      "key.slsb.use_skill": "Use Skill",
+      "effect.slsb.stealth": "Stealth",
+      "advancements.awakening.title": "Awakening",
+      "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
+      "block.slsb.dripstone_dungeon_south": "Dripstone Dungeon South",
+      "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
+      "entity.slsb.after_image": "After Image",
       "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
       "advancements.heal_skill.descr": "Unlock Heal Skill",
       "advancements.stealth_skill.title": "Stealth Skill",
-      "subtitles.quickstep": "Player quicksteps",
-      "advancements.haste_skill.title": "Haste Skill",
-      "block.slsb.blue_gate_small": "Blue Gate Small",
       "block.slsb.red_gate_small": "Red Gate Small",
-      "block.slsb.awakening_orb": "Awakening Orb",
-      "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
+      "block.slsb.blue_gate_small": "Blue Gate Small",
       "effect.slsb.healing_aura": "Healing Aura",
-      "item.slsb.knight_killer": "§cKnight Killer",
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
-      "key.slsb.switch_skill": "Switch Skill",
       "block.slsb.dripstone_dungeon_north": "Dripstone Dungeon North",
-      "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
       "item_group.slsb.solo_leveling_weapons": "Solo Leveling: Weapons",
-      "block.slsb.dripstone_dungeon_west": "Dripstone Dungeon West",
       "subtitles.stab": "",
       "advancements.awakening.descr": "Awaken as a Hunter.",
       "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
-      "advancements.assassin_class.descr": "Become the Assassin Class.",
-      "advancements.healer_class.title": "Healer",
       "block.slsb.mana_crystal_block_stone": "Mana Crystal (Stone)",
       "advancements.healer_class.descr": "Become the Healer Class.",
-      "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "advancements.assassin_class.title": "Assassin",
       "block.slsb.mana_crystal_block_granite": "Mana Crystal (Granite)",
-      "key.slsb.use_skill": "Use Skill",
       "effect.slsb.evade": "Evade",
       "advancements.heal_skill.title": "Heal Skill",
-      "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East",
-      "effect.slsb.stealth": "Stealth",
-      "advancements.awakening.title": "Awakening",
-      "biome.slsb.dungeon": "Dungeon"
+      "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East"
     }
   },
   "foldersRoot": {

@@ -202,9 +202,9 @@ public class SlsbModVariables {
 		public static final String DATA_NAME = "slsb_mapvars";
 		public double GateTimer = 0;
 		public boolean WorldCreated = false;
-		public double DungeonRoomTimer = 0;
-		public double DungeonRoomCount = 0;
 		public boolean DungeonBossRoom = false;
+		public double DungeonRoomCount = 0;
+		public double DungeonRoomTimer = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -215,18 +215,18 @@ public class SlsbModVariables {
 		public void read(CompoundTag nbt) {
 			GateTimer = nbt.getDouble("GateTimer");
 			WorldCreated = nbt.getBoolean("WorldCreated");
-			DungeonRoomTimer = nbt.getDouble("DungeonRoomTimer");
-			DungeonRoomCount = nbt.getDouble("DungeonRoomCount");
 			DungeonBossRoom = nbt.getBoolean("DungeonBossRoom");
+			DungeonRoomCount = nbt.getDouble("DungeonRoomCount");
+			DungeonRoomTimer = nbt.getDouble("DungeonRoomTimer");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putDouble("GateTimer", GateTimer);
 			nbt.putBoolean("WorldCreated", WorldCreated);
-			nbt.putDouble("DungeonRoomTimer", DungeonRoomTimer);
-			nbt.putDouble("DungeonRoomCount", DungeonRoomCount);
 			nbt.putBoolean("DungeonBossRoom", DungeonBossRoom);
+			nbt.putDouble("DungeonRoomCount", DungeonRoomCount);
+			nbt.putDouble("DungeonRoomTimer", DungeonRoomTimer);
 			return nbt;
 		}
 

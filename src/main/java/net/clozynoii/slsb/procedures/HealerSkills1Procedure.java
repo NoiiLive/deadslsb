@@ -1,5 +1,6 @@
 package net.clozynoii.slsb.procedures;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
@@ -7,7 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.clozynoii.slsb.network.SlsbModVariables;
 
 public class HealerSkills1Procedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCooldown1 == 0) {
@@ -35,7 +36,7 @@ public class HealerSkills1Procedure {
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Haste Buff")) {
 				{
-					double _setval = 0;
+					double _setval = 40;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -43,6 +44,7 @@ public class HealerSkills1Procedure {
 				}
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+					HasteBuffSkillUseProcedure.execute(world, x, y, z, entity);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(
@@ -53,7 +55,7 @@ public class HealerSkills1Procedure {
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Strength Buff")) {
 				{
-					double _setval = 0;
+					double _setval = 100;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -61,6 +63,7 @@ public class HealerSkills1Procedure {
 				}
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+					StrengthBuffSkillUseProcedure.execute(world, x, y, z, entity);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(
@@ -71,7 +74,7 @@ public class HealerSkills1Procedure {
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Disguise")) {
 				{
-					double _setval = 0;
+					double _setval = 110;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -80,6 +83,7 @@ public class HealerSkills1Procedure {
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Disguise") == false) {
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+						DisguiseSkillUseProcedure.execute(world, x, y, z, entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -87,6 +91,7 @@ public class HealerSkills1Procedure {
 									true);
 					}
 				} else {
+					DisguiseTickProcedure.execute(world, x, y, z, entity);
 				}
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Sacred Barrier")) {
@@ -111,7 +116,7 @@ public class HealerSkills1Procedure {
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Purify")) {
 				{
-					double _setval = 0;
+					double _setval = 300;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -119,6 +124,7 @@ public class HealerSkills1Procedure {
 				}
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+					PurifySkillUseProcedure.execute(world, x, y, z, entity);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(
@@ -129,7 +135,7 @@ public class HealerSkills1Procedure {
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Fortify")) {
 				{
-					double _setval = 0;
+					double _setval = 150;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -137,6 +143,7 @@ public class HealerSkills1Procedure {
 				}
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+					FortifySkillUseProcedure.execute(world, x, y, z, entity);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(
