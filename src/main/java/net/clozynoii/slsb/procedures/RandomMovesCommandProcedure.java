@@ -394,7 +394,7 @@ public class RandomMovesCommandProcedure {
 						}.getEntity()));
 					});
 				}
-				abilitylist = "Barrier,ReflectiveBarrier,Encasement,";
+				abilitylist = "Barrier,ReflectiveShield,Encasement,";
 				abilitycount = 3;
 			}
 		}
@@ -409,7 +409,7 @@ public class RandomMovesCommandProcedure {
 			}
 		}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Assassin")) {
 			abilitylist = "Stealth,Quickstep,Backstab,Evasion,Mark,Smokescreen,Clone,Flurry,";
-			abilitycount = 7;
+			abilitycount = 8;
 		}
 		if ((((new Object() {
 			public Entity getEntity() {

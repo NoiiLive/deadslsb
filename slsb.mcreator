@@ -413,6 +413,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4626,6 +4630,102 @@
         ]
       },
       "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "ERankDungeon",
+      "type": "dimension",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_rank_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/e_rank_dungeon.json",
+          "src/main/resources/data/slsb/dimension/e_rank_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/ERankDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "DRankDungeon",
+      "type": "dimension",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "d_rank_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/dimension/DRankDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/d_rank_dungeon.json",
+          "src/main/resources/data/slsb/dimension/d_rank_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "CRankDungeon",
+      "type": "dimension",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_rank_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/c_rank_dungeon.json",
+          "src/main/resources/data/slsb/dimension_type/c_rank_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/CRankDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "BRankDungeon",
+      "type": "dimension",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_rank_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/dimension/BRankDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension/b_rank_dungeon.json",
+          "src/main/resources/data/slsb/dimension_type/b_rank_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "ARankDungeon",
+      "type": "dimension",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "a_rank_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/a_rank_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/ARankDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension/a_rank_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions"
+    },
+    {
+      "name": "SRankDungeon",
+      "type": "dimension",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_rank_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/s_rank_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/SRankDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/s_rank_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions"
     }
   ],
   "variable_elements": [
@@ -4711,7 +4811,7 @@
       "name": "Rank",
       "type": "string",
       "scope": "player_persistent",
-      "value": "0"
+      "value": ""
     },
     {
       "name": "UseAbilityType",
@@ -4957,7 +5057,13 @@
       "name": "DungeonRoomTimer",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "0.0"
+    },
+    {
+      "name": "DungeonEntranceTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
     }
   ],
   "sound_elements": [],

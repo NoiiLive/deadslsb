@@ -1706,54 +1706,54 @@ public class SkillRenameMageProcedure {
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).MageType).equals("Barrier")) {
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Mage")) {
-				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("ReflectiveBarrier")) {
+				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("ReflectiveShield")) {
 					{
-						String _setval = "Reflective Barrier";
+						String _setval = "Reflective Shield";
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilitySelected = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 				}
-				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1).equals("ReflectiveBarrier")) {
+				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1).equals("ReflectiveShield")) {
 					{
-						String _setval = "Reflective Barrier";
+						String _setval = "Reflective Shield";
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilitySlot1 = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 				}
-				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot2).equals("ReflectiveBarrier")) {
+				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot2).equals("ReflectiveShield")) {
 					{
-						String _setval = "Reflective Barrier";
+						String _setval = "Reflective Shield";
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilitySlot2 = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 				}
-				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot3).equals("ReflectiveBarrier")) {
+				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot3).equals("ReflectiveShield")) {
 					{
-						String _setval = "Reflective Barrier";
+						String _setval = "Reflective Shield";
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilitySlot3 = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 				}
-				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot4).equals("ReflectiveBarrier")) {
+				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot4).equals("ReflectiveShield")) {
 					{
-						String _setval = "Reflective Barrier";
+						String _setval = "Reflective Shield";
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilitySlot4 = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 				}
-				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot5).equals("ReflectiveBarrier")) {
+				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot5).equals("ReflectiveShield")) {
 					{
-						String _setval = "Reflective Barrier";
+						String _setval = "Reflective Shield";
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilitySlot5 = _setval;
 							capability.syncPlayerVariables(entity);

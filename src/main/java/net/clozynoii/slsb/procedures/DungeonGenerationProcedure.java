@@ -49,7 +49,7 @@ public class DungeonGenerationProcedure {
 		if (entity == null)
 			return;
 		if (entity.getPersistentData().getBoolean("GenerateDungeon") == true) {
-			if ((entity.level().dimension()) == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:dungeon_world")))) {
+			if ((entity.level().dimension()) == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:e_rank_dungeon")))) {
 				if (world instanceof ServerLevel _serverworld) {
 					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("slsb", "dripstonedungeon_entrance"));
 					if (template != null) {
@@ -57,7 +57,11 @@ public class DungeonGenerationProcedure {
 								_serverworld.random, 3);
 					}
 				}
-				world.setBlock(BlockPos.containing(x, y, z), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+				if (entity.getPersistentData().getBoolean("RedGate") == true) {
+					world.setBlock(BlockPos.containing(x, y, z), SlsbModBlocks.RED_GATE_SMALL.get().defaultBlockState(), 3);
+				} else {
+					world.setBlock(BlockPos.containing(x, y, z), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+				}
 				{
 					Direction _dir = Direction.WEST;
 					BlockPos _pos = BlockPos.containing(x, y, z);
@@ -80,13 +84,23 @@ public class DungeonGenerationProcedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("RedGate", (entity.getPersistentData().getBoolean("RedGate")));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 9, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 9, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 20, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 0, false, false));
 				entity.getPersistentData().putString("GateRank", "");
-				SlsbMod.LOGGER.debug("Dungeon Generating");
+				entity.getPersistentData().putBoolean("RedGate", false);
 				entity.getPersistentData().putBoolean("GenerateDungeon", false);
+				SlsbMod.LOGGER.debug("Dungeon Generating");
 			}
 		}
 	}

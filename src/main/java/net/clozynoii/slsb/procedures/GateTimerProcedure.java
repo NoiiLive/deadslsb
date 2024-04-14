@@ -18,6 +18,7 @@ import net.minecraft.core.BlockPos;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
 import net.clozynoii.slsb.init.SlsbModBlocks;
+import net.clozynoii.slsb.SlsbMod;
 
 import javax.annotation.Nullable;
 
@@ -45,6 +46,16 @@ public class GateTimerProcedure {
 		double GateRandomize = 0;
 		if (SlsbModVariables.MapVariables.get(world).DungeonRoomTimer > 0) {
 			SlsbModVariables.MapVariables.get(world).DungeonRoomTimer = SlsbModVariables.MapVariables.get(world).DungeonRoomTimer - 1;
+			SlsbModVariables.MapVariables.get(world).syncData(world);
+		}
+		if (SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer > 1) {
+			SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer - 1;
+			SlsbModVariables.MapVariables.get(world).syncData(world);
+		}
+		if (SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer == 1) {
+			SlsbModVariables.MapVariables.get(world).DungeonBossRoom = false;
+			SlsbModVariables.MapVariables.get(world).syncData(world);
+			SlsbModVariables.MapVariables.get(world).DungeonRoomCount = 0;
 			SlsbModVariables.MapVariables.get(world).syncData(world);
 		}
 		if (SlsbModVariables.MapVariables.get(world).GateTimer > 0) {
@@ -141,6 +152,18 @@ public class GateTimerProcedure {
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
+				}
+				if (Math.random() <= 0.01) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("RedGate", true);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+					SlsbMod.LOGGER.debug("Red Gate");
 				}
 				if (!world.isClientSide() && world.getServer() != null)
 					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A7f\u00A7lA " + GateRank + " \u00A7f\u00A7lGate Has Opened At: \u00A7f" + new java.text.DecimalFormat("##").format(RandomX) + " "

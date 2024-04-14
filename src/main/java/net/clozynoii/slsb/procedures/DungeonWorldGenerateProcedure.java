@@ -32,22 +32,13 @@ public class DungeonWorldGenerateProcedure {
 		if (dimension == null || entity == null)
 			return;
 		SlsbMod.queueServerWork(1, () -> {
-			if (dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:dungeon_world")))) {
+			if (dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:e_rank_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:d_rank_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:c_rank_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:b_rank_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:a_rank_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:s_rank_dungeon")))) {
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).DungeonGenerate == true) {
 					entity.getPersistentData().putBoolean("GenerateDungeon", true);
-					SlsbMod.queueServerWork(200, () -> {
-						{
-							boolean _setval = false;
-							entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.DungeonGenerate = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
-						SlsbModVariables.MapVariables.get(world).DungeonBossRoom = false;
-						SlsbModVariables.MapVariables.get(world).syncData(world);
-						SlsbModVariables.MapVariables.get(world).DungeonRoomCount = 0;
-						SlsbModVariables.MapVariables.get(world).syncData(world);
-					});
+					SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = 200;
+					SlsbModVariables.MapVariables.get(world).syncData(world);
 				}
 				SlsbMod.LOGGER.debug("Dungeon Entered");
 			}

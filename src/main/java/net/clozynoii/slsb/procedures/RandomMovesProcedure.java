@@ -147,13 +147,13 @@ public class RandomMovesProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				abilitylist = "Barrier,ReflectiveBarrier,Encasement,";
+				abilitylist = "Barrier,ReflectiveShield,Encasement,";
 				abilitycount = 3;
 			}
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Assassin")) {
 			abilitylist = "Stealth,Quickstep,Backstab,Evasion,Mark,Smokescreen,Clone,Flurry,";
-			abilitycount = 7;
+			abilitycount = 8;
 		}
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HunterClass).equals("Ranger")) {
 			abilitylist = "MagicArrows,RapidShot,ArrowRain,PiercingShot,Tracking,SnareTrap,RotatingShots,";

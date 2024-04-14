@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
@@ -16,15 +17,15 @@ public class CooldownTimerProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player);
+			execute(event, event.player.level(), event.player);
 		}
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCooldown1 > 0) {
@@ -110,6 +111,17 @@ public class CooldownTimerProcedure {
 		}
 		if (entity.getPersistentData().getDouble("PortalCooldown") > 0) {
 			entity.getPersistentData().putDouble("PortalCooldown", (entity.getPersistentData().getDouble("PortalCooldown") - 1));
+		}
+		if (SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer == 1) {
+			{
+				boolean _setval = false;
+				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.DungeonGenerate = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = 0;
+			SlsbModVariables.MapVariables.get(world).syncData(world);
 		}
 	}
 }

@@ -204,7 +204,8 @@ public class SlsbModVariables {
 		public boolean WorldCreated = false;
 		public boolean DungeonBossRoom = false;
 		public double DungeonRoomCount = 0;
-		public double DungeonRoomTimer = 0;
+		public double DungeonRoomTimer = 0.0;
+		public double DungeonEntranceTimer = 0.0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -218,6 +219,7 @@ public class SlsbModVariables {
 			DungeonBossRoom = nbt.getBoolean("DungeonBossRoom");
 			DungeonRoomCount = nbt.getDouble("DungeonRoomCount");
 			DungeonRoomTimer = nbt.getDouble("DungeonRoomTimer");
+			DungeonEntranceTimer = nbt.getDouble("DungeonEntranceTimer");
 		}
 
 		@Override
@@ -227,6 +229,7 @@ public class SlsbModVariables {
 			nbt.putBoolean("DungeonBossRoom", DungeonBossRoom);
 			nbt.putDouble("DungeonRoomCount", DungeonRoomCount);
 			nbt.putDouble("DungeonRoomTimer", DungeonRoomTimer);
+			nbt.putDouble("DungeonEntranceTimer", DungeonEntranceTimer);
 			return nbt;
 		}
 
@@ -332,7 +335,7 @@ public class SlsbModVariables {
 		public String Aura = "";
 		public String ColorCode = "";
 		public String HunterClass = "";
-		public String Rank = "0";
+		public String Rank = "";
 		public String UseAbilityType = "Switcher";
 		public String ActiveSkills = "";
 		public String MageType = "";

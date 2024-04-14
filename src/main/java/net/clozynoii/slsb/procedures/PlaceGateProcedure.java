@@ -16,6 +16,7 @@ import net.clozynoii.slsb.init.SlsbModBlocks;
 
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.StringArgumentType;
+import com.mojang.brigadier.arguments.BoolArgumentType;
 
 public class PlaceGateProcedure {
 	public static void execute(LevelAccessor world, CommandContext<CommandSourceStack> arguments, Entity entity) {
@@ -106,6 +107,17 @@ public class PlaceGateProcedure {
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
 					_blockEntity.getPersistentData().putString("GateRank", "S-Rank");
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+		}
+		if (BoolArgumentType.getBool(arguments, "redgate") == true) {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putBoolean("RedGate", true);
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

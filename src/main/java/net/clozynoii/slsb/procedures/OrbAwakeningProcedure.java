@@ -32,6 +32,7 @@ public class OrbAwakeningProcedure {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("<Hunter Evaluator> Well, It seems you've awakened!"), false);
 				ClearMovesProcedure.execute(entity);
+				RandomRankProcedure.execute(entity);
 				SlsbMod.queueServerWork(40, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
@@ -42,7 +43,6 @@ public class OrbAwakeningProcedure {
 					}
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.END_ROD, x, (y + 1), z, 15, 1, 1, 1, 0.3);
-					RandomRankProcedure.execute(entity);
 					if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Rank).equals("S-Rank")) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, x, (y + 1), z, 15, 1, 1, 1, 0.2);
