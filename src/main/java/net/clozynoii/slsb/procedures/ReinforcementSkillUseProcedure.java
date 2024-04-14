@@ -1,8 +1,25 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+
+import net.clozynoii.slsb.network.SlsbModVariables;
+import net.clozynoii.slsb.init.SlsbModMobEffects;
+import net.clozynoii.slsb.SlsbMod;
 
 public class ReinforcementSkillUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -20,7 +37,7 @@ public class ReinforcementSkillUseProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.DELETED_MOD_ELEMENT.get(), 2, 0, false, true));
+				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.REINFORCEMENT.get(), 2, 0, false, true));
 			gate = true;
 			cooldown = 60;
 			{
@@ -107,7 +124,7 @@ public class ReinforcementSkillUseProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, 0.1, 0.1, 0.1, 0.1);
 			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(SlsbModMobEffects.DELETED_MOD_ELEMENT.get());
+				_entity.removeEffect(SlsbModMobEffects.REINFORCEMENT.get());
 			gate = true;
 			{
 				Entity _entity = entity;

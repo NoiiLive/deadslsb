@@ -1,6 +1,19 @@
 
 package net.clozynoii.slsb.potion;
 
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
+
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+import net.minecraft.client.gui.GuiGraphics;
+
+import net.clozynoii.slsb.procedures.CollapseEffectExpiresProcedure;
+import net.clozynoii.slsb.procedures.CollapseActiveTickProcedure;
+
 public class CollapseMobEffect extends MobEffect {
 	public CollapseMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);

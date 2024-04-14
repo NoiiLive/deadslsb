@@ -1,5 +1,6 @@
 {
   "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
+  "effect.slsb.collapse": "Collapse",
   "item.slsb.mana_crystal": "§bMana Crystal",
   "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
   "block.slsb.dripstone_dungeon_south": "Dripstone Dungeon South",
@@ -11,7 +12,9 @@
   "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
   "advancements.heal_skill.descr": "Unlock Heal Skill",
   "advancements.stealth_skill.title": "Stealth Skill",
+  "effect.slsb.charged": "Charged",
   "advancements.haste_skill.title": "Haste Skill",
+  "effect.slsb.bash": "Bash",
   "block.slsb.awakening_orb": "Awakening Orb",
   "block.slsb.red_gate_small": "Red Gate Small",
   "block.slsb.blue_gate_small": "Blue Gate Small",
@@ -21,6 +24,7 @@
   "advancements.stealth_skill.descr": "Unlock Stealth Skill",
   "key.slsb.switch_skill": "Switch Skill",
   "block.slsb.dripstone_dungeon_north": "Dripstone Dungeon North",
+  "effect.slsb.reinforcement": "Reinforcement",
   "block.slsb.dripstone_dungeon_west": "Dripstone Dungeon West",
   "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
   "item_group.slsb.solo_leveling_weapons": "Solo Leveling: Weapons",
@@ -33,11 +37,13 @@
   "advancements.healer_class.descr": "Become the Healer Class.",
   "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
   "advancements.assassin_class.title": "Assassin",
+  "effect.slsb.disguise": "Disguise",
   "block.slsb.mana_crystal_block_granite": "Mana Crystal (Granite)",
   "key.slsb.use_skill": "Use Skill",
   "effect.slsb.evade": "Evade",
   "advancements.heal_skill.title": "Heal Skill",
   "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East",
   "effect.slsb.stealth": "Stealth",
-  "advancements.awakening.title": "Awakening"
+  "advancements.awakening.title": "Awakening",
+  "biome.slsb.dungeon": "Dungeon"
 }
