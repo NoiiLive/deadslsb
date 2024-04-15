@@ -25,6 +25,7 @@ public class RatDungeonSpawnWestProcedure {
 				if (SlsbModVariables.MapVariables.get(world).DungeonBossRoom == true) {
 					if (SlsbModVariables.MapVariables.get(world).DungeonRoomCount >= 15) {
 						random = 2;
+						SlsbMod.LOGGER.debug("Dungeon End");
 					} else {
 						random = Mth.nextInt(RandomSource.create(), 3, 10);
 					}
@@ -45,8 +46,6 @@ public class RatDungeonSpawnWestProcedure {
 					}
 					SlsbModVariables.MapVariables.get(world).DungeonBossRoom = true;
 					SlsbModVariables.MapVariables.get(world).syncData(world);
-					SlsbModVariables.MapVariables.get(world).DungeonRoomTimer = 1;
-					SlsbModVariables.MapVariables.get(world).syncData(world);
 					SlsbMod.LOGGER.debug("Boss Room Generated");
 				}
 				if (random == 2) {
@@ -57,8 +56,6 @@ public class RatDungeonSpawnWestProcedure {
 									_serverworld.random, 3);
 						}
 					}
-					SlsbModVariables.MapVariables.get(world).DungeonRoomTimer = 1;
-					SlsbModVariables.MapVariables.get(world).syncData(world);
 				}
 				if (random == 3) {
 					if (world instanceof ServerLevel _serverworld) {
@@ -134,6 +131,8 @@ public class RatDungeonSpawnWestProcedure {
 				}
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.BEDROCK.defaultBlockState(), 3);
 				SlsbModVariables.MapVariables.get(world).DungeonRoomCount = SlsbModVariables.MapVariables.get(world).DungeonRoomCount + 1;
+				SlsbModVariables.MapVariables.get(world).syncData(world);
+				SlsbModVariables.MapVariables.get(world).DungeonRoomTimer = 1;
 				SlsbModVariables.MapVariables.get(world).syncData(world);
 			} else {
 				if ((world.getBlockState(BlockPos.containing(x - 2, y, z))).is(BlockTags.create(new ResourceLocation("slsb:dungeon_unplaceable"))) == false || (world.getBlockState(BlockPos.containing(x - 2, y + 5, z))).getBlock() == Blocks.BEDROCK) {
