@@ -101,7 +101,7 @@
     "luminance": 14,
     "unbreakable": true,
     "breakHarvestLevel": 1,
-    "spawnParticles": true,
+    "spawnParticles": false,
     "particleToSpawn": {
       "value": "ENCHANTMENT_TABLE"
     },
@@ -139,7 +139,7 @@
     "frequencyOnChunk": 16,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
-    "normal": "redgatesmall.geo.json",
+    "normal": "bluegatesmall.geo.json",
     "displaySettings": "bluegatesmall.item.json"
   }
 }

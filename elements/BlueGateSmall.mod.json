@@ -101,7 +101,7 @@
     "luminance": 14,
     "unbreakable": true,
     "breakHarvestLevel": 1,
-    "spawnParticles": true,
+    "spawnParticles": false,
     "particleToSpawn": {
       "value": "ENCHANTMENT_TABLE"
     },

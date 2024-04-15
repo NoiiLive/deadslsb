@@ -33,7 +33,7 @@
         "subtract": false
       }
     ],
-    "name": "Rat Dungeon North",
+    "name": "Rat Dungeon Enemies",
     "specialInformation": {
       "fixedValue": []
     },
@@ -119,6 +119,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "RatDungeonSpawnEnemies"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [],
