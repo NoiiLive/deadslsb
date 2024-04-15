@@ -7091,6 +7091,125 @@
         ]
       },
       "path": "~/Dimensions/B Rank"
+    },
+    {
+      "name": "GiantRatGrey",
+      "type": "animatedentity",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_rat_grey",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/giant_rat_grey_spawn_egg.json",
+          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatGreyRenderer.java",
+          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatGreyModel.java",
+          "src/main/java/net/clozynoii/slsb/entity/GiantRatGreyEntity.java"
+        ]
+      },
+      "path": "~/Mobs/E Rank"
+    },
+    {
+      "name": "GiantRatBrown",
+      "type": "animatedentity",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_rat_brown",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/giant_rat_brown_spawn_egg.json",
+          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatBrownRenderer.java",
+          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatBrownModel.java",
+          "src/main/java/net/clozynoii/slsb/entity/GiantRatBrownEntity.java"
+        ]
+      },
+      "path": "~/Mobs/E Rank"
+    },
+    {
+      "name": "GiantRatBlack",
+      "type": "animatedentity",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_rat_black",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatBlackRenderer.java",
+          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatBlackModel.java",
+          "src/main/resources/assets/slsb/models/item/giant_rat_black_spawn_egg.json",
+          "src/main/java/net/clozynoii/slsb/entity/GiantRatBlackEntity.java"
+        ]
+      },
+      "path": "~/Mobs/E Rank"
+    },
+    {
+      "name": "SoloLevelingArmor",
+      "type": "tab",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solo_leveling_armor",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Tabs"
+    },
+    {
+      "name": "SoloLevelingNPCs",
+      "type": "tab",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solo_leveling_np_cs",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Tabs"
+    },
+    {
+      "name": "SoloLevelingMagicBeasts",
+      "type": "tab",
+      "sortid": 366,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solo_leveling_magic_beasts",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Tabs"
+    },
+    {
+      "name": "RatDungeonSpawnEnemies",
+      "type": "procedure",
+      "sortid": 367,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_spawn_enemies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RatDungeonSpawnEnemiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
     }
   ],
   "variable_elements": [
@@ -7459,11 +7578,14 @@
       "block.slsb.sand_dungeon_south": "Sand Dungeon South",
       "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
       "block.slsb.forest_dungeon_boss": "Forest Dungeon Boss",
+      "entity.slsb.giant_rat_brown": "Giant Brown Rat (E-Rank)",
       "block.slsb.dragon_dungeon_south": "Dragon Dungeon South",
       "block.slsb.subway_dungeon_north": "Subway Dungeon North",
       "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
       "block.slsb.mine_dungeon_south": "Mine Dungeon South",
+      "item_group.slsb.solo_leveling_magic_beasts": "Solo Leveling: Magic Beasts",
       "advancements.assassin_class.descr": "Become the Assassin Class.",
+      "item.slsb.giant_rat_black_spawn_egg": "Giant Black Rat (E-Rank) Spawn Egg",
       "advancements.healer_class.title": "Healer",
       "block.slsb.forest_dungeon_north": "Forest Dungeon North",
       "block.slsb.mine_dungeon_enemies": "Mine Dungeon Enemies",
@@ -7485,6 +7607,7 @@
       "block.slsb.sunken_dungeon_south": "Sunken Dungeon South",
       "block.slsb.sunken_dungeon_north": "Sunken Dungeon North",
       "block.slsb.goblin_dungeon_boss": "Goblin Dungeon Boss",
+      "entity.slsb.giant_rat_black": "Giant Black Rat (E-Rank)",
       "block.slsb.subway_dungeon_west": "Subway Dungeon West",
       "block.slsb.catacomb_dungeon_east": "Catacomb Dungeon East",
       "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
@@ -7506,6 +7629,7 @@
       "block.slsb.naga_dungeon_east": "Naga Dungeon East",
       "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
       "block.slsb.mana_crystal_block_stone": "Mana Crystal (Stone)",
+      "item.slsb.giant_rat_brown_spawn_egg": "Giant Brown Rat (E-Rank) Spawn Egg",
       "block.slsb.dragon_dungeon_enemies": "Dragon Dungeon Enemies",
       "advancements.healer_class.descr": "Become the Healer Class.",
       "block.slsb.dragon_dungeon_west": "Dragon Dungeon West",
@@ -7513,6 +7637,7 @@
       "block.slsb.crystal_dungeon_north": "Crystal Dungeon North",
       "block.slsb.coliseum_dungeon_south": "Coliseum Dungeon South",
       "block.slsb.catacomb_dungeon_enemies": "Catacomb Dungeon Enemies",
+      "item_group.slsb.solo_leveling_armor": "Solo Leveling: Armor",
       "effect.slsb.evade": "Evade",
       "block.slsb.giant_dungeon_west": "Giant Dungeon West",
       "block.slsb.forest_dungeon_enemies": "Forest Dungeon Enemies",
@@ -7570,6 +7695,7 @@
       "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
       "block.slsb.maze_dungeon_enemies": "Maze Dungeon Enemies",
       "block.slsb.dragon_dungeon_east": "Dragon Dungeon East",
+      "item.slsb.giant_rat_grey_spawn_egg": "Giant Grey Rat (E-Rank) Spawn Egg",
       "block.slsb.maze_dungeon_south": "Maze Dungeon South",
       "entity.slsb.after_image": "After Image",
       "block.slsb.giant_dungeon_boss": "Giant Dungeon Boss",
@@ -7593,6 +7719,7 @@
       "block.slsb.rat_dungeon_west": "Rat Dungeon West",
       "block.slsb.giant_dungeon_south": "Giant Dungeon South",
       "block.slsb.giant_dungeon_north": "Giant Dungeon North",
+      "entity.slsb.giant_rat_grey": "Giant Grey Rat (E-Rank)",
       "block.slsb.cathedral_dungeon_west": "Cathedral Dungeon West",
       "block.slsb.ice_dungeon_enemies": "Ice Dungeon Enemies",
       "block.slsb.crystal_dungeon_east": "Crystal Dungeon East",
@@ -7608,6 +7735,7 @@
       "block.slsb.double_dungeon_north": "Double Dungeon North",
       "block.slsb.library_dungeon_boss": "Library Dungeon Boss",
       "block.slsb.double_dungeon_south": "Double Dungeon South",
+      "item_group.slsb.solo_leveling_np_cs": "Solo Leveling: NPCs",
       "block.slsb.orc_dungeon_boss": "Orc Dungeon Boss",
       "block.slsb.orc_dungeon_south": "Orc Dungeon South"
     }
@@ -7987,6 +8115,30 @@
       {
         "name": "Mobs",
         "children": [
+          {
+            "name": "E Rank",
+            "children": []
+          },
+          {
+            "name": "D Rank",
+            "children": []
+          },
+          {
+            "name": "C Rank",
+            "children": []
+          },
+          {
+            "name": "B Rank",
+            "children": []
+          },
+          {
+            "name": "A Rank",
+            "children": []
+          },
+          {
+            "name": "S Rank",
+            "children": []
+          },
           {
             "name": "Misc",
             "children": [

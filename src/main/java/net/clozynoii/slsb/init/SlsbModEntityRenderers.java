@@ -11,6 +11,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.clozynoii.slsb.client.renderer.GiantRatGreyRenderer;
+import net.clozynoii.slsb.client.renderer.GiantRatBrownRenderer;
+import net.clozynoii.slsb.client.renderer.GiantRatBlackRenderer;
 import net.clozynoii.slsb.client.renderer.AfterImageRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -19,5 +22,8 @@ public class SlsbModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(SlsbModEntities.AFTER_IMAGE.get(), AfterImageRenderer::new);
 		event.registerEntityRenderer(SlsbModEntities.MARK_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(SlsbModEntities.GIANT_RAT_GREY.get(), GiantRatGreyRenderer::new);
+		event.registerEntityRenderer(SlsbModEntities.GIANT_RAT_BROWN.get(), GiantRatBrownRenderer::new);
+		event.registerEntityRenderer(SlsbModEntities.GIANT_RAT_BLACK.get(), GiantRatBlackRenderer::new);
 	}
 }

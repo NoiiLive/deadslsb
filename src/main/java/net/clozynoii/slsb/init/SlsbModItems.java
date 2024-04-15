@@ -7,6 +7,7 @@ package net.clozynoii.slsb.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
@@ -176,6 +177,9 @@ public class SlsbModItems {
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_ENEMIES = block(SlsbModBlocks.CATHEDRAL_DUNGEON_ENEMIES);
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_BOSS = block(SlsbModBlocks.CATHEDRAL_DUNGEON_BOSS);
 	public static final RegistryObject<Item> RED_GATE_MEDIUM = REGISTRY.register(SlsbModBlocks.RED_GATE_MEDIUM.getId().getPath(), () -> new RedGateMediumDisplayItem(SlsbModBlocks.RED_GATE_MEDIUM.get(), new Item.Properties()));
+	public static final RegistryObject<Item> GIANT_RAT_GREY_SPAWN_EGG = REGISTRY.register("giant_rat_grey_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT_GREY, -6710887, -10066330, new Item.Properties()));
+	public static final RegistryObject<Item> GIANT_RAT_BROWN_SPAWN_EGG = REGISTRY.register("giant_rat_brown_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT_BROWN, -9024463, -11849172, new Item.Properties()));
+	public static final RegistryObject<Item> GIANT_RAT_BLACK_SPAWN_EGG = REGISTRY.register("giant_rat_black_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT_BLACK, -13223612, -15000545, new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
