@@ -413,10 +413,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -3560,122 +3556,6 @@
       "path": "~/Procedures/GUI/Slots/Cooldown"
     },
     {
-      "name": "DripstoneDungeonNorth",
-      "type": "block",
-      "sortid": 168,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_north",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/slsb/models/item/dripstone_dungeon_north.json",
-          "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_north.json",
-          "src/main/resources/assets/slsb/models/block/dripstone_dungeon_north.json",
-          "src/main/java/net/clozynoii/slsb/block/DripstoneDungeonNorthBlock.java"
-        ]
-      },
-      "path": "~/Blocks/Dungeon Blocks"
-    },
-    {
-      "name": "DripstoneDungeonSouth",
-      "type": "block",
-      "sortid": 169,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_south",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/block/DripstoneDungeonSouthBlock.java",
-          "src/main/resources/assets/slsb/models/block/dripstone_dungeon_south.json",
-          "src/main/resources/assets/slsb/models/item/dripstone_dungeon_south.json",
-          "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_south.json"
-        ]
-      },
-      "path": "~/Blocks/Dungeon Blocks"
-    },
-    {
-      "name": "DripstoneDungeonEast",
-      "type": "block",
-      "sortid": 170,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_east",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/slsb/models/item/dripstone_dungeon_east.json",
-          "src/main/java/net/clozynoii/slsb/block/DripstoneDungeonEastBlock.java",
-          "src/main/resources/assets/slsb/models/block/dripstone_dungeon_east.json",
-          "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_east.json"
-        ]
-      },
-      "path": "~/Blocks/Dungeon Blocks"
-    },
-    {
-      "name": "DripstoneDungeonWest",
-      "type": "block",
-      "sortid": 171,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_west",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/slsb/blockstates/dripstone_dungeon_west.json",
-          "src/main/resources/assets/slsb/models/item/dripstone_dungeon_west.json",
-          "src/main/java/net/clozynoii/slsb/block/DripstoneDungeonWestBlock.java",
-          "src/main/resources/assets/slsb/models/block/dripstone_dungeon_west.json"
-        ]
-      },
-      "path": "~/Blocks/Dungeon Blocks"
-    },
-    {
-      "name": "DripstoneDungeonSpawnWest",
-      "type": "procedure",
-      "sortid": 175,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_spawn_west",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnWestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
-    },
-    {
-      "name": "DungeonWorld",
-      "type": "dimension",
-      "sortid": 178,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dungeon_world",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/dimension_type/dungeon_world.json",
-          "src/main/java/net/clozynoii/slsb/world/dimension/DungeonWorldDimension.java",
-          "src/main/resources/data/slsb/dimension/dungeon_world.json"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
       "name": "DungeonWorldGenerate",
       "type": "procedure",
       "sortid": 180,
@@ -3792,38 +3672,6 @@
       "path": "~/Biomes"
     },
     {
-      "name": "DripstoneDungeonSpawnEast",
-      "type": "procedure",
-      "sortid": 174,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_spawn_east",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnEastProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
-    },
-    {
       "name": "PlaceGate",
       "type": "procedure",
       "sortid": 181,
@@ -3864,70 +3712,6 @@
         ]
       },
       "path": "~/Tags"
-    },
-    {
-      "name": "DripstoneDungeonSpawnSouth",
-      "type": "procedure",
-      "sortid": 173,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_spawn_south",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnSouthProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
-    },
-    {
-      "name": "DripstoneDungeonSpawnNorth",
-      "type": "procedure",
-      "sortid": 172,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dripstone_dungeon_spawn_north",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/DripstoneDungeonSpawnNorthProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Dungeons/Dripstone Dungeon"
     },
     {
       "name": "HasteBuffSkillUse",
@@ -4632,102 +4416,6 @@
       "path": "~/Procedures/Skills/Tanker/Moves"
     },
     {
-      "name": "ERankDungeon",
-      "type": "dimension",
-      "sortid": 200,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "e_rank_dungeon",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/dimension_type/e_rank_dungeon.json",
-          "src/main/resources/data/slsb/dimension/e_rank_dungeon.json",
-          "src/main/java/net/clozynoii/slsb/world/dimension/ERankDungeonDimension.java"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "DRankDungeon",
-      "type": "dimension",
-      "sortid": 201,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "d_rank_dungeon",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/world/dimension/DRankDungeonDimension.java",
-          "src/main/resources/data/slsb/dimension_type/d_rank_dungeon.json",
-          "src/main/resources/data/slsb/dimension/d_rank_dungeon.json"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "CRankDungeon",
-      "type": "dimension",
-      "sortid": 202,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "c_rank_dungeon",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/dimension/c_rank_dungeon.json",
-          "src/main/resources/data/slsb/dimension_type/c_rank_dungeon.json",
-          "src/main/java/net/clozynoii/slsb/world/dimension/CRankDungeonDimension.java"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "BRankDungeon",
-      "type": "dimension",
-      "sortid": 203,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "b_rank_dungeon",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/world/dimension/BRankDungeonDimension.java",
-          "src/main/resources/data/slsb/dimension/b_rank_dungeon.json",
-          "src/main/resources/data/slsb/dimension_type/b_rank_dungeon.json"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "ARankDungeon",
-      "type": "dimension",
-      "sortid": 204,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "a_rank_dungeon",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/dimension_type/a_rank_dungeon.json",
-          "src/main/java/net/clozynoii/slsb/world/dimension/ARankDungeonDimension.java",
-          "src/main/resources/data/slsb/dimension/a_rank_dungeon.json"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
-      "name": "SRankDungeon",
-      "type": "dimension",
-      "sortid": 205,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "s_rank_dungeon",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/slsb/dimension/s_rank_dungeon.json",
-          "src/main/java/net/clozynoii/slsb/world/dimension/SRankDungeonDimension.java",
-          "src/main/resources/data/slsb/dimension_type/s_rank_dungeon.json"
-        ]
-      },
-      "path": "~/Dimensions"
-    },
-    {
       "name": "RatDungeonNorth",
       "type": "block",
       "sortid": 206,
@@ -5036,6 +4724,7 @@
     {
       "name": "MineDungeonEnemies",
       "type": "block",
+      "sortid": 224,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mine_dungeon_enemies",
@@ -5052,6 +4741,7 @@
     {
       "name": "MineDungeonBoss",
       "type": "block",
+      "sortid": 225,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mine_dungeon_boss",
@@ -5068,6 +4758,7 @@
     {
       "name": "ForestDungeonEnemies",
       "type": "block",
+      "sortid": 226,
       "compiles": true,
       "locked_code": false,
       "registry_name": "forest_dungeon_enemies",
@@ -5084,6 +4775,7 @@
     {
       "name": "ForestDungeonBoss",
       "type": "block",
+      "sortid": 227,
       "compiles": true,
       "locked_code": false,
       "registry_name": "forest_dungeon_boss",
@@ -5100,6 +4792,7 @@
     {
       "name": "SubwayDungeonEnemies",
       "type": "block",
+      "sortid": 228,
       "compiles": true,
       "locked_code": false,
       "registry_name": "subway_dungeon_enemies",
@@ -5116,6 +4809,7 @@
     {
       "name": "SubwayDungeonBoss",
       "type": "block",
+      "sortid": 229,
       "compiles": true,
       "locked_code": false,
       "registry_name": "subway_dungeon_boss",
@@ -5132,6 +4826,7 @@
     {
       "name": "CatacombDungeonNorth",
       "type": "block",
+      "sortid": 230,
       "compiles": true,
       "locked_code": false,
       "registry_name": "catacomb_dungeon_north",
@@ -5148,6 +4843,7 @@
     {
       "name": "CatacombDungeonEast",
       "type": "block",
+      "sortid": 231,
       "compiles": true,
       "locked_code": false,
       "registry_name": "catacomb_dungeon_east",
@@ -5164,6 +4860,7 @@
     {
       "name": "CatacombDungeonSouth",
       "type": "block",
+      "sortid": 232,
       "compiles": true,
       "locked_code": false,
       "registry_name": "catacomb_dungeon_south",
@@ -5180,6 +4877,7 @@
     {
       "name": "CatacombDungeonWest",
       "type": "block",
+      "sortid": 233,
       "compiles": true,
       "locked_code": false,
       "registry_name": "catacomb_dungeon_west",
@@ -5196,6 +4894,7 @@
     {
       "name": "CatacombDungeonEnemies",
       "type": "block",
+      "sortid": 234,
       "compiles": true,
       "locked_code": false,
       "registry_name": "catacomb_dungeon_enemies",
@@ -5212,6 +4911,7 @@
     {
       "name": "CatacombDungeonBoss",
       "type": "block",
+      "sortid": 235,
       "compiles": true,
       "locked_code": false,
       "registry_name": "catacomb_dungeon_boss",
@@ -5228,6 +4928,7 @@
     {
       "name": "SpiderDungeonNorth",
       "type": "block",
+      "sortid": 236,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spider_dungeon_north",
@@ -5244,6 +4945,7 @@
     {
       "name": "SpiderDungeonEast",
       "type": "block",
+      "sortid": 237,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spider_dungeon_east",
@@ -5260,6 +4962,7 @@
     {
       "name": "SpiderDungeonSouth",
       "type": "block",
+      "sortid": 238,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spider_dungeon_south",
@@ -5276,6 +4979,7 @@
     {
       "name": "SpiderDungeonWest",
       "type": "block",
+      "sortid": 239,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spider_dungeon_west",
@@ -5292,6 +4996,7 @@
     {
       "name": "SpiderDungeonEnemies",
       "type": "block",
+      "sortid": 240,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spider_dungeon_enemies",
@@ -5308,6 +5013,7 @@
     {
       "name": "SpiderDungeonBoss",
       "type": "block",
+      "sortid": 241,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spider_dungeon_boss",
@@ -5324,6 +5030,7 @@
     {
       "name": "SunkenDungeonNorth",
       "type": "block",
+      "sortid": 242,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sunken_dungeon_north",
@@ -5340,6 +5047,7 @@
     {
       "name": "SunkenDungeonEast",
       "type": "block",
+      "sortid": 243,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sunken_dungeon_east",
@@ -5356,6 +5064,7 @@
     {
       "name": "SunkenDungeonSouth",
       "type": "block",
+      "sortid": 244,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sunken_dungeon_south",
@@ -5372,6 +5081,7 @@
     {
       "name": "SunkenDungeonWest",
       "type": "block",
+      "sortid": 245,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sunken_dungeon_west",
@@ -5388,6 +5098,7 @@
     {
       "name": "SunkenDungeonEnemies",
       "type": "block",
+      "sortid": 246,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sunken_dungeon_enemies",
@@ -5404,6 +5115,7 @@
     {
       "name": "SunkenDungeonBoss",
       "type": "block",
+      "sortid": 247,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sunken_dungeon_boss",
@@ -5420,6 +5132,7 @@
     {
       "name": "IceDungeonNorth",
       "type": "block",
+      "sortid": 248,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_dungeon_north",
@@ -5436,6 +5149,7 @@
     {
       "name": "IceDungeonEast",
       "type": "block",
+      "sortid": 249,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_dungeon_east",
@@ -5452,6 +5166,7 @@
     {
       "name": "IceDungeonSouth",
       "type": "block",
+      "sortid": 250,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_dungeon_south",
@@ -5468,6 +5183,7 @@
     {
       "name": "IceDungeonWest",
       "type": "block",
+      "sortid": 251,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_dungeon_west",
@@ -5484,6 +5200,7 @@
     {
       "name": "IceDungeonEnemies",
       "type": "block",
+      "sortid": 252,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_dungeon_enemies",
@@ -5500,6 +5217,7 @@
     {
       "name": "IceDungeonBoss",
       "type": "block",
+      "sortid": 253,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_dungeon_boss",
@@ -5516,6 +5234,7 @@
     {
       "name": "DoubleDungeonNorth",
       "type": "block",
+      "sortid": 254,
       "compiles": true,
       "locked_code": false,
       "registry_name": "double_dungeon_north",
@@ -5532,6 +5251,7 @@
     {
       "name": "DoubleDungeonEast",
       "type": "block",
+      "sortid": 255,
       "compiles": true,
       "locked_code": false,
       "registry_name": "double_dungeon_east",
@@ -5548,6 +5268,7 @@
     {
       "name": "DoubleDungeonSouth",
       "type": "block",
+      "sortid": 256,
       "compiles": true,
       "locked_code": false,
       "registry_name": "double_dungeon_south",
@@ -5564,6 +5285,7 @@
     {
       "name": "DoubleDungeonWest",
       "type": "block",
+      "sortid": 257,
       "compiles": true,
       "locked_code": false,
       "registry_name": "double_dungeon_west",
@@ -5580,6 +5302,7 @@
     {
       "name": "DoubleDungeonEnemies",
       "type": "block",
+      "sortid": 258,
       "compiles": true,
       "locked_code": false,
       "registry_name": "double_dungeon_enemies",
@@ -5596,6 +5319,7 @@
     {
       "name": "DoubleDungeonBoss",
       "type": "block",
+      "sortid": 259,
       "compiles": true,
       "locked_code": false,
       "registry_name": "double_dungeon_boss",
@@ -5612,6 +5336,7 @@
     {
       "name": "LibraryDungeonNorth",
       "type": "block",
+      "sortid": 260,
       "compiles": true,
       "locked_code": false,
       "registry_name": "library_dungeon_north",
@@ -5628,6 +5353,7 @@
     {
       "name": "LibraryDungeonEast",
       "type": "block",
+      "sortid": 261,
       "compiles": true,
       "locked_code": false,
       "registry_name": "library_dungeon_east",
@@ -5644,6 +5370,7 @@
     {
       "name": "LibraryDungeonSouth",
       "type": "block",
+      "sortid": 262,
       "compiles": true,
       "locked_code": false,
       "registry_name": "library_dungeon_south",
@@ -5660,6 +5387,7 @@
     {
       "name": "LibraryDungeonWest",
       "type": "block",
+      "sortid": 263,
       "compiles": true,
       "locked_code": false,
       "registry_name": "library_dungeon_west",
@@ -5676,6 +5404,7 @@
     {
       "name": "LibraryDungeonEnemies",
       "type": "block",
+      "sortid": 264,
       "compiles": true,
       "locked_code": false,
       "registry_name": "library_dungeon_enemies",
@@ -5692,6 +5421,7 @@
     {
       "name": "LibraryDungeonBoss",
       "type": "block",
+      "sortid": 265,
       "compiles": true,
       "locked_code": false,
       "registry_name": "library_dungeon_boss",
@@ -5708,6 +5438,7 @@
     {
       "name": "MazeDungeonNorth",
       "type": "block",
+      "sortid": 266,
       "compiles": true,
       "locked_code": false,
       "registry_name": "maze_dungeon_north",
@@ -5724,6 +5455,7 @@
     {
       "name": "MazeDungeonEast",
       "type": "block",
+      "sortid": 267,
       "compiles": true,
       "locked_code": false,
       "registry_name": "maze_dungeon_east",
@@ -5740,6 +5472,7 @@
     {
       "name": "MazeDungeonSouth",
       "type": "block",
+      "sortid": 268,
       "compiles": true,
       "locked_code": false,
       "registry_name": "maze_dungeon_south",
@@ -5756,6 +5489,7 @@
     {
       "name": "MazeDungeonWest",
       "type": "block",
+      "sortid": 269,
       "compiles": true,
       "locked_code": false,
       "registry_name": "maze_dungeon_west",
@@ -5772,6 +5506,7 @@
     {
       "name": "MazeDungeonEnemies",
       "type": "block",
+      "sortid": 270,
       "compiles": true,
       "locked_code": false,
       "registry_name": "maze_dungeon_enemies",
@@ -5788,6 +5523,7 @@
     {
       "name": "MazeDungeonBoss",
       "type": "block",
+      "sortid": 271,
       "compiles": true,
       "locked_code": false,
       "registry_name": "maze_dungeon_boss",
@@ -5804,6 +5540,7 @@
     {
       "name": "GoblinDungeonNorth",
       "type": "block",
+      "sortid": 272,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_dungeon_north",
@@ -5820,6 +5557,7 @@
     {
       "name": "GoblinDungeonEast",
       "type": "block",
+      "sortid": 273,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_dungeon_east",
@@ -5836,6 +5574,7 @@
     {
       "name": "GoblinDungeonSouth",
       "type": "block",
+      "sortid": 274,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_dungeon_south",
@@ -5852,6 +5591,7 @@
     {
       "name": "GoblinDungeonWest",
       "type": "block",
+      "sortid": 275,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_dungeon_west",
@@ -5868,6 +5608,7 @@
     {
       "name": "GoblinDungeonEnemies",
       "type": "block",
+      "sortid": 276,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_dungeon_enemies",
@@ -5884,6 +5625,7 @@
     {
       "name": "GoblinDungeonBoss",
       "type": "block",
+      "sortid": 277,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_dungeon_boss",
@@ -5900,6 +5642,7 @@
     {
       "name": "SandDungeonNorth",
       "type": "block",
+      "sortid": 278,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sand_dungeon_north",
@@ -5916,6 +5659,7 @@
     {
       "name": "SandDungeonEast",
       "type": "block",
+      "sortid": 279,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sand_dungeon_east",
@@ -5932,6 +5676,7 @@
     {
       "name": "SandDungeonSouth",
       "type": "block",
+      "sortid": 280,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sand_dungeon_south",
@@ -5948,6 +5693,7 @@
     {
       "name": "SandDungeonWest",
       "type": "block",
+      "sortid": 281,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sand_dungeon_west",
@@ -5964,6 +5710,7 @@
     {
       "name": "SandDungeonEnemies",
       "type": "block",
+      "sortid": 282,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sand_dungeon_enemies",
@@ -5980,6 +5727,7 @@
     {
       "name": "SandDungeonBoss",
       "type": "block",
+      "sortid": 283,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sand_dungeon_boss",
@@ -5996,6 +5744,7 @@
     {
       "name": "CrystalDungeonNorth",
       "type": "block",
+      "sortid": 284,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_dungeon_north",
@@ -6012,6 +5761,7 @@
     {
       "name": "CrystalDungeonEast",
       "type": "block",
+      "sortid": 285,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_dungeon_east",
@@ -6028,6 +5778,7 @@
     {
       "name": "CrystalDungeonSouth",
       "type": "block",
+      "sortid": 286,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_dungeon_south",
@@ -6044,6 +5795,7 @@
     {
       "name": "CrystalDungeonWest",
       "type": "block",
+      "sortid": 287,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_dungeon_west",
@@ -6060,6 +5812,7 @@
     {
       "name": "CrystalDungeonEnemies",
       "type": "block",
+      "sortid": 288,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_dungeon_enemies",
@@ -6076,6 +5829,7 @@
     {
       "name": "CrystalDungeonBoss",
       "type": "block",
+      "sortid": 289,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_dungeon_boss",
@@ -6092,6 +5846,7 @@
     {
       "name": "ColiseumDungeonNorth",
       "type": "block",
+      "sortid": 290,
       "compiles": true,
       "locked_code": false,
       "registry_name": "coliseum_dungeon_north",
@@ -6108,6 +5863,7 @@
     {
       "name": "ColiseumDungeonEast",
       "type": "block",
+      "sortid": 291,
       "compiles": true,
       "locked_code": false,
       "registry_name": "coliseum_dungeon_east",
@@ -6124,6 +5880,7 @@
     {
       "name": "ColiseumDungeonSouth",
       "type": "block",
+      "sortid": 292,
       "compiles": true,
       "locked_code": false,
       "registry_name": "coliseum_dungeon_south",
@@ -6140,6 +5897,7 @@
     {
       "name": "ColiseumDungeonWest",
       "type": "block",
+      "sortid": 293,
       "compiles": true,
       "locked_code": false,
       "registry_name": "coliseum_dungeon_west",
@@ -6156,6 +5914,7 @@
     {
       "name": "ColiseumDungeonEnemies",
       "type": "block",
+      "sortid": 294,
       "compiles": true,
       "locked_code": false,
       "registry_name": "coliseum_dungeon_enemies",
@@ -6172,6 +5931,7 @@
     {
       "name": "ColiseumDungeonBoss",
       "type": "block",
+      "sortid": 295,
       "compiles": true,
       "locked_code": false,
       "registry_name": "coliseum_dungeon_boss",
@@ -6188,6 +5948,7 @@
     {
       "name": "OrcDungeonNorth",
       "type": "block",
+      "sortid": 296,
       "compiles": true,
       "locked_code": false,
       "registry_name": "orc_dungeon_north",
@@ -6204,6 +5965,7 @@
     {
       "name": "OrcDungeonEast",
       "type": "block",
+      "sortid": 297,
       "compiles": true,
       "locked_code": false,
       "registry_name": "orc_dungeon_east",
@@ -6220,6 +5982,7 @@
     {
       "name": "OrcDungeonSouth",
       "type": "block",
+      "sortid": 298,
       "compiles": true,
       "locked_code": false,
       "registry_name": "orc_dungeon_south",
@@ -6236,6 +5999,7 @@
     {
       "name": "OrcDungeonWest",
       "type": "block",
+      "sortid": 299,
       "compiles": true,
       "locked_code": false,
       "registry_name": "orc_dungeon_west",
@@ -6252,6 +6016,7 @@
     {
       "name": "OrcDungeonEnemies",
       "type": "block",
+      "sortid": 300,
       "compiles": true,
       "locked_code": false,
       "registry_name": "orc_dungeon_enemies",
@@ -6268,6 +6033,7 @@
     {
       "name": "OrcDungeonBoss",
       "type": "block",
+      "sortid": 301,
       "compiles": true,
       "locked_code": false,
       "registry_name": "orc_dungeon_boss",
@@ -6284,6 +6050,7 @@
     {
       "name": "LichDungeonNorth",
       "type": "block",
+      "sortid": 302,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lich_dungeon_north",
@@ -6300,6 +6067,7 @@
     {
       "name": "LichDungeonEast",
       "type": "block",
+      "sortid": 303,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lich_dungeon_east",
@@ -6316,6 +6084,7 @@
     {
       "name": "LichDungeonSouth",
       "type": "block",
+      "sortid": 304,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lich_dungeon_south",
@@ -6332,6 +6101,7 @@
     {
       "name": "LichDungeonWest",
       "type": "block",
+      "sortid": 305,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lich_dungeon_west",
@@ -6348,6 +6118,7 @@
     {
       "name": "LichDungeonEnemies",
       "type": "block",
+      "sortid": 306,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lich_dungeon_enemies",
@@ -6364,6 +6135,7 @@
     {
       "name": "LichDungeonBoss",
       "type": "block",
+      "sortid": 307,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lich_dungeon_boss",
@@ -6380,6 +6152,7 @@
     {
       "name": "NagaDungeonNorth",
       "type": "block",
+      "sortid": 308,
       "compiles": true,
       "locked_code": false,
       "registry_name": "naga_dungeon_north",
@@ -6396,6 +6169,7 @@
     {
       "name": "NagaDungeonEast",
       "type": "block",
+      "sortid": 309,
       "compiles": true,
       "locked_code": false,
       "registry_name": "naga_dungeon_east",
@@ -6412,6 +6186,7 @@
     {
       "name": "NagaDungeonSouth",
       "type": "block",
+      "sortid": 310,
       "compiles": true,
       "locked_code": false,
       "registry_name": "naga_dungeon_south",
@@ -6428,6 +6203,7 @@
     {
       "name": "NagaDungeonWest",
       "type": "block",
+      "sortid": 311,
       "compiles": true,
       "locked_code": false,
       "registry_name": "naga_dungeon_west",
@@ -6444,6 +6220,7 @@
     {
       "name": "NagaDungeonEnemies",
       "type": "block",
+      "sortid": 312,
       "compiles": true,
       "locked_code": false,
       "registry_name": "naga_dungeon_enemies",
@@ -6460,6 +6237,7 @@
     {
       "name": "NagaDungeonBoss",
       "type": "block",
+      "sortid": 313,
       "compiles": true,
       "locked_code": false,
       "registry_name": "naga_dungeon_boss",
@@ -6476,6 +6254,7 @@
     {
       "name": "DragonDungeonNorth",
       "type": "block",
+      "sortid": 314,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dragon_dungeon_north",
@@ -6492,6 +6271,7 @@
     {
       "name": "DragonDungeonEast",
       "type": "block",
+      "sortid": 315,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dragon_dungeon_east",
@@ -6508,6 +6288,7 @@
     {
       "name": "DragonDungeonSouth",
       "type": "block",
+      "sortid": 316,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dragon_dungeon_south",
@@ -6524,6 +6305,7 @@
     {
       "name": "DragonDungeonWest",
       "type": "block",
+      "sortid": 317,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dragon_dungeon_west",
@@ -6540,6 +6322,7 @@
     {
       "name": "DragonDungeonEnemies",
       "type": "block",
+      "sortid": 318,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dragon_dungeon_enemies",
@@ -6556,6 +6339,7 @@
     {
       "name": "DragonDungeonBoss",
       "type": "block",
+      "sortid": 319,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dragon_dungeon_boss",
@@ -6572,6 +6356,7 @@
     {
       "name": "GiantDungeonNorth",
       "type": "block",
+      "sortid": 320,
       "compiles": true,
       "locked_code": false,
       "registry_name": "giant_dungeon_north",
@@ -6588,6 +6373,7 @@
     {
       "name": "GiantDungeonEast",
       "type": "block",
+      "sortid": 321,
       "compiles": true,
       "locked_code": false,
       "registry_name": "giant_dungeon_east",
@@ -6604,6 +6390,7 @@
     {
       "name": "GiantDungeonSouth",
       "type": "block",
+      "sortid": 322,
       "compiles": true,
       "locked_code": false,
       "registry_name": "giant_dungeon_south",
@@ -6620,6 +6407,7 @@
     {
       "name": "GiantDungeonWest",
       "type": "block",
+      "sortid": 323,
       "compiles": true,
       "locked_code": false,
       "registry_name": "giant_dungeon_west",
@@ -6636,6 +6424,7 @@
     {
       "name": "GiantDungeonEnemies",
       "type": "block",
+      "sortid": 324,
       "compiles": true,
       "locked_code": false,
       "registry_name": "giant_dungeon_enemies",
@@ -6652,6 +6441,7 @@
     {
       "name": "GiantDungeonBoss",
       "type": "block",
+      "sortid": 325,
       "compiles": true,
       "locked_code": false,
       "registry_name": "giant_dungeon_boss",
@@ -6668,6 +6458,7 @@
     {
       "name": "CathedralDungeonNorth",
       "type": "block",
+      "sortid": 326,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cathedral_dungeon_north",
@@ -6684,6 +6475,7 @@
     {
       "name": "CathedralDungeonEast",
       "type": "block",
+      "sortid": 327,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cathedral_dungeon_east",
@@ -6700,6 +6492,7 @@
     {
       "name": "CathedralDungeonSouth",
       "type": "block",
+      "sortid": 328,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cathedral_dungeon_south",
@@ -6716,6 +6509,7 @@
     {
       "name": "CathedralDungeonWest",
       "type": "block",
+      "sortid": 329,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cathedral_dungeon_west",
@@ -6732,6 +6526,7 @@
     {
       "name": "CathedralDungeonEnemies",
       "type": "block",
+      "sortid": 330,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cathedral_dungeon_enemies",
@@ -6748,6 +6543,7 @@
     {
       "name": "CathedralDungeonBoss",
       "type": "block",
+      "sortid": 331,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cathedral_dungeon_boss",
@@ -6760,6 +6556,541 @@
         ]
       },
       "path": "~/Blocks/Dungeon Blocks/S Rank/Cathedral Dungeon"
+    },
+    {
+      "name": "RatDungeonSpawnNorth",
+      "type": "procedure",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_spawn_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RatDungeonSpawnNorthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "RatDungeonSpawnSouth",
+      "type": "procedure",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_spawn_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RatDungeonSpawnSouthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "RatDungeonSpawnEast",
+      "type": "procedure",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_spawn_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RatDungeonSpawnEastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "RatDungeonSpawnWest",
+      "type": "procedure",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_spawn_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RatDungeonSpawnWestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "RedGateMedium",
+      "type": "animatedblock",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_gate_medium",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/block/RedGateMediumBlock.java",
+          "src/main/java/net/clozynoii/slsb/block/entity/RedGateMediumTileEntity.java",
+          "src/main/resources/assets/slsb/models/item/red_gate_medium.json",
+          "src/main/resources/assets/slsb/models/custom/red_gate_medium_particle.json",
+          "src/main/resources/assets/slsb/blockstates/red_gate_medium.json",
+          "src/main/java/net/clozynoii/slsb/block/model/RedGateMediumBlockModel.java",
+          "src/main/java/net/clozynoii/slsb/block/display/RedGateMediumDisplayItem.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateMediumTileRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/renderer/RedGateMediumDisplayItemRenderer.java",
+          "src/main/java/net/clozynoii/slsb/block/model/RedGateMediumDisplayModel.java"
+        ]
+      },
+      "path": "~/Blocks/Gates"
+    },
+    {
+      "name": "RatDungeon",
+      "type": "dimension",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/rat_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/RatDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension/rat_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/E Rank"
+    },
+    {
+      "name": "MineDungeon",
+      "type": "dimension",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/mine_dungeon.json",
+          "src/main/resources/data/slsb/dimension_type/mine_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/MineDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions/E Rank"
+    },
+    {
+      "name": "ForestDungeon",
+      "type": "dimension",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forest_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/forest_dungeon.json",
+          "src/main/resources/data/slsb/dimension/forest_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/ForestDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions/E Rank"
+    },
+    {
+      "name": "HapjeongDungeon",
+      "type": "dimension",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hapjeong_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/hapjeong_dungeon.json",
+          "src/main/resources/data/slsb/dimension/hapjeong_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/HapjeongDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions/E Rank"
+    },
+    {
+      "name": "DoubleDungeon",
+      "type": "dimension",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/dimension/DoubleDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension/double_dungeon.json",
+          "src/main/resources/data/slsb/dimension_type/double_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/S Rank"
+    },
+    {
+      "name": "CatacombDungeon",
+      "type": "dimension",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/catacomb_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/CatacombDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension/catacomb_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/D Rank"
+    },
+    {
+      "name": "LibraryDungeon",
+      "type": "dimension",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "library_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/dimension/LibraryDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/library_dungeon.json",
+          "src/main/resources/data/slsb/dimension/library_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/D Rank"
+    },
+    {
+      "name": "MazeDungeon",
+      "type": "dimension",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maze_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/dimension/MazeDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension/maze_dungeon.json",
+          "src/main/resources/data/slsb/dimension_type/maze_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/D Rank"
+    },
+    {
+      "name": "InsectDungeon",
+      "type": "dimension",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "insect_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/dimension/InsectDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/insect_dungeon.json",
+          "src/main/resources/data/slsb/dimension/insect_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/C Rank"
+    },
+    {
+      "name": "GoblinDungeon",
+      "type": "dimension",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/goblin_dungeon.json",
+          "src/main/resources/data/slsb/dimension_type/goblin_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/GoblinDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions/C Rank"
+    },
+    {
+      "name": "SandyDungeon",
+      "type": "dimension",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sandy_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/sandy_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/SandyDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/sandy_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/C Rank"
+    },
+    {
+      "name": "SunkenDungeon",
+      "type": "dimension",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sunken_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/sunken_dungeon.json",
+          "src/main/resources/data/slsb/dimension/sunken_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/SunkenDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions/B Rank"
+    },
+    {
+      "name": "CrystalDungeon",
+      "type": "dimension",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/crystal_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/CrystalDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/crystal_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/B Rank"
+    },
+    {
+      "name": "ColiseumDungeon",
+      "type": "dimension",
+      "sortid": 350,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coliseum_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/dimension/ColiseumDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/coliseum_dungeon.json",
+          "src/main/resources/data/slsb/dimension/coliseum_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/B Rank"
+    },
+    {
+      "name": "IceDungeon",
+      "type": "dimension",
+      "sortid": 351,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/ice_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/IceDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension/ice_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/A Rank"
+    },
+    {
+      "name": "OrcDungeon",
+      "type": "dimension",
+      "sortid": 352,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orc_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/orc_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/OrcDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/orc_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/A Rank"
+    },
+    {
+      "name": "LichDungeon",
+      "type": "dimension",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lich_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/lich_dungeon.json",
+          "src/main/resources/data/slsb/dimension/lich_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/LichDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions/A Rank"
+    },
+    {
+      "name": "NagaDungeon",
+      "type": "dimension",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naga_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/naga_dungeon.json",
+          "src/main/resources/data/slsb/dimension_type/naga_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/NagaDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions/A Rank"
+    },
+    {
+      "name": "DragonDungeon",
+      "type": "dimension",
+      "sortid": 355,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension_type/dragon_dungeon.json",
+          "src/main/resources/data/slsb/dimension/dragon_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/DragonDungeonDimension.java"
+        ]
+      },
+      "path": "~/Dimensions/S Rank"
+    },
+    {
+      "name": "GiantDungeon",
+      "type": "dimension",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/dimension/GiantDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension/giant_dungeon.json",
+          "src/main/resources/data/slsb/dimension_type/giant_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/S Rank"
+    },
+    {
+      "name": "CitadelDungeon",
+      "type": "dimension",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "citadel_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/citadel_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/CitadelDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/citadel_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/S Rank"
+    },
+    {
+      "name": "DemonCastle",
+      "type": "dimension",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "demon_castle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/dimension/DemonCastleDimension.java",
+          "src/main/resources/data/slsb/dimension/demon_castle.json",
+          "src/main/resources/data/slsb/dimension_type/demon_castle.json"
+        ]
+      },
+      "path": "~/Dimensions/S Rank"
+    },
+    {
+      "name": "PenaltyZone",
+      "type": "dimension",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "penalty_zone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/penalty_zone.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/PenaltyZoneDimension.java",
+          "src/main/resources/data/slsb/dimension_type/penalty_zone.json"
+        ]
+      },
+      "path": "~/Dimensions/B Rank"
+    },
+    {
+      "name": "JogChangeDungeon",
+      "type": "dimension",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jog_change_dungeon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/dimension/jog_change_dungeon.json",
+          "src/main/java/net/clozynoii/slsb/world/dimension/JogChangeDungeonDimension.java",
+          "src/main/resources/data/slsb/dimension_type/jog_change_dungeon.json"
+        ]
+      },
+      "path": "~/Dimensions/B Rank"
     }
   ],
   "variable_elements": [
@@ -7098,6 +7429,12 @@
       "type": "number",
       "scope": "map",
       "value": "0.0"
+    },
+    {
+      "name": "DungeonEnterTimerPlayer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -7115,16 +7452,15 @@
       "block.slsb.lich_dungeon_east": "Rat Dungeon East",
       "block.slsb.double_dungeon_enemies": "Rat Dungeon North",
       "block.slsb.double_dungeon_west": "Rat Dungeon West",
-      "block.slsb.subway_dungeon_boss": "Rat Dungeon North",
-      "block.slsb.library_dungeon_north": "Rat Dungeon North",
       "block.slsb.coliseum_dungeon_north": "Rat Dungeon North",
+      "block.slsb.library_dungeon_north": "Rat Dungeon North",
+      "block.slsb.subway_dungeon_boss": "Rat Dungeon North",
       "block.slsb.naga_dungeon_boss": "Rat Dungeon North",
       "block.slsb.sand_dungeon_south": "Rat Dungeon South",
       "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
       "block.slsb.forest_dungeon_boss": "Rat Dungeon North",
       "block.slsb.dragon_dungeon_south": "Rat Dungeon South",
       "block.slsb.subway_dungeon_north": "Subway Dungeon North",
-      "block.slsb.dripstone_dungeon_west": "Dripstone Dungeon West",
       "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
       "block.slsb.mine_dungeon_south": "Mine Dungeon South",
       "advancements.assassin_class.descr": "Become the Assassin Class.",
@@ -7142,25 +7478,23 @@
       "block.slsb.sunken_dungeon_west": "Rat Dungeon West",
       "block.slsb.ice_dungeon_east": "Rat Dungeon East",
       "effect.slsb.stealth": "Stealth",
-      "block.slsb.rat_dungeon_boss": "Rat Dungeon North",
+      "block.slsb.rat_dungeon_boss": "Rat Dungeon Boss",
       "biome.slsb.dungeon": "Dungeon",
       "block.slsb.lich_dungeon_enemies": "Rat Dungeon North",
       "block.slsb.cathedral_dungeon_south": "Rat Dungeon South",
       "block.slsb.sunken_dungeon_south": "Rat Dungeon South",
       "block.slsb.sunken_dungeon_north": "Rat Dungeon North",
-      "block.slsb.dripstone_dungeon_south": "Dripstone Dungeon South",
       "block.slsb.goblin_dungeon_boss": "Rat Dungeon North",
       "block.slsb.subway_dungeon_west": "Subway Dungeon West",
       "block.slsb.catacomb_dungeon_east": "Rat Dungeon East",
       "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
       "block.slsb.maze_dungeon_boss": "Rat Dungeon North",
-      "block.slsb.rat_dungeon_enemies": "Rat Dungeon North",
+      "block.slsb.rat_dungeon_enemies": "Rat Dungeon Enemies",
       "block.slsb.spider_dungeon_east": "Rat Dungeon East",
       "block.slsb.coliseum_dungeon_east": "Rat Dungeon East",
       "block.slsb.blue_gate_small": "Blue Gate Small",
       "block.slsb.crystal_dungeon_south": "Rat Dungeon South",
       "effect.slsb.healing_aura": "Healing Aura",
-      "block.slsb.dripstone_dungeon_north": "Dripstone Dungeon North",
       "block.slsb.double_dungeon_boss": "Rat Dungeon North",
       "block.slsb.lich_dungeon_west": "Rat Dungeon West",
       "effect.slsb.reinforcement": "Reinforcement",
@@ -7181,7 +7515,6 @@
       "block.slsb.catacomb_dungeon_enemies": "Rat Dungeon North",
       "effect.slsb.evade": "Evade",
       "block.slsb.giant_dungeon_west": "Rat Dungeon West",
-      "block.slsb.dripstone_dungeon_east": "Dripstone Dungeon East",
       "block.slsb.forest_dungeon_enemies": "Rat Dungeon North",
       "block.slsb.crystal_dungeon_boss": "Rat Dungeon North",
       "block.slsb.mine_dungeon_boss": "Rat Dungeon North",
@@ -7218,6 +7551,7 @@
       "block.slsb.ice_dungeon_boss": "Rat Dungeon North",
       "block.slsb.giant_dungeon_enemies": "Rat Dungeon North",
       "block.slsb.double_dungeon_east": "Rat Dungeon East",
+      "block.slsb.red_gate_medium": "Red Gate Medium",
       "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "block.slsb.cathedral_dungeon_north": "Rat Dungeon North",
       "block.slsb.naga_dungeon_west": "Rat Dungeon West",
@@ -7406,8 +7740,13 @@
             "name": "Dungeons",
             "children": [
               {
-                "name": "Dripstone Dungeon",
-                "children": []
+                "name": "E Rank",
+                "children": [
+                  {
+                    "name": "Rat Dungeon",
+                    "children": []
+                  }
+                ]
               }
             ]
           }
@@ -7585,7 +7924,32 @@
       },
       {
         "name": "Dimensions",
-        "children": []
+        "children": [
+          {
+            "name": "E Rank",
+            "children": []
+          },
+          {
+            "name": "D Rank",
+            "children": []
+          },
+          {
+            "name": "C Rank",
+            "children": []
+          },
+          {
+            "name": "B Rank",
+            "children": []
+          },
+          {
+            "name": "A Rank",
+            "children": []
+          },
+          {
+            "name": "S Rank",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Tabs",

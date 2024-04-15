@@ -32,13 +32,20 @@ public class DungeonWorldGenerateProcedure {
 		if (dimension == null || entity == null)
 			return;
 		SlsbMod.queueServerWork(1, () -> {
-			if (dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:e_rank_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:d_rank_dungeon")))
-					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:c_rank_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:b_rank_dungeon")))
-					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:a_rank_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:s_rank_dungeon")))) {
+			if (dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:rat_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:mine_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:forest_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:hapjeong_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:double_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:catacomb_dungeon")))) {
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).DungeonGenerate == true) {
 					entity.getPersistentData().putBoolean("GenerateDungeon", true);
-					SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = 300;
+					SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = 400;
 					SlsbModVariables.MapVariables.get(world).syncData(world);
+					{
+						double _setval = 400;
+						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.DungeonEnterTimerPlayer = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 				SlsbMod.LOGGER.debug("Dungeon Entered");
 			}

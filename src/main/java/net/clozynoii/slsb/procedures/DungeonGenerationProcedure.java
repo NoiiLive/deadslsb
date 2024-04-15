@@ -1,5 +1,6 @@
 package net.clozynoii.slsb.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -16,17 +17,21 @@ import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.clozynoii.slsb.network.SlsbModVariables;
 import net.clozynoii.slsb.init.SlsbModBlocks;
 import net.clozynoii.slsb.SlsbMod;
 
@@ -49,21 +54,37 @@ public class DungeonGenerationProcedure {
 		if (entity == null)
 			return;
 		if (entity.getPersistentData().getBoolean("GenerateDungeon") == true) {
-			if ((entity.level().dimension()) == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:e_rank_dungeon")))) {
+			if ((entity.level().dimension()) == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:rat_dungeon")))) {
 				if (world instanceof ServerLevel _serverworld) {
-					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("slsb", "dripstonedungeon_entrance"));
+					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("slsb", "rat_dungeon_entrance"));
 					if (template != null) {
-						template.placeInWorld(_serverworld, BlockPos.containing(x - 2, y - 4, z - 11), BlockPos.containing(x - 2, y - 4, z - 11), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
-								_serverworld.random, 3);
+						template.placeInWorld(_serverworld, BlockPos.containing(x - 21, y - 4, z - 14), BlockPos.containing(x - 21, y - 4, z - 14),
+								new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 					}
 				}
 				if (entity.getPersistentData().getBoolean("RedGate") == true) {
 					world.setBlock(BlockPos.containing(x, y, z), SlsbModBlocks.RED_GATE_SMALL.get().defaultBlockState(), 3);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.trident.thunder")), SoundSource.BLOCKS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.trident.thunder")), SoundSource.BLOCKS, 1, 1, false);
+						}
+					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("\u00A7c\u00A7lThe Gate Turns Red Behind You..."), true);
 				} else {
 					world.setBlock(BlockPos.containing(x, y, z), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.conduit.activate")), SoundSource.BLOCKS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.conduit.activate")), SoundSource.BLOCKS, 1, 1, false);
+						}
+					}
 				}
 				{
-					Direction _dir = Direction.WEST;
+					Direction _dir = Direction.SOUTH;
 					BlockPos _pos = BlockPos.containing(x, y, z);
 					BlockState _bs = world.getBlockState(_pos);
 					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
@@ -101,6 +122,15 @@ public class DungeonGenerationProcedure {
 				entity.getPersistentData().putBoolean("RedGate", false);
 				entity.getPersistentData().putBoolean("GenerateDungeon", false);
 				SlsbMod.LOGGER.debug("Dungeon Generating");
+				SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = 300;
+				SlsbModVariables.MapVariables.get(world).syncData(world);
+				{
+					double _setval = 300;
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.DungeonEnterTimerPlayer = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}

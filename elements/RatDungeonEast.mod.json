@@ -119,6 +119,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "RatDungeonSpawnEast"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [],

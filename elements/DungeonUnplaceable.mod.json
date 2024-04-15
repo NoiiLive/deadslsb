@@ -9,16 +9,382 @@
         "value": "Blocks.BEDROCK"
       },
       {
-        "value": "CUSTOM:DripstoneDungeonNorth"
+        "value": "CUSTOM:RatDungeonNorth"
       },
       {
-        "value": "CUSTOM:DripstoneDungeonSouth"
+        "value": "CUSTOM:RatDungeonEast"
       },
       {
-        "value": "CUSTOM:DripstoneDungeonEast"
+        "value": "CUSTOM:RatDungeonSouth"
       },
       {
-        "value": "CUSTOM:DripstoneDungeonWest"
+        "value": "CUSTOM:RatDungeonWest"
+      },
+      {
+        "value": "CUSTOM:MineDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:MineDungeonEast"
+      },
+      {
+        "value": "CUSTOM:MineDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:MineDungeonWest"
+      },
+      {
+        "value": "CUSTOM:ForestDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:ForestDungeonEast"
+      },
+      {
+        "value": "CUSTOM:ForestDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:ForestDungeonWest"
+      },
+      {
+        "value": "CUSTOM:SubwayDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:SubwayDungeonEast"
+      },
+      {
+        "value": "CUSTOM:SubwayDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:SubwayDungeonWest"
+      },
+      {
+        "value": "CUSTOM:RatDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:RatDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:MineDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:MineDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:ForestDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:ForestDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:SubwayDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:SubwayDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:CatacombDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:CatacombDungeonEast"
+      },
+      {
+        "value": "CUSTOM:CatacombDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:CatacombDungeonWest"
+      },
+      {
+        "value": "CUSTOM:CatacombDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:CatacombDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:SpiderDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:SpiderDungeonEast"
+      },
+      {
+        "value": "CUSTOM:SpiderDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:SpiderDungeonWest"
+      },
+      {
+        "value": "CUSTOM:SpiderDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:SpiderDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:SunkenDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:SunkenDungeonEast"
+      },
+      {
+        "value": "CUSTOM:SunkenDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:SunkenDungeonWest"
+      },
+      {
+        "value": "CUSTOM:SunkenDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:SunkenDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:IceDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:IceDungeonEast"
+      },
+      {
+        "value": "CUSTOM:IceDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:IceDungeonWest"
+      },
+      {
+        "value": "CUSTOM:IceDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:IceDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:DoubleDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:DoubleDungeonEast"
+      },
+      {
+        "value": "CUSTOM:DoubleDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:DoubleDungeonWest"
+      },
+      {
+        "value": "CUSTOM:DoubleDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:DoubleDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:LibraryDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:LibraryDungeonEast"
+      },
+      {
+        "value": "CUSTOM:LibraryDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:LibraryDungeonWest"
+      },
+      {
+        "value": "CUSTOM:LibraryDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:LibraryDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:MazeDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:MazeDungeonEast"
+      },
+      {
+        "value": "CUSTOM:MazeDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:MazeDungeonWest"
+      },
+      {
+        "value": "CUSTOM:MazeDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:MazeDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:GoblinDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:GoblinDungeonEast"
+      },
+      {
+        "value": "CUSTOM:GoblinDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:GoblinDungeonWest"
+      },
+      {
+        "value": "CUSTOM:GoblinDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:GoblinDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:SandDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:SandDungeonEast"
+      },
+      {
+        "value": "CUSTOM:SandDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:SandDungeonWest"
+      },
+      {
+        "value": "CUSTOM:SandDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:SandDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:CrystalDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:CrystalDungeonEast"
+      },
+      {
+        "value": "CUSTOM:CrystalDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:CrystalDungeonWest"
+      },
+      {
+        "value": "CUSTOM:CrystalDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:CrystalDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:ColiseumDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:ColiseumDungeonEast"
+      },
+      {
+        "value": "CUSTOM:ColiseumDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:ColiseumDungeonWest"
+      },
+      {
+        "value": "CUSTOM:ColiseumDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:ColiseumDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:OrcDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:OrcDungeonEast"
+      },
+      {
+        "value": "CUSTOM:OrcDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:OrcDungeonWest"
+      },
+      {
+        "value": "CUSTOM:OrcDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:OrcDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:LichDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:LichDungeonEast"
+      },
+      {
+        "value": "CUSTOM:LichDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:LichDungeonWest"
+      },
+      {
+        "value": "CUSTOM:LichDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:LichDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:NagaDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:NagaDungeonEast"
+      },
+      {
+        "value": "CUSTOM:NagaDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:NagaDungeonWest"
+      },
+      {
+        "value": "CUSTOM:NagaDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:NagaDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:DragonDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:DragonDungeonEast"
+      },
+      {
+        "value": "CUSTOM:DragonDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:DragonDungeonWest"
+      },
+      {
+        "value": "CUSTOM:DragonDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:DragonDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:GiantDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:GiantDungeonEast"
+      },
+      {
+        "value": "CUSTOM:GiantDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:GiantDungeonWest"
+      },
+      {
+        "value": "CUSTOM:GiantDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:GiantDungeonBoss"
+      },
+      {
+        "value": "CUSTOM:CathedralDungeonNorth"
+      },
+      {
+        "value": "CUSTOM:CathedralDungeonEast"
+      },
+      {
+        "value": "CUSTOM:CathedralDungeonSouth"
+      },
+      {
+        "value": "CUSTOM:CathedralDungeonWest"
+      },
+      {
+        "value": "CUSTOM:CathedralDungeonEnemies"
+      },
+      {
+        "value": "CUSTOM:CathedralDungeonBoss"
       }
     ],
     "functions": [],

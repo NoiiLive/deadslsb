@@ -9,12 +9,12 @@ import net.clozynoii.slsb.block.entity.RedGateSmallTileEntity;
 public class RedGateSmallBlockModel extends GeoModel<RedGateSmallTileEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(RedGateSmallTileEntity animatable) {
-		return new ResourceLocation("slsb", "animations/redgatesmall.animation.json");
+		return new ResourceLocation("slsb", "animations/bluegatesmall.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(RedGateSmallTileEntity animatable) {
-		return new ResourceLocation("slsb", "geo/redgatesmall.geo.json");
+		return new ResourceLocation("slsb", "geo/bluegatesmall.geo.json");
 	}
 
 	@Override

@@ -16,6 +16,7 @@ import net.clozynoii.slsb.item.ManaCrystalItem;
 import net.clozynoii.slsb.item.KnightKillerItem;
 import net.clozynoii.slsb.item.KasakasVenomFangItem;
 import net.clozynoii.slsb.block.display.RedGateSmallDisplayItem;
+import net.clozynoii.slsb.block.display.RedGateMediumDisplayItem;
 import net.clozynoii.slsb.block.display.ManaCrystalBlockStoneDisplayItem;
 import net.clozynoii.slsb.block.display.ManaCrystalBlockPureDisplayItem;
 import net.clozynoii.slsb.block.display.ManaCrystalBlockGraniteDisplayItem;
@@ -48,10 +49,6 @@ public class SlsbModItems {
 			() -> new ManaCrystalBlockDripstoneDisplayItem(SlsbModBlocks.MANA_CRYSTAL_BLOCK_DRIPSTONE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> KNIGHT_KILLER = REGISTRY.register("knight_killer", () -> new KnightKillerItem());
 	public static final RegistryObject<Item> AWAKENING_ORB = REGISTRY.register(SlsbModBlocks.AWAKENING_ORB.getId().getPath(), () -> new AwakeningOrbDisplayItem(SlsbModBlocks.AWAKENING_ORB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_NORTH = block(SlsbModBlocks.DRIPSTONE_DUNGEON_NORTH);
-	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_SOUTH = block(SlsbModBlocks.DRIPSTONE_DUNGEON_SOUTH);
-	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_EAST = block(SlsbModBlocks.DRIPSTONE_DUNGEON_EAST);
-	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_WEST = block(SlsbModBlocks.DRIPSTONE_DUNGEON_WEST);
 	public static final RegistryObject<Item> RAT_DUNGEON_NORTH = block(SlsbModBlocks.RAT_DUNGEON_NORTH);
 	public static final RegistryObject<Item> RAT_DUNGEON_EAST = block(SlsbModBlocks.RAT_DUNGEON_EAST);
 	public static final RegistryObject<Item> RAT_DUNGEON_SOUTH = block(SlsbModBlocks.RAT_DUNGEON_SOUTH);
@@ -178,6 +175,7 @@ public class SlsbModItems {
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_WEST = block(SlsbModBlocks.CATHEDRAL_DUNGEON_WEST);
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_ENEMIES = block(SlsbModBlocks.CATHEDRAL_DUNGEON_ENEMIES);
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_BOSS = block(SlsbModBlocks.CATHEDRAL_DUNGEON_BOSS);
+	public static final RegistryObject<Item> RED_GATE_MEDIUM = REGISTRY.register(SlsbModBlocks.RED_GATE_MEDIUM.getId().getPath(), () -> new RedGateMediumDisplayItem(SlsbModBlocks.RED_GATE_MEDIUM.get(), new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
