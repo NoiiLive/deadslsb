@@ -111,7 +111,6 @@ public class SlsbModVariables {
 			clone.SkillsRenamed = original.SkillsRenamed;
 			clone.Awakened = original.Awakened;
 			clone.DungeonGenerate = original.DungeonGenerate;
-			clone.DungeonEnterTimerPlayer = original.DungeonEnterTimerPlayer;
 			if (!event.isWasDeath()) {
 				clone.AbilitySelected = original.AbilitySelected;
 				clone.ActiveSkills = original.ActiveSkills;
@@ -358,7 +357,6 @@ public class SlsbModVariables {
 		public boolean SkillsRenamed = false;
 		public boolean Awakened = false;
 		public boolean DungeonGenerate = false;
-		public double DungeonEnterTimerPlayer = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -417,7 +415,6 @@ public class SlsbModVariables {
 			nbt.putBoolean("SkillsRenamed", SkillsRenamed);
 			nbt.putBoolean("Awakened", Awakened);
 			nbt.putBoolean("DungeonGenerate", DungeonGenerate);
-			nbt.putDouble("DungeonEnterTimerPlayer", DungeonEnterTimerPlayer);
 			return nbt;
 		}
 
@@ -473,7 +470,6 @@ public class SlsbModVariables {
 			SkillsRenamed = nbt.getBoolean("SkillsRenamed");
 			Awakened = nbt.getBoolean("Awakened");
 			DungeonGenerate = nbt.getBoolean("DungeonGenerate");
-			DungeonEnterTimerPlayer = nbt.getDouble("DungeonEnterTimerPlayer");
 		}
 	}
 
@@ -548,7 +544,6 @@ public class SlsbModVariables {
 					variables.SkillsRenamed = message.data.SkillsRenamed;
 					variables.Awakened = message.data.Awakened;
 					variables.DungeonGenerate = message.data.DungeonGenerate;
-					variables.DungeonEnterTimerPlayer = message.data.DungeonEnterTimerPlayer;
 				}
 			});
 			context.setPacketHandled(true);
