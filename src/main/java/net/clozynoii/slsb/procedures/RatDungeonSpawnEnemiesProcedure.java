@@ -14,9 +14,9 @@ import net.clozynoii.slsb.init.SlsbModEntities;
 public class RatDungeonSpawnEnemiesProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double random = 0;
-		random = Mth.nextInt(RandomSource.create(), 1, 3);
+		random = Mth.nextInt(RandomSource.create(), 1, 5);
 		for (int index0 = 0; index0 < (int) random; index0++) {
-			if (Math.random() >= 0.5) {
+			if (Math.random() >= 0.75) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = SlsbModEntities.GIANT_RAT_BLACK.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
@@ -24,7 +24,7 @@ public class RatDungeonSpawnEnemiesProcedure {
 					}
 				}
 			} else {
-				if (Math.random() >= 0.5) {
+				if (Math.random() <= 0.25) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = SlsbModEntities.GIANT_RAT_BROWN.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 						if (entityToSpawn != null) {

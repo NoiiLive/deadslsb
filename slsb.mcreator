@@ -7210,6 +7210,38 @@
         ]
       },
       "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "RatDungeonSpawnBoss",
+      "type": "procedure",
+      "sortid": 368,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rat_dungeon_spawn_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RatDungeonSpawnBossProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
     }
   ],
   "variable_elements": [

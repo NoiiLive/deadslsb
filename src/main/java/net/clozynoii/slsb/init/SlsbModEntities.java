@@ -33,15 +33,15 @@ public class SlsbModEntities {
 	public static final RegistryObject<EntityType<GiantRatGreyEntity>> GIANT_RAT_GREY = register("giant_rat_grey",
 			EntityType.Builder.<GiantRatGreyEntity>of(GiantRatGreyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantRatGreyEntity::new)
 
-					.sized(2f, 1f));
+					.sized(1.5f, 1f));
 	public static final RegistryObject<EntityType<GiantRatBrownEntity>> GIANT_RAT_BROWN = register("giant_rat_brown",
 			EntityType.Builder.<GiantRatBrownEntity>of(GiantRatBrownEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantRatBrownEntity::new)
 
-					.sized(2f, 1f));
+					.sized(1.5f, 1f));
 	public static final RegistryObject<EntityType<GiantRatBlackEntity>> GIANT_RAT_BLACK = register("giant_rat_black",
 			EntityType.Builder.<GiantRatBlackEntity>of(GiantRatBlackEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantRatBlackEntity::new)
 
-					.sized(2f, 1f));
+					.sized(1.5f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
