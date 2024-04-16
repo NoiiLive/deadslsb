@@ -35,6 +35,7 @@ import net.clozynoii.slsb.block.SandDungeonEnemiesBlock;
 import net.clozynoii.slsb.block.SandDungeonEastBlock;
 import net.clozynoii.slsb.block.SandDungeonBossBlock;
 import net.clozynoii.slsb.block.RedGateSmallBlock;
+import net.clozynoii.slsb.block.RedGateMediumBlock;
 import net.clozynoii.slsb.block.RatDungeonWestBlock;
 import net.clozynoii.slsb.block.RatDungeonSouthBlock;
 import net.clozynoii.slsb.block.RatDungeonNorthBlock;
@@ -160,10 +161,6 @@ public class SlsbModBlocks {
 	public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK_GRANITE = REGISTRY.register("mana_crystal_block_granite", () -> new ManaCrystalBlockGraniteBlock());
 	public static final RegistryObject<Block> MANA_CRYSTAL_BLOCK_DRIPSTONE = REGISTRY.register("mana_crystal_block_dripstone", () -> new ManaCrystalBlockDripstoneBlock());
 	public static final RegistryObject<Block> AWAKENING_ORB = REGISTRY.register("awakening_orb", () -> new AwakeningOrbBlock());
-	public static final RegistryObject<Block> DRIPSTONE_DUNGEON_NORTH = REGISTRY.register("dripstone_dungeon_north", () -> new DripstoneDungeonNorthBlock());
-	public static final RegistryObject<Block> DRIPSTONE_DUNGEON_SOUTH = REGISTRY.register("dripstone_dungeon_south", () -> new DripstoneDungeonSouthBlock());
-	public static final RegistryObject<Block> DRIPSTONE_DUNGEON_EAST = REGISTRY.register("dripstone_dungeon_east", () -> new DripstoneDungeonEastBlock());
-	public static final RegistryObject<Block> DRIPSTONE_DUNGEON_WEST = REGISTRY.register("dripstone_dungeon_west", () -> new DripstoneDungeonWestBlock());
 	public static final RegistryObject<Block> RAT_DUNGEON_NORTH = REGISTRY.register("rat_dungeon_north", () -> new RatDungeonNorthBlock());
 	public static final RegistryObject<Block> RAT_DUNGEON_EAST = REGISTRY.register("rat_dungeon_east", () -> new RatDungeonEastBlock());
 	public static final RegistryObject<Block> RAT_DUNGEON_SOUTH = REGISTRY.register("rat_dungeon_south", () -> new RatDungeonSouthBlock());
@@ -290,4 +287,5 @@ public class SlsbModBlocks {
 	public static final RegistryObject<Block> CATHEDRAL_DUNGEON_WEST = REGISTRY.register("cathedral_dungeon_west", () -> new CathedralDungeonWestBlock());
 	public static final RegistryObject<Block> CATHEDRAL_DUNGEON_ENEMIES = REGISTRY.register("cathedral_dungeon_enemies", () -> new CathedralDungeonEnemiesBlock());
 	public static final RegistryObject<Block> CATHEDRAL_DUNGEON_BOSS = REGISTRY.register("cathedral_dungeon_boss", () -> new CathedralDungeonBossBlock());
+	public static final RegistryObject<Block> RED_GATE_MEDIUM = REGISTRY.register("red_gate_medium", () -> new RedGateMediumBlock());
 }
