@@ -21,7 +21,9 @@ public class RatDungeonSpawnNorthProcedure {
 		double random = 0;
 		if (SlsbModVariables.MapVariables.get(world).DungeonRoomTimer == 0) {
 			if ((world.getBlockState(BlockPos.containing(x, y, z - 1))).is(BlockTags.create(new ResourceLocation("slsb:dungeon_unplaceable"))) == false
-					&& (world.getBlockState(BlockPos.containing(x, y, z - 43))).is(BlockTags.create(new ResourceLocation("slsb:dungeon_unplaceable"))) == false) {
+					&& (world.getBlockState(BlockPos.containing(x, y, z - 43))).is(BlockTags.create(new ResourceLocation("slsb:dungeon_unplaceable"))) == false
+					&& (world.getBlockState(BlockPos.containing(x - 21, y, z - 1))).is(BlockTags.create(new ResourceLocation("slsb:dungeon_unplaceable"))) == false
+					&& (world.getBlockState(BlockPos.containing(x + 21, y, z - 43))).is(BlockTags.create(new ResourceLocation("slsb:dungeon_unplaceable"))) == false) {
 				if (SlsbModVariables.MapVariables.get(world).DungeonBossRoom == true) {
 					if (SlsbModVariables.MapVariables.get(world).DungeonRoomCount >= 15) {
 						random = 2;

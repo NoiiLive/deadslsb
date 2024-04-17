@@ -270,6 +270,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -7110,40 +7114,6 @@
       "path": "~/Mobs/E Rank"
     },
     {
-      "name": "GiantRatBrown",
-      "type": "animatedentity",
-      "sortid": 362,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "giant_rat_brown",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/slsb/models/item/giant_rat_brown_spawn_egg.json",
-          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatBrownRenderer.java",
-          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatBrownModel.java",
-          "src/main/java/net/clozynoii/slsb/entity/GiantRatBrownEntity.java"
-        ]
-      },
-      "path": "~/Mobs/E Rank"
-    },
-    {
-      "name": "GiantRatBlack",
-      "type": "animatedentity",
-      "sortid": 363,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "giant_rat_black",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatBlackRenderer.java",
-          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatBlackModel.java",
-          "src/main/resources/assets/slsb/models/item/giant_rat_black_spawn_egg.json",
-          "src/main/java/net/clozynoii/slsb/entity/GiantRatBlackEntity.java"
-        ]
-      },
-      "path": "~/Mobs/E Rank"
-    },
-    {
       "name": "SoloLevelingArmor",
       "type": "tab",
       "sortid": 364,
@@ -7242,6 +7212,348 @@
         ]
       },
       "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "GiantRatOnSpawn",
+      "type": "procedure",
+      "sortid": 369,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_rat_on_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/GiantRatOnSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
+    },
+    {
+      "name": "MineDungeonSpawnNorth",
+      "type": "procedure",
+      "sortid": 370,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_spawn_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MineDungeonSpawnNorthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "MineDungeonSpawnSouth",
+      "type": "procedure",
+      "sortid": 371,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_spawn_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MineDungeonSpawnSouthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "MineDungeonSpawnEast",
+      "type": "procedure",
+      "sortid": 372,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_spawn_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MineDungeonSpawnEastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "MineDungeonSpawnWest",
+      "type": "procedure",
+      "sortid": 373,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_spawn_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MineDungeonSpawnWestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "MineDungeonSpawnEnemies",
+      "type": "procedure",
+      "sortid": 374,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_spawn_enemies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MineDungeonSpawnEnemiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "MineDungeonSpawnBoss",
+      "type": "procedure",
+      "sortid": 375,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mine_dungeon_spawn_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/MineDungeonSpawnBossProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "DungeonBossKilled",
+      "type": "procedure",
+      "sortid": 376,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon_boss_killed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/DungeonBossKilledProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons"
+    },
+    {
+      "name": "ERankEssenceStone",
+      "type": "item",
+      "sortid": 377,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_rank_essence_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/ERankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/e_rank_essence_stone.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "DRankEssenceStone",
+      "type": "item",
+      "sortid": 378,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "d_rank_essence_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/DRankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/d_rank_essence_stone.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CRankEssenceStone",
+      "type": "item",
+      "sortid": 379,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_rank_essence_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/CRankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/c_rank_essence_stone.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BRankEssenceStone",
+      "type": "item",
+      "sortid": 380,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_rank_essence_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/BRankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/b_rank_essence_stone.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "ARankEssenceStone",
+      "type": "item",
+      "sortid": 381,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "a_rank_essence_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/ARankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/a_rank_essence_stone.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SRankEssenceStone",
+      "type": "item",
+      "sortid": 382,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_rank_essence_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/item/SRankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/s_rank_essence_stone.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "StatEffects",
+      "type": "procedure",
+      "sortid": 383,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/StatEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Player"
     }
   ],
   "variable_elements": [
@@ -7351,25 +7663,25 @@
       "name": "GateTimer",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "Mana",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "ManaMax",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "Mastery",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "PlayerTimer",
@@ -7387,49 +7699,49 @@
       "name": "AbilityCooldown1",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown2",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown3",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown4",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown5",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown6",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown7",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown8",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown9",
@@ -7441,55 +7753,55 @@
       "name": "AbilityCost1",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost2",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost3",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost4",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost5",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost6",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost7",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost8",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost9",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "JoinedWorld",
@@ -7561,7 +7873,7 @@
       "name": "DungeonRoomCount",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "DungeonGenerate",
@@ -7585,7 +7897,73 @@
       "name": "DungeonEnterTimerPlayer",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
+    },
+    {
+      "name": "DefeatedBoss",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Strength",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "MaxStrength",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "Agility",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "MaxAgility",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "Vitality",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "MaxVitality",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "Intelligence",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "MaxIntelligence",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "Sense",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "MaxSense",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
     }
   ],
   "sound_elements": [],
@@ -7599,6 +7977,7 @@
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
       "block.slsb.ice_dungeon_south": "Ice Dungeon South",
       "advancements.strength_skill.title": "Strength Skill",
+      "item.slsb.c_rank_essence_stone": "§aC-Rank Essence Stone",
       "block.slsb.rat_dungeon_north": "Rat Dungeon North",
       "block.slsb.lich_dungeon_east": "Lich Dungeon East",
       "block.slsb.double_dungeon_enemies": "Double Dungeon Enemies",
@@ -7610,14 +7989,13 @@
       "block.slsb.sand_dungeon_south": "Sand Dungeon South",
       "block.slsb.mana_crystal_block_diorite": "Mana Crystal (Diorite)",
       "block.slsb.forest_dungeon_boss": "Forest Dungeon Boss",
-      "entity.slsb.giant_rat_brown": "Giant Brown Rat (E-Rank)",
       "block.slsb.dragon_dungeon_south": "Dragon Dungeon South",
       "block.slsb.subway_dungeon_north": "Subway Dungeon North",
       "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
       "block.slsb.mine_dungeon_south": "Mine Dungeon South",
       "item_group.slsb.solo_leveling_magic_beasts": "Solo Leveling: Magic Beasts",
+      "item.slsb.s_rank_essence_stone": "§dS-Rank Essence Stone",
       "advancements.assassin_class.descr": "Become the Assassin Class.",
-      "item.slsb.giant_rat_black_spawn_egg": "Giant Black Rat (E-Rank) Spawn Egg",
       "advancements.healer_class.title": "Healer",
       "block.slsb.forest_dungeon_north": "Forest Dungeon North",
       "block.slsb.mine_dungeon_enemies": "Mine Dungeon Enemies",
@@ -7639,7 +8017,6 @@
       "block.slsb.sunken_dungeon_south": "Sunken Dungeon South",
       "block.slsb.sunken_dungeon_north": "Sunken Dungeon North",
       "block.slsb.goblin_dungeon_boss": "Goblin Dungeon Boss",
-      "entity.slsb.giant_rat_black": "Giant Black Rat (E-Rank)",
       "block.slsb.subway_dungeon_west": "Subway Dungeon West",
       "block.slsb.catacomb_dungeon_east": "Catacomb Dungeon East",
       "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
@@ -7661,7 +8038,6 @@
       "block.slsb.naga_dungeon_east": "Naga Dungeon East",
       "block.slsb.mana_crystal_block_deepslate": "Mana Crystal (Deepslate)",
       "block.slsb.mana_crystal_block_stone": "Mana Crystal (Stone)",
-      "item.slsb.giant_rat_brown_spawn_egg": "Giant Brown Rat (E-Rank) Spawn Egg",
       "block.slsb.dragon_dungeon_enemies": "Dragon Dungeon Enemies",
       "advancements.healer_class.descr": "Become the Healer Class.",
       "block.slsb.dragon_dungeon_west": "Dragon Dungeon West",
@@ -7689,6 +8065,7 @@
       "block.slsb.naga_dungeon_north": "Naga Dungeon North",
       "block.slsb.goblin_dungeon_west": "Goblin Dungeon West",
       "block.slsb.orc_dungeon_east": "Orc Dungeon East",
+      "item.slsb.e_rank_essence_stone": "E-Rank Essence Stone",
       "block.slsb.rat_dungeon_east": "Rat Dungeon East",
       "block.slsb.forest_dungeon_east": "Forest Dungeon East",
       "effect.slsb.charged": "Charged",
@@ -7711,7 +8088,9 @@
       "block.slsb.red_gate_medium": "Red Gate Medium",
       "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "block.slsb.cathedral_dungeon_north": "Cathedral Dungeon North",
+      "item.slsb.a_rank_essence_stone": "§cA-Rank Essence Stone",
       "block.slsb.naga_dungeon_west": "Naga Dungeon West",
+      "item.slsb.b_rank_essence_stone": "§bB-Rank Essence Stone",
       "key.slsb.use_skill": "Use Skill",
       "block.slsb.sand_dungeon_north": "Sand Dungeon North",
       "block.slsb.goblin_dungeon_south": "Goblin Dungeon South",
@@ -7727,10 +8106,11 @@
       "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
       "block.slsb.maze_dungeon_enemies": "Maze Dungeon Enemies",
       "block.slsb.dragon_dungeon_east": "Dragon Dungeon East",
-      "item.slsb.giant_rat_grey_spawn_egg": "Giant Grey Rat (E-Rank) Spawn Egg",
+      "item.slsb.giant_rat_grey_spawn_egg": "Giant Rat (E-Rank) Spawn Egg",
       "block.slsb.maze_dungeon_south": "Maze Dungeon South",
       "entity.slsb.after_image": "After Image",
       "block.slsb.giant_dungeon_boss": "Giant Dungeon Boss",
+      "item.slsb.d_rank_essence_stone": "§eD-Rank Essence Stone",
       "block.slsb.forest_dungeon_west": "Forest Dungeon West",
       "block.slsb.goblin_dungeon_north": "Goblin Dungeon North",
       "advancements.heal_skill.descr": "Unlock Heal Skill",
@@ -7751,7 +8131,7 @@
       "block.slsb.rat_dungeon_west": "Rat Dungeon West",
       "block.slsb.giant_dungeon_south": "Giant Dungeon South",
       "block.slsb.giant_dungeon_north": "Giant Dungeon North",
-      "entity.slsb.giant_rat_grey": "Giant Grey Rat (E-Rank)",
+      "entity.slsb.giant_rat_grey": "Giant Rat (E-Rank)",
       "block.slsb.cathedral_dungeon_west": "Cathedral Dungeon West",
       "block.slsb.ice_dungeon_enemies": "Ice Dungeon Enemies",
       "block.slsb.crystal_dungeon_east": "Crystal Dungeon East",
@@ -7904,6 +8284,14 @@
                 "children": [
                   {
                     "name": "Rat Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Mine Dungeon",
+                    "children": []
+                  },
+                  {
+                    "name": "Forest Dungeon",
                     "children": []
                   }
                 ]

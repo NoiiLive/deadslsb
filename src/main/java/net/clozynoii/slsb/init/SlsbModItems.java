@@ -7,15 +7,23 @@ package net.clozynoii.slsb.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.clozynoii.slsb.item.SRankEssenceStoneItem;
 import net.clozynoii.slsb.item.ManaCrystalItem;
 import net.clozynoii.slsb.item.KnightKillerItem;
 import net.clozynoii.slsb.item.KasakasVenomFangItem;
+import net.clozynoii.slsb.item.ERankEssenceStoneItem;
+import net.clozynoii.slsb.item.DRankEssenceStoneItem;
+import net.clozynoii.slsb.item.CRankEssenceStoneItem;
+import net.clozynoii.slsb.item.BRankEssenceStoneItem;
+import net.clozynoii.slsb.item.ARankEssenceStoneItem;
 import net.clozynoii.slsb.block.display.RedGateSmallDisplayItem;
+import net.clozynoii.slsb.block.display.RedGateMediumDisplayItem;
 import net.clozynoii.slsb.block.display.ManaCrystalBlockStoneDisplayItem;
 import net.clozynoii.slsb.block.display.ManaCrystalBlockPureDisplayItem;
 import net.clozynoii.slsb.block.display.ManaCrystalBlockGraniteDisplayItem;
@@ -48,10 +56,6 @@ public class SlsbModItems {
 			() -> new ManaCrystalBlockDripstoneDisplayItem(SlsbModBlocks.MANA_CRYSTAL_BLOCK_DRIPSTONE.get(), new Item.Properties()));
 	public static final RegistryObject<Item> KNIGHT_KILLER = REGISTRY.register("knight_killer", () -> new KnightKillerItem());
 	public static final RegistryObject<Item> AWAKENING_ORB = REGISTRY.register(SlsbModBlocks.AWAKENING_ORB.getId().getPath(), () -> new AwakeningOrbDisplayItem(SlsbModBlocks.AWAKENING_ORB.get(), new Item.Properties()));
-	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_NORTH = block(SlsbModBlocks.DRIPSTONE_DUNGEON_NORTH);
-	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_SOUTH = block(SlsbModBlocks.DRIPSTONE_DUNGEON_SOUTH);
-	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_EAST = block(SlsbModBlocks.DRIPSTONE_DUNGEON_EAST);
-	public static final RegistryObject<Item> DRIPSTONE_DUNGEON_WEST = block(SlsbModBlocks.DRIPSTONE_DUNGEON_WEST);
 	public static final RegistryObject<Item> RAT_DUNGEON_NORTH = block(SlsbModBlocks.RAT_DUNGEON_NORTH);
 	public static final RegistryObject<Item> RAT_DUNGEON_EAST = block(SlsbModBlocks.RAT_DUNGEON_EAST);
 	public static final RegistryObject<Item> RAT_DUNGEON_SOUTH = block(SlsbModBlocks.RAT_DUNGEON_SOUTH);
@@ -178,6 +182,14 @@ public class SlsbModItems {
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_WEST = block(SlsbModBlocks.CATHEDRAL_DUNGEON_WEST);
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_ENEMIES = block(SlsbModBlocks.CATHEDRAL_DUNGEON_ENEMIES);
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_BOSS = block(SlsbModBlocks.CATHEDRAL_DUNGEON_BOSS);
+	public static final RegistryObject<Item> RED_GATE_MEDIUM = REGISTRY.register(SlsbModBlocks.RED_GATE_MEDIUM.getId().getPath(), () -> new RedGateMediumDisplayItem(SlsbModBlocks.RED_GATE_MEDIUM.get(), new Item.Properties()));
+	public static final RegistryObject<Item> GIANT_RAT_GREY_SPAWN_EGG = REGISTRY.register("giant_rat_grey_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT_GREY, -6710887, -10066330, new Item.Properties()));
+	public static final RegistryObject<Item> E_RANK_ESSENCE_STONE = REGISTRY.register("e_rank_essence_stone", () -> new ERankEssenceStoneItem());
+	public static final RegistryObject<Item> D_RANK_ESSENCE_STONE = REGISTRY.register("d_rank_essence_stone", () -> new DRankEssenceStoneItem());
+	public static final RegistryObject<Item> C_RANK_ESSENCE_STONE = REGISTRY.register("c_rank_essence_stone", () -> new CRankEssenceStoneItem());
+	public static final RegistryObject<Item> B_RANK_ESSENCE_STONE = REGISTRY.register("b_rank_essence_stone", () -> new BRankEssenceStoneItem());
+	public static final RegistryObject<Item> A_RANK_ESSENCE_STONE = REGISTRY.register("a_rank_essence_stone", () -> new ARankEssenceStoneItem());
+	public static final RegistryObject<Item> S_RANK_ESSENCE_STONE = REGISTRY.register("s_rank_essence_stone", () -> new SRankEssenceStoneItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

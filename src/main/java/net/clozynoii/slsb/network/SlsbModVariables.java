@@ -34,6 +34,7 @@ import net.minecraft.client.Minecraft;
 import net.clozynoii.slsb.SlsbMod;
 
 import java.util.function.Supplier;
+import java.util.ArrayList;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class SlsbModVariables {
@@ -52,20 +53,29 @@ public class SlsbModVariables {
 	public static class EventBusVariableHandlers {
 		@SubscribeEvent
 		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide())
-				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
+			if (!event.getEntity().level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
+					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
+				}
+			}
 		}
 
 		@SubscribeEvent
 		public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-			if (!event.getEntity().level().isClientSide())
-				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
+			if (!event.getEntity().level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
+					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
+				}
+			}
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide())
-				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
+			if (!event.getEntity().level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
+					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
+				}
+			}
 		}
 
 		@SubscribeEvent
@@ -111,6 +121,17 @@ public class SlsbModVariables {
 			clone.SkillsRenamed = original.SkillsRenamed;
 			clone.Awakened = original.Awakened;
 			clone.DungeonGenerate = original.DungeonGenerate;
+			clone.DungeonEnterTimerPlayer = original.DungeonEnterTimerPlayer;
+			clone.Strength = original.Strength;
+			clone.MaxStrength = original.MaxStrength;
+			clone.Agility = original.Agility;
+			clone.MaxAgility = original.MaxAgility;
+			clone.Vitality = original.Vitality;
+			clone.MaxVitality = original.MaxVitality;
+			clone.Intelligence = original.Intelligence;
+			clone.MaxIntelligence = original.MaxIntelligence;
+			clone.Sense = original.Sense;
+			clone.MaxSense = original.MaxSense;
 			if (!event.isWasDeath()) {
 				clone.AbilitySelected = original.AbilitySelected;
 				clone.ActiveSkills = original.ActiveSkills;
@@ -124,6 +145,12 @@ public class SlsbModVariables {
 				clone.AbilityCooldown7 = original.AbilityCooldown7;
 				clone.AbilityCooldown8 = original.AbilityCooldown8;
 				clone.AbilityCooldown9 = original.AbilityCooldown9;
+				clone.DefeatedBoss = original.DefeatedBoss;
+			}
+			if (!event.getEntity().level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
+					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
+				}
 			}
 		}
 
@@ -185,10 +212,10 @@ public class SlsbModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "slsb_mapvars";
-		public double GateTimer = 0;
+		public double GateTimer = 0.0;
 		public boolean WorldCreated = false;
 		public boolean DungeonBossRoom = false;
-		public double DungeonRoomCount = 0;
+		public double DungeonRoomCount = 0.0;
 		public double DungeonRoomTimer = 0.0;
 		public double DungeonEntranceTimer = 0.0;
 
@@ -324,29 +351,29 @@ public class SlsbModVariables {
 		public String UseAbilityType = "Switcher";
 		public String ActiveSkills = "";
 		public String MageType = "";
-		public double Mana = 0;
-		public double ManaMax = 0;
-		public double Mastery = 0;
+		public double Mana = 0.0;
+		public double ManaMax = 0.0;
+		public double Mastery = 0.0;
 		public double PlayerTimer = 0.0;
 		public double SwitcherSlot = 1.0;
-		public double AbilityCooldown1 = 0;
-		public double AbilityCooldown2 = 0;
-		public double AbilityCooldown3 = 0;
-		public double AbilityCooldown4 = 0;
-		public double AbilityCooldown5 = 0;
-		public double AbilityCooldown6 = 0;
-		public double AbilityCooldown7 = 0;
-		public double AbilityCooldown8 = 0;
+		public double AbilityCooldown1 = 0.0;
+		public double AbilityCooldown2 = 0.0;
+		public double AbilityCooldown3 = 0.0;
+		public double AbilityCooldown4 = 0.0;
+		public double AbilityCooldown5 = 0.0;
+		public double AbilityCooldown6 = 0.0;
+		public double AbilityCooldown7 = 0.0;
+		public double AbilityCooldown8 = 0.0;
 		public double AbilityCooldown9 = 0.0;
-		public double AbilityCost1 = 0;
-		public double AbilityCost2 = 0;
-		public double AbilityCost3 = 0;
-		public double AbilityCost4 = 0;
-		public double AbilityCost5 = 0;
-		public double AbilityCost6 = 0;
-		public double AbilityCost7 = 0;
-		public double AbilityCost8 = 0;
-		public double AbilityCost9 = 0;
+		public double AbilityCost1 = 0.0;
+		public double AbilityCost2 = 0.0;
+		public double AbilityCost3 = 0.0;
+		public double AbilityCost4 = 0.0;
+		public double AbilityCost5 = 0.0;
+		public double AbilityCost6 = 0.0;
+		public double AbilityCost7 = 0.0;
+		public double AbilityCost8 = 0.0;
+		public double AbilityCost9 = 0.0;
 		public boolean JoinedWorld = false;
 		public boolean SystemPlayer = false;
 		public boolean RulerVessel = false;
@@ -357,10 +384,22 @@ public class SlsbModVariables {
 		public boolean SkillsRenamed = false;
 		public boolean Awakened = false;
 		public boolean DungeonGenerate = false;
+		public double DungeonEnterTimerPlayer = 0.0;
+		public boolean DefeatedBoss = false;
+		public double Strength = 0.0;
+		public double MaxStrength = 0.0;
+		public double Agility = 0.0;
+		public double MaxAgility = 0.0;
+		public double Vitality = 0.0;
+		public double MaxVitality = 0.0;
+		public double Intelligence = 0.0;
+		public double MaxIntelligence = 0.0;
+		public double Sense = 0.0;
+		public double MaxSense = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
-				SlsbMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> serverPlayer), new PlayerVariablesSyncMessage(this));
+				SlsbMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(entity.level()::dimension), new PlayerVariablesSyncMessage(this, entity.getId()));
 		}
 
 		public Tag writeNBT() {
@@ -415,6 +454,18 @@ public class SlsbModVariables {
 			nbt.putBoolean("SkillsRenamed", SkillsRenamed);
 			nbt.putBoolean("Awakened", Awakened);
 			nbt.putBoolean("DungeonGenerate", DungeonGenerate);
+			nbt.putDouble("DungeonEnterTimerPlayer", DungeonEnterTimerPlayer);
+			nbt.putBoolean("DefeatedBoss", DefeatedBoss);
+			nbt.putDouble("Strength", Strength);
+			nbt.putDouble("MaxStrength", MaxStrength);
+			nbt.putDouble("Agility", Agility);
+			nbt.putDouble("MaxAgility", MaxAgility);
+			nbt.putDouble("Vitality", Vitality);
+			nbt.putDouble("MaxVitality", MaxVitality);
+			nbt.putDouble("Intelligence", Intelligence);
+			nbt.putDouble("MaxIntelligence", MaxIntelligence);
+			nbt.putDouble("Sense", Sense);
+			nbt.putDouble("MaxSense", MaxSense);
 			return nbt;
 		}
 
@@ -470,30 +521,51 @@ public class SlsbModVariables {
 			SkillsRenamed = nbt.getBoolean("SkillsRenamed");
 			Awakened = nbt.getBoolean("Awakened");
 			DungeonGenerate = nbt.getBoolean("DungeonGenerate");
+			DungeonEnterTimerPlayer = nbt.getDouble("DungeonEnterTimerPlayer");
+			DefeatedBoss = nbt.getBoolean("DefeatedBoss");
+			Strength = nbt.getDouble("Strength");
+			MaxStrength = nbt.getDouble("MaxStrength");
+			Agility = nbt.getDouble("Agility");
+			MaxAgility = nbt.getDouble("MaxAgility");
+			Vitality = nbt.getDouble("Vitality");
+			MaxVitality = nbt.getDouble("MaxVitality");
+			Intelligence = nbt.getDouble("Intelligence");
+			MaxIntelligence = nbt.getDouble("MaxIntelligence");
+			Sense = nbt.getDouble("Sense");
+			MaxSense = nbt.getDouble("MaxSense");
 		}
 	}
 
+	@SubscribeEvent
+	public static void registerMessage(FMLCommonSetupEvent event) {
+		SlsbMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
+	}
+
 	public static class PlayerVariablesSyncMessage {
+		private final int target;
 		private final PlayerVariables data;
 
 		public PlayerVariablesSyncMessage(FriendlyByteBuf buffer) {
 			this.data = new PlayerVariables();
 			this.data.readNBT(buffer.readNbt());
+			this.target = buffer.readInt();
 		}
 
-		public PlayerVariablesSyncMessage(PlayerVariables data) {
+		public PlayerVariablesSyncMessage(PlayerVariables data, int entityid) {
 			this.data = data;
+			this.target = entityid;
 		}
 
 		public static void buffer(PlayerVariablesSyncMessage message, FriendlyByteBuf buffer) {
 			buffer.writeNbt((CompoundTag) message.data.writeNBT());
+			buffer.writeInt(message.target);
 		}
 
 		public static void handler(PlayerVariablesSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 			NetworkEvent.Context context = contextSupplier.get();
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
-					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.AbilitySelected = message.data.AbilitySelected;
 					variables.AbilitySlot1 = message.data.AbilitySlot1;
 					variables.AbilitySlot2 = message.data.AbilitySlot2;
@@ -544,6 +616,18 @@ public class SlsbModVariables {
 					variables.SkillsRenamed = message.data.SkillsRenamed;
 					variables.Awakened = message.data.Awakened;
 					variables.DungeonGenerate = message.data.DungeonGenerate;
+					variables.DungeonEnterTimerPlayer = message.data.DungeonEnterTimerPlayer;
+					variables.DefeatedBoss = message.data.DefeatedBoss;
+					variables.Strength = message.data.Strength;
+					variables.MaxStrength = message.data.MaxStrength;
+					variables.Agility = message.data.Agility;
+					variables.MaxAgility = message.data.MaxAgility;
+					variables.Vitality = message.data.Vitality;
+					variables.MaxVitality = message.data.MaxVitality;
+					variables.Intelligence = message.data.Intelligence;
+					variables.MaxIntelligence = message.data.MaxIntelligence;
+					variables.Sense = message.data.Sense;
+					variables.MaxSense = message.data.MaxSense;
 				}
 			});
 			context.setPacketHandled(true);

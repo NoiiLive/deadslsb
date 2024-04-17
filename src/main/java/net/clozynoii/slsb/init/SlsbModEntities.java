@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.clozynoii.slsb.entity.MarkProjectileEntity;
+import net.clozynoii.slsb.entity.GiantRatGreyEntity;
 import net.clozynoii.slsb.entity.AfterImageEntity;
 import net.clozynoii.slsb.SlsbMod;
 
@@ -27,6 +28,10 @@ public class SlsbModEntities {
 			.setUpdateInterval(3).setCustomClientFactory(AfterImageEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MarkProjectileEntity>> MARK_PROJECTILE = register("projectile_mark_projectile",
 			EntityType.Builder.<MarkProjectileEntity>of(MarkProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(MarkProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<GiantRatGreyEntity>> GIANT_RAT_GREY = register("giant_rat_grey",
+			EntityType.Builder.<GiantRatGreyEntity>of(GiantRatGreyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantRatGreyEntity::new)
+
+					.sized(1.5f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -36,11 +41,13 @@ public class SlsbModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			AfterImageEntity.init();
+			GiantRatGreyEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(AFTER_IMAGE.get(), AfterImageEntity.createAttributes().build());
+		event.put(GIANT_RAT_GREY.get(), GiantRatGreyEntity.createAttributes().build());
 	}
 }

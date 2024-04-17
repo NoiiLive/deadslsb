@@ -13,7 +13,7 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class SetManaProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "manaset");
+			double _setval = DoubleArgumentType.getDouble(arguments, "amount");
 			(new Object() {
 				public Entity getEntity() {
 					try {

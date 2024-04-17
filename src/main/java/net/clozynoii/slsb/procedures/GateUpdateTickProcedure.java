@@ -42,7 +42,16 @@ public class GateUpdateTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("GateCloseTimer", (Mth.nextInt(RandomSource.create(), 48000, 72000)));
+						_blockEntity.getPersistentData().putDouble("GateCloseTimer", (Mth.nextInt(RandomSource.create(), 72000, 120000)));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("GateCompleted", false);
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -80,62 +89,95 @@ public class GateUpdateTickProcedure {
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 			}
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "GateCloseTimer") == 24000) {
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A7c\u00A7lOne Day Left to Clear " + (new Object() {
-						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getString(tag);
-							return "";
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "GateRank")) + " Gate at: " + new java.text.DecimalFormat("##").format(x) + " " + new java.text.DecimalFormat("##").format(y) + " " + new java.text.DecimalFormat("##").format(z))),
-							false);
-			}
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
+			}.getValue(world, BlockPos.containing(x, y, z), "GateCompleted")) == false) {
+				if (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "GateCloseTimer") == 24000) {
+					if (!world.isClientSide() && world.getServer() != null)
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A7c\u00A7lOne Day Left to Clear " + (new Object() {
+							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getPersistentData().getString(tag);
+								return "";
+							}
+						}.getValue(world, BlockPos.containing(x, y, z), "GateRank")) + " Gate at: " + new java.text.DecimalFormat("##").format(x) + " " + new java.text.DecimalFormat("##").format(y) + " "
+								+ new java.text.DecimalFormat("##").format(z))), false);
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "GateCloseTimer") == 12000) {
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A7c\u00A7l10 Minutes Left to Clear " + (new Object() {
-						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getString(tag);
-							return "";
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "GateRank")) + " Gate at: " + new java.text.DecimalFormat("##").format(x) + " " + new java.text.DecimalFormat("##").format(y) + " " + new java.text.DecimalFormat("##").format(z))),
-							false);
-			}
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
+				if (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "GateCloseTimer") == 12000) {
+					if (!world.isClientSide() && world.getServer() != null)
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A7c\u00A7l10 Minutes Left to Clear " + (new Object() {
+							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getPersistentData().getString(tag);
+								return "";
+							}
+						}.getValue(world, BlockPos.containing(x, y, z), "GateRank")) + " Gate at: " + new java.text.DecimalFormat("##").format(x) + " " + new java.text.DecimalFormat("##").format(y) + " "
+								+ new java.text.DecimalFormat("##").format(z))), false);
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "GateCloseTimer") == 6000) {
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A7c\u00A7l5 Minutes Left to Clear " + (new Object() {
-						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getString(tag);
-							return "";
+				if (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "GateCloseTimer") == 6000) {
+					if (!world.isClientSide() && world.getServer() != null)
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A7c\u00A7l5 Minutes Left to Clear " + (new Object() {
+							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getPersistentData().getString(tag);
+								return "";
+							}
+						}.getValue(world, BlockPos.containing(x, y, z), "GateRank")) + " Gate at: " + new java.text.DecimalFormat("##").format(x) + " " + new java.text.DecimalFormat("##").format(y) + " "
+								+ new java.text.DecimalFormat("##").format(z))), false);
+				}
+				if (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "GateCloseTimer") == 1) {
+					if (!world.isClientSide() && world.getServer() != null)
+						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A74\u00A7lA " + (new Object() {
+							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getPersistentData().getString(tag);
+								return "";
+							}
+						}.getValue(world, BlockPos.containing(x, y, z), "GateRank")) + " Dungeon Break Has Happened at: " + new java.text.DecimalFormat("##").format(x) + " " + new java.text.DecimalFormat("##").format(y) + " "
+								+ new java.text.DecimalFormat("##").format(z))), false);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wither.spawn")), SoundSource.BLOCKS, 1, 1);
 						}
-					}.getValue(world, BlockPos.containing(x, y, z), "GateRank")) + " Gate at: " + new java.text.DecimalFormat("##").format(x) + " " + new java.text.DecimalFormat("##").format(y) + " " + new java.text.DecimalFormat("##").format(z))),
-							false);
+					}
+				}
 			}
 			if (new Object() {
 				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
@@ -145,24 +187,16 @@ public class GateUpdateTickProcedure {
 					return -1;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "GateCloseTimer") == 1) {
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A74\u00A7lA " + (new Object() {
-						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getString(tag);
-							return "";
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "GateRank")) + " Dungeon Break Has Happened at: " + new java.text.DecimalFormat("##").format(x) + " " + new java.text.DecimalFormat("##").format(y) + " "
-							+ new java.text.DecimalFormat("##").format(z))), false);
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.wither.spawn")), SoundSource.BLOCKS, 1, 1);
-					}
-				}
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.ENCHANT, x, y, z, 1, 1, 1, 1, 0.1);
+					_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 1, 1, 1, 1, 0.1);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.glass.break")), SoundSource.BLOCKS, 2, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.glass.break")), SoundSource.BLOCKS, 2, 1, false);
+					}
+				}
 			}
 		}
 	}

@@ -138,6 +138,256 @@ public class UnawakenCommandProcedure {
 			});
 		}
 		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MaxStrength = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Strength = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MaxAgility = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Agility = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MaxVitality = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Vitality = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MaxIntelligence = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Intelligence = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MaxSense = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
+			double _setval = 0;
+			(new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
+					}
+				}
+			}.getEntity()).getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Sense = _setval;
+				capability.syncPlayerVariables((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "name");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()));
+			});
+		}
+		{
 			boolean _setval = false;
 			(new Object() {
 				public Entity getEntity() {

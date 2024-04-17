@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Giant Grey Rat (E-Rank)",
+    "mobName": "Giant Rat (E-Rank)",
     "mobLabel": "",
     "mobModelTexture": "greyrattexture.png",
     "mobModelGlowTexture": "",
@@ -12,7 +12,13 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "name": "Color",
+        "type": "string",
+        "value": ""
+      }
+    ],
     "modelWidth": 1.5,
     "modelHeight": 1.0,
     "modelShadowSize": 0.5,
@@ -86,7 +92,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": ""
+      "value": "CUSTOM:ERankEssenceStone"
     },
     "livingSound": {
       "value": "entity.rabbit.ambient"
@@ -99,6 +105,12 @@
     },
     "stepSound": {
       "value": ""
+    },
+    "whenMobDies": {
+      "name": "DungeonBossKilled"
+    },
+    "onInitialSpawn": {
+      "name": "GiantRatOnSpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",

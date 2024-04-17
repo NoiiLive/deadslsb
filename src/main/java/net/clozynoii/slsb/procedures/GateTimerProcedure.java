@@ -92,7 +92,7 @@ public class GateTimerProcedure {
 						}
 					}
 					if (GateRandomize >= 5 && GateRandomize < 10) {
-						GateRank = "\u00A7a\u00A7lD-Rank";
+						GateRank = "\u00A7e\u00A7lD-Rank";
 						world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
@@ -105,7 +105,7 @@ public class GateTimerProcedure {
 						}
 					}
 					if (GateRandomize >= 10 && GateRandomize < 15) {
-						GateRank = "\u00A7d\u00A7lC-Rank";
+						GateRank = "\u00A7a\u00A7lC-Rank";
 						world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
@@ -131,7 +131,7 @@ public class GateTimerProcedure {
 						}
 					}
 					if (GateRandomize >= 18 && GateRandomize < 20) {
-						GateRank = "\u00A7e\u00A7lA-Rank";
+						GateRank = "\u00A7c\u00A7lA-Rank";
 						world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
@@ -144,7 +144,7 @@ public class GateTimerProcedure {
 						}
 					}
 					if (GateRandomize == 20) {
-						GateRank = "\u00A7c\u00A7lS-Rank";
+						GateRank = "\u00A7d\u00A7lS-Rank";
 						world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);

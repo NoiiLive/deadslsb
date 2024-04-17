@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.clozynoii.slsb.init.SlsbModBlockEntities;
 import net.clozynoii.slsb.block.renderer.RedGateSmallTileRenderer;
+import net.clozynoii.slsb.block.renderer.RedGateMediumTileRenderer;
 import net.clozynoii.slsb.block.renderer.ManaCrystalBlockStoneTileRenderer;
 import net.clozynoii.slsb.block.renderer.ManaCrystalBlockPureTileRenderer;
 import net.clozynoii.slsb.block.renderer.ManaCrystalBlockGraniteTileRenderer;
@@ -34,5 +35,6 @@ public class ClientListener {
 		event.registerBlockEntityRenderer(SlsbModBlockEntities.MANA_CRYSTAL_BLOCK_GRANITE.get(), context -> new ManaCrystalBlockGraniteTileRenderer());
 		event.registerBlockEntityRenderer(SlsbModBlockEntities.MANA_CRYSTAL_BLOCK_DRIPSTONE.get(), context -> new ManaCrystalBlockDripstoneTileRenderer());
 		event.registerBlockEntityRenderer(SlsbModBlockEntities.AWAKENING_ORB.get(), context -> new AwakeningOrbTileRenderer());
+		event.registerBlockEntityRenderer(SlsbModBlockEntities.RED_GATE_MEDIUM.get(), context -> new RedGateMediumTileRenderer());
 	}
 }
