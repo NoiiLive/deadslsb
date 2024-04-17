@@ -115,7 +115,7 @@ public class SLSBAdminCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			UnawakenCommandProcedure.execute(arguments);
+			UnawakenCommandProcedure.execute(world, arguments);
 			return 0;
 		})))).then(Commands.literal("class").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("fighter").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();

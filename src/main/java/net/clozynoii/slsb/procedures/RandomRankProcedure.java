@@ -5,7 +5,6 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
-import net.clozynoii.slsb.SlsbMod;
 
 public class RandomRankProcedure {
 	public static void execute(Entity entity) {
@@ -354,9 +353,5 @@ public class RandomRankProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		SlsbMod.LOGGER.debug(("STR: " + (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Strength + " AGI: "
-				+ (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Agility + " VIT: "
-				+ (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Vitality + " INT: "
-				+ (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Intelligence));
 	}
 }

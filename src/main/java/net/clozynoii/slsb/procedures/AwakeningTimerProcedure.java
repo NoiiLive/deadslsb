@@ -57,7 +57,7 @@ public class AwakeningTimerProcedure {
 				Entity _ent = entity;
 				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "title @a title {\"text\":\"Awakened\",\"color\":\"#5555dd\"}");
+							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "title @s title {\"text\":\"Awakened\",\"color\":\"#5555dd\"}");
 				}
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

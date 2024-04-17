@@ -2903,6 +2903,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
