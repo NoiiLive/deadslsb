@@ -1,34 +1,40 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.InteractionHand;
 
-import javax.annotation.Nullable;
+import net.clozynoii.slsb.network.SlsbModVariables;
+import net.clozynoii.slsb.init.SlsbModMobEffects;
+import net.clozynoii.slsb.entity.AfterImageEntity;
+
+import java.util.List;
+import java.util.Comparator;
 
 public class TurbulenceSkillUseProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		double cooldown = 0;
+		boolean singletarget = false;
 		if (entity instanceof LivingEntity _entity)
 			_entity.swing(InteractionHand.MAIN_HAND, true);
 		{
-			Entity _shootFrom = entity;
-			Level projectileLevel = _shootFrom.level();
-			if (!projectileLevel.isClientSide()) {
-				Projectile _entityToSpawn = new Object() {
-					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-						AbstractArrow entityToSpawn = new TurbulentProjectileEntity(SlsbModEntities.DELETED_MOD_ELEMENT.get(), level);
-						entityToSpawn.setOwner(shooter);
-						entityToSpawn.setBaseDamage(damage);
-						entityToSpawn.setKnockback(knockback);
-						entityToSpawn.setSilent(true);
-						entityToSpawn.setPierceLevel(piercing);
-						return entityToSpawn;
-					}
-				}.getArrow(projectileLevel, entity, 0, 0, (byte) 15);
-				_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-				_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 0);
-				projectileLevel.addFreshEntity(_entityToSpawn);
+			final Vec3 _center = new Vec3(
+					(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(7)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
+					(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(7)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
+					(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(7)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()));
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+			for (Entity entityiterator : _entfound) {
+				if (!(entity == entityiterator) && !(entityiterator instanceof AfterImageEntity)) {
+					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.TURBULENCE.get(), 60, 0, false, false));
+				}
 			}
 		}
 		cooldown = 130;

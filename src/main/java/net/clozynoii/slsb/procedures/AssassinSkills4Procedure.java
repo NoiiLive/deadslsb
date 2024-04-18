@@ -101,7 +101,7 @@ public class AssassinSkills4Procedure {
 				}
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost4) {
-					MarkSkillUseProcedure.execute(entity);
+					MarkSkillUseProcedure.execute(world, entity);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(

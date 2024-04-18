@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Bash",
-    "icon": "collapse.png",
+    "icon": "bash.png",
     "color": {
       "value": -1,
       "falpha": 0.0

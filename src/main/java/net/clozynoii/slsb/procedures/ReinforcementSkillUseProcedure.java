@@ -3,18 +3,14 @@ package net.clozynoii.slsb.procedures;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
@@ -31,81 +27,18 @@ public class ReinforcementSkillUseProcedure {
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Reinforcement") == false && gate == false) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.hit")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.use")), SoundSource.PLAYERS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.hit")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.use")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
+			world.levelEvent(2001, BlockPos.containing(x, y + 1, z), Block.getId(Blocks.IRON_BLOCK.defaultBlockState()));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.REINFORCEMENT.get(), 2, 0, false, true));
 			gate = true;
 			cooldown = 60;
 			{
-				ItemStack _setval = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY);
-				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.HelmetSave = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				ItemStack _setval = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY);
-				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.ChestplateSave = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				ItemStack _setval = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY);
-				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.LeggingsSave = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				ItemStack _setval = (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY);
-				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.BootsSave = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(3, new ItemStack(Blocks.AIR));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Blocks.AIR));
-				}
-			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(2, new ItemStack(Blocks.AIR));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Blocks.AIR));
-				}
-			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(1, new ItemStack(Blocks.AIR));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Blocks.AIR));
-				}
-			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(0, new ItemStack(Blocks.AIR));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(Blocks.AIR));
-				}
-			}
-			{
-				String _setval = (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills + "Reinforcement";
+				String _setval = (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills + "Reinforcement ";
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.ActiveSkills = _setval;
 					capability.syncPlayerVariables(entity);
@@ -116,54 +49,17 @@ public class ReinforcementSkillUseProcedure {
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Reinforcement") == true && gate == false) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.nearby_closer")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.destroy")), SoundSource.PLAYERS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.nearby_closer")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.destroy")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, 0.1, 0.1, 0.1, 0.1);
+			world.levelEvent(2001, BlockPos.containing(x, y + 1, z), Block.getId(Blocks.IRON_BLOCK.defaultBlockState()));
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(SlsbModMobEffects.REINFORCEMENT.get());
 			gate = true;
 			{
-				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(3, ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HelmetSave));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.HEAD, ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).HelmetSave));
-				}
-			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(2, ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ChestplateSave));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.CHEST, ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ChestplateSave));
-				}
-			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(1, ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).LeggingsSave));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).LeggingsSave));
-				}
-			}
-			{
-				Entity _entity = entity;
-				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(0, ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).BootsSave));
-					_player.getInventory().setChanged();
-				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.FEET, ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).BootsSave));
-				}
-			}
-			{
-				String _setval = ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).replace("Reinforcement", "");
+				String _setval = ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).replace("Reinforcement ", "");
 				entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.ActiveSkills = _setval;
 					capability.syncPlayerVariables(entity);

@@ -5,21 +5,21 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
-import net.clozynoii.slsb.procedures.HealingAuraTickProcedure;
+import net.clozynoii.slsb.procedures.TurbulenceActiveProcedure;
 
-public class HealingAuraMobEffect extends MobEffect {
-	public HealingAuraMobEffect() {
-		super(MobEffectCategory.BENEFICIAL, -12588513);
+public class TurbulenceMobEffect extends MobEffect {
+	public TurbulenceMobEffect() {
+		super(MobEffectCategory.HARMFUL, -1);
 	}
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.slsb.healing_aura";
+		return "effect.slsb.turbulence";
 	}
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		HealingAuraTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		TurbulenceActiveProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override

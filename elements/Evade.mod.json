@@ -2,16 +2,16 @@
   "_fv": 57,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Evade",
+    "effectName": "Evasion",
     "icon": "evade.png",
     "color": {
-      "value": -1,
+      "value": -10092340,
       "falpha": 0.0
     },
     "isInstant": false,
     "isBad": false,
-    "isBenefitical": false,
-    "renderStatusInInventory": false,
-    "renderStatusInHUD": false
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
   }
 }

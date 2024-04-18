@@ -14,7 +14,7 @@ import net.clozynoii.slsb.procedures.ReinforcementTickProcedure;
 
 public class ReinforcementMobEffect extends MobEffect {
 	public ReinforcementMobEffect() {
-		super(MobEffectCategory.NEUTRAL, -1);
+		super(MobEffectCategory.NEUTRAL, -3355444);
 	}
 
 	@Override

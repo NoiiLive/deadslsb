@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Collapse",
-    "icon": "stealth.png",
+    "icon": "collapse.png",
     "color": {
       "value": -1,
       "falpha": 0.0

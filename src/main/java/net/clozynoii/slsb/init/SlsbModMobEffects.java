@@ -12,6 +12,7 @@ import net.minecraft.world.effect.MobEffect;
 
 import net.clozynoii.slsb.potion.WindPullActiveMobEffect;
 import net.clozynoii.slsb.potion.WindBurstActiveMobEffect;
+import net.clozynoii.slsb.potion.TurbulenceMobEffect;
 import net.clozynoii.slsb.potion.TornadoActiveMobEffect;
 import net.clozynoii.slsb.potion.SuffocationActiveMobEffect;
 import net.clozynoii.slsb.potion.StealthMobEffect;
@@ -38,4 +39,5 @@ public class SlsbModMobEffects {
 	public static final RegistryObject<MobEffect> WIND_BURST_ACTIVE = REGISTRY.register("wind_burst_active", () -> new WindBurstActiveMobEffect());
 	public static final RegistryObject<MobEffect> SUFFOCATION_ACTIVE = REGISTRY.register("suffocation_active", () -> new SuffocationActiveMobEffect());
 	public static final RegistryObject<MobEffect> TORNADO_ACTIVE = REGISTRY.register("tornado_active", () -> new TornadoActiveMobEffect());
+	public static final RegistryObject<MobEffect> TURBULENCE = REGISTRY.register("turbulence", () -> new TurbulenceMobEffect());
 }

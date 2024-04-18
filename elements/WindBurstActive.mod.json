@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Wind Burst",
-    "icon": "bash.png",
+    "icon": "suffocation_active.png",
     "color": {
       "value": -1,
       "falpha": 0.0

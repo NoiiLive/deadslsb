@@ -20,10 +20,8 @@ public class SlsbModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(SlsbModEntities.AFTER_IMAGE.get(), AfterImageRenderer::new);
-		event.registerEntityRenderer(SlsbModEntities.MARK_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(SlsbModEntities.GIANT_RAT_GREY.get(), GiantRatGreyRenderer::new);
 		event.registerEntityRenderer(SlsbModEntities.WIND_SLICE_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(SlsbModEntities.TURBULENT_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(SlsbModEntities.WIND_BARRIER_MOB.get(), WindBarrierMobRenderer::new);
 	}
 }

@@ -3,9 +3,9 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Reinforcement",
-    "icon": "healing_aura.png",
+    "icon": "bash.png",
     "color": {
-      "value": -1,
+      "value": -3355444,
       "falpha": 0.0
     },
     "isInstant": false,

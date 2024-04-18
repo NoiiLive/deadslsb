@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Charged",
-    "icon": "reinforcement.png",
+    "icon": "charged.png",
     "color": {
       "value": -1,
       "falpha": 0.0

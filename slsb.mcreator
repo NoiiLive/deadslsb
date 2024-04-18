@@ -270,6 +270,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -294,7 +298,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Misc/Procedures"
+      "path": "~/Procedures/Mobs"
     },
     {
       "name": "SkillOverlay",
@@ -343,7 +347,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Misc/Procedures"
+      "path": "~/Procedures/Mobs"
     },
     {
       "name": "SwitchSkill",
@@ -381,7 +385,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Procedures/Commands"
     },
     {
       "name": "AfterImage",
@@ -437,7 +441,7 @@
           }
         ]
       },
-      "path": "~/Overlays/Procedures"
+      "path": "~/Procedures/GUI"
     },
     {
       "name": "GateUpdateTick",
@@ -553,7 +557,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Classes"
+      "path": "~/Procedures/Commands/Classes"
     },
     {
       "name": "CostOverlay",
@@ -574,7 +578,7 @@
           }
         ]
       },
-      "path": "~/Overlays/Procedures"
+      "path": "~/Procedures/GUI"
     },
     {
       "name": "HealSkill",
@@ -640,7 +644,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Misc/Procedures"
+      "path": "~/Procedures/Mobs"
     },
     {
       "name": "SetMana",
@@ -660,7 +664,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Procedures/Commands"
     },
     {
       "name": "ManaOverlay",
@@ -681,7 +685,7 @@
           }
         ]
       },
-      "path": "~/Overlays/Procedures"
+      "path": "~/Procedures/GUI"
     },
     {
       "name": "HealerClass",
@@ -1056,7 +1060,7 @@
           }
         ]
       },
-      "path": "~/Overlays/Procedures"
+      "path": "~/Procedures/GUI"
     },
     {
       "name": "CostDisplayCondition",
@@ -1077,7 +1081,7 @@
           }
         ]
       },
-      "path": "~/Overlays/Procedures"
+      "path": "~/Procedures/GUI"
     },
     {
       "name": "ManaDisplayCondition",
@@ -1098,7 +1102,7 @@
           }
         ]
       },
-      "path": "~/Overlays/Procedures"
+      "path": "~/Procedures/GUI"
     },
     {
       "name": "RandomMoves",
@@ -1299,6 +1303,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1715,6 +1735,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1735,6 +1771,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1755,6 +1807,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1775,6 +1843,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1882,7 +1966,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Classes"
+      "path": "~/Procedures/Commands/Classes"
     },
     {
       "name": "SetTanker",
@@ -1906,7 +1990,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Classes"
+      "path": "~/Procedures/Commands/Classes"
     },
     {
       "name": "SetFighter",
@@ -1930,7 +2014,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Classes"
+      "path": "~/Procedures/Commands/Classes"
     },
     {
       "name": "SetMage",
@@ -1954,7 +2038,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Classes"
+      "path": "~/Procedures/Commands/Classes"
     },
     {
       "name": "SetRanger",
@@ -1978,7 +2062,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Classes"
+      "path": "~/Procedures/Commands/Classes"
     },
     {
       "name": "ClearAbilitiesCommand",
@@ -2128,7 +2212,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Ranks"
+      "path": "~/Procedures/Commands/Ranks"
     },
     {
       "name": "SetRankD",
@@ -2152,7 +2236,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Ranks"
+      "path": "~/Procedures/Commands/Ranks"
     },
     {
       "name": "SetRankC",
@@ -2176,7 +2260,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Ranks"
+      "path": "~/Procedures/Commands/Ranks"
     },
     {
       "name": "SetRankB",
@@ -2200,7 +2284,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Ranks"
+      "path": "~/Procedures/Commands/Ranks"
     },
     {
       "name": "SetRankA",
@@ -2224,7 +2308,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Ranks"
+      "path": "~/Procedures/Commands/Ranks"
     },
     {
       "name": "SetRankS",
@@ -2248,7 +2332,7 @@
           }
         ]
       },
-      "path": "~/Commands/Procedures/Ranks"
+      "path": "~/Procedures/Commands/Ranks"
     },
     {
       "name": "BlueGateMedium",
@@ -2374,34 +2458,6 @@
       "path": "~/Procedures/Skills/Mage"
     },
     {
-      "name": "MarkProjectileProjectileHitsLivingEntity",
-      "type": "procedure",
-      "sortid": 127,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mark_projectile_projectile_hits_living_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/MarkProjectileProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Skills/Assassin/Moves"
-    },
-    {
       "name": "MarkSkillUse",
       "type": "procedure",
       "sortid": 129,
@@ -2416,6 +2472,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2434,20 +2494,6 @@
         ]
       },
       "path": "~/Potions"
-    },
-    {
-      "name": "MarkProjectile",
-      "type": "projectile",
-      "sortid": 128,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mark_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/entity/MarkProjectileEntity.java"
-        ]
-      },
-      "path": "~/Projectiles"
     },
     {
       "name": "BackstabSkillUse",
@@ -2899,6 +2945,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4362,6 +4412,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4408,8 +4474,32 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7110,40 +7200,6 @@
       "path": "~/Mobs/E Rank"
     },
     {
-      "name": "GiantRatBrown",
-      "type": "animatedentity",
-      "sortid": 362,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "giant_rat_brown",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/slsb/models/item/giant_rat_brown_spawn_egg.json",
-          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatBrownRenderer.java",
-          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatBrownModel.java",
-          "src/main/java/net/clozynoii/slsb/entity/GiantRatBrownEntity.java"
-        ]
-      },
-      "path": "~/Mobs/E Rank"
-    },
-    {
-      "name": "GiantRatBlack",
-      "type": "animatedentity",
-      "sortid": 363,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "giant_rat_black",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatBlackRenderer.java",
-          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatBlackModel.java",
-          "src/main/resources/assets/slsb/models/item/giant_rat_black_spawn_egg.json",
-          "src/main/java/net/clozynoii/slsb/entity/GiantRatBlackEntity.java"
-        ]
-      },
-      "path": "~/Mobs/E Rank"
-    },
-    {
       "name": "SoloLevelingArmor",
       "type": "tab",
       "sortid": 364,
@@ -7244,78 +7300,6 @@
       "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
     },
     {
-      "name": "Turbulent4",
-      "type": "procedure",
-      "sortid": 380,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turbulent_4",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/Turbulent4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles/Procedures"
-    },
-    {
-      "name": "Turbulent3",
-      "type": "procedure",
-      "sortid": 379,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turbulent_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/Turbulent3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles/Procedures"
-    },
-    {
       "name": "WindSliceProjectileWhileProjectileFlyingTick",
       "type": "procedure",
       "sortid": 371,
@@ -7328,14 +7312,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -7353,79 +7329,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Skills/Mage/Moves"
-    },
-    {
-      "name": "Turbulent6",
-      "type": "procedure",
-      "sortid": 382,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turbulent_6",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/Turbulent6Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles/Procedures"
-    },
-    {
-      "name": "Turbulent5",
-      "type": "procedure",
-      "sortid": 381,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turbulent_5",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/Turbulent5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles/Procedures"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "WindBurstActiveOnEffectActiveTick",
@@ -7461,7 +7365,7 @@
           }
         ]
       },
-      "path": "~/Potions/Procedures"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "WindPullActive",
@@ -7492,45 +7396,26 @@
           {
             "name": "entity",
             "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Skills/Mage/Moves"
-    },
-    {
-      "name": "TestRightclicked",
-      "type": "procedure",
-      "sortid": 372,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/TestRightclickedProcedure.java"
-        ],
-        "dependencies": [
+          },
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Items/Procedures"
-    },
-    {
-      "name": "Test",
-      "type": "item",
-      "sortid": 373,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/item/TestItem.java",
-          "src/main/resources/assets/slsb/models/item/test.json"
-        ]
-      },
-      "path": "~/Items"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "WindBarrierMobOnInitialEntitySpawn",
@@ -7554,7 +7439,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Misc/Procedures"
+      "path": "~/Procedures/Mobs"
     },
     {
       "name": "WindBarrierSkillUse",
@@ -7590,7 +7475,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Skills/Mage/Moves"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "TornadoActiveOnEffectActiveTick",
@@ -7626,7 +7511,7 @@
           }
         ]
       },
-      "path": "~/Potions/Procedures"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "WindBarrierMobOnEntityTickUpdate",
@@ -7662,7 +7547,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Misc/Procedures"
+      "path": "~/Procedures/Mobs"
     },
     {
       "name": "WindPullSkillUse",
@@ -7698,79 +7583,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Skills/Mage/Moves"
-    },
-    {
-      "name": "Turbulent2",
-      "type": "procedure",
-      "sortid": 378,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turbulent_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/Turbulent2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles/Procedures"
-    },
-    {
-      "name": "Turbulent1",
-      "type": "procedure",
-      "sortid": 377,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turbulent_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/Turbulent1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Projectiles/Procedures"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "TornadoSkillUse",
@@ -7790,7 +7603,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Skills/Mage/Moves"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "WindSliceProjectile",
@@ -7821,10 +7634,26 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Procedures/Skills/Mage/Moves"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "SuffocationActive",
@@ -7869,42 +7698,6 @@
           {
             "name": "entity",
             "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/Skills/Mage/Moves"
-    },
-    {
-      "name": "TurbulentProjectileWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 383,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turbulent_projectile_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/TurbulentProjectileWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -7912,7 +7705,7 @@
           }
         ]
       },
-      "path": "~/Projectiles/Procedures"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "SuffocationActiveOnEffectActiveTick",
@@ -7948,7 +7741,7 @@
           }
         ]
       },
-      "path": "~/Potions/Procedures"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "WindBarrierMob",
@@ -7959,8 +7752,8 @@
       "registry_name": "wind_barrier_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/entity/WindBarrierMobEntity.java",
-          "src/main/java/net/clozynoii/slsb/client/renderer/WindBarrierMobRenderer.java"
+          "src/main/java/net/clozynoii/slsb/client/renderer/WindBarrierMobRenderer.java",
+          "src/main/java/net/clozynoii/slsb/entity/WindBarrierMobEntity.java"
         ]
       },
       "path": "~/Mobs/Misc"
@@ -7997,21 +7790,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Skills/Mage/Moves"
-    },
-    {
-      "name": "TurbulentProjectile",
-      "type": "projectile",
-      "sortid": 384,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turbulent_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/entity/TurbulentProjectileEntity.java"
-        ]
-      },
-      "path": "~/Projectiles"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "WindPullActiveOnEffectActiveTick",
@@ -8040,14 +7819,10 @@
           {
             "name": "z",
             "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
-      "path": "~/Potions/Procedures"
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     },
     {
       "name": "StatEffects",
@@ -8162,8 +7937,8 @@
       "registry_name": "c_rank_essence_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/slsb/models/item/c_rank_essence_stone.json",
-          "src/main/java/net/clozynoii/slsb/item/CRankEssenceStoneItem.java"
+          "src/main/java/net/clozynoii/slsb/item/CRankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/c_rank_essence_stone.json"
         ]
       },
       "path": "~/Items"
@@ -8186,7 +7961,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Dungeons/E Rank/Rat Dungeon"
+      "path": "~/Procedures/Mobs"
     },
     {
       "name": "SRankEssenceStone",
@@ -8197,8 +7972,8 @@
       "registry_name": "s_rank_essence_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/slsb/models/item/s_rank_essence_stone.json",
-          "src/main/java/net/clozynoii/slsb/item/SRankEssenceStoneItem.java"
+          "src/main/java/net/clozynoii/slsb/item/SRankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/s_rank_essence_stone.json"
         ]
       },
       "path": "~/Items"
@@ -8259,8 +8034,8 @@
       "registry_name": "a_rank_essence_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/slsb/models/item/a_rank_essence_stone.json",
-          "src/main/java/net/clozynoii/slsb/item/ARankEssenceStoneItem.java"
+          "src/main/java/net/clozynoii/slsb/item/ARankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/a_rank_essence_stone.json"
         ]
       },
       "path": "~/Items"
@@ -8306,8 +8081,8 @@
       "registry_name": "e_rank_essence_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/slsb/models/item/e_rank_essence_stone.json",
-          "src/main/java/net/clozynoii/slsb/item/ERankEssenceStoneItem.java"
+          "src/main/java/net/clozynoii/slsb/item/ERankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/e_rank_essence_stone.json"
         ]
       },
       "path": "~/Items"
@@ -8321,8 +8096,8 @@
       "registry_name": "b_rank_essence_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/slsb/models/item/b_rank_essence_stone.json",
-          "src/main/java/net/clozynoii/slsb/item/BRankEssenceStoneItem.java"
+          "src/main/java/net/clozynoii/slsb/item/BRankEssenceStoneItem.java",
+          "src/main/resources/assets/slsb/models/item/b_rank_essence_stone.json"
         ]
       },
       "path": "~/Items"
@@ -8390,6 +8165,56 @@
         ]
       },
       "path": "~/Procedures/Dungeons/E Rank/Mine Dungeon"
+    },
+    {
+      "name": "Turbulence",
+      "type": "potioneffect",
+      "sortid": 399,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turbulence",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/TurbulenceMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "TurbulenceActive",
+      "type": "procedure",
+      "sortid": 400,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turbulence_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TurbulenceActiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Mage/Moves/Wind"
     }
   ],
   "variable_elements": [
@@ -8809,10 +8634,13 @@
       "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
       "block.slsb.naga_dungeon_south": "Naga Dungeon South",
       "block.slsb.cathedral_dungeon_east": "Cathedral Dungeon East",
+      "effect.slsb.wind_burst_active": "Wind Burst",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
       "block.slsb.ice_dungeon_south": "Ice Dungeon South",
+      "effect.slsb.wind_pull_active": "Wind Pull Active",
       "advancements.strength_skill.title": "Strength Skill",
+      "item.slsb.c_rank_essence_stone": "§aC-Rank Essence Stone",
       "block.slsb.rat_dungeon_north": "Rat Dungeon North",
       "block.slsb.lich_dungeon_east": "Lich Dungeon East",
       "block.slsb.double_dungeon_enemies": "Double Dungeon Enemies",
@@ -8829,13 +8657,14 @@
       "block.slsb.mana_crystal_block_pure": "Mana Crystal (Pure)",
       "block.slsb.mine_dungeon_south": "Mine Dungeon South",
       "item_group.slsb.solo_leveling_magic_beasts": "Solo Leveling: Magic Beasts",
+      "item.slsb.s_rank_essence_stone": "§dS-Rank Essence Stone",
       "advancements.assassin_class.descr": "Become the Assassin Class.",
       "advancements.healer_class.title": "Healer",
       "block.slsb.forest_dungeon_north": "Forest Dungeon North",
       "block.slsb.mine_dungeon_enemies": "Mine Dungeon Enemies",
       "block.slsb.library_dungeon_west": "Library Dungeon West",
       "block.slsb.mine_dungeon_west": "Mine Dungeon West",
-      "effect.slsb.disguise": "Disguise",
+      "effect.slsb.disguise": "Disguised",
       "block.slsb.orc_dungeon_west": "Orc Dungeon West",
       "block.slsb.goblin_dungeon_east": "Goblin Dungeon East",
       "block.slsb.cathedral_dungeon_enemies": "Cathedral Dungeon Enemies",
@@ -8880,10 +8709,11 @@
       "block.slsb.coliseum_dungeon_south": "Coliseum Dungeon South",
       "block.slsb.catacomb_dungeon_enemies": "Catacomb Dungeon Enemies",
       "item_group.slsb.solo_leveling_armor": "Solo Leveling: Armor",
-      "effect.slsb.evade": "Evade",
+      "effect.slsb.evade": "Evasion",
       "block.slsb.giant_dungeon_west": "Giant Dungeon West",
       "block.slsb.forest_dungeon_enemies": "Forest Dungeon Enemies",
       "block.slsb.crystal_dungeon_boss": "Crystal Dungeon Boss",
+      "effect.slsb.suffocation_active": "Suffocating",
       "block.slsb.mine_dungeon_boss": "Mine Dungeon Boss",
       "block.slsb.sand_dungeon_boss": "Sand Dungeon Boss",
       "block.slsb.mine_dungeon_east": "Mine Dungeon East",
@@ -8892,6 +8722,7 @@
       "block.slsb.lich_dungeon_boss": "Lich Dungeon Boss",
       "block.slsb.spider_dungeon_west": "Spider Dungeon West",
       "block.slsb.maze_dungeon_west": "Maze Dungeon West",
+      "entity.slsb.wind_barrier_mob": "Wind Barrier Mob",
       "block.slsb.ice_dungeon_north": "Ice Dungeon North",
       "block.slsb.library_dungeon_east": "Library Dungeon East",
       "block.slsb.orc_dungeon_enemies": "Orc Dungeon Enemies",
@@ -8899,6 +8730,7 @@
       "block.slsb.naga_dungeon_north": "Naga Dungeon North",
       "block.slsb.goblin_dungeon_west": "Goblin Dungeon West",
       "block.slsb.orc_dungeon_east": "Orc Dungeon East",
+      "item.slsb.e_rank_essence_stone": "E-Rank Essence Stone",
       "block.slsb.rat_dungeon_east": "Rat Dungeon East",
       "block.slsb.forest_dungeon_east": "Forest Dungeon East",
       "effect.slsb.charged": "Charged",
@@ -8917,11 +8749,14 @@
       "block.slsb.coliseum_dungeon_boss": "Coliseum Dungeon Boss",
       "block.slsb.ice_dungeon_boss": "Ice Dungeon Boss",
       "block.slsb.giant_dungeon_enemies": "Giant Dungeon Enemies",
+      "effect.slsb.turbulence": "Turbulence",
       "block.slsb.double_dungeon_east": "Double Dungeon East",
       "block.slsb.red_gate_medium": "Red Gate Medium",
       "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "block.slsb.cathedral_dungeon_north": "Cathedral Dungeon North",
+      "item.slsb.a_rank_essence_stone": "§cA-Rank Essence Stone",
       "block.slsb.naga_dungeon_west": "Naga Dungeon West",
+      "item.slsb.b_rank_essence_stone": "§bB-Rank Essence Stone",
       "key.slsb.use_skill": "Use Skill",
       "block.slsb.sand_dungeon_north": "Sand Dungeon North",
       "block.slsb.goblin_dungeon_south": "Goblin Dungeon South",
@@ -8937,10 +8772,11 @@
       "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
       "block.slsb.maze_dungeon_enemies": "Maze Dungeon Enemies",
       "block.slsb.dragon_dungeon_east": "Dragon Dungeon East",
-      "item.slsb.giant_rat_grey_spawn_egg": "Giant Grey Rat (E-Rank) Spawn Egg",
+      "item.slsb.giant_rat_grey_spawn_egg": "Giant Rat (E-Rank) Spawn Egg",
       "block.slsb.maze_dungeon_south": "Maze Dungeon South",
       "entity.slsb.after_image": "After Image",
       "block.slsb.giant_dungeon_boss": "Giant Dungeon Boss",
+      "item.slsb.d_rank_essence_stone": "§eD-Rank Essence Stone",
       "block.slsb.forest_dungeon_west": "Forest Dungeon West",
       "block.slsb.goblin_dungeon_north": "Goblin Dungeon North",
       "advancements.heal_skill.descr": "Unlock Heal Skill",
@@ -8961,7 +8797,8 @@
       "block.slsb.rat_dungeon_west": "Rat Dungeon West",
       "block.slsb.giant_dungeon_south": "Giant Dungeon South",
       "block.slsb.giant_dungeon_north": "Giant Dungeon North",
-      "entity.slsb.giant_rat_grey": "Giant Grey Rat (E-Rank)",
+      "entity.slsb.giant_rat_grey": "Giant Rat (E-Rank)",
+      "effect.slsb.tornado_active": "TornadoActive",
       "block.slsb.cathedral_dungeon_west": "Cathedral Dungeon West",
       "block.slsb.ice_dungeon_enemies": "Ice Dungeon Enemies",
       "block.slsb.crystal_dungeon_east": "Crystal Dungeon East",
@@ -9051,7 +8888,16 @@
           },
           {
             "name": "Commands",
-            "children": []
+            "children": [
+              {
+                "name": "Classes",
+                "children": []
+              },
+              {
+                "name": "Ranks",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Awakening",
@@ -9100,7 +8946,48 @@
                 "children": [
                   {
                     "name": "Moves",
-                    "children": []
+                    "children": [
+                      {
+                        "name": "Fire",
+                        "children": []
+                      },
+                      {
+                        "name": "Wind",
+                        "children": []
+                      },
+                      {
+                        "name": "Water",
+                        "children": []
+                      },
+                      {
+                        "name": "Earth",
+                        "children": []
+                      },
+                      {
+                        "name": "Ice",
+                        "children": []
+                      },
+                      {
+                        "name": "Lightning",
+                        "children": []
+                      },
+                      {
+                        "name": "Curse",
+                        "children": []
+                      },
+                      {
+                        "name": "Summoning",
+                        "children": []
+                      },
+                      {
+                        "name": "Spatial",
+                        "children": []
+                      },
+                      {
+                        "name": "Barrier",
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               },
@@ -9126,6 +9013,10 @@
           },
           {
             "name": "Gates",
+            "children": []
+          },
+          {
+            "name": "Mobs",
             "children": []
           }
         ]
@@ -9331,21 +9222,11 @@
       },
       {
         "name": "Items",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Overlays",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Biomes",
@@ -9353,12 +9234,7 @@
       },
       {
         "name": "Projectiles",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Particles",
@@ -9412,12 +9288,7 @@
       },
       {
         "name": "Potions",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Keybinds",
@@ -9425,21 +9296,7 @@
       },
       {
         "name": "Commands",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": [
-              {
-                "name": "Classes",
-                "children": []
-              },
-              {
-                "name": "Ranks",
-                "children": []
-              }
-            ]
-          }
-        ]
+        "children": []
       }
     ]
   },
