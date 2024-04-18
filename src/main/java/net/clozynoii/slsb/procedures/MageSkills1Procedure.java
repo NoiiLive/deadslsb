@@ -1,5 +1,6 @@
 package net.clozynoii.slsb.procedures;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
@@ -7,7 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.clozynoii.slsb.network.SlsbModVariables;
 
 public class MageSkills1Procedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCooldown1 == 0) {
@@ -290,7 +291,7 @@ public class MageSkills1Procedure {
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).MageType).equals("Wind")) {
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Wind Slice")) {
 					{
-						double _setval = 0;
+						double _setval = 45;
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilityCost1 = _setval;
 							capability.syncPlayerVariables(entity);
@@ -298,6 +299,7 @@ public class MageSkills1Procedure {
 					}
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+						WindSliceSkillUseProcedure.execute(entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -307,7 +309,7 @@ public class MageSkills1Procedure {
 				}
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Turbulence")) {
 					{
-						double _setval = 0;
+						double _setval = 150;
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilityCost1 = _setval;
 							capability.syncPlayerVariables(entity);
@@ -315,6 +317,7 @@ public class MageSkills1Procedure {
 					}
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+						TurbulenceSkillUseProcedure.execute(entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -324,7 +327,7 @@ public class MageSkills1Procedure {
 				}
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Wind Burst")) {
 					{
-						double _setval = 0;
+						double _setval = 45;
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilityCost1 = _setval;
 							capability.syncPlayerVariables(entity);
@@ -332,6 +335,7 @@ public class MageSkills1Procedure {
 					}
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+						WindBurstSkillUseProcedure.execute(entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -341,7 +345,7 @@ public class MageSkills1Procedure {
 				}
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Wind Pull")) {
 					{
-						double _setval = 0;
+						double _setval = 80;
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilityCost1 = _setval;
 							capability.syncPlayerVariables(entity);
@@ -349,6 +353,7 @@ public class MageSkills1Procedure {
 					}
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+						WindPullSkillUseProcedure.execute(world, x, y, z, entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -358,7 +363,7 @@ public class MageSkills1Procedure {
 				}
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Suffocation")) {
 					{
-						double _setval = 0;
+						double _setval = 35;
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilityCost1 = _setval;
 							capability.syncPlayerVariables(entity);
@@ -366,6 +371,7 @@ public class MageSkills1Procedure {
 					}
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+						SuffocationSkillUseProcedure.execute(entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -375,7 +381,7 @@ public class MageSkills1Procedure {
 				}
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Tornado")) {
 					{
-						double _setval = 0;
+						double _setval = 150;
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilityCost1 = _setval;
 							capability.syncPlayerVariables(entity);
@@ -383,6 +389,7 @@ public class MageSkills1Procedure {
 					}
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+						TornadoSkillUseProcedure.execute(entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -392,7 +399,7 @@ public class MageSkills1Procedure {
 				}
 				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Wind Barrier")) {
 					{
-						double _setval = 0;
+						double _setval = 110;
 						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.AbilityCost1 = _setval;
 							capability.syncPlayerVariables(entity);
@@ -400,6 +407,7 @@ public class MageSkills1Procedure {
 					}
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+						WindBarrierSkillUseProcedure.execute(world, x, y, z, entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"

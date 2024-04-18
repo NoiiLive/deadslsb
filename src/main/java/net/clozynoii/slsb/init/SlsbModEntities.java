@@ -16,6 +16,9 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.clozynoii.slsb.entity.WindSliceProjectileEntity;
+import net.clozynoii.slsb.entity.WindBarrierMobEntity;
+import net.clozynoii.slsb.entity.TurbulentProjectileEntity;
 import net.clozynoii.slsb.entity.MarkProjectileEntity;
 import net.clozynoii.slsb.entity.GiantRatGreyEntity;
 import net.clozynoii.slsb.entity.GiantRatBrownEntity;
@@ -42,6 +45,12 @@ public class SlsbModEntities {
 			EntityType.Builder.<GiantRatBlackEntity>of(GiantRatBlackEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantRatBlackEntity::new)
 
 					.sized(1.5f, 1f));
+	public static final RegistryObject<EntityType<WindSliceProjectileEntity>> WIND_SLICE_PROJECTILE = register("projectile_wind_slice_projectile", EntityType.Builder.<WindSliceProjectileEntity>of(WindSliceProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(WindSliceProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TurbulentProjectileEntity>> TURBULENT_PROJECTILE = register("projectile_turbulent_projectile", EntityType.Builder.<TurbulentProjectileEntity>of(TurbulentProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(TurbulentProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<WindBarrierMobEntity>> WIND_BARRIER_MOB = register("wind_barrier_mob", EntityType.Builder.<WindBarrierMobEntity>of(WindBarrierMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WindBarrierMobEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -54,6 +63,7 @@ public class SlsbModEntities {
 			GiantRatGreyEntity.init();
 			GiantRatBrownEntity.init();
 			GiantRatBlackEntity.init();
+			WindBarrierMobEntity.init();
 		});
 	}
 
@@ -63,5 +73,6 @@ public class SlsbModEntities {
 		event.put(GIANT_RAT_GREY.get(), GiantRatGreyEntity.createAttributes().build());
 		event.put(GIANT_RAT_BROWN.get(), GiantRatBrownEntity.createAttributes().build());
 		event.put(GIANT_RAT_BLACK.get(), GiantRatBlackEntity.createAttributes().build());
+		event.put(WIND_BARRIER_MOB.get(), WindBarrierMobEntity.createAttributes().build());
 	}
 }

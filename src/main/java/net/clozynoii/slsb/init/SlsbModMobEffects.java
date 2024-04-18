@@ -10,6 +10,10 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
+import net.clozynoii.slsb.potion.WindPullActiveMobEffect;
+import net.clozynoii.slsb.potion.WindBurstActiveMobEffect;
+import net.clozynoii.slsb.potion.TornadoActiveMobEffect;
+import net.clozynoii.slsb.potion.SuffocationActiveMobEffect;
 import net.clozynoii.slsb.potion.StealthMobEffect;
 import net.clozynoii.slsb.potion.ReinforcementMobEffect;
 import net.clozynoii.slsb.potion.HealingAuraMobEffect;
@@ -30,4 +34,8 @@ public class SlsbModMobEffects {
 	public static final RegistryObject<MobEffect> COLLAPSE = REGISTRY.register("collapse", () -> new CollapseMobEffect());
 	public static final RegistryObject<MobEffect> CHARGED = REGISTRY.register("charged", () -> new ChargedMobEffect());
 	public static final RegistryObject<MobEffect> BASH = REGISTRY.register("bash", () -> new BashMobEffect());
+	public static final RegistryObject<MobEffect> WIND_PULL_ACTIVE = REGISTRY.register("wind_pull_active", () -> new WindPullActiveMobEffect());
+	public static final RegistryObject<MobEffect> WIND_BURST_ACTIVE = REGISTRY.register("wind_burst_active", () -> new WindBurstActiveMobEffect());
+	public static final RegistryObject<MobEffect> SUFFOCATION_ACTIVE = REGISTRY.register("suffocation_active", () -> new SuffocationActiveMobEffect());
+	public static final RegistryObject<MobEffect> TORNADO_ACTIVE = REGISTRY.register("tornado_active", () -> new TornadoActiveMobEffect());
 }

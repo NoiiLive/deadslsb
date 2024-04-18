@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.clozynoii.slsb.item.TestItem;
 import net.clozynoii.slsb.item.ManaCrystalItem;
 import net.clozynoii.slsb.item.KnightKillerItem;
 import net.clozynoii.slsb.item.KasakasVenomFangItem;
@@ -180,6 +181,7 @@ public class SlsbModItems {
 	public static final RegistryObject<Item> GIANT_RAT_GREY_SPAWN_EGG = REGISTRY.register("giant_rat_grey_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT_GREY, -6710887, -10066330, new Item.Properties()));
 	public static final RegistryObject<Item> GIANT_RAT_BROWN_SPAWN_EGG = REGISTRY.register("giant_rat_brown_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT_BROWN, -9024463, -11849172, new Item.Properties()));
 	public static final RegistryObject<Item> GIANT_RAT_BLACK_SPAWN_EGG = REGISTRY.register("giant_rat_black_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT_BLACK, -13223612, -15000545, new Item.Properties()));
+	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
