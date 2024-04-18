@@ -112,6 +112,16 @@ public class SlsbModVariables {
 			clone.Awakened = original.Awakened;
 			clone.DungeonGenerate = original.DungeonGenerate;
 			clone.DungeonEnterTimerPlayer = original.DungeonEnterTimerPlayer;
+			clone.MaxStrength = original.MaxStrength;
+			clone.Intelligence = original.Intelligence;
+			clone.MaxAgility = original.MaxAgility;
+			clone.MaxVitality = original.MaxVitality;
+			clone.Agility = original.Agility;
+			clone.MaxSense = original.MaxSense;
+			clone.MaxIntelligence = original.MaxIntelligence;
+			clone.Vitality = original.Vitality;
+			clone.Strength = original.Strength;
+			clone.Sense = original.Sense;
 			if (!event.isWasDeath()) {
 				clone.AbilitySelected = original.AbilitySelected;
 				clone.ActiveSkills = original.ActiveSkills;
@@ -125,6 +135,7 @@ public class SlsbModVariables {
 				clone.AbilityCooldown7 = original.AbilityCooldown7;
 				clone.AbilityCooldown8 = original.AbilityCooldown8;
 				clone.AbilityCooldown9 = original.AbilityCooldown9;
+				clone.DefeatedBoss = original.DefeatedBoss;
 			}
 		}
 
@@ -359,6 +370,17 @@ public class SlsbModVariables {
 		public boolean Awakened = false;
 		public boolean DungeonGenerate = false;
 		public double DungeonEnterTimerPlayer = 0;
+		public boolean DefeatedBoss = false;
+		public double MaxStrength = 0.0;
+		public double Intelligence = 0.0;
+		public double MaxAgility = 0.0;
+		public double MaxVitality = 0.0;
+		public double Agility = 0.0;
+		public double MaxSense = 0.0;
+		public double MaxIntelligence = 0.0;
+		public double Vitality = 0.0;
+		public double Strength = 0.0;
+		public double Sense = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -418,6 +440,17 @@ public class SlsbModVariables {
 			nbt.putBoolean("Awakened", Awakened);
 			nbt.putBoolean("DungeonGenerate", DungeonGenerate);
 			nbt.putDouble("DungeonEnterTimerPlayer", DungeonEnterTimerPlayer);
+			nbt.putBoolean("DefeatedBoss", DefeatedBoss);
+			nbt.putDouble("MaxStrength", MaxStrength);
+			nbt.putDouble("Intelligence", Intelligence);
+			nbt.putDouble("MaxAgility", MaxAgility);
+			nbt.putDouble("MaxVitality", MaxVitality);
+			nbt.putDouble("Agility", Agility);
+			nbt.putDouble("MaxSense", MaxSense);
+			nbt.putDouble("MaxIntelligence", MaxIntelligence);
+			nbt.putDouble("Vitality", Vitality);
+			nbt.putDouble("Strength", Strength);
+			nbt.putDouble("Sense", Sense);
 			return nbt;
 		}
 
@@ -474,6 +507,17 @@ public class SlsbModVariables {
 			Awakened = nbt.getBoolean("Awakened");
 			DungeonGenerate = nbt.getBoolean("DungeonGenerate");
 			DungeonEnterTimerPlayer = nbt.getDouble("DungeonEnterTimerPlayer");
+			DefeatedBoss = nbt.getBoolean("DefeatedBoss");
+			MaxStrength = nbt.getDouble("MaxStrength");
+			Intelligence = nbt.getDouble("Intelligence");
+			MaxAgility = nbt.getDouble("MaxAgility");
+			MaxVitality = nbt.getDouble("MaxVitality");
+			Agility = nbt.getDouble("Agility");
+			MaxSense = nbt.getDouble("MaxSense");
+			MaxIntelligence = nbt.getDouble("MaxIntelligence");
+			Vitality = nbt.getDouble("Vitality");
+			Strength = nbt.getDouble("Strength");
+			Sense = nbt.getDouble("Sense");
 		}
 	}
 
@@ -549,6 +593,17 @@ public class SlsbModVariables {
 					variables.Awakened = message.data.Awakened;
 					variables.DungeonGenerate = message.data.DungeonGenerate;
 					variables.DungeonEnterTimerPlayer = message.data.DungeonEnterTimerPlayer;
+					variables.DefeatedBoss = message.data.DefeatedBoss;
+					variables.MaxStrength = message.data.MaxStrength;
+					variables.Intelligence = message.data.Intelligence;
+					variables.MaxAgility = message.data.MaxAgility;
+					variables.MaxVitality = message.data.MaxVitality;
+					variables.Agility = message.data.Agility;
+					variables.MaxSense = message.data.MaxSense;
+					variables.MaxIntelligence = message.data.MaxIntelligence;
+					variables.Vitality = message.data.Vitality;
+					variables.Strength = message.data.Strength;
+					variables.Sense = message.data.Sense;
 				}
 			});
 			context.setPacketHandled(true);

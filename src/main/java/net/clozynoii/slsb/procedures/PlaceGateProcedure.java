@@ -33,7 +33,7 @@ public class PlaceGateProcedure {
 		RandomX = entity.getX() + 1;
 		RandomY = entity.getY() - 1;
 		RandomZ = entity.getZ() - 1;
-		if ((StringArgumentType.getString(arguments, "rank")).equals("E")) {
+		if (((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("e") || ((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("e-rank")) {
 			GateRank = "\u00A7f\u00A7lE-Rank";
 			world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
 			if (!world.isClientSide()) {
@@ -46,8 +46,8 @@ public class PlaceGateProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
-		if ((StringArgumentType.getString(arguments, "rank")).equals("D")) {
-			GateRank = "\u00A7a\u00A7lD-Rank";
+		if (((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("d") || ((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("d-rank")) {
+			GateRank = "\u00A7e\u00A7lD-Rank";
 			world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
@@ -59,8 +59,8 @@ public class PlaceGateProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
-		if ((StringArgumentType.getString(arguments, "rank")).equals("C")) {
-			GateRank = "\u00A7d\u00A7lC-Rank";
+		if (((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("c") || ((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("c-rank")) {
+			GateRank = "\u00A7a\u00A7lC-Rank";
 			world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
@@ -72,7 +72,7 @@ public class PlaceGateProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
-		if ((StringArgumentType.getString(arguments, "rank")).equals("B")) {
+		if (((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("b") || ((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("b-rank")) {
 			GateRank = "\u00A7b\u00A7lB-Rank";
 			world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 			if (!world.isClientSide()) {
@@ -85,8 +85,8 @@ public class PlaceGateProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
-		if ((StringArgumentType.getString(arguments, "rank")).equals("A")) {
-			GateRank = "\u00A7e\u00A7lA-Rank";
+		if (((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("a") || ((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("a-rank")) {
+			GateRank = "\u00A7c\u00A7lA-Rank";
 			world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);
@@ -98,8 +98,8 @@ public class PlaceGateProcedure {
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
-		if ((StringArgumentType.getString(arguments, "rank")).equals("S")) {
-			GateRank = "\u00A7c\u00A7lS-Rank";
+		if (((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("s") || ((StringArgumentType.getString(arguments, "rank")).toLowerCase()).equals("s-rank")) {
+			GateRank = "\u00A7d\u00A7lS-Rank";
 			world.setBlock(BlockPos.containing(RandomX, RandomY + 1, RandomZ), SlsbModBlocks.BLUE_GATE_MEDIUM.get().defaultBlockState(), 3);
 			if (!world.isClientSide()) {
 				BlockPos _bp = BlockPos.containing(RandomX, RandomY + 1, RandomZ);

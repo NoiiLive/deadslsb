@@ -61,7 +61,7 @@ public class SLSBAdminCommand {
 
 			RandomGateCommandProcedure.execute(world, entity);
 			return 0;
-		})).then(Commands.literal("place").then(Commands.argument("rank", StringArgumentType.word()).executes(arguments -> {
+		})).then(Commands.literal("spawn").then(Commands.argument("rank", StringArgumentType.word()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -115,9 +115,9 @@ public class SLSBAdminCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			UnawakenCommandProcedure.execute(arguments);
+			UnawakenCommandProcedure.execute(world, arguments);
 			return 0;
-		}))).then(Commands.literal("class").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("fighter").executes(arguments -> {
+		})))).then(Commands.literal("class").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("fighter").executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -311,9 +311,9 @@ public class SLSBAdminCommand {
 			if (entity != null)
 				direction = entity.getDirection();
 
-			RandomRankCommandProcedure.execute(arguments);
+			RandomRankCommandProcedure.execute(arguments, entity);
 			return 0;
-		}))))).then(Commands.literal("ability").then(Commands.literal("set")
+		})))).then(Commands.literal("ability").then(Commands.literal("set")
 				.then(Commands.argument("name", EntityArgument.player()).then(Commands.argument("movenumber", DoubleArgumentType.doubleArg(1, 9)).then(Commands.argument("skill", MessageArgument.message()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
@@ -356,7 +356,7 @@ public class SLSBAdminCommand {
 
 					RandomMovesCommandProcedure.execute(world, arguments);
 					return 0;
-				})))).then(Commands.literal("mana").then(Commands.argument("manaset", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+				})))).then(Commands.literal("mana").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

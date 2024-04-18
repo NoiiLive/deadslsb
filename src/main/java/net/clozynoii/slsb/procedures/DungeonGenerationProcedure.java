@@ -73,6 +73,15 @@ public class DungeonGenerationProcedure {
 					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A7c\u00A7lThe Gate Turns Red Behind You..."), true);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("GateCompleted", false);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				} else {
 					world.setBlock(BlockPos.containing(x, y, z), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
 					if (world instanceof Level _level) {
@@ -81,6 +90,15 @@ public class DungeonGenerationProcedure {
 						} else {
 							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.conduit.activate")), SoundSource.BLOCKS, 1, 1, false);
 						}
+					}
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("GateCompleted", false);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
 				}
 				{
@@ -130,6 +148,66 @@ public class DungeonGenerationProcedure {
 						capability.DungeonEnterTimerPlayer = _setval;
 						capability.syncPlayerVariables(entity);
 					});
+				}
+			}
+		}
+		if (entity.getPersistentData().getBoolean("UpdateGate") == true) {
+			if ((entity.level().dimension()) == Level.OVERWORLD) {
+				entity.getPersistentData().putBoolean("UpdateGate", false);
+				int horizontalRadiusSphere = (int) 5 - 1;
+				int verticalRadiusSphere = (int) 5 - 1;
+				int yIterationsSphere = verticalRadiusSphere;
+				for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
+					for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+						for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+							double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+									+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+							if (distanceSq <= 1.0) {
+								if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == SlsbModBlocks.BLUE_GATE_MEDIUM.get()
+										|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == SlsbModBlocks.BLUE_GATE_SMALL.get()
+										|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == SlsbModBlocks.RED_GATE_SMALL.get()
+										|| (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == SlsbModBlocks.RED_GATE_MEDIUM.get()) {
+									if (!world.isClientSide()) {
+										BlockPos _bp = BlockPos.containing(x + xi, y + i, z + zi);
+										BlockEntity _blockEntity = world.getBlockEntity(_bp);
+										BlockState _bs = world.getBlockState(_bp);
+										if (_blockEntity != null)
+											_blockEntity.getPersistentData().putBoolean("GateCompleted", true);
+										if (world instanceof Level _level)
+											_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+									}
+									if (new Object() {
+										public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+											BlockEntity blockEntity = world.getBlockEntity(pos);
+											if (blockEntity != null)
+												return blockEntity.getPersistentData().getDouble(tag);
+											return -1;
+										}
+									}.getValue(world, BlockPos.containing(x + xi, y + i, z + zi), "GateCloseTimer") > 6000) {
+										if (!world.isClientSide()) {
+											BlockPos _bp = BlockPos.containing(x + xi, y + i, z + zi);
+											BlockEntity _blockEntity = world.getBlockEntity(_bp);
+											BlockState _bs = world.getBlockState(_bp);
+											if (_blockEntity != null)
+												_blockEntity.getPersistentData().putDouble("GateCloseTimer", 6000);
+											if (world instanceof Level _level)
+												_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+										}
+									}
+									if (!world.isClientSide() && world.getServer() != null)
+										world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A7a\u00A7l" + (new Object() {
+											public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+												BlockEntity blockEntity = world.getBlockEntity(pos);
+												if (blockEntity != null)
+													return blockEntity.getPersistentData().getString(tag);
+												return "";
+											}
+										}.getValue(world, BlockPos.containing(x + xi, y + i, z + zi), "GateRank")) + " Gate at " + new java.text.DecimalFormat("##").format(x + xi) + " " + new java.text.DecimalFormat("##").format(y + i) + " "
+												+ new java.text.DecimalFormat("##").format(z + zi) + " has been cleared!")), false);
+								}
+							}
+						}
+					}
 				}
 			}
 		}

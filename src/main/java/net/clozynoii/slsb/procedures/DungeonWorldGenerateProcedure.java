@@ -50,5 +50,20 @@ public class DungeonWorldGenerateProcedure {
 				SlsbMod.LOGGER.debug("Dungeon Entered");
 			}
 		});
+		SlsbMod.queueServerWork(1, () -> {
+			if (dimension == Level.OVERWORLD) {
+				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).DefeatedBoss == true) {
+					{
+						boolean _setval = false;
+						entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.DefeatedBoss = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					entity.getPersistentData().putBoolean("UpdateGate", true);
+					SlsbMod.LOGGER.debug("Dungeon Completed");
+				}
+			}
+		});
 	}
 }

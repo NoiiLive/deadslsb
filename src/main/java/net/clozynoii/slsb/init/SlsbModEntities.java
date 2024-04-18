@@ -21,8 +21,6 @@ import net.clozynoii.slsb.entity.WindBarrierMobEntity;
 import net.clozynoii.slsb.entity.TurbulentProjectileEntity;
 import net.clozynoii.slsb.entity.MarkProjectileEntity;
 import net.clozynoii.slsb.entity.GiantRatGreyEntity;
-import net.clozynoii.slsb.entity.GiantRatBrownEntity;
-import net.clozynoii.slsb.entity.GiantRatBlackEntity;
 import net.clozynoii.slsb.entity.AfterImageEntity;
 import net.clozynoii.slsb.SlsbMod;
 
@@ -35,14 +33,6 @@ public class SlsbModEntities {
 			EntityType.Builder.<MarkProjectileEntity>of(MarkProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(MarkProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<GiantRatGreyEntity>> GIANT_RAT_GREY = register("giant_rat_grey",
 			EntityType.Builder.<GiantRatGreyEntity>of(GiantRatGreyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantRatGreyEntity::new)
-
-					.sized(1.5f, 1f));
-	public static final RegistryObject<EntityType<GiantRatBrownEntity>> GIANT_RAT_BROWN = register("giant_rat_brown",
-			EntityType.Builder.<GiantRatBrownEntity>of(GiantRatBrownEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantRatBrownEntity::new)
-
-					.sized(1.5f, 1f));
-	public static final RegistryObject<EntityType<GiantRatBlackEntity>> GIANT_RAT_BLACK = register("giant_rat_black",
-			EntityType.Builder.<GiantRatBlackEntity>of(GiantRatBlackEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantRatBlackEntity::new)
 
 					.sized(1.5f, 1f));
 	public static final RegistryObject<EntityType<WindSliceProjectileEntity>> WIND_SLICE_PROJECTILE = register("projectile_wind_slice_projectile", EntityType.Builder.<WindSliceProjectileEntity>of(WindSliceProjectileEntity::new, MobCategory.MISC)
@@ -61,8 +51,6 @@ public class SlsbModEntities {
 		event.enqueueWork(() -> {
 			AfterImageEntity.init();
 			GiantRatGreyEntity.init();
-			GiantRatBrownEntity.init();
-			GiantRatBlackEntity.init();
 			WindBarrierMobEntity.init();
 		});
 	}
@@ -71,8 +59,6 @@ public class SlsbModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(AFTER_IMAGE.get(), AfterImageEntity.createAttributes().build());
 		event.put(GIANT_RAT_GREY.get(), GiantRatGreyEntity.createAttributes().build());
-		event.put(GIANT_RAT_BROWN.get(), GiantRatBrownEntity.createAttributes().build());
-		event.put(GIANT_RAT_BLACK.get(), GiantRatBlackEntity.createAttributes().build());
 		event.put(WIND_BARRIER_MOB.get(), WindBarrierMobEntity.createAttributes().build());
 	}
 }

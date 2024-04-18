@@ -19,6 +19,12 @@ public class SlsbModTabs {
 	public static final RegistryObject<CreativeModeTab> SOLO_LEVELING_ITEMS = REGISTRY.register("solo_leveling_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.slsb.solo_leveling_items")).icon(() -> new ItemStack(SlsbModItems.MANA_CRYSTAL.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(SlsbModItems.MANA_CRYSTAL.get());
+				tabData.accept(SlsbModItems.E_RANK_ESSENCE_STONE.get());
+				tabData.accept(SlsbModItems.D_RANK_ESSENCE_STONE.get());
+				tabData.accept(SlsbModItems.C_RANK_ESSENCE_STONE.get());
+				tabData.accept(SlsbModItems.B_RANK_ESSENCE_STONE.get());
+				tabData.accept(SlsbModItems.A_RANK_ESSENCE_STONE.get());
+				tabData.accept(SlsbModItems.S_RANK_ESSENCE_STONE.get());
 			})
 
 					.build());
@@ -44,8 +50,6 @@ public class SlsbModTabs {
 	public static final RegistryObject<CreativeModeTab> SOLO_LEVELING_MAGIC_BEASTS = REGISTRY.register("solo_leveling_magic_beasts",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.slsb.solo_leveling_magic_beasts")).icon(() -> new ItemStack(SlsbModItems.GIANT_RAT_GREY_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(SlsbModItems.GIANT_RAT_GREY_SPAWN_EGG.get());
-				tabData.accept(SlsbModItems.GIANT_RAT_BROWN_SPAWN_EGG.get());
-				tabData.accept(SlsbModItems.GIANT_RAT_BLACK_SPAWN_EGG.get());
 			})
 
 					.build());
