@@ -96,10 +96,10 @@ public class HunterInfoMenuScreen extends AbstractContainerScreen<HunterInfoMenu
 				ReturnHunterInfoClassProcedure.execute(entity), -36, -11, -16777216, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnHunterInfoGuildProcedure.execute(entity), -114, 69, -1, false);
+				ReturnHunterInfoGuildProcedure.execute(entity), -114, -77, -1, false);
 		guiGraphics.drawString(this.font,
 
-				ReturnBalanceProcedure.execute(entity), -114, 83, -1, false);
+				ReturnBalanceProcedure.execute(entity), -114, 69, -1, false);
 	}
 
 	@Override

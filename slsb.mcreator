@@ -664,7 +664,7 @@
           }
         ]
       },
-      "path": "~/Procedures/Commands"
+      "path": "~/Procedures/Commands/Stats"
     },
     {
       "name": "ManaOverlay",
@@ -8459,6 +8459,126 @@
         ]
       },
       "path": "~/Procedures/GUI/Info Menu"
+    },
+    {
+      "name": "SetStatStrength",
+      "type": "procedure",
+      "sortid": 415,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_stat_strength",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetStatStrengthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands/Stats"
+    },
+    {
+      "name": "SetStatAgility",
+      "type": "procedure",
+      "sortid": 416,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_stat_agility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetStatAgilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands/Stats"
+    },
+    {
+      "name": "SetStatVitality",
+      "type": "procedure",
+      "sortid": 417,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_stat_vitality",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetStatVitalityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands/Stats"
+    },
+    {
+      "name": "SetStatIntelligence",
+      "type": "procedure",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_stat_intelligence",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetStatIntelligenceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands/Stats"
+    },
+    {
+      "name": "SetStatSense",
+      "type": "procedure",
+      "sortid": 419,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_stat_sense",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetStatSenseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands/Stats"
+    },
+    {
+      "name": "SetStatsMax",
+      "type": "procedure",
+      "sortid": 420,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_stats_max",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/SetStatsMaxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Procedures/Commands/Stats"
     }
   ],
   "variable_elements": [
@@ -8880,7 +9000,7 @@
       "name": "Money",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0.0"
+      "value": "100.0"
     },
     {
       "name": "HunterGuild",
@@ -8902,8 +9022,8 @@
       "block.slsb.subway_dungeon_boss": "Subway Dungeon Boss",
       "block.slsb.naga_dungeon_boss": "Naga Dungeon Boss",
       "block.slsb.sand_dungeon_south": "Sand Dungeon South",
-      "block.slsb.forest_dungeon_boss": "Forest Dungeon Boss",
       "gui.slsb.hunter_info_menu.label_as_a_verified_hunter": "§8As A Verified Hunter",
+      "block.slsb.forest_dungeon_boss": "Forest Dungeon Boss",
       "block.slsb.dragon_dungeon_south": "Dragon Dungeon South",
       "block.slsb.subway_dungeon_north": "Subway Dungeon North",
       "block.slsb.mine_dungeon_south": "Mine Dungeon South",
@@ -8931,8 +9051,8 @@
       "block.slsb.double_dungeon_boss": "Double Dungeon Boss",
       "block.slsb.catacomb_dungeon_west": "Catacomb Dungeon West",
       "block.slsb.dragon_dungeon_enemies": "Dragon Dungeon Enemies",
-      "advancements.healer_class.descr": "Become the Healer Class.",
       "block.slsb.dragon_dungeon_west": "Dragon Dungeon West",
+      "advancements.healer_class.descr": "Become the Healer Class.",
       "block.slsb.catacomb_dungeon_south": "Catacomb Dungeon South",
       "block.slsb.coliseum_dungeon_south": "Coliseum Dungeon South",
       "item_group.slsb.solo_leveling_armor": "Solo Leveling: Armor",
@@ -8942,8 +9062,8 @@
       "block.slsb.mine_dungeon_east": "Mine Dungeon East",
       "item.slsb.mana_crystal": "§bMana Crystal",
       "block.slsb.lich_dungeon_boss": "Lich Dungeon Boss",
-      "block.slsb.maze_dungeon_west": "Maze Dungeon West",
       "entity.slsb.wind_barrier_mob": "Wind Barrier Mob",
+      "block.slsb.maze_dungeon_west": "Maze Dungeon West",
       "block.slsb.ice_dungeon_north": "Ice Dungeon North",
       "block.slsb.crystal_dungeon_west": "Crystal Dungeon West",
       "block.slsb.orc_dungeon_east": "Orc Dungeon East",
@@ -9175,6 +9295,10 @@
               },
               {
                 "name": "Ranks",
+                "children": []
+              },
+              {
+                "name": "Stats",
                 "children": []
               }
             ]

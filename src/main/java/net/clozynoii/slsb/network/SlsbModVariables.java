@@ -400,7 +400,7 @@ public class SlsbModVariables {
 		public double Strength = 0.0;
 		public double Sense = 0.0;
 		public double DungeonLeaveTimer = 0.0;
-		public double Money = 0.0;
+		public double Money = 100.0;
 		public String HunterGuild = "None";
 
 		public void syncPlayerVariables(Entity entity) {
