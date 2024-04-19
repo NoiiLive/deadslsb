@@ -5,7 +5,7 @@
     "effectName": "Suffocating",
     "icon": "suffocation.png",
     "color": {
-      "value": -5199191,
+      "value": -1,
       "falpha": 0.0
     },
     "isInstant": false,

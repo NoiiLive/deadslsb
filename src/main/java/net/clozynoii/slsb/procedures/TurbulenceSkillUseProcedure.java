@@ -33,7 +33,7 @@ public class TurbulenceSkillUseProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator) && !(entityiterator instanceof AfterImageEntity)) {
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.TURBULENCE.get(), 60, 0, false, false));
+						_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.TURBULENCE.get(), 60, 0, false, true));
 				}
 			}
 		}

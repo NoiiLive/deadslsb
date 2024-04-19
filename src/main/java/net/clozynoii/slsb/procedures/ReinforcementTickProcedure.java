@@ -48,7 +48,7 @@ public class ReinforcementTickProcedure {
 			SlsbMod.LOGGER.debug(((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills));
 		} else {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.REINFORCEMENT.get(), 2, 0, false, true));
+				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.REINFORCEMENT.get(), 20, 0, false, true));
 		}
 		if (entity.getPersistentData().getDouble("RegenCD") > 0) {
 			entity.getPersistentData().putDouble("RegenCD", (entity.getPersistentData().getDouble("RegenCD") - 1));

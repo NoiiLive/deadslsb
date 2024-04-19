@@ -13,7 +13,7 @@ public class WindBurstSkillUseProcedure {
 			return;
 		double cooldown = 0;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.WIND_BURST_ACTIVE.get(), 20, 0, false, false));
+			_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.WIND_BURST_ACTIVE.get(), 20, 0, false, true));
 		entity.getPersistentData().putDouble("bubbleexpand", 0);
 		cooldown = 120;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected)

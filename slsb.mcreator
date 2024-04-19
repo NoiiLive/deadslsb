@@ -8201,6 +8201,35 @@
         ]
       },
       "path": "~/Procedures/Skills/Mage/Moves/Wind"
+    },
+    {
+      "name": "HealEffect",
+      "type": "particle",
+      "sortid": 401,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heal_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/client/particle/HealEffectParticle.java",
+          "src/main/resources/assets/slsb/particles/heal_effect.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "HealCircle",
+      "type": "function",
+      "sortid": 402,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heal_circle",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/slsb/functions/heal_circle.mcfunction"
+        ]
+      },
+      "path": "~/Particles/Functions"
     }
   ],
   "variable_elements": [
@@ -8619,8 +8648,8 @@
       "effect.slsb.collapse": "Collapse",
       "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
       "block.slsb.naga_dungeon_south": "Naga Dungeon South",
-      "block.slsb.cathedral_dungeon_east": "Cathedral Dungeon East",
       "effect.slsb.wind_burst_active": "Wind Burst",
+      "block.slsb.cathedral_dungeon_east": "Cathedral Dungeon East",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
       "block.slsb.ice_dungeon_south": "Ice Dungeon South",
@@ -9223,7 +9252,12 @@
       },
       {
         "name": "Particles",
-        "children": []
+        "children": [
+          {
+            "name": "Functions",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Recipes",

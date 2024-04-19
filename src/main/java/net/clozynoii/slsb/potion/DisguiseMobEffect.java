@@ -9,7 +9,7 @@ import net.clozynoii.slsb.procedures.DisguiseTickProcedure;
 
 public class DisguiseMobEffect extends MobEffect {
 	public DisguiseMobEffect() {
-		super(MobEffectCategory.BENEFICIAL, -10092340);
+		super(MobEffectCategory.BENEFICIAL, -2230563);
 	}
 
 	@Override

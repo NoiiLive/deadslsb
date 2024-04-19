@@ -35,7 +35,7 @@ public class SuffocationSkillUseProcedure {
 					entityiterator.setDeltaMovement(new Vec3(0, 1, 0));
 					SlsbMod.queueServerWork(10, () -> {
 						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.SUFFOCATION_ACTIVE.get(), 40, 0, false, false));
+							_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.SUFFOCATION_ACTIVE.get(), 40, 0, false, true));
 					});
 					entityiterator.getPersistentData().putString("Attacker", (entity.getDisplayName().getString()));
 				}

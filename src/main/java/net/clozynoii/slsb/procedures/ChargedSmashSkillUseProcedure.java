@@ -199,7 +199,7 @@ public class ChargedSmashSkillUseProcedure {
 		}
 		SlsbMod.queueServerWork(20, () -> {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.CHARGED.get(), 200, 0, false, false));
+				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.CHARGED.get(), 200, 0, false, true));
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("\u00A7c\u00A7lAttack Charged!"), true);
 			if (world instanceof Level _level) {

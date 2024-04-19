@@ -5,14 +5,14 @@
     "effectName": "Collapse",
     "icon": "collapse.png",
     "color": {
-      "value": -1,
+      "value": -12171706,
       "falpha": 0.0
     },
     "isInstant": false,
     "isBad": false,
-    "isBenefitical": false,
-    "renderStatusInInventory": false,
-    "renderStatusInHUD": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
     "onActiveTick": {
       "name": "CollapseActiveTick"
     },

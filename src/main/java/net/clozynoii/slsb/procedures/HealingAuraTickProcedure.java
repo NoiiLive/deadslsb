@@ -1,6 +1,7 @@
 package net.clozynoii.slsb.procedures;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
@@ -8,12 +9,20 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+import net.minecraft.commands.CommandFunction;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
+import net.clozynoii.slsb.init.SlsbModParticleTypes;
 import net.clozynoii.slsb.init.SlsbModMobEffects;
 import net.clozynoii.slsb.SlsbMod;
 
+import java.util.Optional;
 import java.util.List;
 import java.util.Comparator;
 
@@ -37,11 +46,18 @@ public class HealingAuraTickProcedure {
 		} else {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.HEALING_AURA.get(), 20, 0));
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles((SimpleParticleType) (SlsbModParticleTypes.HEAL_EFFECT.get()), x, y, z, 1, 0.5, 0.5, 0.5, 0);
 		}
 		if (entity.getPersistentData().getDouble("RegenCD") > 0) {
 			entity.getPersistentData().putDouble("RegenCD", (entity.getPersistentData().getDouble("RegenCD") - 1));
 		}
 		if (entity.isShiftKeyDown()) {
+			if (world instanceof ServerLevel _level && _level.getServer() != null) {
+				Optional<CommandFunction> _fopt = _level.getServer().getFunctions().get(new ResourceLocation("slsb:heal_circle"));
+				if (_fopt.isPresent())
+					_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null));
+			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Rank).equals("D-Rank")) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);

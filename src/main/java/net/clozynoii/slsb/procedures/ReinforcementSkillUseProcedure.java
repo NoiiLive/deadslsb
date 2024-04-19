@@ -27,14 +27,14 @@ public class ReinforcementSkillUseProcedure {
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Reinforcement") == false && gate == false) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.use")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.use")), SoundSource.PLAYERS, (float) 0.5, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.use")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.use")), SoundSource.PLAYERS, (float) 0.5, 1, false);
 				}
 			}
 			world.levelEvent(2001, BlockPos.containing(x, y + 1, z), Block.getId(Blocks.IRON_BLOCK.defaultBlockState()));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.REINFORCEMENT.get(), 2, 0, false, true));
+				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.REINFORCEMENT.get(), 20, 0, false, true));
 			gate = true;
 			cooldown = 60;
 			{
@@ -49,9 +49,9 @@ public class ReinforcementSkillUseProcedure {
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Reinforcement") == true && gate == false) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.destroy")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.destroy")), SoundSource.PLAYERS, (float) 0.5, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.destroy")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.anvil.destroy")), SoundSource.PLAYERS, (float) 0.5, 1, false);
 				}
 			}
 			world.levelEvent(2001, BlockPos.containing(x, y + 1, z), Block.getId(Blocks.IRON_BLOCK.defaultBlockState()));
