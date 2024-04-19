@@ -7670,20 +7670,6 @@
       "path": "~/Potions"
     },
     {
-      "name": "TornadoActive",
-      "type": "potioneffect",
-      "sortid": 393,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tornado_active",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/potion/TornadoActiveMobEffect.java"
-        ]
-      },
-      "path": "~/Potions"
-    },
-    {
       "name": "TurbulenceSkillUse",
       "type": "procedure",
       "sortid": 385,
@@ -8638,7 +8624,7 @@
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
       "block.slsb.ice_dungeon_south": "Ice Dungeon South",
-      "effect.slsb.wind_pull_active": "Wind Pull Active",
+      "effect.slsb.wind_pull_active": "Wind Pull",
       "advancements.strength_skill.title": "Strength Skill",
       "item.slsb.c_rank_essence_stone": "§aC-Rank Essence Stone",
       "block.slsb.rat_dungeon_north": "Rat Dungeon North",
@@ -8798,7 +8784,6 @@
       "block.slsb.giant_dungeon_south": "Giant Dungeon South",
       "block.slsb.giant_dungeon_north": "Giant Dungeon North",
       "entity.slsb.giant_rat_grey": "Giant Rat (E-Rank)",
-      "effect.slsb.tornado_active": "TornadoActive",
       "block.slsb.cathedral_dungeon_west": "Cathedral Dungeon West",
       "block.slsb.ice_dungeon_enemies": "Ice Dungeon Enemies",
       "block.slsb.crystal_dungeon_east": "Crystal Dungeon East",

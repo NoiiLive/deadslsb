@@ -3,9 +3,9 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Suffocating",
-    "icon": "suffocation_active.png",
+    "icon": "suffocation.png",
     "color": {
-      "value": -1,
+      "value": -5199191,
       "falpha": 0.0
     },
     "isInstant": false,

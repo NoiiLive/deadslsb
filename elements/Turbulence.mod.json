@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Turbulence",
-    "icon": "suffocation_active.png",
+    "icon": "turbulence.png",
     "color": {
       "value": -1,
       "falpha": 0.0

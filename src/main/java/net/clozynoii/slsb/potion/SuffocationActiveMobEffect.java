@@ -9,7 +9,7 @@ import net.clozynoii.slsb.procedures.SuffocationActiveOnEffectActiveTickProcedur
 
 public class SuffocationActiveMobEffect extends MobEffect {
 	public SuffocationActiveMobEffect() {
-		super(MobEffectCategory.HARMFUL, -1);
+		super(MobEffectCategory.HARMFUL, -5199191);
 	}
 
 	@Override

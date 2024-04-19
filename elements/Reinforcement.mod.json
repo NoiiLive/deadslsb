@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Reinforcement",
-    "icon": "bash.png",
+    "icon": "reinforcement.png",
     "color": {
       "value": -3355444,
       "falpha": 0.0
