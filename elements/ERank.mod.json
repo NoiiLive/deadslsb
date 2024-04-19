@@ -6,7 +6,11 @@
     "items": [],
     "blocks": [],
     "functions": [],
-    "entities": [],
+    "entities": [
+      {
+        "value": "CUSTOM:GiantRat"
+      }
+    ],
     "biomes": [],
     "damageTypes": [],
     "name": "e_rank",

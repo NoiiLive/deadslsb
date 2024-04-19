@@ -13,7 +13,7 @@ public class RatDungeonSpawnBossProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double random = 0;
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = SlsbModEntities.GIANT_RAT_GREY.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+			Entity entityToSpawn = SlsbModEntities.GIANT_RAT_BOSS.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 			if (entityToSpawn != null) {
 				entityToSpawn.setDeltaMovement(0, 0, 0);
 			}

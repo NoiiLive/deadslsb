@@ -1,4 +1,6 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "slsb:giant_rat_boss"
+  ]
 }

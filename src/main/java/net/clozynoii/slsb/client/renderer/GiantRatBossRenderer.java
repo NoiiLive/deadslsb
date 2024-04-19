@@ -9,25 +9,25 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 
-import net.clozynoii.slsb.entity.model.GiantRatGreyModel;
-import net.clozynoii.slsb.entity.GiantRatGreyEntity;
+import net.clozynoii.slsb.entity.model.GiantRatBossModel;
+import net.clozynoii.slsb.entity.GiantRatBossEntity;
 
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class GiantRatGreyRenderer extends GeoEntityRenderer<GiantRatGreyEntity> {
-	public GiantRatGreyRenderer(EntityRendererProvider.Context renderManager) {
-		super(renderManager, new GiantRatGreyModel());
+public class GiantRatBossRenderer extends GeoEntityRenderer<GiantRatBossEntity> {
+	public GiantRatBossRenderer(EntityRendererProvider.Context renderManager) {
+		super(renderManager, new GiantRatBossModel());
 		this.shadowRadius = 0.5f;
 	}
 
 	@Override
-	public RenderType getRenderType(GiantRatGreyEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
+	public RenderType getRenderType(GiantRatBossEntity animatable, ResourceLocation texture, MultiBufferSource bufferSource, float partialTick) {
 		return RenderType.entityTranslucent(getTextureLocation(animatable));
 	}
 
 	@Override
-	public void preRender(PoseStack poseStack, GiantRatGreyEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
+	public void preRender(PoseStack poseStack, GiantRatBossEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
 			float blue, float alpha) {
 		float scale = 1f;
 		this.scaleHeight = scale;

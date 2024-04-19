@@ -132,6 +132,9 @@ public class SlsbModVariables {
 			clone.Vitality = original.Vitality;
 			clone.Strength = original.Strength;
 			clone.Sense = original.Sense;
+			clone.DungeonLeaveTimer = original.DungeonLeaveTimer;
+			clone.Money = original.Money;
+			clone.HunterGuild = original.HunterGuild;
 			if (!event.isWasDeath()) {
 				clone.AbilitySelected = original.AbilitySelected;
 				clone.ActiveSkills = original.ActiveSkills;
@@ -212,10 +215,10 @@ public class SlsbModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "slsb_mapvars";
-		public double GateTimer = 0;
+		public double GateTimer = 0.0;
 		public boolean WorldCreated = false;
 		public boolean DungeonBossRoom = false;
-		public double DungeonRoomCount = 0;
+		public double DungeonRoomCount = 0.0;
 		public double DungeonRoomTimer = 0.0;
 		public double DungeonEntranceTimer = 0.0;
 
@@ -351,29 +354,29 @@ public class SlsbModVariables {
 		public String UseAbilityType = "Switcher";
 		public String ActiveSkills = "";
 		public String MageType = "";
-		public double Mana = 0;
-		public double ManaMax = 0;
-		public double Mastery = 0;
+		public double Mana = 0.0;
+		public double ManaMax = 0.0;
+		public double Mastery = 0.0;
 		public double PlayerTimer = 0.0;
 		public double SwitcherSlot = 1.0;
-		public double AbilityCooldown1 = 0;
-		public double AbilityCooldown2 = 0;
-		public double AbilityCooldown3 = 0;
-		public double AbilityCooldown4 = 0;
-		public double AbilityCooldown5 = 0;
-		public double AbilityCooldown6 = 0;
-		public double AbilityCooldown7 = 0;
-		public double AbilityCooldown8 = 0;
+		public double AbilityCooldown1 = 0.0;
+		public double AbilityCooldown2 = 0.0;
+		public double AbilityCooldown3 = 0.0;
+		public double AbilityCooldown4 = 0.0;
+		public double AbilityCooldown5 = 0.0;
+		public double AbilityCooldown6 = 0.0;
+		public double AbilityCooldown7 = 0.0;
+		public double AbilityCooldown8 = 0.0;
 		public double AbilityCooldown9 = 0.0;
-		public double AbilityCost1 = 0;
-		public double AbilityCost2 = 0;
-		public double AbilityCost3 = 0;
-		public double AbilityCost4 = 0;
-		public double AbilityCost5 = 0;
-		public double AbilityCost6 = 0;
-		public double AbilityCost7 = 0;
-		public double AbilityCost8 = 0;
-		public double AbilityCost9 = 0;
+		public double AbilityCost1 = 0.0;
+		public double AbilityCost2 = 0.0;
+		public double AbilityCost3 = 0.0;
+		public double AbilityCost4 = 0.0;
+		public double AbilityCost5 = 0.0;
+		public double AbilityCost6 = 0.0;
+		public double AbilityCost7 = 0.0;
+		public double AbilityCost8 = 0.0;
+		public double AbilityCost9 = 0.0;
 		public boolean JoinedWorld = false;
 		public boolean SystemPlayer = false;
 		public boolean RulerVessel = false;
@@ -384,7 +387,7 @@ public class SlsbModVariables {
 		public boolean SkillsRenamed = false;
 		public boolean Awakened = false;
 		public boolean DungeonGenerate = false;
-		public double DungeonEnterTimerPlayer = 0;
+		public double DungeonEnterTimerPlayer = 0.0;
 		public boolean DefeatedBoss = false;
 		public double MaxStrength = 0.0;
 		public double Intelligence = 0.0;
@@ -396,6 +399,9 @@ public class SlsbModVariables {
 		public double Vitality = 0.0;
 		public double Strength = 0.0;
 		public double Sense = 0.0;
+		public double DungeonLeaveTimer = 0.0;
+		public double Money = 0.0;
+		public String HunterGuild = "None";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -466,6 +472,9 @@ public class SlsbModVariables {
 			nbt.putDouble("Vitality", Vitality);
 			nbt.putDouble("Strength", Strength);
 			nbt.putDouble("Sense", Sense);
+			nbt.putDouble("DungeonLeaveTimer", DungeonLeaveTimer);
+			nbt.putDouble("Money", Money);
+			nbt.putString("HunterGuild", HunterGuild);
 			return nbt;
 		}
 
@@ -533,6 +542,9 @@ public class SlsbModVariables {
 			Vitality = nbt.getDouble("Vitality");
 			Strength = nbt.getDouble("Strength");
 			Sense = nbt.getDouble("Sense");
+			DungeonLeaveTimer = nbt.getDouble("DungeonLeaveTimer");
+			Money = nbt.getDouble("Money");
+			HunterGuild = nbt.getString("HunterGuild");
 		}
 	}
 
@@ -628,6 +640,9 @@ public class SlsbModVariables {
 					variables.Vitality = message.data.Vitality;
 					variables.Strength = message.data.Strength;
 					variables.Sense = message.data.Sense;
+					variables.DungeonLeaveTimer = message.data.DungeonLeaveTimer;
+					variables.Money = message.data.Money;
+					variables.HunterGuild = message.data.HunterGuild;
 				}
 			});
 			context.setPacketHandled(true);

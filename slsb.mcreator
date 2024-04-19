@@ -7183,23 +7183,6 @@
       "path": "~/Dimensions/B Rank"
     },
     {
-      "name": "GiantRatGrey",
-      "type": "animatedentity",
-      "sortid": 361,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "giant_rat_grey",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/slsb/models/item/giant_rat_grey_spawn_egg.json",
-          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatGreyRenderer.java",
-          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatGreyModel.java",
-          "src/main/java/net/clozynoii/slsb/entity/GiantRatGreyEntity.java"
-        ]
-      },
-      "path": "~/Mobs/E Rank"
-    },
-    {
       "name": "SoloLevelingArmor",
       "type": "tab",
       "sortid": 364,
@@ -8230,6 +8213,105 @@
         ]
       },
       "path": "~/Particles/Functions"
+    },
+    {
+      "name": "GiantRat",
+      "type": "animatedentity",
+      "sortid": 403,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_rat",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/slsb/models/item/giant_rat_spawn_egg.json",
+          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatModel.java",
+          "src/main/java/net/clozynoii/slsb/entity/GiantRatEntity.java",
+          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/E Rank"
+    },
+    {
+      "name": "GiantRatBoss",
+      "type": "animatedentity",
+      "sortid": 404,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "giant_rat_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/entity/GiantRatBossEntity.java",
+          "src/main/java/net/clozynoii/slsb/entity/model/GiantRatBossModel.java",
+          "src/main/java/net/clozynoii/slsb/client/renderer/GiantRatBossRenderer.java",
+          "src/main/resources/assets/slsb/models/item/giant_rat_boss_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/D Rank"
+    },
+    {
+      "name": "InfoMenu",
+      "type": "keybind",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "info_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/network/InfoMenuMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "HunterInfoMenu",
+      "type": "gui",
+      "sortid": 406,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hunter_info_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/world/inventory/HunterInfoMenuMenu.java",
+          "src/main/java/net/clozynoii/slsb/client/gui/HunterInfoMenuScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "OpenInfoMenu",
+      "type": "procedure",
+      "sortid": 407,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_info_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/OpenInfoMenuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/GUI"
     }
   ],
   "variable_elements": [
@@ -8339,25 +8421,25 @@
       "name": "GateTimer",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "Mana",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "ManaMax",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "Mastery",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "PlayerTimer",
@@ -8375,49 +8457,49 @@
       "name": "AbilityCooldown1",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown2",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown3",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown4",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown5",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown6",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown7",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown8",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCooldown9",
@@ -8429,55 +8511,55 @@
       "name": "AbilityCost1",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost2",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost3",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost4",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost5",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost6",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost7",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost8",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "AbilityCost9",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "JoinedWorld",
@@ -8549,7 +8631,7 @@
       "name": "DungeonRoomCount",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "DungeonGenerate",
@@ -8573,7 +8655,7 @@
       "name": "DungeonEnterTimerPlayer",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "DefeatedBoss",
@@ -8640,22 +8722,41 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0.0"
+    },
+    {
+      "name": "DungeonLeaveTimer",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "Money",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "HunterGuild",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "None"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "effect.slsb.collapse": "Collapse",
-      "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
       "block.slsb.naga_dungeon_south": "Naga Dungeon South",
-      "effect.slsb.wind_burst_active": "Wind Burst",
+      "advancements.haste_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s speed§r]",
+      "effect.slsb.collapse": "Collapse",
       "block.slsb.cathedral_dungeon_east": "Cathedral Dungeon East",
+      "effect.slsb.wind_burst_active": "Wind Burst",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
       "block.slsb.ice_dungeon_south": "Ice Dungeon South",
       "effect.slsb.wind_pull_active": "Wind Pull",
       "advancements.strength_skill.title": "Strength Skill",
       "item.slsb.c_rank_essence_stone": "§aC-Rank Essence Stone",
+      "entity.slsb.giant_rat": "Giant Rat (E-Rank)",
       "block.slsb.rat_dungeon_north": "Rat Dungeon North",
       "block.slsb.lich_dungeon_east": "Lich Dungeon East",
       "block.slsb.double_dungeon_enemies": "Double Dungeon Enemies",
@@ -8699,6 +8800,7 @@
       "block.slsb.catacomb_dungeon_east": "Catacomb Dungeon East",
       "item_group.slsb.solo_leveling_blocks": "Solo Leveling: Blocks",
       "block.slsb.maze_dungeon_boss": "Maze Dungeon Boss",
+      "item.slsb.giant_rat_boss_spawn_egg": "Giant Rat Boss (D-Rank) Spawn Egg",
       "block.slsb.rat_dungeon_enemies": "Rat Dungeon Enemies",
       "block.slsb.spider_dungeon_east": "Spider Dungeon East",
       "block.slsb.coliseum_dungeon_east": "Coliseum Dungeon East",
@@ -8724,8 +8826,10 @@
       "block.slsb.coliseum_dungeon_south": "Coliseum Dungeon South",
       "block.slsb.catacomb_dungeon_enemies": "Catacomb Dungeon Enemies",
       "item_group.slsb.solo_leveling_armor": "Solo Leveling: Armor",
+      "key.categories.slsb": "Solo Leveling: System Break",
       "effect.slsb.evade": "Evasion",
       "block.slsb.giant_dungeon_west": "Giant Dungeon West",
+      "entity.slsb.giant_rat_boss": "Giant Rat Boss (D-Rank)",
       "block.slsb.forest_dungeon_enemies": "Forest Dungeon Enemies",
       "block.slsb.crystal_dungeon_boss": "Crystal Dungeon Boss",
       "effect.slsb.suffocation_active": "Suffocating",
@@ -8748,6 +8852,7 @@
       "item.slsb.e_rank_essence_stone": "E-Rank Essence Stone",
       "block.slsb.rat_dungeon_east": "Rat Dungeon East",
       "block.slsb.forest_dungeon_east": "Forest Dungeon East",
+      "key.slsb.info_menu": "Info Menu",
       "effect.slsb.charged": "Charged",
       "advancements.haste_skill.title": "Haste Skill",
       "block.slsb.library_dungeon_south": "Library Dungeon South",
@@ -8787,7 +8892,6 @@
       "block.slsb.mana_crystal_block_dripstone": "Mana Crystal (Dripstone)",
       "block.slsb.maze_dungeon_enemies": "Maze Dungeon Enemies",
       "block.slsb.dragon_dungeon_east": "Dragon Dungeon East",
-      "item.slsb.giant_rat_grey_spawn_egg": "Giant Rat (E-Rank) Spawn Egg",
       "block.slsb.maze_dungeon_south": "Maze Dungeon South",
       "entity.slsb.after_image": "After Image",
       "block.slsb.giant_dungeon_boss": "Giant Dungeon Boss",
@@ -8804,6 +8908,7 @@
       "block.slsb.red_gate_small": "Red Gate Small",
       "block.slsb.catacomb_dungeon_boss": "Catacomb Dungeon Boss",
       "advancements.stealth_skill.descr": "Unlock Stealth Skill",
+      "item.slsb.giant_rat_spawn_egg": "Giant Rat (E-Rank) Spawn Egg",
       "block.slsb.coliseum_dungeon_west": "Coliseum Dungeon West",
       "block.slsb.maze_dungeon_east": "Maze Dungeon East",
       "block.slsb.ice_dungeon_west": "Ice Dungeon West",
@@ -8812,7 +8917,6 @@
       "block.slsb.rat_dungeon_west": "Rat Dungeon West",
       "block.slsb.giant_dungeon_south": "Giant Dungeon South",
       "block.slsb.giant_dungeon_north": "Giant Dungeon North",
-      "entity.slsb.giant_rat_grey": "Giant Rat (E-Rank)",
       "block.slsb.cathedral_dungeon_west": "Cathedral Dungeon West",
       "block.slsb.ice_dungeon_enemies": "Ice Dungeon Enemies",
       "block.slsb.crystal_dungeon_east": "Crystal Dungeon East",
@@ -9275,15 +9379,23 @@
             "children": []
           },
           {
+            "name": "D Rank",
+            "children": []
+          },
+          {
+            "name": "C Rank",
+            "children": []
+          },
+          {
             "name": "B Rank",
             "children": []
           },
           {
-            "name": "S Rank",
+            "name": "A Rank",
             "children": []
           },
           {
-            "name": "A Rank",
+            "name": "S Rank",
             "children": []
           },
           {
@@ -9294,14 +9406,6 @@
                 "children": []
               }
             ]
-          },
-          {
-            "name": "D Rank",
-            "children": []
-          },
-          {
-            "name": "C Rank",
-            "children": []
           }
         ]
       },

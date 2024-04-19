@@ -45,6 +45,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.chat.Component;
 import net.minecraft.nbt.CompoundTag;
 
 import net.clozynoii.slsb.procedures.GiantRatOnSpawnProcedure;
@@ -54,25 +55,27 @@ import net.clozynoii.slsb.init.SlsbModEntities;
 
 import javax.annotation.Nullable;
 
-public class GiantRatGreyEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(GiantRatGreyEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(GiantRatGreyEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(GiantRatGreyEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> DATA_Color = SynchedEntityData.defineId(GiantRatGreyEntity.class, EntityDataSerializers.STRING);
+public class GiantRatBossEntity extends Monster implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(GiantRatBossEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(GiantRatBossEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(GiantRatBossEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> DATA_Color = SynchedEntityData.defineId(GiantRatBossEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public GiantRatGreyEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(SlsbModEntities.GIANT_RAT_GREY.get(), world);
+	public GiantRatBossEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(SlsbModEntities.GIANT_RAT_BOSS.get(), world);
 	}
 
-	public GiantRatGreyEntity(EntityType<GiantRatGreyEntity> type, Level world) {
+	public GiantRatBossEntity(EntityType<GiantRatBossEntity> type, Level world) {
 		super(type, world);
 		xpReward = 10;
 		setNoAi(false);
+		setCustomName(Component.literal("Lupin, The Scarred Rat"));
+		setCustomNameVisible(true);
 		setPersistenceRequired();
 	}
 
@@ -81,7 +84,7 @@ public class GiantRatGreyEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "greyrattexture");
+		this.entityData.define(TEXTURE, "kingrattexture");
 		this.entityData.define(DATA_Color, "");
 	}
 
@@ -126,7 +129,7 @@ public class GiantRatGreyEntity extends Monster implements GeoEntity {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(SlsbModItems.E_RANK_ESSENCE_STONE.get()));
+		this.spawnAtLocation(new ItemStack(SlsbModItems.D_RANK_ESSENCE_STONE.get()));
 	}
 
 	@Override
@@ -197,9 +200,9 @@ public class GiantRatGreyEntity extends Monster implements GeoEntity {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 50);
+		builder = builder.add(Attributes.MAX_HEALTH, 100);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}
@@ -254,7 +257,7 @@ public class GiantRatGreyEntity extends Monster implements GeoEntity {
 	protected void tickDeath() {
 		++this.deathTime;
 		if (this.deathTime == 20) {
-			this.remove(GiantRatGreyEntity.RemovalReason.KILLED);
+			this.remove(GiantRatBossEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}

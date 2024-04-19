@@ -106,9 +106,6 @@
     "stepSound": {
       "value": ""
     },
-    "whenMobDies": {
-      "name": "DungeonBossKilled"
-    },
     "onInitialSpawn": {
       "name": "GiantRatOnSpawn"
     },
