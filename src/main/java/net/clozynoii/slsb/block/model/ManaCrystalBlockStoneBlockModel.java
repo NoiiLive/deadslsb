@@ -18,7 +18,7 @@ public class ManaCrystalBlockStoneBlockModel extends GeoModel<ManaCrystalBlockSt
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(ManaCrystalBlockStoneTileEntity animatable) {
+	public ResourceLocation getTextureResource(ManaCrystalBlockStoneTileEntity entity) {
 		return new ResourceLocation("slsb", "textures/block/manacrystal_stone.png");
 	}
 }

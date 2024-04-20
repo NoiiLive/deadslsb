@@ -1,8 +1,11 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 
-import javax.annotation.Nullable;
+import net.clozynoii.slsb.init.SlsbModMobEffects;
 
 public class RalliedEffectTickProcedure {
 	public static void execute(Entity entity) {

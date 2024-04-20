@@ -18,7 +18,7 @@ public class AwakeningOrbBlockModel extends GeoModel<AwakeningOrbTileEntity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(AwakeningOrbTileEntity animatable) {
+	public ResourceLocation getTextureResource(AwakeningOrbTileEntity entity) {
 		return new ResourceLocation("slsb", "textures/block/awakeningorbtexture.png");
 	}
 }

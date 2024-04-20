@@ -18,7 +18,7 @@ public class BlueGateSmallBlockModel extends GeoModel<BlueGateSmallTileEntity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(BlueGateSmallTileEntity animatable) {
+	public ResourceLocation getTextureResource(BlueGateSmallTileEntity entity) {
 		return new ResourceLocation("slsb", "textures/block/smallbluegatetexture.png");
 	}
 }

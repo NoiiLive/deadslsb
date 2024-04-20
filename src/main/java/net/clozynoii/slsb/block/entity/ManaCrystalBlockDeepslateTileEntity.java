@@ -32,7 +32,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.clozynoii.slsb.init.SlsbModBlockEntities;
-import net.clozynoii.slsb.block.ManaCrystalBlockDeepslateBlock;
 
 import javax.annotation.Nullable;
 
@@ -48,7 +47,7 @@ public class ManaCrystalBlockDeepslateTileEntity extends RandomizableContainerBl
 	}
 
 	private PlayState predicate(AnimationState event) {
-		String animationprocedure = ("" + this.getBlockState().getValue(ManaCrystalBlockDeepslateBlock.ANIMATION));
+		String animationprocedure = ("" + ((this.getBlockState()).getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _getip1 ? (this.getBlockState()).getValue(_getip1) : 0));
 		if (animationprocedure.equals("0")) {
 			return event.setAndContinue(RawAnimation.begin().thenLoop(animationprocedure));
 		}
@@ -56,7 +55,7 @@ public class ManaCrystalBlockDeepslateTileEntity extends RandomizableContainerBl
 	}
 
 	private PlayState procedurePredicate(AnimationState event) {
-		String animationprocedure = ("" + this.getBlockState().getValue(ManaCrystalBlockDeepslateBlock.ANIMATION));
+		String animationprocedure = ("" + ((this.getBlockState()).getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _getip1 ? (this.getBlockState()).getValue(_getip1) : 0));
 		if (!animationprocedure.equals("0") && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
 			event.getController().setAnimation(RawAnimation.begin().thenPlay(animationprocedure));
 			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {

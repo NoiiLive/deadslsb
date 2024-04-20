@@ -18,7 +18,7 @@ public class BlueGateMediumBlockModel extends GeoModel<BlueGateMediumTileEntity>
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(BlueGateMediumTileEntity animatable) {
+	public ResourceLocation getTextureResource(BlueGateMediumTileEntity entity) {
 		return new ResourceLocation("slsb", "textures/block/mediumbluegatetexture.png");
 	}
 }
