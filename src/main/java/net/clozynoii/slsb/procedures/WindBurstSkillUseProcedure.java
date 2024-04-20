@@ -1,11 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
-import net.clozynoii.slsb.init.SlsbModMobEffects;
+import javax.annotation.Nullable;
 
 public class WindBurstSkillUseProcedure {
 	public static void execute(Entity entity) {
@@ -13,7 +10,8 @@ public class WindBurstSkillUseProcedure {
 			return;
 		double cooldown = 0;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.WIND_BURST_ACTIVE.get(), 20, 0, false, false));
+			_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.WIND_BURST_ACTIVE.get(), 20, 0, false, true));
+		entity.getPersistentData().putDouble("bubbleexpand", 0);
 		cooldown = 120;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected)
 				.equals((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1)) {

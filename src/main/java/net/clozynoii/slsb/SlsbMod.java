@@ -30,7 +30,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.clozynoii.slsb.init.SlsbModTabs;
+import net.clozynoii.slsb.init.SlsbModParticleTypes;
 import net.clozynoii.slsb.init.SlsbModMobEffects;
+import net.clozynoii.slsb.init.SlsbModMenus;
 import net.clozynoii.slsb.init.SlsbModItems;
 import net.clozynoii.slsb.init.SlsbModEntities;
 import net.clozynoii.slsb.init.SlsbModBlocks;
@@ -63,6 +65,9 @@ public class SlsbMod {
 
 		SlsbModMobEffects.REGISTRY.register(bus);
 
+		SlsbModParticleTypes.REGISTRY.register(bus);
+
+		SlsbModMenus.REGISTRY.register(bus);
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

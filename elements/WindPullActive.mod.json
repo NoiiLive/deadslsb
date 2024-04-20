@@ -2,17 +2,17 @@
   "_fv": 57,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Wind Pull Active",
-    "icon": "disguise.png",
+    "effectName": "Wind Pull",
+    "icon": "wind_pull.png",
     "color": {
       "value": -1,
       "falpha": 0.0
     },
     "isInstant": false,
     "isBad": false,
-    "isBenefitical": false,
-    "renderStatusInInventory": false,
-    "renderStatusInHUD": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
     "onActiveTick": {
       "name": "WindPullActiveOnEffectActiveTick"
     },

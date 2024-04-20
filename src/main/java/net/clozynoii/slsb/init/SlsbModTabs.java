@@ -48,8 +48,9 @@ public class SlsbModTabs {
 
 					.build());
 	public static final RegistryObject<CreativeModeTab> SOLO_LEVELING_MAGIC_BEASTS = REGISTRY.register("solo_leveling_magic_beasts",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.slsb.solo_leveling_magic_beasts")).icon(() -> new ItemStack(SlsbModItems.GIANT_RAT_GREY_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(SlsbModItems.GIANT_RAT_GREY_SPAWN_EGG.get());
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.slsb.solo_leveling_magic_beasts")).icon(() -> new ItemStack(SlsbModItems.GIANT_RAT_BOSS_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(SlsbModItems.GIANT_RAT_SPAWN_EGG.get());
+				tabData.accept(SlsbModItems.GIANT_RAT_BOSS_SPAWN_EGG.get());
 			})
 
 					.build());

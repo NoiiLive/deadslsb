@@ -13,7 +13,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
-import net.clozynoii.slsb.item.TestItem;
 import net.clozynoii.slsb.item.SRankEssenceStoneItem;
 import net.clozynoii.slsb.item.ManaCrystalItem;
 import net.clozynoii.slsb.item.KnightKillerItem;
@@ -184,14 +183,14 @@ public class SlsbModItems {
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_ENEMIES = block(SlsbModBlocks.CATHEDRAL_DUNGEON_ENEMIES);
 	public static final RegistryObject<Item> CATHEDRAL_DUNGEON_BOSS = block(SlsbModBlocks.CATHEDRAL_DUNGEON_BOSS);
 	public static final RegistryObject<Item> RED_GATE_MEDIUM = REGISTRY.register(SlsbModBlocks.RED_GATE_MEDIUM.getId().getPath(), () -> new RedGateMediumDisplayItem(SlsbModBlocks.RED_GATE_MEDIUM.get(), new Item.Properties()));
-	public static final RegistryObject<Item> GIANT_RAT_GREY_SPAWN_EGG = REGISTRY.register("giant_rat_grey_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT_GREY, -6710887, -10066330, new Item.Properties()));
-	public static final RegistryObject<Item> TEST = REGISTRY.register("test", () -> new TestItem());
 	public static final RegistryObject<Item> E_RANK_ESSENCE_STONE = REGISTRY.register("e_rank_essence_stone", () -> new ERankEssenceStoneItem());
 	public static final RegistryObject<Item> D_RANK_ESSENCE_STONE = REGISTRY.register("d_rank_essence_stone", () -> new DRankEssenceStoneItem());
 	public static final RegistryObject<Item> C_RANK_ESSENCE_STONE = REGISTRY.register("c_rank_essence_stone", () -> new CRankEssenceStoneItem());
 	public static final RegistryObject<Item> B_RANK_ESSENCE_STONE = REGISTRY.register("b_rank_essence_stone", () -> new BRankEssenceStoneItem());
 	public static final RegistryObject<Item> A_RANK_ESSENCE_STONE = REGISTRY.register("a_rank_essence_stone", () -> new ARankEssenceStoneItem());
 	public static final RegistryObject<Item> S_RANK_ESSENCE_STONE = REGISTRY.register("s_rank_essence_stone", () -> new SRankEssenceStoneItem());
+	public static final RegistryObject<Item> GIANT_RAT_SPAWN_EGG = REGISTRY.register("giant_rat_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT, -6710887, -10066330, new Item.Properties()));
+	public static final RegistryObject<Item> GIANT_RAT_BOSS_SPAWN_EGG = REGISTRY.register("giant_rat_boss_spawn_egg", () -> new ForgeSpawnEggItem(SlsbModEntities.GIANT_RAT_BOSS, -6710887, -10066330, new Item.Properties()));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

@@ -18,6 +18,12 @@ import net.minecraft.commands.Commands;
 
 import net.clozynoii.slsb.procedures.UnawakenCommandProcedure;
 import net.clozynoii.slsb.procedures.SetTankerProcedure;
+import net.clozynoii.slsb.procedures.SetStatsMaxProcedure;
+import net.clozynoii.slsb.procedures.SetStatVitalityProcedure;
+import net.clozynoii.slsb.procedures.SetStatStrengthProcedure;
+import net.clozynoii.slsb.procedures.SetStatSenseProcedure;
+import net.clozynoii.slsb.procedures.SetStatIntelligenceProcedure;
+import net.clozynoii.slsb.procedures.SetStatAgilityProcedure;
 import net.clozynoii.slsb.procedures.SetRankSProcedure;
 import net.clozynoii.slsb.procedures.SetRankEProcedure;
 import net.clozynoii.slsb.procedures.SetRankDProcedure;
@@ -356,7 +362,7 @@ public class SLSBAdminCommand {
 
 					RandomMovesCommandProcedure.execute(world, arguments);
 					return 0;
-				})))).then(Commands.literal("mana").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+				})))).then(Commands.literal("stat").then(Commands.literal("mana").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -369,6 +375,90 @@ public class SLSBAdminCommand {
 						direction = entity.getDirection();
 
 					SetManaProcedure.execute(arguments);
+					return 0;
+				})))).then(Commands.literal("strength").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					SetStatStrengthProcedure.execute(arguments);
+					return 0;
+				})))).then(Commands.literal("agility").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					SetStatAgilityProcedure.execute(arguments);
+					return 0;
+				})))).then(Commands.literal("vitality").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					SetStatVitalityProcedure.execute(arguments);
+					return 0;
+				})))).then(Commands.literal("intelligence").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					SetStatIntelligenceProcedure.execute(arguments);
+					return 0;
+				})))).then(Commands.literal("sense").then(Commands.argument("amount", DoubleArgumentType.doubleArg()).then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					SetStatSenseProcedure.execute(arguments);
+					return 0;
+				})))).then(Commands.literal("max").then(Commands.argument("name", EntityArgument.player()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					SetStatsMaxProcedure.execute(arguments);
 					return 0;
 				})))));
 	}

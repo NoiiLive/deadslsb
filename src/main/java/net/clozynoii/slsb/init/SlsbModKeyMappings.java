@@ -17,6 +17,7 @@ import net.minecraft.client.KeyMapping;
 
 import net.clozynoii.slsb.network.UseSkillMessage;
 import net.clozynoii.slsb.network.SwitchSkillMessage;
+import net.clozynoii.slsb.network.InfoMenuMessage;
 import net.clozynoii.slsb.SlsbMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -47,11 +48,25 @@ public class SlsbModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping INFO_MENU = new KeyMapping("key.slsb.info_menu", GLFW.GLFW_KEY_G, "key.categories.slsb") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				SlsbMod.PACKET_HANDLER.sendToServer(new InfoMenuMessage(0, 0));
+				InfoMenuMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(SWITCH_SKILL);
 		event.register(USE_SKILL);
+		event.register(INFO_MENU);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -61,6 +76,7 @@ public class SlsbModKeyMappings {
 			if (Minecraft.getInstance().screen == null) {
 				SWITCH_SKILL.consumeClick();
 				USE_SKILL.consumeClick();
+				INFO_MENU.consumeClick();
 			}
 		}
 	}

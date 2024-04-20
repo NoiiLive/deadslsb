@@ -1,0 +1,170 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "hunter_liecense.png",
+          "use1Xscale": false,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_the_hunters_assocation",
+          "text": {
+            "fixedValue": "§8The Hunters Assocation"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 139
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_has_approved_blank_as_a",
+          "text": {
+            "fixedValue": "Has Approved Blank",
+            "name": "ReturnHunterInfoApproval"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_as_a_verified_hunter",
+          "text": {
+            "fixedValue": "§8As A Verified Hunter"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 165
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name",
+          "text": {
+            "fixedValue": "Name",
+            "name": "ReturnHunterInfoName"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 83
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_rank",
+          "text": {
+            "fixedValue": "Rank",
+            "name": "ReturnHunterInfoRank"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 96
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_class",
+          "text": {
+            "fixedValue": "Class",
+            "name": "ReturnHunterInfoClass"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 178,
+          "y": 109
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_guild",
+          "text": {
+            "fixedValue": "Guild",
+            "name": "ReturnHunterInfoGuild"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 100,
+          "y": 43
+        }
+      },
+      {
+        "type": "entitymodel",
+        "data": {
+          "entityModel": {
+            "name": "ReturnPlayerIcon"
+          },
+          "scale": 45,
+          "rotationX": 0,
+          "followMouseMovement": true,
+          "x": 130,
+          "y": 153
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_balance",
+          "text": {
+            "fixedValue": "Money",
+            "name": "ReturnBalance"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 100,
+          "y": 189
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -18,11 +18,6 @@ public class HealingAuraMobEffect extends MobEffect {
 	}
 
 	@Override
-	public boolean isInstantenous() {
-		return true;
-	}
-
-	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		HealingAuraTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}

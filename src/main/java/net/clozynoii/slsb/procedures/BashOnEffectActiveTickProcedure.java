@@ -1,18 +1,15 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
@@ -25,28 +22,26 @@ public class BashOnEffectActiveTickProcedure {
 		if (entity == null)
 			return;
 		double cooldown = 0;
-		entity.setDeltaMovement(new Vec3((2 * entity.getLookAngle().x), (0.1 * entity.getLookAngle().y), (2 * entity.getLookAngle().z)));
+		double x_norm = 0;
+		double magnitude = 0;
+		double y_norm = 0;
+		double z_norm = 0;
+		magnitude = Math.sqrt(Math.pow(entity.getLookAngle().x, 2) + Math.pow(entity.getLookAngle().y, 2) + Math.pow(entity.getLookAngle().z, 2));
+		x_norm = entity.getLookAngle().x / magnitude;
+		z_norm = entity.getLookAngle().z / magnitude;
+		entity.setDeltaMovement(new Vec3((x_norm * 1), (entity.getDeltaMovement().y()), (z_norm * 1)));
 		world.levelEvent(2001, BlockPos.containing(x, y - 1, z), Block.getId((world.getBlockState(BlockPos.containing(x, y - 1, z)))));
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 0.01, 1.5, 0.01, 0);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.POOF, x, y, z, 3, 0.01, 1.5, 0.01, 0.4);
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.SONIC_BOOM, x, y, z, 1, 0.01, 1.5, 0.01, 0);
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				if (!(entity == entityiterator)) {
+				if (!(entityiterator == entity)) {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_ATTACK), entity), 5);
-					entityiterator.setDeltaMovement(new Vec3(((entity.getX() + entityiterator.getX()) / 19), (entity.getDeltaMovement().y() + 0.9), ((entity.getZ() + entityiterator.getZ()) / 19)));
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
-						}
-					}
+					entityiterator.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -1.5, 1.5)), 0.1, (Mth.nextDouble(RandomSource.create(), -1.5, 1.5))));
 				}
 			}
 		}

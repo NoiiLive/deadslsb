@@ -1,0 +1,12 @@
+{
+  "_fv": 57,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "G",
+    "keyBindingName": "Info Menu",
+    "keyBindingCategoryKey": "slsb",
+    "onKeyPressed": {
+      "name": "OpenInfoMenu"
+    }
+  }
+}

@@ -13,7 +13,7 @@ public class BashSkillUseProcedure {
 			return;
 		double cooldown = 0;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.BASH.get(), 20, 0, false, false));
+			_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.BASH.get(), 20, 0, false, true));
 		cooldown = 350;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected)
 				.equals((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1)) {

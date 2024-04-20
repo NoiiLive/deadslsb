@@ -122,6 +122,9 @@ public class SlsbModVariables {
 			clone.Vitality = original.Vitality;
 			clone.Strength = original.Strength;
 			clone.Sense = original.Sense;
+			clone.Money = original.Money;
+			clone.HunterGuild = original.HunterGuild;
+			clone.DungeonLeaveTimer = original.DungeonLeaveTimer;
 			if (!event.isWasDeath()) {
 				clone.AbilitySelected = original.AbilitySelected;
 				clone.ActiveSkills = original.ActiveSkills;
@@ -381,6 +384,9 @@ public class SlsbModVariables {
 		public double Vitality = 0.0;
 		public double Strength = 0.0;
 		public double Sense = 0.0;
+		public double Money = 100.0;
+		public String HunterGuild = "None";
+		public double DungeonLeaveTimer = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -451,6 +457,9 @@ public class SlsbModVariables {
 			nbt.putDouble("Vitality", Vitality);
 			nbt.putDouble("Strength", Strength);
 			nbt.putDouble("Sense", Sense);
+			nbt.putDouble("Money", Money);
+			nbt.putString("HunterGuild", HunterGuild);
+			nbt.putDouble("DungeonLeaveTimer", DungeonLeaveTimer);
 			return nbt;
 		}
 
@@ -518,6 +527,9 @@ public class SlsbModVariables {
 			Vitality = nbt.getDouble("Vitality");
 			Strength = nbt.getDouble("Strength");
 			Sense = nbt.getDouble("Sense");
+			Money = nbt.getDouble("Money");
+			HunterGuild = nbt.getString("HunterGuild");
+			DungeonLeaveTimer = nbt.getDouble("DungeonLeaveTimer");
 		}
 	}
 
@@ -604,6 +616,9 @@ public class SlsbModVariables {
 					variables.Vitality = message.data.Vitality;
 					variables.Strength = message.data.Strength;
 					variables.Sense = message.data.Sense;
+					variables.Money = message.data.Money;
+					variables.HunterGuild = message.data.HunterGuild;
+					variables.DungeonLeaveTimer = message.data.DungeonLeaveTimer;
 				}
 			});
 			context.setPacketHandled(true);

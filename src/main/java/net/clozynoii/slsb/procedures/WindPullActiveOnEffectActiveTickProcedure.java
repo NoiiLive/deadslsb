@@ -1,12 +1,11 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraftforge.eventbus.api.Event;
+
+import javax.annotation.Nullable;
 
 public class WindPullActiveOnEffectActiveTickProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double xRadius = 0;
@@ -22,8 +21,6 @@ public class WindPullActiveOnEffectActiveTickProcedure {
 			x_pos = x + Math.cos(degree) * xRadius;
 			y_pos = y + 0.1;
 			z_pos = z + Math.sin(degree) * zRadius;
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.POOF, x_pos, y_pos, z_pos, 1, 0.1, 0.1, 0.1, 0);
 			degree = degree + Math.toRadians(5);
 		}
 		degree = Math.toRadians(entity.getYRot());
@@ -33,8 +30,6 @@ public class WindPullActiveOnEffectActiveTickProcedure {
 			x_pos = x + Math.cos(degree) * xRadius;
 			y_pos = y + 0.1;
 			z_pos = z + Math.sin(degree) * zRadius;
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.POOF, x_pos, y_pos, z_pos, 1, 0.1, 0.1, 0.1, 0);
 			degree = degree + Math.toRadians(5);
 		}
 		entity.getPersistentData().putDouble("xincrease", (entity.getPersistentData().getDouble("xincrease") - 0.5));

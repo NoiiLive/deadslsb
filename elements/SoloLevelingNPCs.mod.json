@@ -4,7 +4,7 @@
   "definition": {
     "name": "Solo Leveling: NPCs",
     "icon": {
-      "value": "CUSTOM:GiantRatGrey.spawn_egg"
+      "value": "CUSTOM:GiantRatBoss.spawn_egg"
     },
     "showSearch": false
   }

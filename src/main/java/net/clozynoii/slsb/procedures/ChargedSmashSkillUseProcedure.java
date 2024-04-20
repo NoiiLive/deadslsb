@@ -10,41 +10,31 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.clozynoii.slsb.network.SlsbModVariables;
 import net.clozynoii.slsb.init.SlsbModMobEffects;
+import net.clozynoii.slsb.SlsbMod;
 
 public class ChargedSmashSkillUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double cooldown = 0;
+		if (world instanceof Level _level) {
+			if (!_level.isClientSide()) {
+				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.charge")), SoundSource.PLAYERS, 1, 1);
+			} else {
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.charge")), SoundSource.PLAYERS, 1, 1, false);
+			}
+		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.CHARGED.get(), 600, 0, false, false));
-		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Rank).equals("D-Rank")) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 3, false, false));
-		}
-		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Rank).equals("C-Rank")) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 4, false, false));
-		}
-		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Rank).equals("B-Rank")) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 5, false, false));
-		}
-		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Rank).equals("A-Rank")) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 6, false, false));
-		}
-		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Rank).equals("S-Rank")) {
-			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 7, false, false));
-		}
-		cooldown = 2000;
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 2, false, false));
+		cooldown = 500;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected)
 				.equals((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1)) {
 			{
@@ -207,14 +197,20 @@ public class ChargedSmashSkillUseProcedure {
 				});
 			}
 		}
-		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(Component.literal("\u00A7l\u00A7cCharged Attack"), true);
-		if (world instanceof Level _level) {
-			if (!_level.isClientSide()) {
-				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.charge")), SoundSource.NEUTRAL, 1, 1);
-			} else {
-				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.vex.charge")), SoundSource.NEUTRAL, 1, 1, false);
+		SlsbMod.queueServerWork(20, () -> {
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.CHARGED.get(), 200, 0, false, true));
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("\u00A7c\u00A7lAttack Charged!"), true);
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.prepare_attack")), SoundSource.PLAYERS, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.prepare_attack")), SoundSource.PLAYERS, 1, 1, false);
+				}
 			}
-		}
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.ENCHANTED_HIT, x, y, z, 5, 1, 1, 1, 0.1);
+		});
 	}
 }

@@ -1,19 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.server.level.ServerPlayer;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
-import net.clozynoii.slsb.init.SlsbModMobEffects;
-
-import java.util.List;
-import java.util.Comparator;
+import javax.annotation.Nullable;
 
 public class WindPullSkillUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -38,6 +27,13 @@ public class WindPullSkillUseProcedure {
 						entityiterator.setDeltaMovement(new Vec3(((entity.getX() - entityiterator.getX()) / 4), ((entity.getY() - entityiterator.getY()) / 4), ((entity.getZ() - entityiterator.getZ()) / 4)));
 					}
 				}
+			}
+		}
+		if (world instanceof Level _level) {
+			if (!_level.isClientSide()) {
+				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.break")), SoundSource.PLAYERS, 2, 1);
+			} else {
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.wool.break")), SoundSource.PLAYERS, 2, 1, false);
 			}
 		}
 		cooldown = 100;

@@ -1,20 +1,15 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
-import net.clozynoii.slsb.init.SlsbModMobEffects;
+import javax.annotation.Nullable;
 
 public class TornadoSkillUseProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		double cooldown = 0;
-		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(SlsbModMobEffects.TORNADO_ACTIVE.get(), 55, 0, false, false));
-		cooldown = 460;
+		cooldown = 400;
 		if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected)
 				.equals((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySlot1)) {
 			{

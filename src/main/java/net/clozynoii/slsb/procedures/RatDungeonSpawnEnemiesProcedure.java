@@ -17,7 +17,7 @@ public class RatDungeonSpawnEnemiesProcedure {
 		random = Mth.nextInt(RandomSource.create(), 1, 5);
 		for (int index0 = 0; index0 < (int) random; index0++) {
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = SlsbModEntities.GIANT_RAT_GREY.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = SlsbModEntities.GIANT_RAT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setDeltaMovement(0, 0, 0);
 				}
