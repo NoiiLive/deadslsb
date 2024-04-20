@@ -18,7 +18,7 @@ public class ManaCrystalBlockDeepslateBlockModel extends GeoModel<ManaCrystalBlo
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(ManaCrystalBlockDeepslateTileEntity entity) {
+	public ResourceLocation getTextureResource(ManaCrystalBlockDeepslateTileEntity animatable) {
 		return new ResourceLocation("slsb", "textures/block/manacrystal_deepslate.png");
 	}
 }

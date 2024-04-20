@@ -1,8 +1,11 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 
-import javax.annotation.Nullable;
+import net.clozynoii.slsb.network.SlsbModVariables;
 
 public class MageSkills1Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -314,7 +317,7 @@ public class MageSkills1Procedure {
 					}
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
-						TurbulenceSkillUseProcedure.execute(entity);
+						TurbulenceSkillUseProcedure.execute(world, entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -368,7 +371,7 @@ public class MageSkills1Procedure {
 					}
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
-						SuffocationSkillUseProcedure.execute(entity);
+						SuffocationSkillUseProcedure.execute(world, x, y, z, entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"

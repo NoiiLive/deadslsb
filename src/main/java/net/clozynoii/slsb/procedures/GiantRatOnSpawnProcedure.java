@@ -1,8 +1,10 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 
-import javax.annotation.Nullable;
+import net.clozynoii.slsb.entity.GiantRatEntity;
 
 public class GiantRatOnSpawnProcedure {
 	public static void execute(Entity entity) {

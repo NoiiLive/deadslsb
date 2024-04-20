@@ -1,5 +1,7 @@
 package net.clozynoii.slsb.procedures;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
@@ -453,7 +455,12 @@ public class RandomMovesCommandProcedure {
 		for (int index0 = 0; index0 < (int) totalabilities; index0++) {
 			if (!(abilitylist).isEmpty()) {
 				SlsbMod.LOGGER.debug(("Slot: " + new java.text.DecimalFormat("##").format(abilitiesselected)));
-				selectedability = (abilitylist).split(",")[(Mth.nextInt(RandomSource.create(), 0, (int) (abilitycount - abilitiesselected)))];
+				selectedability = new Object() {
+					private String split(String text, String space, int index) {
+						String s = text.split(space)[index];
+						return s;
+					}
+				}.split(abilitylist, ",", (int) (Mth.nextInt(RandomSource.create(), 0, (int) (abilitycount - abilitiesselected))));
 				abilitylist = abilitylist.replace(selectedability + ",", "");
 				SlsbMod.LOGGER.debug(("Ability Selected: " + selectedability));
 				SlsbMod.LOGGER.debug(("Abilities Left: " + abilitylist));

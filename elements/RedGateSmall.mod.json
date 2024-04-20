@@ -140,6 +140,7 @@
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
     "normal": "bluegatesmall.geo.json",
-    "displaySettings": "bluegatesmall.item.json"
+    "displaySettings": "bluegatesmall.item.json",
+    "blockstateList": []
   }
 }
