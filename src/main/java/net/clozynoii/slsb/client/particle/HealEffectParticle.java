@@ -26,7 +26,8 @@ public class HealEffectParticle extends TextureSheetParticle {
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			return new HealEffectParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			HealEffectParticle particle = new HealEffectParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			return particle;
 		}
 	}
 
