@@ -1,6 +1,17 @@
 
 package net.clozynoii.slsb.potion;
 
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
+
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+import net.minecraft.client.gui.GuiGraphics;
+
+import net.clozynoii.slsb.procedures.SuffocationActiveOnEffectActiveTickProcedure;
+
 public class SuffocationActiveMobEffect extends MobEffect {
 	public SuffocationActiveMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
@@ -13,7 +24,7 @@ public class SuffocationActiveMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		SuffocationActiveOnEffectActiveTickProcedure.execute();
+		SuffocationActiveOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
