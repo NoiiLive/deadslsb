@@ -34,7 +34,15 @@ public class DungeonWorldGenerateProcedure {
 		SlsbMod.queueServerWork(1, () -> {
 			if (dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:rat_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:mine_dungeon")))
 					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:forest_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:hapjeong_dungeon")))
-					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:double_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:catacomb_dungeon")))) {
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:double_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:catacomb_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:library_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:maze_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:insect_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:goblin_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:sandy_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:sunken_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:crystal_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:coliseum_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:ice_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:orc_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:lich_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:naga_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:dragon_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:giant_dungeon")))
+					|| dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:citadel_dungeon"))) || dimension == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:jog_change_dungeon")))) {
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).DungeonGenerate == true) {
 					entity.getPersistentData().putBoolean("GenerateDungeon", true);
 					SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = 400;

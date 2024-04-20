@@ -150,6 +150,102 @@ public class DungeonGenerationProcedure {
 					});
 				}
 			}
+			if ((entity.level().dimension()) == (ResourceKey.create(Registries.DIMENSION, new ResourceLocation("slsb:catacomb_dungeon")))) {
+				if (world instanceof ServerLevel _serverworld) {
+					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("slsb", "catacomb_dungeon_entrance"));
+					if (template != null) {
+						template.placeInWorld(_serverworld, BlockPos.containing(x - 21, y - 4, z - 13), BlockPos.containing(x - 21, y - 4, z - 13),
+								new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+					}
+				}
+				if (entity.getPersistentData().getBoolean("RedGate") == true) {
+					world.setBlock(BlockPos.containing(x, y, z), SlsbModBlocks.RED_GATE_SMALL.get().defaultBlockState(), 3);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.trident.thunder")), SoundSource.BLOCKS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.trident.thunder")), SoundSource.BLOCKS, 1, 1, false);
+						}
+					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal("\u00A7c\u00A7lThe Gate Turns Red Behind You..."), true);
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("GateCompleted", false);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				} else {
+					world.setBlock(BlockPos.containing(x, y, z), SlsbModBlocks.BLUE_GATE_SMALL.get().defaultBlockState(), 3);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.conduit.activate")), SoundSource.BLOCKS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.conduit.activate")), SoundSource.BLOCKS, 1, 1, false);
+						}
+					}
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putBoolean("GateCompleted", false);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				}
+				{
+					Direction _dir = Direction.SOUTH;
+					BlockPos _pos = BlockPos.containing(x, y, z);
+					BlockState _bs = world.getBlockState(_pos);
+					Property<?> _property = _bs.getBlock().getStateDefinition().getProperty("facing");
+					if (_property instanceof DirectionProperty _dp && _dp.getPossibleValues().contains(_dir)) {
+						world.setBlock(_pos, _bs.setValue(_dp, _dir), 3);
+					} else {
+						_property = _bs.getBlock().getStateDefinition().getProperty("axis");
+						if (_property instanceof EnumProperty _ap && _ap.getPossibleValues().contains(_dir.getAxis()))
+							world.setBlock(_pos, _bs.setValue(_ap, _dir.getAxis()), 3);
+					}
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putString("GateRank", (entity.getPersistentData().getString("GateRank")));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putBoolean("RedGate", (entity.getPersistentData().getBoolean("RedGate")));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 9, false, false));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 60, 0, false, false));
+				entity.getPersistentData().putString("GateRank", "");
+				entity.getPersistentData().putBoolean("RedGate", false);
+				entity.getPersistentData().putBoolean("GenerateDungeon", false);
+				SlsbMod.LOGGER.debug("Dungeon Generating");
+				SlsbModVariables.MapVariables.get(world).DungeonEntranceTimer = 300;
+				SlsbModVariables.MapVariables.get(world).syncData(world);
+				{
+					double _setval = 300;
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.DungeonEnterTimerPlayer = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 		}
 		if (entity.getPersistentData().getBoolean("UpdateGate") == true) {
 			if ((entity.level().dimension()) == Level.OVERWORLD) {

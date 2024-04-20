@@ -8921,6 +8921,198 @@
         ]
       },
       "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "CatacombDungeonSpawnNorth",
+      "type": "procedure",
+      "sortid": 437,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_spawn_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnNorthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonSpawnSouth",
+      "type": "procedure",
+      "sortid": 438,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_spawn_south",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnSouthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonSpawnEast",
+      "type": "procedure",
+      "sortid": 439,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_spawn_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnEastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonSpawnWest",
+      "type": "procedure",
+      "sortid": 440,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_spawn_west",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnWestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonSpawnEnemies",
+      "type": "procedure",
+      "sortid": 441,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_spawn_enemies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnEnemiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonSpawnBoss",
+      "type": "procedure",
+      "sortid": 442,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_spawn_boss",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnBossProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
     }
   ],
   "variable_elements": [
@@ -9357,16 +9549,16 @@
       "effect.slsb.wind_burst_active": "Wind Burst",
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
-      "block.slsb.ice_dungeon_south": "Ice Dungeon South",
       "effect.slsb.overwhelmed": "Overwhelmed",
+      "block.slsb.ice_dungeon_south": "Ice Dungeon South",
       "item.slsb.c_rank_essence_stone": "§aC-Rank Essence Stone",
       "block.slsb.double_dungeon_west": "Double Dungeon West",
       "block.slsb.library_dungeon_north": "Library Dungeon North",
       "block.slsb.subway_dungeon_boss": "Subway Dungeon Boss",
       "block.slsb.naga_dungeon_boss": "Naga Dungeon Boss",
       "block.slsb.sand_dungeon_south": "Sand Dungeon South",
-      "gui.slsb.hunter_info_menu.label_as_a_verified_hunter": "§8As A Verified Hunter",
       "block.slsb.forest_dungeon_boss": "Forest Dungeon Boss",
+      "gui.slsb.hunter_info_menu.label_as_a_verified_hunter": "§8As A Verified Hunter",
       "block.slsb.dragon_dungeon_south": "Dragon Dungeon South",
       "block.slsb.subway_dungeon_north": "Subway Dungeon North",
       "block.slsb.mine_dungeon_south": "Mine Dungeon South",
@@ -9404,8 +9596,8 @@
       "block.slsb.mine_dungeon_east": "Mine Dungeon East",
       "item.slsb.mana_crystal": "§bMana Crystal",
       "block.slsb.lich_dungeon_boss": "Lich Dungeon Boss",
-      "entity.slsb.wind_barrier_mob": "Wind Barrier Mob",
       "block.slsb.maze_dungeon_west": "Maze Dungeon West",
+      "entity.slsb.wind_barrier_mob": "Wind Barrier Mob",
       "block.slsb.ice_dungeon_north": "Ice Dungeon North",
       "block.slsb.crystal_dungeon_west": "Crystal Dungeon West",
       "block.slsb.orc_dungeon_east": "Orc Dungeon East",
@@ -9431,8 +9623,8 @@
       "block.slsb.spider_dungeon_north": "Spider Dungeon North",
       "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
       "block.slsb.maze_dungeon_north": "Maze Dungeon North",
-      "block.slsb.maze_dungeon_enemies": "Maze Dungeon Enemies",
       "block.slsb.dragon_dungeon_east": "Dragon Dungeon East",
+      "block.slsb.maze_dungeon_enemies": "Maze Dungeon Enemies",
       "entity.slsb.after_image": "After Image",
       "block.slsb.giant_dungeon_boss": "Giant Dungeon Boss",
       "item.slsb.d_rank_essence_stone": "§eD-Rank Essence Stone",
@@ -9585,6 +9777,31 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "D-Rank",
+                "children": [
+                  {
+                    "name": "Catacomb Dungeon",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "C-Rank",
+                "children": []
+              },
+              {
+                "name": "B-Rank",
+                "children": []
+              },
+              {
+                "name": "A-Rank",
+                "children": []
+              },
+              {
+                "name": "S-Rank",
+                "children": []
               }
             ]
           },
