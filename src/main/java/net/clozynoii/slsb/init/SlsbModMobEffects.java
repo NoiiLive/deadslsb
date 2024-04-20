@@ -16,10 +16,15 @@ import net.clozynoii.slsb.potion.TurbulenceMobEffect;
 import net.clozynoii.slsb.potion.SuffocationActiveMobEffect;
 import net.clozynoii.slsb.potion.StealthMobEffect;
 import net.clozynoii.slsb.potion.ReinforcementMobEffect;
+import net.clozynoii.slsb.potion.RalliedMobEffect;
+import net.clozynoii.slsb.potion.OverwhelmedMobEffect;
 import net.clozynoii.slsb.potion.HealingAuraMobEffect;
+import net.clozynoii.slsb.potion.GuardianMobEffect;
+import net.clozynoii.slsb.potion.FinalStandMobEffect;
 import net.clozynoii.slsb.potion.EvadeMobEffect;
 import net.clozynoii.slsb.potion.DisguiseMobEffect;
 import net.clozynoii.slsb.potion.CollapseMobEffect;
+import net.clozynoii.slsb.potion.ClearMindMobEffect;
 import net.clozynoii.slsb.potion.ChargedMobEffect;
 import net.clozynoii.slsb.potion.BashMobEffect;
 import net.clozynoii.slsb.SlsbMod;
@@ -38,4 +43,9 @@ public class SlsbModMobEffects {
 	public static final RegistryObject<MobEffect> WIND_BURST_ACTIVE = REGISTRY.register("wind_burst_active", () -> new WindBurstActiveMobEffect());
 	public static final RegistryObject<MobEffect> SUFFOCATION_ACTIVE = REGISTRY.register("suffocation_active", () -> new SuffocationActiveMobEffect());
 	public static final RegistryObject<MobEffect> TURBULENCE = REGISTRY.register("turbulence", () -> new TurbulenceMobEffect());
+	public static final RegistryObject<MobEffect> RALLIED = REGISTRY.register("rallied", () -> new RalliedMobEffect());
+	public static final RegistryObject<MobEffect> FINAL_STAND = REGISTRY.register("final_stand", () -> new FinalStandMobEffect());
+	public static final RegistryObject<MobEffect> GUARDIAN = REGISTRY.register("guardian", () -> new GuardianMobEffect());
+	public static final RegistryObject<MobEffect> OVERWHELMED = REGISTRY.register("overwhelmed", () -> new OverwhelmedMobEffect());
+	public static final RegistryObject<MobEffect> CLEAR_MIND = REGISTRY.register("clear_mind", () -> new ClearMindMobEffect());
 }

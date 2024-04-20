@@ -8543,6 +8543,384 @@
         ]
       },
       "path": "~/Procedures/GUI/Info Menu"
+    },
+    {
+      "name": "RalliedEffectTick",
+      "type": "procedure",
+      "sortid": 421,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rallied_effect_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RalliedEffectTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "Rallied",
+      "type": "potioneffect",
+      "sortid": 422,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rallied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/RalliedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FinalStand",
+      "type": "potioneffect",
+      "sortid": 423,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_stand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/FinalStandMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Guardian",
+      "type": "potioneffect",
+      "sortid": 424,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guardian",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/GuardianMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Overwhelmed",
+      "type": "potioneffect",
+      "sortid": 425,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overwhelmed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/OverwhelmedMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ClearMind",
+      "type": "potioneffect",
+      "sortid": 426,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clear_mind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/potion/ClearMindMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ClearMindTick",
+      "type": "procedure",
+      "sortid": 427,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clear_mind_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ClearMindTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "OverwhelmedTick",
+      "type": "procedure",
+      "sortid": 428,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overwhelmed_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/OverwhelmedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "FinalStandAttacked",
+      "type": "procedure",
+      "sortid": 429,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_stand_attacked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/FinalStandAttackedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "GuardianAttacked",
+      "type": "procedure",
+      "sortid": 430,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guardian_attacked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/GuardianAttackedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "GuardianEffectRemove",
+      "type": "procedure",
+      "sortid": 431,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guardian_effect_remove",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/GuardianEffectRemoveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "RallySkillUse",
+      "type": "procedure",
+      "sortid": 432,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rally_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/RallySkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "OverwhelmSkillUse",
+      "type": "procedure",
+      "sortid": 433,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overwhelm_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/OverwhelmSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "ClearMindSkillUse",
+      "type": "procedure",
+      "sortid": 434,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clear_mind_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/ClearMindSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "FinalStandSkillUse",
+      "type": "procedure",
+      "sortid": 435,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "final_stand_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/FinalStandSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
+    },
+    {
+      "name": "GuardianSkillUse",
+      "type": "procedure",
+      "sortid": 436,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guardian_skill_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/GuardianSkillUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Skills/Tanker/Moves"
     }
   ],
   "variable_elements": [
@@ -8980,14 +9358,15 @@
       "block.slsb.blue_gate_medium": "Blue Gate Medium",
       "item_group.slsb.solo_leveling_items": "Solo Leveling: Items",
       "block.slsb.ice_dungeon_south": "Ice Dungeon South",
+      "effect.slsb.overwhelmed": "Overwhelmed",
       "item.slsb.c_rank_essence_stone": "§aC-Rank Essence Stone",
       "block.slsb.double_dungeon_west": "Double Dungeon West",
       "block.slsb.library_dungeon_north": "Library Dungeon North",
       "block.slsb.subway_dungeon_boss": "Subway Dungeon Boss",
       "block.slsb.naga_dungeon_boss": "Naga Dungeon Boss",
       "block.slsb.sand_dungeon_south": "Sand Dungeon South",
-      "block.slsb.forest_dungeon_boss": "Forest Dungeon Boss",
       "gui.slsb.hunter_info_menu.label_as_a_verified_hunter": "§8As A Verified Hunter",
+      "block.slsb.forest_dungeon_boss": "Forest Dungeon Boss",
       "block.slsb.dragon_dungeon_south": "Dragon Dungeon South",
       "block.slsb.subway_dungeon_north": "Subway Dungeon North",
       "block.slsb.mine_dungeon_south": "Mine Dungeon South",
@@ -9015,8 +9394,8 @@
       "block.slsb.double_dungeon_boss": "Double Dungeon Boss",
       "block.slsb.catacomb_dungeon_west": "Catacomb Dungeon West",
       "block.slsb.dragon_dungeon_enemies": "Dragon Dungeon Enemies",
-      "advancements.healer_class.descr": "Become the Healer Class.",
       "block.slsb.dragon_dungeon_west": "Dragon Dungeon West",
+      "advancements.healer_class.descr": "Become the Healer Class.",
       "block.slsb.catacomb_dungeon_south": "Catacomb Dungeon South",
       "block.slsb.coliseum_dungeon_south": "Coliseum Dungeon South",
       "item_group.slsb.solo_leveling_armor": "Solo Leveling: Armor",
@@ -9025,11 +9404,12 @@
       "block.slsb.mine_dungeon_east": "Mine Dungeon East",
       "item.slsb.mana_crystal": "§bMana Crystal",
       "block.slsb.lich_dungeon_boss": "Lich Dungeon Boss",
-      "block.slsb.maze_dungeon_west": "Maze Dungeon West",
       "entity.slsb.wind_barrier_mob": "Wind Barrier Mob",
+      "block.slsb.maze_dungeon_west": "Maze Dungeon West",
       "block.slsb.ice_dungeon_north": "Ice Dungeon North",
       "block.slsb.crystal_dungeon_west": "Crystal Dungeon West",
       "block.slsb.orc_dungeon_east": "Orc Dungeon East",
+      "effect.slsb.clear_mind": "Clear Mind",
       "item.slsb.e_rank_essence_stone": "E-Rank Essence Stone",
       "block.slsb.forest_dungeon_east": "Forest Dungeon East",
       "effect.slsb.charged": "Charged",
@@ -9042,6 +9422,7 @@
       "block.slsb.double_dungeon_east": "Double Dungeon East",
       "block.slsb.red_gate_medium": "Red Gate Medium",
       "item.slsb.a_rank_essence_stone": "§cA-Rank Essence Stone",
+      "effect.slsb.final_stand": "Final Stand",
       "block.slsb.naga_dungeon_west": "Naga Dungeon West",
       "item.slsb.b_rank_essence_stone": "§bB-Rank Essence Stone",
       "key.slsb.use_skill": "Use Skill",
@@ -9050,8 +9431,8 @@
       "block.slsb.spider_dungeon_north": "Spider Dungeon North",
       "item.slsb.kasakas_venom_fang": "§eKasaka\u0027s Venom Fang",
       "block.slsb.maze_dungeon_north": "Maze Dungeon North",
-      "block.slsb.dragon_dungeon_east": "Dragon Dungeon East",
       "block.slsb.maze_dungeon_enemies": "Maze Dungeon Enemies",
+      "block.slsb.dragon_dungeon_east": "Dragon Dungeon East",
       "entity.slsb.after_image": "After Image",
       "block.slsb.giant_dungeon_boss": "Giant Dungeon Boss",
       "item.slsb.d_rank_essence_stone": "§eD-Rank Essence Stone",
@@ -9066,9 +9447,10 @@
       "subtitles.stab": "",
       "block.slsb.mine_dungeon_north": "Mine Dungeon North",
       "block.slsb.giant_dungeon_south": "Giant Dungeon South",
-      "entity.slsb.giant_rat_grey": "Giant Rat (E-Rank)",
       "effect.slsb.tornado_active": "TornadoActive",
+      "entity.slsb.giant_rat_grey": "Giant Rat (E-Rank)",
       "block.slsb.cathedral_dungeon_west": "Cathedral Dungeon West",
+      "effect.slsb.guardian": "Guardian",
       "block.slsb.ice_dungeon_enemies": "Ice Dungeon Enemies",
       "block.slsb.crystal_dungeon_east": "Crystal Dungeon East",
       "advancements.assassin_class.title": "Assassin",
@@ -9142,6 +9524,7 @@
       "block.slsb.rat_dungeon_south": "Rat Dungeon South",
       "block.slsb.forest_dungeon_south": "Forest Dungeon South",
       "block.slsb.subway_dungeon_south": "Subway Dungeon South",
+      "effect.slsb.rallied": "Rallied",
       "effect.slsb.turbulence": "Turbulence",
       "advancements.strength_skill.descr": "Unlock Haste Skill [§lA skill that temporarily increases the user\u0027s strength§r]",
       "block.slsb.cathedral_dungeon_north": "Cathedral Dungeon North",

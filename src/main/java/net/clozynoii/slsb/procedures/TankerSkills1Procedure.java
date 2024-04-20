@@ -132,7 +132,7 @@ public class TankerSkills1Procedure {
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Rally")) {
 				{
-					double _setval = 0;
+					double _setval = 100;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -140,6 +140,7 @@ public class TankerSkills1Procedure {
 				}
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+					RallySkillUseProcedure.execute(world, x, y, z, entity);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(
@@ -150,7 +151,7 @@ public class TankerSkills1Procedure {
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Final Stand")) {
 				{
-					double _setval = 0;
+					double _setval = 100;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -159,6 +160,7 @@ public class TankerSkills1Procedure {
 				if (((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) / (entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1)) * 100 <= 30) {
 					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+						FinalStandSkillUseProcedure.execute(world, x, y, z, entity);
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
@@ -172,27 +174,7 @@ public class TankerSkills1Procedure {
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Guardian")) {
 				{
-					double _setval = 0;
-					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.AbilityCost1 = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).ActiveSkills).contains("Guardian") == false) {
-					if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
-					} else {
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
-									+ new java.text.DecimalFormat("##").format((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) + " \u00A7fMana to Use This")),
-									true);
-					}
-				} else {
-				}
-			}
-			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Clear Mind")) {
-				{
-					double _setval = 0;
+					double _setval = 100;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -200,6 +182,26 @@ public class TankerSkills1Procedure {
 				}
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+					GuardianSkillUseProcedure.execute(world, x, y, z, entity);
+				} else {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(
+								Component.literal(("\u00A7fYou Need \u00A7b\u00A7l"
+										+ new java.text.DecimalFormat("##").format((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) + " \u00A7fMana to Use This")),
+								true);
+				}
+			}
+			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Clear Mind")) {
+				{
+					double _setval = 100;
+					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.AbilityCost1 = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+					ClearMindSkillUseProcedure.execute(world, x, y, z, entity);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(
@@ -210,7 +212,7 @@ public class TankerSkills1Procedure {
 			}
 			if (((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).AbilitySelected).equals("Overwhelm")) {
 				{
-					double _setval = 0;
+					double _setval = 100;
 					entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.AbilityCost1 = _setval;
 						capability.syncPlayerVariables(entity);
@@ -218,6 +220,7 @@ public class TankerSkills1Procedure {
 				}
 				if ((entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SlsbModVariables.PlayerVariables())).Mana >= (entity.getCapability(SlsbModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new SlsbModVariables.PlayerVariables())).AbilityCost1) {
+					OverwhelmSkillUseProcedure.execute(world, x, y, z, entity);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(
