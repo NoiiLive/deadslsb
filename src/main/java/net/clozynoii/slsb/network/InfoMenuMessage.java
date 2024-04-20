@@ -1,11 +1,22 @@
 
 package net.clozynoii.slsb.network;
 
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+
+import net.clozynoii.slsb.procedures.OpenInfoMenuProcedure;
 import net.clozynoii.slsb.SlsbMod;
+
+import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class InfoMenuMessage {
-
 	int type, pressedms;
 
 	public InfoMenuMessage(int type, int pressedms) {
@@ -36,21 +47,17 @@ public class InfoMenuMessage {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
-
 		if (type == 0) {
 
 			OpenInfoMenuProcedure.execute(world, x, y, z, entity);
 		}
-
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		SlsbMod.addNetworkMessage(InfoMenuMessage.class, InfoMenuMessage::buffer, InfoMenuMessage::new, InfoMenuMessage::handler);
 	}
-
 }

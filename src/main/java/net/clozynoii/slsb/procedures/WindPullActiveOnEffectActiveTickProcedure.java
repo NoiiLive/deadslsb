@@ -1,8 +1,6 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.Entity;
 
 public class WindPullActiveOnEffectActiveTickProcedure {
 	public static void execute(double x, double y, double z, Entity entity) {

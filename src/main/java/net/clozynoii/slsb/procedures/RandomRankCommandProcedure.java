@@ -1,8 +1,11 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+import net.minecraft.commands.CommandSourceStack;
 
-import javax.annotation.Nullable;
+import com.mojang.brigadier.context.CommandContext;
 
 public class RandomRankCommandProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {

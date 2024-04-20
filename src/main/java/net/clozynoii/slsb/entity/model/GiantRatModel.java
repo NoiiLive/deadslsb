@@ -1,6 +1,10 @@
 package net.clozynoii.slsb.entity.model;
 
-import software.bernie.geckolib.core.animation.AnimationState;
+import software.bernie.geckolib.model.GeoModel;
+
+import net.minecraft.resources.ResourceLocation;
+
+import net.clozynoii.slsb.entity.GiantRatEntity;
 
 public class GiantRatModel extends GeoModel<GiantRatEntity> {
 	@Override

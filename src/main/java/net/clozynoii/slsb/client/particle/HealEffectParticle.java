@@ -1,6 +1,17 @@
 
 package net.clozynoii.slsb.client.particle;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.client.particle.TextureSheetParticle;
+import net.minecraft.client.particle.SpriteSet;
+import net.minecraft.client.particle.ParticleRenderType;
+import net.minecraft.client.particle.ParticleProvider;
+import net.minecraft.client.particle.Particle;
+import net.minecraft.client.multiplayer.ClientLevel;
+
 @OnlyIn(Dist.CLIENT)
 public class HealEffectParticle extends TextureSheetParticle {
 	public static HealEffectParticleProvider provider(SpriteSet spriteSet) {
@@ -15,7 +26,8 @@ public class HealEffectParticle extends TextureSheetParticle {
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			return new HealEffectParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			HealEffectParticle particle = new HealEffectParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			return particle;
 		}
 	}
 
