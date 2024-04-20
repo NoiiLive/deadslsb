@@ -8923,15 +8923,15 @@
       "path": "~/Procedures/Skills/Tanker/Moves"
     },
     {
-      "name": "CatacombDungeonSpawnNorth",
+      "name": "CatacombDungeonSpawnWest",
       "type": "procedure",
-      "sortid": 437,
+      "sortid": 440,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "catacomb_dungeon_spawn_north",
+      "registry_name": "catacomb_dungeon_spawn_west",
       "metadata": {
         "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnNorthProcedure.java"
+          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnWestProcedure.java"
         ],
         "dependencies": [
           {
@@ -8987,70 +8987,6 @@
       "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
     },
     {
-      "name": "CatacombDungeonSpawnEast",
-      "type": "procedure",
-      "sortid": 439,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "catacomb_dungeon_spawn_east",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnEastProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
-    },
-    {
-      "name": "CatacombDungeonSpawnWest",
-      "type": "procedure",
-      "sortid": 440,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "catacomb_dungeon_spawn_west",
-      "metadata": {
-        "files": [
-          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnWestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
-    },
-    {
       "name": "CatacombDungeonSpawnEnemies",
       "type": "procedure",
       "sortid": 441,
@@ -9060,6 +8996,38 @@
       "metadata": {
         "files": [
           "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnEnemiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonSpawnNorth",
+      "type": "procedure",
+      "sortid": 437,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_spawn_north",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnNorthProcedure.java"
         ],
         "dependencies": [
           {
@@ -9113,6 +9081,73 @@
         ]
       },
       "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "CatacombDungeonSpawnEast",
+      "type": "procedure",
+      "sortid": 439,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "catacomb_dungeon_spawn_east",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/CatacombDungeonSpawnEastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/Dungeons/D-Rank/Catacomb Dungeon"
+    },
+    {
+      "name": "TornadoActiveOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_active_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/clozynoii/slsb/procedures/TornadoActiveOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -9762,6 +9797,27 @@
             "name": "Dungeons",
             "children": [
               {
+                "name": "S-Rank",
+                "children": []
+              },
+              {
+                "name": "B-Rank",
+                "children": []
+              },
+              {
+                "name": "A-Rank",
+                "children": []
+              },
+              {
+                "name": "D-Rank",
+                "children": [
+                  {
+                    "name": "Catacomb Dungeon",
+                    "children": []
+                  }
+                ]
+              },
+              {
                 "name": "E Rank",
                 "children": [
                   {
@@ -9779,28 +9835,7 @@
                 ]
               },
               {
-                "name": "D-Rank",
-                "children": [
-                  {
-                    "name": "Catacomb Dungeon",
-                    "children": []
-                  }
-                ]
-              },
-              {
                 "name": "C-Rank",
-                "children": []
-              },
-              {
-                "name": "B-Rank",
-                "children": []
-              },
-              {
-                "name": "A-Rank",
-                "children": []
-              },
-              {
-                "name": "S-Rank",
                 "children": []
               }
             ]

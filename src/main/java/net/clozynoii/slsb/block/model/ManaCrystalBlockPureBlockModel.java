@@ -18,7 +18,7 @@ public class ManaCrystalBlockPureBlockModel extends GeoModel<ManaCrystalBlockPur
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(ManaCrystalBlockPureTileEntity entity) {
+	public ResourceLocation getTextureResource(ManaCrystalBlockPureTileEntity animatable) {
 		return new ResourceLocation("slsb", "textures/block/manacrystla_pure.png");
 	}
 }

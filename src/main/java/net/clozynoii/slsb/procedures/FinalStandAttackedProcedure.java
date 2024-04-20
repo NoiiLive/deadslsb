@@ -1,14 +1,6 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
-
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-
-import net.clozynoii.slsb.init.SlsbModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -28,7 +20,7 @@ public class FinalStandAttackedProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(SlsbModMobEffects.FINAL_STAND.get())) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(SlsbModMobEffects.DELETED_MOD_ELEMENT.get())) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}

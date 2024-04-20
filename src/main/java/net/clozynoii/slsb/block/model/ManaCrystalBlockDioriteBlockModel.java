@@ -18,7 +18,7 @@ public class ManaCrystalBlockDioriteBlockModel extends GeoModel<ManaCrystalBlock
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(ManaCrystalBlockDioriteTileEntity entity) {
+	public ResourceLocation getTextureResource(ManaCrystalBlockDioriteTileEntity animatable) {
 		return new ResourceLocation("slsb", "textures/block/manacrystal_diorite.png");
 	}
 }

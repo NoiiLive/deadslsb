@@ -1,12 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
+import javax.annotation.Nullable;
 
 public class TankerSkills4Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

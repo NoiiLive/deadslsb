@@ -1,10 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.init.SlsbModMobEffects;
+import javax.annotation.Nullable;
 
 public class ClearMindTickProcedure {
 	public static void execute(Entity entity) {

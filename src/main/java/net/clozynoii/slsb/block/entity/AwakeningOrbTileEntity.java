@@ -32,6 +32,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.clozynoii.slsb.init.SlsbModBlockEntities;
+import net.clozynoii.slsb.block.AwakeningOrbBlock;
 
 import javax.annotation.Nullable;
 
@@ -47,7 +48,7 @@ public class AwakeningOrbTileEntity extends RandomizableContainerBlockEntity imp
 	}
 
 	private PlayState predicate(AnimationState event) {
-		String animationprocedure = ("" + ((this.getBlockState()).getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _getip1 ? (this.getBlockState()).getValue(_getip1) : 0));
+		String animationprocedure = ("" + this.getBlockState().getValue(AwakeningOrbBlock.ANIMATION));
 		if (animationprocedure.equals("0")) {
 			return event.setAndContinue(RawAnimation.begin().thenLoop(animationprocedure));
 		}
@@ -55,7 +56,7 @@ public class AwakeningOrbTileEntity extends RandomizableContainerBlockEntity imp
 	}
 
 	private PlayState procedurePredicate(AnimationState event) {
-		String animationprocedure = ("" + ((this.getBlockState()).getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _getip1 ? (this.getBlockState()).getValue(_getip1) : 0));
+		String animationprocedure = ("" + this.getBlockState().getValue(AwakeningOrbBlock.ANIMATION));
 		if (!animationprocedure.equals("0") && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
 			event.getController().setAnimation(RawAnimation.begin().thenPlay(animationprocedure));
 			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
