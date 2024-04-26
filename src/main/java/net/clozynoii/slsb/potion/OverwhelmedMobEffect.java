@@ -1,6 +1,12 @@
 
 package net.clozynoii.slsb.potion;
 
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+
+import net.clozynoii.slsb.procedures.OverwhelmedTickProcedure;
+
 public class OverwhelmedMobEffect extends MobEffect {
 	public OverwhelmedMobEffect() {
 		super(MobEffectCategory.HARMFUL, -50887);
@@ -13,7 +19,7 @@ public class OverwhelmedMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		OverwhelmedTickProcedure.execute();
+		OverwhelmedTickProcedure.execute(entity);
 	}
 
 	@Override

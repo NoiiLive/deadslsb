@@ -1,8 +1,9 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.clozynoii.slsb.SlsbMod;
 
 public class WindBarrierMobOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {

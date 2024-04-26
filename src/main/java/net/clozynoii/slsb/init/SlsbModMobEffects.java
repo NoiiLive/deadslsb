@@ -12,11 +12,14 @@ import net.minecraft.world.effect.MobEffect;
 
 import net.clozynoii.slsb.potion.WindPullActiveMobEffect;
 import net.clozynoii.slsb.potion.WindBurstActiveMobEffect;
+import net.clozynoii.slsb.potion.WhirlwindMobEffect;
 import net.clozynoii.slsb.potion.TurbulenceMobEffect;
 import net.clozynoii.slsb.potion.SuffocationActiveMobEffect;
 import net.clozynoii.slsb.potion.StealthMobEffect;
 import net.clozynoii.slsb.potion.ReinforcementMobEffect;
 import net.clozynoii.slsb.potion.RalliedMobEffect;
+import net.clozynoii.slsb.potion.PredictionMobEffect;
+import net.clozynoii.slsb.potion.PrecisionMobEffect;
 import net.clozynoii.slsb.potion.OverwhelmedMobEffect;
 import net.clozynoii.slsb.potion.HealingAuraMobEffect;
 import net.clozynoii.slsb.potion.GuardianMobEffect;
@@ -26,6 +29,7 @@ import net.clozynoii.slsb.potion.DisguiseMobEffect;
 import net.clozynoii.slsb.potion.CollapseMobEffect;
 import net.clozynoii.slsb.potion.ClearMindMobEffect;
 import net.clozynoii.slsb.potion.ChargedMobEffect;
+import net.clozynoii.slsb.potion.BerserkerMobEffect;
 import net.clozynoii.slsb.potion.BashMobEffect;
 import net.clozynoii.slsb.SlsbMod;
 
@@ -48,4 +52,8 @@ public class SlsbModMobEffects {
 	public static final RegistryObject<MobEffect> GUARDIAN = REGISTRY.register("guardian", () -> new GuardianMobEffect());
 	public static final RegistryObject<MobEffect> OVERWHELMED = REGISTRY.register("overwhelmed", () -> new OverwhelmedMobEffect());
 	public static final RegistryObject<MobEffect> CLEAR_MIND = REGISTRY.register("clear_mind", () -> new ClearMindMobEffect());
+	public static final RegistryObject<MobEffect> BERSERKER = REGISTRY.register("berserker", () -> new BerserkerMobEffect());
+	public static final RegistryObject<MobEffect> WHIRLWIND = REGISTRY.register("whirlwind", () -> new WhirlwindMobEffect());
+	public static final RegistryObject<MobEffect> PRECISION = REGISTRY.register("precision", () -> new PrecisionMobEffect());
+	public static final RegistryObject<MobEffect> PREDICTION = REGISTRY.register("prediction", () -> new PredictionMobEffect());
 }

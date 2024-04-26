@@ -25,5 +25,6 @@ public class SlsbModEntityRenderers {
 		event.registerEntityRenderer(SlsbModEntities.WIND_BARRIER_MOB.get(), WindBarrierMobRenderer::new);
 		event.registerEntityRenderer(SlsbModEntities.GIANT_RAT.get(), GiantRatRenderer::new);
 		event.registerEntityRenderer(SlsbModEntities.GIANT_RAT_BOSS.get(), GiantRatBossRenderer::new);
+		event.registerEntityRenderer(SlsbModEntities.SWORD_SLICE_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

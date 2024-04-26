@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.clozynoii.slsb.entity.WindSliceProjectileEntity;
 import net.clozynoii.slsb.entity.WindBarrierMobEntity;
+import net.clozynoii.slsb.entity.SwordSliceProjectileEntity;
 import net.clozynoii.slsb.entity.GiantRatEntity;
 import net.clozynoii.slsb.entity.GiantRatBossEntity;
 import net.clozynoii.slsb.entity.AfterImageEntity;
@@ -40,6 +41,8 @@ public class SlsbModEntities {
 			EntityType.Builder.<GiantRatBossEntity>of(GiantRatBossEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GiantRatBossEntity::new)
 
 					.sized(1.7f, 1.2f));
+	public static final RegistryObject<EntityType<SwordSliceProjectileEntity>> SWORD_SLICE_PROJECTILE = register("projectile_sword_slice_projectile", EntityType.Builder.<SwordSliceProjectileEntity>of(SwordSliceProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(SwordSliceProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

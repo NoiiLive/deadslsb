@@ -1,6 +1,12 @@
 
 package net.clozynoii.slsb.potion;
 
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+
+import net.clozynoii.slsb.procedures.WindBurstActiveOnEffectActiveTickProcedure;
+
 public class WindBurstActiveMobEffect extends MobEffect {
 	public WindBurstActiveMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -1);
