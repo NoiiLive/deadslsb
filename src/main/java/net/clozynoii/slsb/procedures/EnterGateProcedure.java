@@ -164,6 +164,8 @@ public class EnterGateProcedure {
 												return false;
 											}
 										}.getValue(world, BlockPos.containing(x, y, z), "DungeonGenerated")) == false) {
+											SlsbModVariables.MapVariables.get(world).DungeonRoomCount = 0;
+											SlsbModVariables.MapVariables.get(world).syncData(world);
 											if ((new Object() {
 												public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 													BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -215,9 +217,9 @@ public class EnterGateProcedure {
 													return "";
 												}
 											}.getValue(world, BlockPos.containing(x, y, z), "GateRank")).equals("D-Rank")) {
-												random = Mth.nextInt(RandomSource.create(), 1, 5);
+												random = Mth.nextInt(RandomSource.create(), 1, 4);
 												if (random < 5) {
-													random = Mth.nextInt(RandomSource.create(), 1, 3);
+													random = Mth.nextInt(RandomSource.create(), 1, 1);
 													if (random == 1) {
 														if (!world.isClientSide()) {
 															BlockPos _bp = BlockPos.containing(x, y, z);

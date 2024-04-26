@@ -134,7 +134,6 @@
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
     "normal": "manacrystal.geo.json",
-    "displaySettings": "manacrystal.item.json",
-    "blockstateList": []
+    "displaySettings": "manacrystal.item.json"
   }
 }

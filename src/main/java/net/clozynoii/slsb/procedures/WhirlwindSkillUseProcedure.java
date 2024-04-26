@@ -1,15 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.network.chat.Component;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
-import net.clozynoii.slsb.init.SlsbModMobEffects;
+import javax.annotation.Nullable;
 
 public class WhirlwindSkillUseProcedure {
 	public static void execute(Entity entity) {

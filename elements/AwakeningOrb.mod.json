@@ -146,7 +146,6 @@
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64,
     "normal": "awakeningorb.geo.json",
-    "displaySettings": "awakeningorb.item.json",
-    "blockstateList": []
+    "displaySettings": "awakeningorb.item.json"
   }
 }

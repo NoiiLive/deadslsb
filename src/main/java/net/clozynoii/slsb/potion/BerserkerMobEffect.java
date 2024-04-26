@@ -1,12 +1,6 @@
 
 package net.clozynoii.slsb.potion;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-
-import net.clozynoii.slsb.procedures.BerserkerOnEffectActiveTickProcedure;
-
 public class BerserkerMobEffect extends MobEffect {
 	public BerserkerMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
@@ -19,7 +13,7 @@ public class BerserkerMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		BerserkerOnEffectActiveTickProcedure.execute(entity);
+		BerserkerOnEffectActiveTickProcedure.execute();
 	}
 
 	@Override

@@ -18,7 +18,7 @@ public class ManaCrystalBlockDripstoneBlockModel extends GeoModel<ManaCrystalBlo
 	}
 
 	@Override
-	public ResourceLocation getTextureResource(ManaCrystalBlockDripstoneTileEntity animatable) {
+	public ResourceLocation getTextureResource(ManaCrystalBlockDripstoneTileEntity entity) {
 		return new ResourceLocation("slsb", "textures/block/manacrystal_dripstone.png");
 	}
 }

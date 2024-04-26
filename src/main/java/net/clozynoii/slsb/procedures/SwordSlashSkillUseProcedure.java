@@ -1,17 +1,8 @@
 package net.clozynoii.slsb.procedures;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.InteractionHand;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.clozynoii.slsb.network.SlsbModVariables;
-import net.clozynoii.slsb.init.SlsbModEntities;
-import net.clozynoii.slsb.entity.SwordSliceProjectileEntity;
+import javax.annotation.Nullable;
 
 public class SwordSlashSkillUseProcedure {
 	public static void execute(Entity entity) {
